@@ -4,6 +4,7 @@ import { BestPickBarChart } from "@/components/charts/best-pick-bar-chart";
 import { MemberScoreRadar } from "@/components/charts/member-score-radar";
 import { ReviewCard } from "@/components/review-card";
 import {
+  getBestPickImage,
   getCoverUrl,
   getMemberById,
   getReviewsForSeries,
@@ -39,6 +40,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   const proposer = getMemberById(series.proposerId);
   const summary = getSummaryForSeries(id);
   const cover = getCoverUrl(series);
+  const bestPickImage = getBestPickImage(id);
 
   const radarData = reviews.map((review) => ({
     member: getMemberById(review.memberId)?.name ?? review.memberId,
@@ -96,20 +98,38 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
             </ul>
           )}
 
-          <div className="mt-1 flex flex-wrap items-baseline gap-x-6 gap-y-1">
-            <span className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold tabular-nums">{formatScore(score)}</span>
-              <span className="text-sm text-foreground/60">/ 5</span>
-            </span>
-            {series.bestPick && (
-              <span className="text-sm text-foreground/60">
-                Best girl/boy:{" "}
-                <span className="font-medium text-foreground/80">{series.bestPick}</span>
-              </span>
-            )}
+          <div className="mt-1 flex items-baseline gap-2">
+            <span className="text-3xl font-bold tabular-nums">{formatScore(score)}</span>
+            <span className="text-sm text-foreground/60">/ 5</span>
           </div>
         </div>
       </header>
+
+      {/* Kerhon lempihahmo */}
+      {series.bestPick && (
+        <section
+          aria-label="Kerhon lempihahmo"
+          className="flex items-center gap-4 rounded-lg border border-black/10 p-4 dark:border-white/10"
+        >
+          <div className="flex aspect-[3/4] w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-lg font-bold text-foreground/70 sm:w-20">
+            {bestPickImage ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={bestPickImage}
+                alt={`${series.bestPick} -hahmokuva`}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <span aria-hidden>{getInitials(series.bestPick)}</span>
+            )}
+          </div>
+          <div className="flex flex-col gap-0.5">
+            <span className="text-sm text-foreground/60">Kerhon lempihahmo (best girl/boy)</span>
+            <span className="text-xl font-semibold">{series.bestPick}</span>
+          </div>
+        </section>
+      )}
 
       {/* AI-yhteenveto */}
       {summary && (

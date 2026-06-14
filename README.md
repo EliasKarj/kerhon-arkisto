@@ -125,6 +125,15 @@ Skripti hakee jokaiselle `series.json`:n sarjalle parhaan osuman (leffat suosiva
 MOVIE-muotoa, hankalille nimille on tarkemmat hakusanat) ja tulostaa osumat
 tarkistettavaksi. `data/covers.json` commitoidaan staattisena datana.
 
+Lisäksi jokaisen sarjan **lempihahmosta** (kerhon best girl/boy, `series.bestPick`)
+haetaan kuva — `data/characters.json`. Hahmo haetaan kyseisen animen omasta
+hahmolistasta ja täsmätään nimeen, jotta vältetään väärät osumat; jos täsmäystä
+ei löydy (esim. vapaamuotoiset lempinimet), näytetään pelkkä nimi.
+
+```bash
+npm run fetch:characters
+```
+
 ## Lisenssi
 
 [MIT](./LICENSE)
