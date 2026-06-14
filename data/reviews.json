@@ -2210,5 +2210,69 @@
     "bulletPoints": [],
     "bestPick": "Millie Thompson",
     "tags": []
+  },
+  {
+    "id": "monster-eetu-t",
+    "seriesId": "monster",
+    "memberId": "eetu-t",
+    "score": 3.5,
+    "bulletPoints": [
+      "Alku oli puuduttava koska tiedettiin mitä tapahtuu",
+      "Lukenut mangaa",
+      "Herra tohtori joutunut ikävään tilanteeseen",
+      "Intro ja outro kuulostivat hyvältä",
+      "1x katsottu",
+      "Ei paska",
+      "Vois jatkaa mangaa"
+    ],
+    "bestPick": "Eva Heinemann (alkoholisoitunut exä)",
+    "tags": []
+  },
+  {
+    "id": "monster-eetu-n",
+    "seriesId": "monster",
+    "memberId": "eetu-n",
+    "score": 3.0,
+    "bulletPoints": [
+      "Katsottu ennen desuconiin menoa",
+      "Klippejä nähty tiktokissa aikaisemmin",
+      "12 jaksoa katsottu",
+      "Kiinnostava story",
+      "Tuntuu kauhu-/trillerianimelta"
+    ],
+    "bestPick": "Anna/Nina (pelastettu kaksoissisko)",
+    "tags": []
+  },
+  {
+    "id": "monster-mikko",
+    "seriesId": "monster",
+    "memberId": "mikko",
+    "score": 4.8,
+    "bulletPoints": [
+      "Top 5 anime",
+      "Parhain kirjoitettu villain",
+      "Johan on erittäin voimakas henkilö henkisesti",
+      "Tarina on todella mielenkiintoinen",
+      "Trilleri + jännitys",
+      "Johan tietää kaiken",
+      "Hahmot tosi hyviä",
+      "Mikko on manipuloitu"
+    ],
+    "bestPick": "Lunge",
+    "tags": []
+  },
+  {
+    "id": "monster-jonni",
+    "seriesId": "monster",
+    "memberId": "jonni",
+    "score": 3.0,
+    "bulletPoints": [
+      "Lähes 90-luvun anime",
+      "Artstyle ei niin paha",
+      "Tosi hidas alku",
+      "Tumma, synkkä, ahdistava, trilleri"
+    ],
+    "bestPick": "Dieter",
+    "tags": []
   }
 ]

@@ -70,5 +70,6 @@
   { "id": "jujutsu-kaisen", "title": "Jujutsu Kaisen", "type": "anime", "clubSeason": 10, "watchedDate": "2026-04-26", "proposerId": "jp", "clubScore": 4.4, "bestPick": "Nanami Kento", "genreTags": [], "coverUrl": "" },
   { "id": "tower-of-god", "title": "Tower of God", "type": "anime", "clubSeason": 10, "watchedDate": "2026-05-11", "proposerId": "eetu-t", "clubScore": 3.1, "bestPick": "Ha Yuri Jahad", "genreTags": [], "coverUrl": "" },
   { "id": "chainsaw-man", "title": "Chainsaw Man", "type": "anime", "clubSeason": 10, "watchedDate": "2026-05-24", "proposerId": "mikko", "clubScore": 4.6, "bestPick": "Himeno", "genreTags": ["action", "horror", "comedy", "slice-of-life"], "coverUrl": "" },
-  { "id": "monster", "title": "Monster", "type": "anime", "clubSeason": 10, "watchedDate": "2026-06-14", "proposerId": "eetu-n", "clubScore": null, "bestPick": null, "genreTags": [], "coverUrl": "" }
+  { "id": "monster", "title": "Monster", "type": "anime", "clubSeason": 10, "watchedDate": "2026-06-14", "proposerId": "eetu-n", "clubScore": 3.6, "bestPick": "Dieter", "genreTags": [], "coverUrl": "" },
+  { "id": "witch-hat-atelier", "title": "Witch Hat Atelier", "type": "anime", "clubSeason": 10, "watchedDate": "2026-06-28", "proposerId": "jonni", "clubScore": null, "bestPick": null, "genreTags": [], "coverUrl": "" }
 ]
