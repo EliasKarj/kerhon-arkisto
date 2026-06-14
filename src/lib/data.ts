@@ -9,11 +9,15 @@ import reviewsData from "../../data/reviews.json";
 // AI-generoidut yhteenvedot (build-time, `npm run generate:summaries`).
 // Avain = seriesId, arvo = yhteenvetoteksti. Voi olla tyhjä.
 import summariesData from "../../data/summaries.json";
+// AniListista haetut kansikuvat (build-time, `npm run fetch:covers`).
+// Avain = seriesId, arvo = kuvan URL.
+import coversData from "../../data/covers.json";
 
 export const members: Member[] = membersData as Member[];
 export const series: Series[] = seriesData as Series[];
 export const reviews: Review[] = reviewsData as Review[];
 const summaries = summariesData as Record<string, string>;
+const covers = coversData as Record<string, string>;
 
 export function getMemberById(id: string): Member | undefined {
   return members.find((member) => member.id === id);
@@ -53,4 +57,9 @@ export function getSeriesByDateDesc(): Series[] {
 /** AI-generoitu yhteenveto sarjalle, tai null jos sitä ei ole vielä generoitu. */
 export function getSummaryForSeries(seriesId: string): string | null {
   return summaries[seriesId] ?? null;
+}
+
+/** Sarjan kansikuvan URL: ensisijaisesti datassa annettu, muuten haettu. */
+export function getCoverUrl(series: Series): string | null {
+  return series.coverUrl || covers[series.id] || null;
 }

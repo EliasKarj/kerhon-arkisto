@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getMemberById } from "@/lib/data";
+import { getCoverUrl, getMemberById } from "@/lib/data";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getSeriesAverageScore } from "@/lib/stats";
 import type { Series } from "@/lib/types";
@@ -8,6 +8,7 @@ import type { Series } from "@/lib/types";
 export function SeriesCard({ series }: { series: Series }) {
   const score = getSeriesAverageScore(series.id);
   const proposer = getMemberById(series.proposerId);
+  const cover = getCoverUrl(series);
 
   return (
     <Link
@@ -15,11 +16,12 @@ export function SeriesCard({ series }: { series: Series }) {
       className="group flex gap-4 rounded-lg border border-black/10 p-3 transition-colors hover:border-black/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/10 dark:hover:border-white/25"
     >
       <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden rounded bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-sm font-bold text-foreground/70">
-        {series.coverUrl ? (
+        {cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={series.coverUrl}
+            src={cover}
             alt={`${series.title} -kansikuva`}
+            loading="lazy"
             className="h-full w-full object-cover"
           />
         ) : (

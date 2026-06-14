@@ -108,6 +108,23 @@ Skripti lukee `data/`-tiedostot, kirjoittaa yhteenvedot ja `data/summaries.json`
 commitoidaan staattisena datana. Avainta ei koskaan tallenneta repoon
 (`.env*`-tiedostot ovat `.gitignore`ssa).
 
+## Kansikuvat
+
+Sarjojen kansikuvat haetaan **build-aikana** [AniList](https://anilist.co)-rajapinnasta
+(GraphQL, ilmainen, ei API-avainta) ja tallennetaan `data/covers.json`:iin
+(`{ seriesId: kuvaUrl }`). Sovellus ei hae kuvia ajon aikana — kuvat ladataan
+AniListin CDN:stä (`s4.anilist.co`) suoraan selaimeen.
+
+Päivitä kuvat tarvittaessa projektin juuresta:
+
+```bash
+npm run fetch:covers
+```
+
+Skripti hakee jokaiselle `series.json`:n sarjalle parhaan osuman (leffat suosivat
+MOVIE-muotoa, hankalille nimille on tarkemmat hakusanat) ja tulostaa osumat
+tarkistettavaksi. `data/covers.json` commitoidaan staattisena datana.
+
 ## Lisenssi
 
 [MIT](./LICENSE)

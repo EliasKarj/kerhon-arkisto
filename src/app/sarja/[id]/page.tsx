@@ -4,6 +4,7 @@ import { BestPickBarChart } from "@/components/charts/best-pick-bar-chart";
 import { MemberScoreRadar } from "@/components/charts/member-score-radar";
 import { ReviewCard } from "@/components/review-card";
 import {
+  getCoverUrl,
   getMemberById,
   getReviewsForSeries,
   getSeriesById,
@@ -37,6 +38,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   const score = getSeriesAverageScore(id);
   const proposer = getMemberById(series.proposerId);
   const summary = getSummaryForSeries(id);
+  const cover = getCoverUrl(series);
 
   const radarData = reviews.map((review) => ({
     member: getMemberById(review.memberId)?.name ?? review.memberId,
@@ -49,10 +51,10 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
       {/* Perustiedot */}
       <header className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
         <div className="flex aspect-[2/3] w-28 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-2xl font-bold text-foreground/70 sm:w-32">
-          {series.coverUrl ? (
+          {cover ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={series.coverUrl}
+              src={cover}
               alt={`${series.title} -kansikuva`}
               className="h-full w-full object-cover"
             />
