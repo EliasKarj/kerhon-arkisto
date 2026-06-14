@@ -7,6 +7,5 @@
   { "id": "henri", "name": "Henri", "avatarUrl": null },
   { "id": "benkku", "name": "Benkku", "avatarUrl": null },
   { "id": "jp", "name": "J-P", "avatarUrl": null },
-  { "id": "kossi", "name": "Kossi", "avatarUrl": null, "guest": true },
   { "id": "timi", "name": "Timi", "avatarUrl": null, "guest": true }
 ]
