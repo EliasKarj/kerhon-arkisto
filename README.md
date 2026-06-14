@@ -78,6 +78,32 @@ V1:n data on `data/`-kansiossa kolmessa tiedostossa: `members.json`,
 muokkaamalla näitä tiedostoja — tyypit (`src/lib/types.ts`) pitävät rakenteen
 kasassa.
 
+## AI-yhteenveto
+
+Sarjasivulla voi näkyä lyhyt tekoälyn tiivistämä yhteenveto kerhon arvioista.
+Yhteenvedot generoidaan **build-aikana** erillisellä skriptillä (Anthropic
+Claude, `claude-opus-4-8`) ja tallennetaan `data/summaries.json`:iin — sovellus
+ei kutsu mallia ajon aikana, joten sivusto pysyy täysin staattisena eikä
+API-avainta tarvita tuotannossa.
+
+Generointi vaatii Anthropic API -avaimen ympäristömuuttujana. Aja projektin
+juuresta:
+
+```powershell
+# PowerShell
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+npm run generate:summaries
+```
+
+```bash
+# bash
+ANTHROPIC_API_KEY=sk-ant-... npm run generate:summaries
+```
+
+Skripti lukee `data/`-tiedostot, kirjoittaa yhteenvedot ja `data/summaries.json`
+commitoidaan staattisena datana. Avainta ei koskaan tallenneta repoon
+(`.env*`-tiedostot ovat `.gitignore`ssa).
+
 ## Lisenssi
 
 [MIT](./LICENSE)

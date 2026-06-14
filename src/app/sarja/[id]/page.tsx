@@ -6,6 +6,7 @@ import {
   getMemberById,
   getReviewsForSeries,
   getSeriesById,
+  getSummaryForSeries,
   series as allSeries,
 } from "@/lib/data";
 import { getInitials, reviewCountLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
@@ -33,6 +34,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
     score: review.score,
   }));
   const bestPickData = getBestPickCounts(reviews);
+  const summary = getSummaryForSeries(id);
 
   return (
     <article className="flex flex-col gap-10">
@@ -78,6 +80,22 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           </div>
         </div>
       </header>
+
+      {/* AI-yhteenveto */}
+      {summary && (
+        <section
+          aria-label="AI-yhteenveto"
+          className="flex flex-col gap-2 rounded-lg border border-indigo-500/20 bg-indigo-500/5 p-5"
+        >
+          <h2 className="flex items-center gap-2 text-sm font-medium text-foreground/60">
+            <span aria-hidden>✨</span> AI-yhteenveto
+          </h2>
+          <p className="text-foreground/90">{summary}</p>
+          <p className="text-xs text-foreground/40">
+            Tekoälyn kerhon arvioista tiivistämä — voi sisältää epätarkkuuksia.
+          </p>
+        </section>
+      )}
 
       {/* Kaaviot */}
       <div className="grid gap-8 md:grid-cols-2">
