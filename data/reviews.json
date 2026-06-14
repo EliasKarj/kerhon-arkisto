@@ -565,5 +565,492 @@
     ],
     "bestPick": "Honey",
     "tags": []
+  },
+
+  {
+    "id": "frieren-eetu-t",
+    "seriesId": "frieren",
+    "memberId": "eetu-t",
+    "score": 4.4,
+    "bulletPoints": [
+      "Alku hidas",
+      "Erittäin hyvä musiikki, aivan top tier",
+      "Artstyle hyvä",
+      "Unc reminiscing",
+      "Dwarf GOAT"
+    ],
+    "bestPick": "Dwarf",
+    "tags": []
+  },
+  {
+    "id": "frieren-henri",
+    "seriesId": "frieren",
+    "memberId": "henri",
+    "score": 4.8,
+    "bulletPoints": [
+      "Comfort",
+      "Source of all of my DnD inspiration",
+      "Love the character development",
+      "Music is the GOAT"
+    ],
+    "bestPick": "Flamme",
+    "tags": []
+  },
+  {
+    "id": "frieren-eetu-n",
+    "seriesId": "frieren",
+    "memberId": "eetu-n",
+    "score": 4.7,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Tykkäsi",
+      "Maailma hyvin luotu",
+      "Hyviä hahmoja",
+      "Puhutaan kuolemattomuudesta ja ajan kulusta",
+      "Dio-ääninäyttelijä löydetty",
+      "Artstyle hyvä"
+    ],
+    "bestPick": "Flamme",
+    "tags": []
+  },
+  {
+    "id": "frieren-aki",
+    "seriesId": "frieren",
+    "memberId": "aki",
+    "score": 4.3,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Todella hidastemponen alkuun",
+      "Character dynamic oli hauska",
+      "Tarina ja musiikki hyvää ja mielenkiintoista"
+    ],
+    "bestPick": "Flamme",
+    "tags": []
+  },
+  {
+    "id": "frieren-benkku",
+    "seriesId": "frieren",
+    "memberId": "benkku",
+    "score": 4.4,
+    "bulletPoints": [
+      "Paras kohtaus kun Fern pyytää vahvalta elfiltä vaatteiden puhtaanapitotaian",
+      "Anime jossa kerrotaan henkilöiden kasvusta",
+      "Helvetin hyvä",
+      "Ei oikeestaan mitään negatiivista"
+    ],
+    "bestPick": "Serie",
+    "tags": []
+  },
+  {
+    "id": "frieren-mikko",
+    "seriesId": "frieren",
+    "memberId": "mikko",
+    "score": 4.8,
+    "bulletPoints": [
+      "Katsottu kun se tuli",
+      "BIS Anime",
+      "GLAZE",
+      "Tarina erittäin hyvä",
+      "Ajan kulku iso teema",
+      "Sopiva tempo",
+      "Slice of life seikkailua",
+      "Artstyle ja musiikki todella hyvä",
+      "Hahmojen tarinankerronta todella hyvä",
+      "Top 5 anime"
+    ],
+    "bestPick": "Fern",
+    "tags": []
+  },
+  {
+    "id": "frieren-jp",
+    "seriesId": "frieren",
+    "memberId": "jp",
+    "score": 5.0,
+    "bulletPoints": [
+      "On se ny GOAT",
+      "Hyvä sarja, hyvä animaatio",
+      "Badabim Badabum",
+      "Ei ehkä top 5, silti erittäin hyvä",
+      "Maailma oli cool"
+    ],
+    "bestPick": "Fern",
+    "tags": []
+  },
+  {
+    "id": "frieren-jonni",
+    "seriesId": "frieren",
+    "memberId": "jonni",
+    "score": 4.7,
+    "bulletPoints": [
+      "Soundtrack godtier",
+      "Comfort anime",
+      "Alussa hidas",
+      "Ehdottomasti top 5, ehkä top 3"
+    ],
+    "bestPick": "Frieren",
+    "tags": []
+  },
+
+  {
+    "id": "demon-slayer-aki",
+    "seriesId": "demon-slayer",
+    "memberId": "aki",
+    "score": 4.3,
+    "bulletPoints": [
+      "Hyvä anime",
+      "Artstyle kiva",
+      "Tarina mielenkiintoinen"
+    ],
+    "bestPick": "Mitsuri",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-benkku",
+    "seriesId": "demon-slayer",
+    "memberId": "benkku",
+    "score": 3.0,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Peli oli mielenkiintoisempi",
+      "Anime mielenkiintoinen",
+      "Hyvä shonen (cannot go wrong with shonen)",
+      "Päähenkilö ei vässykkä"
+    ],
+    "bestPick": "Nezuko",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-henri",
+    "seriesId": "demon-slayer",
+    "memberId": "henri",
+    "score": 4.7,
+    "bulletPoints": [
+      "Trio comedy gold",
+      "Shonen",
+      "Verse kiinnosti",
+      "Artstyle",
+      "Fightit paranee sarjassa"
+    ],
+    "bestPick": "Gyomei Himejima",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-eetu-n",
+    "seriesId": "demon-slayer",
+    "memberId": "eetu-n",
+    "score": 4.5,
+    "bulletPoints": [
+      "Kattonu koko animen mitä on tullu",
+      "Artstylestä tykkää",
+      "Jonkinlaisen plot armorin huomaa joissain tilanteissa",
+      "Tappelukohtaukset kivoja"
+    ],
+    "bestPick": "Insect Hashira",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-jonni",
+    "seriesId": "demon-slayer",
+    "memberId": "jonni",
+    "score": 4.7,
+    "bulletPoints": [
+      "Ensimmäinen vähän pidempi anime one piecen jälkeen",
+      "Tykkäsi",
+      "Animaatio hyvä (2D + 3D)",
+      "Tarina hyvä",
+      "Plot armor antaa miinusta",
+      "Eteni alussa todella nopeasti",
+      "Vaikka Tanjiro on ylivoimainen, ei pärjää niin hyvin"
+    ],
+    "bestPick": "Insect Hashira",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-eetu-t",
+    "seriesId": "demon-slayer",
+    "memberId": "eetu-t",
+    "score": 4.3,
+    "bulletPoints": [
+      "14 jaksoa katsottu",
+      "Oli hyvä"
+    ],
+    "bestPick": "Läski Demoni",
+    "tags": []
+  },
+  {
+    "id": "demon-slayer-jp",
+    "seriesId": "demon-slayer",
+    "memberId": "jp",
+    "score": 4.8,
+    "bulletPoints": [
+      "Koko kausi katsottu",
+      "Päähahmokopla vitu hyvä",
+      "Ainoo miinus: alku liian nopee ja surullinen",
+      "Kickstart oli hyvä mut alku liian nopee",
+      "Metsä-alue pog (kauhuelementit)"
+    ],
+    "bestPick": "Nezuko",
+    "tags": []
+  },
+
+  {
+    "id": "nana-aki",
+    "seriesId": "nana",
+    "memberId": "aki",
+    "score": 2.5,
+    "bulletPoints": [
+      "Puolittain katsonut animea",
+      "Se oli tommonen jännä romanssi",
+      "Ei oikeen sytyttäny kauheesti",
+      "Artstyle ok",
+      "Ei ollut niin mieleenpainuva"
+    ],
+    "bestPick": "Nana Osaki",
+    "tags": []
+  },
+  {
+    "id": "nana-benkku",
+    "seriesId": "nana",
+    "memberId": "benkku",
+    "score": 4.7,
+    "bulletPoints": [
+      "Pitkästä aikaa anime joka on hidas",
+      "Aikaa humanismille",
+      "Vähän masentavia kohtauksia",
+      "Ei mitään liian fucked up",
+      "Tuntui enemmän draamalta kuin romanssilta",
+      "Yuri aspect outo mutta ei tuntunu siltä"
+    ],
+    "bestPick": "Hachi",
+    "tags": []
+  },
+  {
+    "id": "nana-eetu-n",
+    "seriesId": "nana",
+    "memberId": "eetu-n",
+    "score": 5.0,
+    "bulletPoints": [
+      "On lukenut aikasemmin",
+      "Hidas alku",
+      "31 jaksoa katsottu",
+      "On ollu hyvä",
+      "Musiikki on kova sana",
+      "Paras drama romance mitä katsottu hetkeen"
+    ],
+    "bestPick": "Nana Osaki",
+    "tags": []
+  },
+  {
+    "id": "nana-mikko",
+    "seriesId": "nana",
+    "memberId": "mikko",
+    "score": 4.5,
+    "bulletPoints": [
+      "Katsoi kokonaan",
+      "Katsottu jopa retrospective animesta ja mangasta",
+      "Todella hyvä",
+      "Top 10 anime",
+      "Vibat Monsterista tyylillisesti",
+      "Musiikki erittäin hyvä (Spotify lisätty)",
+      "Ihmissuhteita, väriä, draamaa, melankoliaa, masennusta, self-worthia, rakkautta",
+      "Ei mitenkään yuri tai romance, vaan hard drama"
+    ],
+    "bestPick": "Leila",
+    "tags": []
+  },
+
+  {
+    "id": "odd-taxi-eetu-n",
+    "seriesId": "odd-taxi",
+    "memberId": "eetu-n",
+    "score": 4.0,
+    "bulletPoints": [
+      "Luultiin wholesomiksi, mutta muuttu ääni kellossa",
+      "Hahmot hyvä",
+      "Musiikki hyvä",
+      "Tarina hyvä",
+      "Artstyle senaikanen"
+    ],
+    "bestPick": "Dobu",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-aki",
+    "seriesId": "odd-taxi",
+    "memberId": "aki",
+    "score": 3.9,
+    "bulletPoints": [
+      "Mielenkiintoinen",
+      "Masentava",
+      "Hyvä tarina",
+      "Kellään ei menny hyvin paitsi se joka voitti lotossa"
+    ],
+    "bestPick": "Dobu",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-jonni",
+    "seriesId": "odd-taxi",
+    "memberId": "jonni",
+    "score": 4.2,
+    "bulletPoints": [
+      "Tykkäsi",
+      "Yllättävä",
+      "Ei actionia, mutta jännitystä",
+      "Piti pysyä hereillä",
+      "Kaikki liittyi toisiinsa"
+    ],
+    "bestPick": "Sensei gorilla",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-eetu-t",
+    "seriesId": "odd-taxi",
+    "memberId": "eetu-t",
+    "score": 3.8,
+    "bulletPoints": [
+      "Tylsä alussa",
+      "Aika perushyvä, ei huono",
+      "Animaatio hyvä, uudempi ja moderni",
+      "Tarina alussa hidas, myöhemmin yllättävä",
+      "Hyvä loppu"
+    ],
+    "bestPick": "Shirakawa",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-benkku",
+    "seriesId": "odd-taxi",
+    "memberId": "benkku",
+    "score": 4.2,
+    "bulletPoints": [
+      "Musiikki oli rakastettavaa",
+      "Manzai mahtavaa",
+      "Helvetin hyvin kerrottu tarina"
+    ],
+    "bestPick": "Shirakawa",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-henri",
+    "seriesId": "odd-taxi",
+    "memberId": "henri",
+    "score": 4.1,
+    "bulletPoints": [
+      "Tykkäsin"
+    ],
+    "bestPick": "Shirakawa",
+    "tags": []
+  },
+  {
+    "id": "odd-taxi-mikko",
+    "seriesId": "odd-taxi",
+    "memberId": "mikko",
+    "score": 4.0,
+    "bulletPoints": [
+      "Trauman näkökulmasta lähettiin animea rakentaa",
+      "Alussa hidasta, onneksi pickup myöhemmin",
+      "Pieniä tarinoita, jotka lopussa yhteen",
+      "Piikkisika Yano: SUURI VIHA TÄTÄ HENKILÖÄ KOHTAAN",
+      "Musiikki ei mieleenpainuvaa",
+      "Artstyle lastenohjelmamainen, mutta ei haitannu",
+      "Tarina kantoi eniten"
+    ],
+    "bestPick": "Shirakawa",
+    "tags": []
+  },
+
+  {
+    "id": "tokyo-revengers-aki",
+    "seriesId": "tokyo-revengers",
+    "memberId": "aki",
+    "score": 4.0,
+    "bulletPoints": [
+      "Tykkäsi animesta, mielenkiintoinen konsepti",
+      "Perus kouluhakkaus anime",
+      "Päähahmo vässykkä",
+      "Tarina koukuttava",
+      "Fuck Tessi",
+      "Artstyle mukava"
+    ],
+    "bestPick": "Future Hina",
+    "tags": []
+  },
+  {
+    "id": "tokyo-revengers-henri",
+    "seriesId": "tokyo-revengers",
+    "memberId": "henri",
+    "score": 4.3,
+    "bulletPoints": [
+      "Tunteisiin hyökkäävä",
+      "Hyvä juoni",
+      "Karkasi kaikelta"
+    ],
+    "bestPick": "Future Hina",
+    "tags": []
+  },
+  {
+    "id": "tokyo-revengers-eetu-t",
+    "seriesId": "tokyo-revengers",
+    "memberId": "eetu-t",
+    "score": 3.9,
+    "bulletPoints": [
+      "Tänään katsottu vaihtelevilla nopeuksilla",
+      "Ei kiinnostanu katsoa alussa yhtään animea",
+      "Mitä pidemmälle mentiin sen parempi",
+      "Tunteellinen ja actionia",
+      "Musiikista ei erityistä",
+      "Hyvä animaatio"
+    ],
+    "bestPick": "Future Hina",
+    "tags": []
+  },
+  {
+    "id": "tokyo-revengers-benkku",
+    "seriesId": "tokyo-revengers",
+    "memberId": "benkku",
+    "score": 3.6,
+    "bulletPoints": [
+      "Nykyään tämä konsepti on aika yleistä, yleisesti manhwassa",
+      "Juoni ei uusi ideana",
+      "Ei niin ihmeellinen koska parempi versio tästä nähty",
+      "Artstyle basic",
+      "Musiikki, erityisesti opening, hyvä",
+      "Tarina voisi olla parempi"
+    ],
+    "bestPick": "Future Hina",
+    "tags": []
+  },
+  {
+    "id": "tokyo-revengers-eetu-n",
+    "seriesId": "tokyo-revengers",
+    "memberId": "eetu-n",
+    "score": 4.2,
+    "bulletPoints": [
+      "Lempianimeista",
+      "Lukenut kokonaan ja katsonut kokonaan",
+      "Kaverillisuus oli hyvin luotu",
+      "Musiikki hyvä",
+      "Tuntuu kuin dragonballissa että jengi tappelee pitkään ja ihmiset kehittyy"
+    ],
+    "bestPick": "Inubi",
+    "tags": []
+  },
+  {
+    "id": "tokyo-revengers-mikko",
+    "seriesId": "tokyo-revengers",
+    "memberId": "mikko",
+    "score": 3.6,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Tarina hyvä ja tykkäsi",
+      "Aluks fiilis et tää ois ku re:life",
+      "Ehkä vähä turtunu et jengi on super op, oli hyvä et oli aitoo tappeluu",
+      "Artstyle perus",
+      "Musiikki ei mitään ihmeellistä",
+      "Drama tosi hyvää"
+    ],
+    "bestPick": "Future Hina",
+    "tags": []
   }
 ]
