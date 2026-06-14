@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SeriesCard } from "@/components/series-card";
 import {
+  getBestPickImage,
   getCoverUrl,
   getMemberById,
   getSeriesByDateDesc,
@@ -36,6 +37,7 @@ export default function HomePage() {
   const latestRated = seriesByRecency.find(
     (entry) => entry.clubScore !== null && entry.bestPick !== null,
   );
+  const latestRatedImage = latestRated ? getBestPickImage(latestRated.id) : null;
 
   return (
     <div className="flex flex-col gap-10">
@@ -152,13 +154,34 @@ export default function HomePage() {
         </div>
 
         {latestRated && (
-          <div className="flex flex-col gap-1 rounded-lg border border-black/10 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 p-5 dark:border-white/10">
-            <span className="text-sm text-foreground/60">
-              Best girl/boy — {latestRated.title}
-            </span>
-            <span className="text-3xl font-bold">{latestRated.bestPick}</span>
-            <span className="text-sm text-foreground/50">viimeisimmästä arvioidusta sarjasta</span>
-          </div>
+          <Link
+            href={`/sarja/${latestRated.id}`}
+            className="group flex items-center gap-4 rounded-lg border border-black/10 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 p-5 transition-colors hover:border-black/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/10 dark:hover:border-white/25"
+          >
+            <div className="flex aspect-[3/4] w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-base font-bold text-foreground/70">
+              {latestRatedImage ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={latestRatedImage}
+                  alt={`${latestRated.bestPick} -hahmokuva`}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <span aria-hidden>{getInitials(latestRated.bestPick ?? latestRated.title)}</span>
+              )}
+            </div>
+            <div className="flex min-w-0 flex-col gap-0.5">
+              <span className="text-sm text-foreground/60">
+                Best girl/boy — {latestRated.title}
+              </span>
+              <span className="text-2xl font-bold group-hover:underline">
+                {latestRated.bestPick}
+              </span>
+              <span className="text-sm text-foreground/50">
+                viimeisimmästä arvioidusta sarjasta
+              </span>
+            </div>
+          </Link>
         )}
       </section>
 
