@@ -91,5 +91,479 @@
     ],
     "bestPick": "Himeno",
     "tags": ["mohoo"]
+  },
+
+  {
+    "id": "tog-eetu-t",
+    "seriesId": "tower-of-god",
+    "memberId": "eetu-t",
+    "score": 2.0,
+    "bulletPoints": [
+      "Järkyttävä artstyle",
+      "Aivan kuin 5-vuotias piirtäny",
+      "Musiikki mitäänsanomaton",
+      "SAO tyylinen",
+      "Tilanne passivoitu (kuivaa möhöö)",
+      "Not a fan",
+      "Lopussa hyvä plot twist",
+      "Mid anime",
+      "Artstyle ahisti niin kovaa et se vitutti"
+    ],
+    "bestPick": "Endorsi Jahad",
+    "tags": []
+  },
+  {
+    "id": "tog-kossi",
+    "seriesId": "tower-of-god",
+    "memberId": "kossi",
+    "score": 4.2,
+    "bulletPoints": [
+      "1 of 3 top manhwas",
+      "Anime on alunperin crunchyrollin publishaama",
+      "Käyttäny alkuperästä artstyleä manhwasta",
+      "Mixed opinions",
+      "Tarinallisesti hyvä",
+      "Comfort manga",
+      "Maailmanluontia alussa hidasta"
+    ],
+    "bestPick": "Ha Yuri Jahad",
+    "tags": []
+  },
+  {
+    "id": "tog-eetu-n",
+    "seriesId": "tower-of-god",
+    "memberId": "eetu-n",
+    "score": 4.0,
+    "bulletPoints": [
+      "Tykännyt animesta since episode 1",
+      "Musiikki hienoa",
+      "Artstyle on omalaatuinen",
+      "Hahmojen luonti hyvä",
+      "Maailma on hyvin luotu",
+      "Juoni koukuttava"
+    ],
+    "bestPick": "Endorsi Jahad",
+    "tags": []
+  },
+  {
+    "id": "tog-mikko",
+    "seriesId": "tower-of-god",
+    "memberId": "mikko",
+    "score": 3.3,
+    "bulletPoints": [
+      "Kokonaan katsottu",
+      "Samoja mielipiteitä kuin muilla",
+      "Artstyle tuntui keskeneräseltä",
+      "Musiikki on erittäin hyvä",
+      "Välillä tuntui siltä että sinihiuksinen tyyppi on päähahmo",
+      "Rachel oli sus koko ajan",
+      "Hyvä base kaudelle 2",
+      "Solid anime"
+    ],
+    "bestPick": "Laure Phonsecal",
+    "tags": []
+  },
+  {
+    "id": "tog-jp",
+    "seriesId": "tower-of-god",
+    "memberId": "jp",
+    "score": 2.8,
+    "bulletPoints": [
+      "Eka jakso oli hyvä",
+      "Ötökät oli hyviä",
+      "Pokemon lintu oli hyvä",
+      "Eläimet hyvii",
+      "Artstyle keskeneräsen tuntuinen",
+      "Kouluanime disguised as möhöanime",
+      "Olis ollu kivempi jos olis menny eteenpäin orgaanisemmin",
+      "Hauskoja hahmoja"
+    ],
+    "bestPick": "Rak",
+    "tags": []
+  },
+  {
+    "id": "tog-jonni",
+    "seriesId": "tower-of-god",
+    "memberId": "jonni",
+    "score": 3.2,
+    "bulletPoints": [
+      "Paljon yap",
+      "Vähän möhöö",
+      "Hyvälaatusta möhöö",
+      "Refreshing uus artstyle",
+      "Mielenkiintoinen take",
+      "Alku oli paljon parempi kuin loppu",
+      "Ei mikään älyttömän hyvä mutta ei huonokaan"
+    ],
+    "bestPick": "Leroro",
+    "tags": []
+  },
+  {
+    "id": "tog-henri",
+    "seriesId": "tower-of-god",
+    "memberId": "henri",
+    "score": 2.5,
+    "bulletPoints": [
+      "Artstyle uniikki",
+      "Puolikeskittyen katsottu",
+      "Tarina hyvä",
+      "Musiikki hyvä",
+      "Rachel kusipää"
+    ],
+    "bestPick": "Ha Yuri Jahad",
+    "tags": []
+  },
+
+  {
+    "id": "jjk-aki",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "aki",
+    "score": 4.5,
+    "bulletPoints": [
+      "Jujutsu kaisen the goat",
+      "Katsottu lähes kaikki seasonit mitkä on tullut",
+      "Tykätty overall",
+      "Hyvä artstyle",
+      "Tarina mielenkiintoinen ja hyvä"
+    ],
+    "bestPick": "Gojo Satoru",
+    "tags": []
+  },
+  {
+    "id": "jjk-eetu-n",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "eetu-n",
+    "score": 4.5,
+    "bulletPoints": [
+      "Leffaan asti katsottu",
+      "Intro ja outro goated",
+      "Kaikki MAPPA animet on hyviä",
+      "Hyvä tarina",
+      "Musiikki hyvää",
+      "Omanlainen huumori",
+      "Gojo satoru goated"
+    ],
+    "bestPick": "Itadori Yuji",
+    "tags": []
+  },
+  {
+    "id": "jjk-mikko",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "mikko",
+    "score": 4.3,
+    "bulletPoints": [
+      "Aikasemmin eka kausi katsottu kokonaan",
+      "Musiikki goated",
+      "Tosi paljon möhöö",
+      "Tosi hyvää möhöö",
+      "Todo secret ability boogie woogie oli hauska",
+      "Story oli hyvä"
+    ],
+    "bestPick": "Todo",
+    "tags": []
+  },
+  {
+    "id": "jjk-jp",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "jp",
+    "score": 4.0,
+    "bulletPoints": [
+      "13 jaksoo katsottu",
+      "Iha hyvä",
+      "Tuli paljon mieleen solo leveling",
+      "Ei näkyny pointtii storyssa",
+      "Gojo too OP",
+      "Kaikki mitä tapahtuu nii on useless"
+    ],
+    "bestPick": "Gojo Satoru",
+    "tags": []
+  },
+  {
+    "id": "jjk-jonni",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "jonni",
+    "score": 4.8,
+    "bulletPoints": [
+      "Goated anime",
+      "1 jaksosta eteenpäin aivan hooked",
+      "Just semmonen sopivan tyylinen shonen",
+      "Päähahmo on OP",
+      "Tarina hyvä",
+      "Supernatural efektit on kivoja",
+      "Sukuna on älyttömän siisti konsepti",
+      "Koko idea siisti",
+      "Domain expansionit on siisti",
+      "Artstyle perus",
+      "Uniikkeja hahmot"
+    ],
+    "bestPick": "Nanami Kento",
+    "tags": []
+  },
+  {
+    "id": "jjk-henri",
+    "seriesId": "jujutsu-kaisen",
+    "memberId": "henri",
+    "score": 4.0,
+    "bulletPoints": [
+      "Hyvä anime",
+      "Pintaraapaisu tulevaan",
+      "Paljon uniikkeja hahmoja",
+      "Paljon uniikkeja voimia"
+    ],
+    "bestPick": "Nanami Kento",
+    "tags": []
+  },
+
+  {
+    "id": "overlord-mikko",
+    "seriesId": "overlord",
+    "memberId": "mikko",
+    "score": 3.0,
+    "bulletPoints": [
+      "Isekai on doggy",
+      "Päähahmo op on ass koska jos sielt tulee joku kauhee vaikee vastustaja se silti voittaa sen",
+      "Luulohari näytti goofyltä",
+      "Hyvin möhöö ja goonaamista",
+      "Meni pahisnäkökulma baittiin",
+      "Banger intro ja outro"
+    ],
+    "bestPick": "Albedo",
+    "tags": []
+  },
+  {
+    "id": "overlord-jonni",
+    "seriesId": "overlord",
+    "memberId": "jonni",
+    "score": 3.0,
+    "bulletPoints": [
+      "Päähahmo ei kuole joten hiinä ja hiinä onko isekai",
+      "Ei päässy ineen",
+      "Koko homma jäi piippuun",
+      "Hahmo oli op mut ei hyvällä tavalla kuten Saitama",
+      "Introa tämä mies ei katsonut kertaakaan"
+    ],
+    "bestPick": "Albedo",
+    "tags": []
+  },
+  {
+    "id": "overlord-eetu-n",
+    "seriesId": "overlord",
+    "memberId": "eetu-n",
+    "score": 3.5,
+    "bulletPoints": [
+      "Katsoi 12 jaksoa yöllä kamun kanssa goonatessa joten ei katsonut lopputaistelua",
+      "Outro löytyy Spotify-listalta sheesh",
+      "Jännä että käytettiin 3D:tä",
+      "Goonaus-kohdat oli parhaita, muisti parhaiten bodypillow-kohdan",
+      "Ihan kiva tommonen tyypillinen seikkailufantasia op plot armor -tyypillä"
+    ],
+    "bestPick": "Mare",
+    "tags": []
+  },
+  {
+    "id": "overlord-aki",
+    "seriesId": "overlord",
+    "memberId": "aki",
+    "score": 3.8,
+    "bulletPoints": [
+      "Nähnyt jo aiemmin kaikki 4 kautta",
+      "Ihan hauska tommonen äijä jumissa pelissä, hijinx sewers tyypillistä isekai-juttua",
+      "Artstyle decent, perus"
+    ],
+    "bestPick": "Albedo",
+    "tags": []
+  },
+
+  {
+    "id": "steins-eetu-t",
+    "seriesId": "steins-gate",
+    "memberId": "eetu-t",
+    "score": 3.5,
+    "bulletPoints": [
+      "Tänään katsottu 1,5x",
+      "12 jakson vika kohtaus aika käänteentekevä",
+      "Tylsät jaksot",
+      "Taru goonaaja on goatti",
+      "Olisi pitänyt katsoa ajatuksella",
+      "Outro sytytti"
+    ],
+    "bestPick": "Taru",
+    "tags": []
+  },
+  {
+    "id": "steins-henri",
+    "seriesId": "steins-gate",
+    "memberId": "henri",
+    "score": 4.8,
+    "bulletPoints": [
+      "Useampaan kertaan yrittäny katsoa",
+      "Pakko katsoa tämä anime",
+      "Hooked",
+      "Hyvä aikamatkustusteoreema",
+      "Chef's kiss"
+    ],
+    "bestPick": "Makise Kurisu",
+    "tags": []
+  },
+  {
+    "id": "steins-mikko",
+    "seriesId": "steins-gate",
+    "memberId": "mikko",
+    "score": 4.8,
+    "bulletPoints": [
+      "Tänään katsottu loppuun",
+      "Top 5 anime",
+      "Erittäin hyvä tarina",
+      "Alkupuolisko tylsähkö, mutta hyvä mysteeri",
+      "Loi tosi hyvän pohjan loppupuoliskolle",
+      "Kyyneleitä tippui",
+      "Hahmot todella hyvä",
+      "Parhaiten tehty aikamatkustus"
+    ],
+    "bestPick": "Makise Kurisu",
+    "tags": []
+  },
+  {
+    "id": "steins-eetu-n",
+    "seriesId": "steins-gate",
+    "memberId": "eetu-n",
+    "score": 3.7,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Jää kesken siinä 12 jakson kohdalla",
+      "Kiva buildup",
+      "Kivoja hahmoja tehty",
+      "Aikamatkustus hyvin tehty",
+      "Devastating kun femboy ei ollukkaa mies"
+    ],
+    "bestPick": "Luka Urushibara",
+    "tags": []
+  },
+  {
+    "id": "steins-benkku",
+    "seriesId": "steins-gate",
+    "memberId": "benkku",
+    "score": 5.0,
+    "bulletPoints": [
+      "Tämä on just sitä melankoliaa mitä benkku rakastaa",
+      "Ekaa kertaa katsottu päivää ennen ylppäreitä",
+      "Huge nostalgia",
+      "Helvetin hyvä anime-adaptaatio",
+      "Miten päähenkilön oma fiktiivinen persoonallisuus hajoaa",
+      "Mayushii helvetin hyvin kerrottu hahmo",
+      "Animaatiotyyli on mikä on"
+    ],
+    "bestPick": "Makise Kurisu",
+    "tags": []
+  },
+  {
+    "id": "steins-aki",
+    "seriesId": "steins-gate",
+    "memberId": "aki",
+    "score": 4.3,
+    "bulletPoints": [
+      "Tarina oli hyvä",
+      "Hauska hyvä mysteeri",
+      "Artstyle iha hyvä",
+      "Intro GOAT"
+    ],
+    "bestPick": "Makise Kurisu",
+    "tags": []
+  },
+
+  {
+    "id": "dandy-jonni",
+    "seriesId": "space-dandy",
+    "memberId": "jonni",
+    "score": 2.5,
+    "bulletPoints": [
+      "Akin valitsema anime",
+      "Näki artstylesta",
+      "Sitcomin kaltainen",
+      "Yksi jakso, yksi tarina",
+      "Hieman ihmeellinen konsepti että kamut kuolee joka jakso",
+      "Äveri booba hommia",
+      "Not my type of thing",
+      "Mitäänsanomaton"
+    ],
+    "bestPick": "Honey",
+    "tags": []
+  },
+  {
+    "id": "dandy-mikko",
+    "seriesId": "space-dandy",
+    "memberId": "mikko",
+    "score": 3.2,
+    "bulletPoints": [
+      "13 jaksoa katsottu",
+      "Samalta producerilta kuin cowboy bebop ja samurai champloo",
+      "Kommellukset uusien lajien löytämiseen",
+      "Lempijakso 9, toinen paras jakso 10",
+      "Aki-huumoria",
+      "Fan servicea erittäin paljon"
+    ],
+    "bestPick": "Honey",
+    "tags": []
+  },
+  {
+    "id": "dandy-eetu-n",
+    "seriesId": "space-dandy",
+    "memberId": "eetu-n",
+    "score": 3.7,
+    "bulletPoints": [
+      "Kokonaan katsottu",
+      "Rick and Morty vibes",
+      "Avaruussekoilua ja aina uutta",
+      "Kiva artstyle",
+      "Vitosjakso oli hyvä musiikkikohta",
+      "Ramen-jakso erittäin hauska",
+      "Sitcom gooner anime"
+    ],
+    "bestPick": "Honey",
+    "tags": []
+  },
+  {
+    "id": "dandy-benkku",
+    "seriesId": "space-dandy",
+    "memberId": "benkku",
+    "score": 4.0,
+    "bulletPoints": [
+      "Paras jakso zombie-jakso",
+      "13 jaksoa katsottu",
+      "Iso juttu AMV-scenessä",
+      "Hyvin akipohjainen",
+      "Slapstick-huumoria",
+      "Kunhan vaan on hauskaa nii mennää eteenpäin"
+    ],
+    "bestPick": "Honey",
+    "tags": []
+  },
+  {
+    "id": "dandy-henri",
+    "seriesId": "space-dandy",
+    "memberId": "henri",
+    "score": 4.0,
+    "bulletPoints": [
+      "Absurdi race-jakso",
+      "Mitä vittua -ilme koko ajan",
+      "Pimeällä puolella joskus"
+    ],
+    "bestPick": "QT",
+    "tags": []
+  },
+  {
+    "id": "dandy-aki",
+    "seriesId": "space-dandy",
+    "memberId": "aki",
+    "score": 4.7,
+    "bulletPoints": [
+      "Musiikkivideo tuli vastaan ja tästä inspiraatio ehdottaa anime",
+      "Absurdi ja tyhmä huumori sytyttää",
+      "Sitcom anime, absurdi",
+      "Visuaalisesti tosi hyvä",
+      "Parhaat jaksot: zombie-jakso, race-jakso ja eka jakso"
+    ],
+    "bestPick": "Honey",
+    "tags": []
   }
 ]
