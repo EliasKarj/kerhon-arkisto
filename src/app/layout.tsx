@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -30,12 +31,12 @@ export default function RootLayout({
   return (
     <html
       lang="fi"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <a
           href="#sisalto"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-foreground focus:px-3 focus:py-2 focus:text-background focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-foreground focus:bg-accent focus:px-3 focus:py-2 focus:font-semibold focus:text-background"
         >
           Siirry sisältöön
         </a>
@@ -47,8 +48,8 @@ export default function RootLayout({
         >
           {children}
         </main>
-        <footer className="border-t border-black/10 dark:border-white/10">
-          <div className="mx-auto w-full max-w-5xl px-4 py-6 text-sm text-foreground/60 sm:px-6">
+        <footer className="border-t-2 border-foreground">
+          <div className="mx-auto w-full max-w-5xl px-4 py-6 text-sm font-medium uppercase tracking-wide text-muted sm:px-6">
             Kerhon Arkisto — kaveriporukan arvioarkisto.
           </div>
         </footer>

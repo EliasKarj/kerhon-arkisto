@@ -13,7 +13,7 @@ import {
 import type { CountEntry } from "@/lib/stats";
 import { ChartFrame } from "./chart-frame";
 
-const ACCENT = "#6366f1";
+const ACCENT = "#c6f000";
 
 /** Best girl/boy -äänten jakauma pylväskaaviona. */
 export function BestPickBarChart({ data }: { data: CountEntry[] }) {

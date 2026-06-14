@@ -13,15 +13,15 @@ export default function MembersIndexPage() {
   return (
     <section className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Jäsenet</h1>
-        <p className="max-w-prose text-foreground/70">
+        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Jäsenet</h1>
+        <p className="max-w-prose text-muted">
           Kerhon arvioijat. Avaa jäsen nähdäksesi hänen ehdotuksensa, arvionsa ja best girl/boy
           -valintansa.
         </p>
       </div>
 
       <div className="flex flex-col gap-4">
-        <h2 className="text-lg font-semibold">Viralliset jäsenet</h2>
+        <h2 className="sec-title w-fit text-lg">Viralliset jäsenet</h2>
         <ul className="grid gap-4 sm:grid-cols-2">
           {official.map((member) => (
             <li key={member.id}>
@@ -33,7 +33,7 @@ export default function MembersIndexPage() {
 
       {guests.length > 0 && (
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg font-semibold">Vieraat</h2>
+          <h2 className="sec-title w-fit text-lg">Vieraat</h2>
           <ul className="grid gap-4 sm:grid-cols-2">
             {guests.map((member) => (
               <li key={member.id}>

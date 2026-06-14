@@ -1,5 +1,5 @@
 function Bar({ className }: { className?: string }) {
-  return <div className={`animate-pulse rounded bg-foreground/10 ${className ?? ""}`} />;
+  return <div className={`animate-pulse border-2 border-foreground/30 bg-panel ${className ?? ""}`} />;
 }
 
 /** Yleinen latausnäkymä detail-sivuille (loading.tsx). */

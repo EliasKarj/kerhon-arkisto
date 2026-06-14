@@ -16,26 +16,25 @@ export const metadata: Metadata = {
 function SeriesRanking({ title, entries }: { title: string; entries: Series[] }) {
   return (
     <section className="flex flex-col gap-4">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <ol className="flex flex-col gap-2">
+      <h2 className="sec-title w-fit text-lg">{title}</h2>
+      <ol className="surface-flat flex flex-col divide-y-2 divide-foreground/15">
         {entries.map((entry, index) => (
-          <li
-            key={entry.id}
-            className="flex items-center gap-3 rounded-lg border border-black/10 p-3 dark:border-white/10"
-          >
-            <span className="w-6 shrink-0 text-center text-sm font-semibold tabular-nums text-foreground/50">
+          <li key={entry.id} className="flex items-center gap-3 px-4 py-3">
+            <span className="w-6 shrink-0 text-center font-mono text-sm font-bold text-muted">
               {index + 1}
             </span>
             <div className="flex min-w-0 flex-1 flex-col">
               <Link
                 href={`/sarja/${entry.id}`}
-                className="truncate rounded font-medium hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                className="truncate font-bold uppercase tracking-tight hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {entry.title}
               </Link>
-              <span className="text-xs text-foreground/50">{seasonLabel(entry.clubSeason)}</span>
+              <span className="text-xs uppercase tracking-wide text-muted">
+                {seasonLabel(entry.clubSeason)}
+              </span>
             </div>
-            <span className="shrink-0 text-sm font-semibold tabular-nums">
+            <span className="shrink-0 font-mono text-lg font-bold text-accent">
               {formatScore(entry.clubScore)}
             </span>
           </li>
@@ -53,8 +52,8 @@ export default function HallOfFamePage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Hall of Fame</h1>
-        <p className="max-w-prose text-foreground/70">
+        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Hall of Fame</h1>
+        <p className="max-w-prose text-muted">
           Kerhon parhaat ja huonoimmat animet kaikkien aikojen yhteisarvosanojen mukaan, sekä
           arviointitilastoja.
         </p>
@@ -67,38 +66,48 @@ export default function HallOfFamePage() {
 
       {/* Tilastokulma */}
       <section className="flex flex-col gap-4">
-        <h2 className="text-lg font-semibold">Tilastokulma</h2>
+        <h2 className="sec-title w-fit text-lg">Tilastokulma</h2>
         {extremes ? (
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="flex flex-col gap-1 rounded-lg border border-black/10 p-5 dark:border-white/10">
-              <span className="text-sm text-foreground/60">Tiukin arvioija</span>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <div className="surface flex flex-col gap-1 p-5">
+              <span className="text-xs font-semibold uppercase tracking-wide text-muted">
+                Tiukin arvioija
+              </span>
               <Link
                 href={`/jasen/${extremes.strictest.member.id}`}
-                className="w-fit rounded text-xl font-semibold hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                className="w-fit text-xl font-bold uppercase hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {extremes.strictest.member.name}
               </Link>
-              <span className="text-sm text-foreground/50">
-                arvioiden ka {formatScore(extremes.strictest.average)}
+              <span className="text-sm text-muted">
+                arvioiden ka{" "}
+                <span className="font-mono text-accent">
+                  {formatScore(extremes.strictest.average)}
+                </span>
               </span>
             </div>
-            <div className="flex flex-col gap-1 rounded-lg border border-black/10 p-5 dark:border-white/10">
-              <span className="text-sm text-foreground/60">Löysin arvioija</span>
+            <div className="surface flex flex-col gap-1 p-5">
+              <span className="text-xs font-semibold uppercase tracking-wide text-muted">
+                Löysin arvioija
+              </span>
               <Link
                 href={`/jasen/${extremes.loosest.member.id}`}
-                className="w-fit rounded text-xl font-semibold hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                className="w-fit text-xl font-bold uppercase hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {extremes.loosest.member.name}
               </Link>
-              <span className="text-sm text-foreground/50">
-                arvioiden ka {formatScore(extremes.loosest.average)}
+              <span className="text-sm text-muted">
+                arvioiden ka{" "}
+                <span className="font-mono text-accent">
+                  {formatScore(extremes.loosest.average)}
+                </span>
               </span>
             </div>
           </div>
         ) : (
-          <p className="text-sm text-foreground/60">Ei vielä tarpeeksi dataa.</p>
+          <p className="text-sm text-muted">Ei vielä tarpeeksi dataa.</p>
         )}
-        <p className="text-xs text-foreground/40">
+        <p className="text-xs text-muted">
           Tiukin/löysin lasketaan niistä jäsenistä, joiden yksityiskohtaiset arviot on kirjattu.
         </p>
       </section>

@@ -12,9 +12,9 @@ export function MemberCard({ member }: { member: Member }) {
   return (
     <Link
       href={`/jasen/${member.id}`}
-      className="group flex items-center gap-4 rounded-lg border border-black/10 p-4 transition-colors hover:border-black/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/10 dark:hover:border-white/25"
+      className="surface surface-link group flex items-center gap-4 p-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      <div className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-sm font-bold text-foreground/70">
+      <div className="flex size-12 shrink-0 items-center justify-center overflow-hidden border-2 border-foreground bg-background text-sm font-bold text-muted">
         {member.avatarUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -28,15 +28,13 @@ export function MemberCard({ member }: { member: Member }) {
       </div>
 
       <div className="flex flex-col">
-        <span className="font-medium group-hover:underline">
+        <span className="font-bold uppercase tracking-tight group-hover:underline">
           {member.name}
-          {member.guest ? <span className="ml-1 text-xs text-foreground/40">(vieras)</span> : null}
+          {member.guest ? <span className="ml-1 text-xs font-normal text-muted">(vieras)</span> : null}
         </span>
-        <span className="text-sm text-foreground/60">
-          ehdotti {seriesCountLabel(proposedCount)} · ehdotusten ka{" "}
-          <span className="font-semibold tabular-nums text-foreground/80">
-            {formatScore(proposedAverage)}
-          </span>
+        <span className="text-sm text-muted">
+          {seriesCountLabel(proposedCount)} · ka{" "}
+          <span className="font-mono font-bold text-accent">{formatScore(proposedAverage)}</span>
         </span>
       </div>
     </Link>

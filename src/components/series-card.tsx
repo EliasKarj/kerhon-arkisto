@@ -13,9 +13,9 @@ export function SeriesCard({ series }: { series: Series }) {
   return (
     <Link
       href={`/sarja/${series.id}`}
-      className="group flex gap-4 rounded-lg border border-black/10 p-3 transition-colors hover:border-black/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/10 dark:hover:border-white/25"
+      className="surface surface-link group flex gap-4 p-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden rounded bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-sm font-bold text-foreground/70">
+      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden border-2 border-foreground bg-background text-sm font-bold text-muted">
         {cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -30,14 +30,16 @@ export function SeriesCard({ series }: { series: Series }) {
       </div>
 
       <div className="flex min-w-0 flex-col gap-0.5">
-        <h3 className="truncate font-medium group-hover:underline">{series.title}</h3>
-        <p className="text-xs text-foreground/60">
+        <h3 className="truncate font-bold uppercase leading-tight tracking-tight group-hover:underline">
+          {series.title}
+        </h3>
+        <p className="text-xs uppercase tracking-wide text-muted">
           {SERIES_TYPE_LABELS[series.type]} · {seasonLabel(series.clubSeason)}
         </p>
-        <p className="mt-auto pt-1 text-sm text-foreground/80">
-          <span className="font-semibold tabular-nums">{formatScore(score)}</span>
-          <span className="text-foreground/50">
-            /5{proposer ? ` · ehdotti ${proposer.name}` : ""}
+        <p className="mt-auto pt-1 text-sm">
+          <span className="font-mono text-lg font-bold text-accent">{formatScore(score)}</span>
+          <span className="text-muted">
+            /5{proposer ? ` · ${proposer.name}` : ""}
           </span>
         </p>
       </div>

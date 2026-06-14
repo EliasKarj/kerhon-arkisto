@@ -15,27 +15,27 @@ export function ReviewCard({
   heading: { label: string; href: string };
 }) {
   return (
-    <li className="flex flex-col gap-3 rounded-lg border border-black/10 p-4 dark:border-white/10">
+    <li className="surface flex flex-col gap-3 p-4">
       <div className="flex items-baseline justify-between gap-2">
-        <h3 className="font-medium">
+        <h3 className="font-bold uppercase tracking-tight">
           <Link
             href={heading.href}
-            className="rounded hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            className="hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {heading.label}
           </Link>
         </h3>
-        <span className="text-sm font-semibold tabular-nums text-foreground/80">
+        <span className="font-mono text-sm font-bold text-accent">
           {formatScore(review.score)}/5
         </span>
       </div>
 
       <p className="text-sm">
-        <span className="text-foreground/60">Best pick: </span>
-        <span className="font-medium">{review.bestPick}</span>
+        <span className="text-muted">Best pick: </span>
+        <span className="font-semibold">{review.bestPick}</span>
       </p>
 
-      <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-foreground/40">
+      <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-accent">
         {review.bulletPoints.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
@@ -46,7 +46,7 @@ export function ReviewCard({
           {review.tags.map((tag) => (
             <li
               key={tag}
-              className="rounded-full bg-foreground/5 px-2 py-0.5 text-xs text-foreground/60"
+              className="border-2 border-foreground px-2 py-0.5 text-xs font-medium text-muted"
             >
               #{tag}
             </li>

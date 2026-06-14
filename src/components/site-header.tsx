@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 type NavItem = {
   href: string;
   label: string;
-  /** Extra path prefix that should also mark this item active (e.g. detail pages). */
   matchPrefix?: string;
 };
 
@@ -29,16 +28,16 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-black/10 dark:border-white/10">
+    <header className="border-b-2 border-foreground">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
+          className="w-fit bg-foreground px-2.5 py-1 text-lg font-bold uppercase tracking-tight text-background focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
           Kerhon Arkisto
         </Link>
         <nav aria-label="Päänavigaatio">
-          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold uppercase tracking-wide">
             {NAV_ITEMS.map((item) => {
               const active = isActive(pathname, item);
               return (
@@ -46,10 +45,10 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`rounded px-1 py-0.5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground ${
+                    className={`underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                       active
-                        ? "font-medium text-foreground"
-                        : "text-foreground/60 hover:text-foreground"
+                        ? "text-foreground underline decoration-accent decoration-2"
+                        : "text-muted hover:text-foreground"
                     }`}
                   >
                     {item.label}
