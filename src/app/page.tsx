@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { SeriesCard } from "@/components/series-card";
-import { getCoverUrl, getMemberById, getSeriesByDateDesc } from "@/lib/data";
+import {
+  getCoverUrl,
+  getMemberById,
+  getSeriesByDateDesc,
+  getWatchLinks,
+} from "@/lib/data";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getClubAverageScore } from "@/lib/stats";
 
@@ -24,6 +29,7 @@ export default function HomePage() {
   const current = seriesByRecency.find((entry) => entry.clubScore === null) ?? null;
   const currentProposer = current ? getMemberById(current.proposerId) : null;
   const currentCover = current ? getCoverUrl(current) : null;
+  const currentLinks = current ? getWatchLinks(current.id) : null;
 
   const recent = seriesByRecency.filter((entry) => entry.id !== current?.id).slice(0, 4);
 
@@ -45,43 +51,86 @@ export default function HomePage() {
       {current && (
         <section
           aria-label="Nyt katselussa"
-          className="overflow-hidden rounded-xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10"
+          className="flex flex-col gap-5 rounded-xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10 p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6"
         >
           <Link
             href={`/sarja/${current.id}`}
-            className="group flex flex-col gap-5 p-5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground sm:flex-row sm:items-center sm:gap-6 sm:p-6"
+            aria-label={current.title}
+            className="flex aspect-[2/3] w-24 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-xl font-bold text-foreground/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground sm:w-28"
           >
-            <div className="flex aspect-[2/3] w-24 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-xl font-bold text-foreground/70 sm:w-28">
-              {currentCover ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={currentCover}
-                  alt={`${current.title} -kansikuva`}
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <span aria-hidden>{getInitials(current.title)}</span>
-              )}
-            </div>
-
-            <div className="flex flex-1 flex-col gap-2">
-              <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-indigo-500 dark:text-indigo-400">
-                <span className="inline-block size-2 animate-pulse rounded-full bg-indigo-500" aria-hidden />
-                Nyt katselussa
-              </span>
-              <h2 className="text-2xl font-semibold tracking-tight group-hover:underline sm:text-3xl">
-                {current.title}
-              </h2>
-              <p className="text-sm text-foreground/60">
-                {SERIES_TYPE_LABELS[current.type]} · {seasonLabel(current.clubSeason)} ·{" "}
-                <time dateTime={current.watchedDate}>{formatDate(current.watchedDate)}</time>
-                {currentProposer ? ` · ehdotti ${currentProposer.name}` : ""}
-              </p>
-              <span className="w-fit rounded-full border border-indigo-500/30 bg-background/40 px-3 py-1 text-xs font-medium text-foreground/70">
-                Ei vielä arvioitu
-              </span>
-            </div>
+            {currentCover ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={currentCover}
+                alt={`${current.title} -kansikuva`}
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <span aria-hidden>{getInitials(current.title)}</span>
+            )}
           </Link>
+
+          <div className="flex flex-1 flex-col gap-2">
+            <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-indigo-500 dark:text-indigo-400">
+              <span className="inline-block size-2 animate-pulse rounded-full bg-indigo-500" aria-hidden />
+              Nyt katselussa
+            </span>
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              <Link
+                href={`/sarja/${current.id}`}
+                className="rounded hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              >
+                {current.title}
+              </Link>
+            </h2>
+            <p className="text-sm text-foreground/60">
+              {SERIES_TYPE_LABELS[current.type]} · {seasonLabel(current.clubSeason)} ·{" "}
+              <time dateTime={current.watchedDate}>{formatDate(current.watchedDate)}</time>
+              {currentProposer ? ` · ehdotti ${currentProposer.name}` : ""}
+            </p>
+            <span className="w-fit rounded-full border border-indigo-500/30 bg-background/40 px-3 py-1 text-xs font-medium text-foreground/70">
+              Ei vielä arvioitu
+            </span>
+
+            {currentLinks && (currentLinks.streaming.length > 0 || currentLinks.anilist) && (
+              <div className="flex flex-col gap-1.5 pt-1">
+                <span className="text-xs font-medium text-foreground/50">Katso:</span>
+                <ul className="flex flex-wrap gap-2">
+                  {currentLinks.streaming.map((link) => (
+                    <li key={link.url}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-background/60 px-3 py-1 text-xs font-medium transition-colors hover:border-black/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/15 dark:hover:border-white/30"
+                      >
+                        {link.color && (
+                          <span
+                            className="size-2 rounded-full"
+                            style={{ backgroundColor: link.color }}
+                            aria-hidden
+                          />
+                        )}
+                        {link.site}
+                      </a>
+                    </li>
+                  ))}
+                  {currentLinks.anilist && (
+                    <li>
+                      <a
+                        href={currentLinks.anilist}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-full border border-black/10 bg-background/60 px-3 py-1 text-xs font-medium text-foreground/60 transition-colors hover:border-black/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/15 dark:hover:border-white/30"
+                      >
+                        AniList
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </div>
+            )}
+          </div>
         </section>
       )}
 

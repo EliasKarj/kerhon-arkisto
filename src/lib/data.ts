@@ -15,6 +15,18 @@ import coversData from "../../data/covers.json";
 // AniListista haetut lempihahmojen kuvat (build-time, `npm run fetch:characters`).
 // Avain = seriesId, arvo = hahmokuvan URL.
 import charactersData from "../../data/characters.json";
+// AniListista haetut katselulinkit (build-time, `npm run fetch:links`).
+import linksData from "../../data/links.json";
+
+export interface StreamingLink {
+  site: string;
+  url: string;
+  color: string | null;
+}
+export interface WatchLinks {
+  anilist: string | null;
+  streaming: StreamingLink[];
+}
 
 export const members: Member[] = membersData as Member[];
 export const series: Series[] = seriesData as Series[];
@@ -22,6 +34,7 @@ export const reviews: Review[] = reviewsData as Review[];
 const summaries = summariesData as Record<string, string>;
 const covers = coversData as Record<string, string>;
 const characterImages = charactersData as Record<string, string>;
+const watchLinks = linksData as Record<string, WatchLinks>;
 
 export function getMemberById(id: string): Member | undefined {
   return members.find((member) => member.id === id);
@@ -71,4 +84,9 @@ export function getCoverUrl(series: Series): string | null {
 /** Sarjan lempihahmon (best girl/boy) kuvan URL, tai null jos ei löytynyt. */
 export function getBestPickImage(seriesId: string): string | null {
   return characterImages[seriesId] ?? null;
+}
+
+/** Sarjan katselulinkit (suoratoistopalvelut + AniList-sivu), tai null. */
+export function getWatchLinks(seriesId: string): WatchLinks | null {
+  return watchLinks[seriesId] ?? null;
 }

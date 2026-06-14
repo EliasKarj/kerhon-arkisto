@@ -134,6 +134,14 @@ ei löydy (esim. vapaamuotoiset lempinimet), näytetään pelkkä nimi.
 npm run fetch:characters
 ```
 
+Lisäksi jokaiselle sarjalle haetaan **katselulinkit** (AniListin `externalLinks`,
+suoratoistopalvelut + AniList-sivu) → `data/links.json`. Etusivun "Nyt katselussa"
+-banneri näyttää nykyisen animen suoratoistolinkit.
+
+```bash
+npm run fetch:links
+```
+
 ## Lisenssi
 
 [MIT](./LICENSE)
