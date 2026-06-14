@@ -22,6 +22,7 @@ export interface StreamingLink {
   site: string;
   url: string;
   color: string | null;
+  icon: string | null;
 }
 export interface WatchLinks {
   anilist: string | null;

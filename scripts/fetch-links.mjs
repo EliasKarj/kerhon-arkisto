@@ -32,7 +32,7 @@ const QUERY = `query($s:String){
   Page(perPage:10){
     media(search:$s, type:ANIME){
       siteUrl format seasonYear
-      externalLinks{ url site type color }
+      externalLinks{ url site type color icon }
     }
   }
 }`;
@@ -76,7 +76,7 @@ async function main() {
       const media = pickMedia(entry, await fetchMedia(term));
       const streaming = (media?.externalLinks ?? [])
         .filter((l) => l.type === "STREAMING" && l.url)
-        .map((l) => ({ site: l.site, url: l.url, color: l.color ?? null }));
+        .map((l) => ({ site: l.site, url: l.url, color: l.color ?? null, icon: l.icon ?? null }));
       links[entry.id] = { anilist: media?.siteUrl ?? null, streaming };
       console.log(`-> ${streaming.length} suoratoistolinkkiä`);
     } catch (err) {

@@ -5,32 +5,38 @@
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/food-wars",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/food-wars-shokugeki-no-soma",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "HIDIVE",
         "url": "https://www.hidive.com/tv/food-wars",
-        "color": "#03AEEF"
+        "color": "#03AEEF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/20-3nWxygrjVM5A.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80182054",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/Sacred-Mother-of-Kyosuke/dp/B073GKRFC2/ref=sr_1_1?dchild=1&keywords=food+wars&qid=1617825503&s=instant-video&sr=1-1&tag=harshabalani-20",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "YouTube",
         "url": "https://youtube.com/playlist?list=PLxSscENEp7JiQ5eGN9KP8g6v8fEG7k6Ab",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -40,7 +46,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81033445",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -50,22 +57,26 @@
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/tokyo-ghoul",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/gp/video/detail/B015O6OK4G/",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/en-gb/tokyo-ghoul",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80023687",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -75,32 +86,38 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/mob-psycho-100",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80179798",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLpm1VVK4UL15H3VL53aWCCaCk_pkpJ5u-",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.primevideo.com/detail/0U3TA8SOFL6VTAQ1E1QSC0SA6D/ref=atv_dp_season_select_s1",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl1pvIv1fBd3oKkP3XEQpT_G",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/mob-psycho-100-fc9b8130-e1e3-420b-b28d-a72f0b235069",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -110,17 +127,20 @@
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl28iypqyY3tsSz7P1BByLiK",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/hyouka",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/34818",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -130,22 +150,26 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/kurokos-basketball",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80063153",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/35261",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLhGamQZtJ7K9dCdYvc4OE5oC22FefmTx0",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -155,7 +179,8 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/G649DWXJY/serial-experiments-lain?srsltid=AfmBOoqy4RNm5F9R6_w2RqfN8fH-pB9qJMPHJcqZaU8eCP5WAWXKHaGe",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -165,7 +190,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/search?q=berserk&jbv=80243876",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -175,27 +201,32 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/solo-leveling",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2097863",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/@AniOneAsia",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/watch/81748512",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.primevideo.com/detail/Solo-Leveling/0PBBLSIQOPO9EUYQ4CY4U9CPFD",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       }
     ]
   },
@@ -205,7 +236,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81228573",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -215,17 +247,20 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/konosuba-gods-blessing-on-this-wonderful-world",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80131674",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JiyHGbqVQuTTs9ZFqu3wYNM",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -235,17 +270,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GJ0H7Q5ZJ/hells-paradise",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81574246",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/hells-paradise-ed1bbbfa-fb32-4b9a-83b8-04a42687ae59",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -255,7 +293,8 @@
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/dp/B07F8H7SHY/",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       }
     ]
   },
@@ -265,17 +304,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GG5H5XQ7D/kaiju-no-8",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/iic8etkxfx",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2107061",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -285,7 +327,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81563026",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -295,7 +338,8 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GJ0H7QGME/viral-hit",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -305,12 +349,14 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/punch-line",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "OceanVeil",
         "url": "https://oceanveil.net/anime_titles/272",
-        "color": "#00D0D3"
+        "color": "#00D0D3",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/249-CFCxdC7MiNX3.png"
       }
     ]
   },
@@ -320,17 +366,20 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/blood-blockade-battlefront",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80205560",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/34541",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -340,32 +389,38 @@
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/dp/B073S2612X",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80193163",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl0-bp4bZ7ER-VQ-973riDyN",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/37179",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/37179",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "HIDIVE",
         "url": "https://www.hidive.com/season/20003",
-        "color": "#03AEEF"
+        "color": "#03AEEF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/20-3nWxygrjVM5A.png"
       }
     ]
   },
@@ -375,32 +430,38 @@
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/cowboy-bebop",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/cowboy-bebop",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/gp/video/detail/B00R2KO8ZE/",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Tubi TV",
         "url": "https://tubitv.com/series/2052",
-        "color": "#7408FF"
+        "color": "#7408FF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/30-RoKDJtmAVpZK.png"
       },
       {
         "site": "Adult Swim",
         "url": "https://www.adultswim.com/videos/cowboy-bebop",
-        "color": "#000000"
+        "color": "#000000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/28-W1L8AHW0O4xE.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80001305",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -410,12 +471,14 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80191008",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "HIDIVE",
         "url": "https://www.hidive.com/season/19824",
-        "color": "#03AEEF"
+        "color": "#03AEEF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/20-3nWxygrjVM5A.png"
       }
     ]
   },
@@ -425,17 +488,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GXJHM3GKX/the-ossan-newbie-adventurer-trained-to-death-by-the-most-powerful-party-became-invincible",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2111784",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl3eT2fOFMIeAJZQpdxe9tmU",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -445,12 +511,14 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/70308793",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/35591",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -460,22 +528,26 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/takt-opdestiny",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/phuutpy5kp",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7Jgp5-czzbc2NrWBg5g2qz7n",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/1019433",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -485,7 +557,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80182123",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -495,12 +568,14 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/G79H23ZX3/demon-lord-2099",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2115894",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -510,22 +585,26 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/540533",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/watch?v=iHil4Y4r3Wk",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Criterion Channel",
         "url": "https://www.criterionchannel.com/ghost-in-the-shell/videos/ghost-in-the-shell-english-dubbed-version",
-        "color": "#141414"
+        "color": "#141414",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/230-Vni5Fgvr3mQh.png"
       },
       {
         "site": "Criterion Channel",
         "url": "https://www.criterionchannel.com/ghost-in-the-shell/videos/ghost-in-the-shell",
-        "color": "#141414"
+        "color": "#141414",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/230-Vni5Fgvr3mQh.png"
       }
     ]
   },
@@ -535,17 +614,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/G1XHJV05V/berserk-of-gluttony",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl16aN3dffy3DzuC9JLH3gDg",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2090442",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -555,32 +637,38 @@
       {
         "site": "Crunchyroll",
         "url": "https://crunchyroll.com/series/GZJH3D719/tsukimichi-moonlit-fantasy-",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7Jjz3JEX5tSOiRFK59VGimN5",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Bilibili",
         "url": "https://www.bilibili.com/bangumi/media/md28234623",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/45-6JAD1SYYCHI2.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/1010573",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Max",
         "url": "https://www.max.com/shows/1e81c647-5190-47a9-9a91-aea5224086b1",
-        "color": "#002BE7"
+        "color": "#002BE7",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/211-S2C1vx1Ex5N7.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/ccb93d4e-d865-444f-9054-115aadf95e0f",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -590,7 +678,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81301833",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -600,17 +689,20 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/umamusume-pretty-derby",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/36256/",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JjzK3AD896WNfsfosMcC6pL",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -620,7 +712,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81281344",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -630,27 +723,32 @@
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/movie/sub-akira-64a5a8d0-1406-4178-97a5-2649504faa85",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/60021103",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Tubi TV",
         "url": "https://tubitv.com/movies/405596/akira_dubbed",
-        "color": "#7408FF"
+        "color": "#7408FF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/30-RoKDJtmAVpZK.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.primevideo.com/detail/0M9TIVLP1IHWJXD5OGGJ3Z2GJR/ref=atv_dp_share_cu_r",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/akira",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -660,12 +758,14 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/another",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80241072",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -675,12 +775,14 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/G9VHN9Q7Q/trillion-game",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JgWSohUFSUx4uQvvUZCAhj4",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -690,12 +792,14 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/gurren-lagann",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/gurren-lagann",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -705,17 +809,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/monster-girl-doctor",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl3LmQOuDIveKBPJvUcapoq5",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/2ffkws2tkk5",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       }
     ]
   },
@@ -725,12 +832,14 @@
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/2aef2fzzzvp",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81442047",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -740,7 +849,8 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/trigun",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -750,17 +860,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/demon-slayer-kimetsu-no-yaiba",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/demon-slayer-kimetsu-no-yaiba",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81091393",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -770,32 +883,38 @@
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl01_ftoIT3birJWkpxFZkEl",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/mushoku-tensei-jobless-reincarnation-787a5fb4-9cba-4a69-96b2-4fb3b10c860a",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/mushoku-tensei-jobless-reincarnation",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80987039",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "WeTV",
         "url": "https://wetv.vip/en/play/ecmp615ib5kswl3",
-        "color": "#2FA3F9"
+        "color": "#2FA3F9",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/131-5sN08ZCe7HKZ.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/tg0bzbp8zd",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       }
     ]
   },
@@ -805,12 +924,14 @@
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl2t0ExBn76ZdBomplZbeaay",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/talentless-nana",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -820,7 +941,8 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GXJHM3G7X/no-longer-allowed-in-another-world",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -830,17 +952,20 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/70019060",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Max",
         "url": "https://www.max.com/movies/06951f7d-ecd0-4bc0-8cfa-867e3b443cb2",
-        "color": "#002BE7"
+        "color": "#002BE7",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/211-S2C1vx1Ex5N7.png"
       },
       {
         "site": "Max",
         "url": "https://www.max.com/movies/53201926-f79e-44ff-8667-a1cb771adadf",
-        "color": "#002BE7"
+        "color": "#002BE7",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/211-S2C1vx1Ex5N7.png"
       }
     ]
   },
@@ -850,22 +975,26 @@
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/36aab705-e0ea-405f-a58d-48a226053c90",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "HIDIVE",
         "url": "https://www.hidive.com/tv/nana",
-        "color": "#03AEEF"
+        "color": "#03AEEF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/20-3nWxygrjVM5A.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/70205010",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.crunchyroll.com/series/GVDHX8QGP/nana&ved=2ahUKEwifi8P_yuj9AhUgVqQEHZuMD9gQFnoECA0QAQ&usg=AOvVaw3qlL5BTTbccRkl1ygyWy9T",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -875,12 +1004,14 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/oddtaxi",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/channel/UC7vSI218btwcth8yKEGfe0g",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -890,7 +1021,8 @@
       {
         "site": "HIDIVE",
         "url": "https://www.hidive.com/playlist/27290",
-        "color": "#03AEEF"
+        "color": "#03AEEF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/20-3nWxygrjVM5A.png"
       }
     ]
   },
@@ -900,32 +1032,38 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2090295",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl10YPPR7qDsVf10wZfYnIMK",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81726714",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/frieren-beyond-journeys-end-1d4725f8-06d1-43fb-a077-72143ac5502f",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       }
     ]
   },
@@ -935,7 +1073,8 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81034907",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -945,17 +1084,20 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/inspectre",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl33XF-NyOM6dJZ6hNDi54lg",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "YouTube",
         "url": "https://youtube.com/@kyokou_suiri",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -965,17 +1107,20 @@
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80007757",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/36801",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.primevideo.com/-/es/detail/0TN5ICF7AIEHNKWRVEQY2C6VCD/ref=atv_dp_share_cu_r",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       }
     ]
   },
@@ -985,27 +1130,32 @@
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLMX26aiIvX5rWjEqareJBmoX-_uTFtemk",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "WeTV",
         "url": "https://wetv.vip/en/play/r8t02fkxr9jyvvn",
-        "color": "#2FA3F9"
+        "color": "#2FA3F9",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/131-5sN08ZCe7HKZ.png"
       },
       {
         "site": "Tencent Video",
         "url": "https://v.qq.com/detail/k/k4mutekomtrdbux.html",
-        "color": "#2FA3F9"
+        "color": "#2FA3F9",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/121-BQIBl0q1Eh9w.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxOs22nkVmnKIbOioc0okz6cDPdKPrE94",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/series/GMEHME78W/the-master-of-diabolism",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -1015,47 +1165,56 @@
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl3F9AGKbC7iRIGeU2XosgTy",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/tokyo-revengers",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81442520",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/17qqf96eghx",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/1001400",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Max",
         "url": "https://www.max.com/shows/47f0c251-1a08-4225-b089-acb5ecc6ebf6",
-        "color": "#002BE7"
+        "color": "#002BE7",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/211-S2C1vx1Ex5N7.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLpm1VVK4UL14ZN_ayyUTitn2qFsVKMI_9",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/d45b72d4-3c8d-4961-960a-c0c182890189",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/1a195a35-e19c-4e36-b609-3b1c451f6ce4",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -1065,27 +1224,32 @@
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/8cce2117-1a21-4ecf-810a-14c9d748d5fc",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7Jh5cTYOJ44AOGwWLAap7dCU",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/sonny-boy-gg01mac6mx",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/sonny-boy",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Prime Video",
         "url": "https://www.primevideo.com/detail/Sonny-Boy/0GXG1CLDR58RDP6RHRE7N8LRWU",
-        "color": "#1A98FF"
+        "color": "#1A98FF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/261-I11R5ZZpcwgD.png"
       }
     ]
   },
@@ -1095,12 +1259,14 @@
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/Memories-Tsutomu-Isobe/dp/B08HJNGKXB/ref=sr_1_1?dchild=1&keywords=memories&qid=1611725421&sr=8-1",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Tubi TV",
         "url": "https://tubitv.com/movies/590392/memories",
-        "color": "#7408FF"
+        "color": "#7408FF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/30-RoKDJtmAVpZK.png"
       }
     ]
   },
@@ -1110,12 +1276,14 @@
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/junji-ito-collection",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://youtube.com/playlist?list=PLwLSw1_eDZl28nYqV_gPaNLe-PL2JEnCR",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       }
     ]
   },
@@ -1125,17 +1293,20 @@
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/space-dandy",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/gp/video/detail/B00HP10M1Y/",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       },
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/space-dandy",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       }
     ]
   },
@@ -1145,12 +1316,14 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/steinsgate",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/37207",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       }
     ]
   },
@@ -1160,32 +1333,38 @@
       {
         "site": "Hulu",
         "url": "http://www.hulu.com/overlord",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Crunchyroll",
         "url": "http://www.crunchyroll.com/overlord",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/80132110",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JiIura5SogPzrVGaujqXYsc",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/34527",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Tubi TV",
         "url": "https://tubitv.com/series/2234/overlord",
-        "color": "#7408FF"
+        "color": "#7408FF",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/30-RoKDJtmAVpZK.png"
       }
     ]
   },
@@ -1195,32 +1374,38 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/jujutsu-kaisen",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81278456",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "iQ",
         "url": "https://www.iq.com/album/igc33vhvex",
-        "color": "#00CC36"
+        "color": "#00CC36",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/122-EPBJ2E0oPt5C.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/media/37738",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "YouTube",
         "url": "https://youtube.com/playlist?list=PLxSscENEp7JisDU6GAJuyNpVwDvCm-f3J",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/jujutsu-kaisen-382ec8bf-3650-4cde-94db-ecd18665f9e0",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -1230,22 +1415,26 @@
       {
         "site": "Crunchyroll",
         "url": "https://www.crunchyroll.com/tower-of-god",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "Netflix",
         "url": "https://netflix.com/title/81329313",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/35839",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/tower-of-god-b2623f96-4b19-4b95-9dc4-443f4bfc2fa0",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       }
     ]
   },
@@ -1255,32 +1444,38 @@
       {
         "site": "Crunchyroll",
         "url": "https://crunchyroll.com/series/GVDHX8QNW",
-        "color": "#F88B24"
+        "color": "#F88B24",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/5-AWN2pVlluCOO.png"
       },
       {
         "site": "YouTube",
         "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JhfvHiWN-djJjCOjW8rxA6p",
-        "color": "#FF0000"
+        "color": "#FF0000",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/13-ZwR1Xwgtyrwa.png"
       },
       {
         "site": "Hulu",
         "url": "https://www.hulu.com/series/chainsaw-man-7b71b5a4-560b-4d8b-98c4-c5dee6004c21",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Bilibili TV",
         "url": "https://www.bilibili.tv/en/media/2069687",
-        "color": "#00A1D6"
+        "color": "#00A1D6",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/119-NCwGvCjFADGQ.png"
       },
       {
         "site": "Disney Plus",
         "url": "https://www.disneyplus.com/series/chainsaw-man/2gMK1kC3JIEh",
-        "color": "#21037C"
+        "color": "#21037C",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/118-mphNAqNDTvhO.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81215627",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       }
     ]
   },
@@ -1290,17 +1485,20 @@
       {
         "site": "Hulu",
         "url": "https://www.hulu.jp/naoki-urasawas-monster/",
-        "color": "#1CE783"
+        "color": "#1CE783",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/7-rM06PQyWONGC.png"
       },
       {
         "site": "Netflix",
         "url": "https://www.netflix.com/title/81409869",
-        "color": "#E50914"
+        "color": "#E50914",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/10-rVGPom8RCiwH.png"
       },
       {
         "site": "Amazon Prime Video",
         "url": "https://www.amazon.com/gp/video/detail/B003BM4IFM/",
-        "color": "#FF9900"
+        "color": "#FF9900",
+        "icon": "https://s4.anilist.co/file/anilistcdn/link/icon/21-bDoNIomehkOx.png"
       }
     ]
   }

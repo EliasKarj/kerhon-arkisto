@@ -102,15 +102,22 @@ export default function HomePage() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-background/60 px-3 py-1 text-xs font-medium transition-colors hover:border-black/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/15 dark:hover:border-white/30"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-background/60 py-1 pl-1.5 pr-3 text-xs font-medium transition-colors hover:border-black/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-white/15 dark:hover:border-white/30"
                       >
-                        {link.color && (
+                        {link.icon ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={link.icon}
+                            alt=""
+                            className="size-4 rounded-[3px] object-contain"
+                          />
+                        ) : link.color ? (
                           <span
                             className="size-2 rounded-full"
                             style={{ backgroundColor: link.color }}
                             aria-hidden
                           />
-                        )}
+                        ) : null}
                         {link.site}
                       </a>
                     </li>
