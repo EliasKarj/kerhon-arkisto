@@ -2,6 +2,16 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import { DEFAULT_THEME, THEME_IDS, THEME_STORAGE_KEY } from "@/lib/themes";
+
+// Asetetaan tallennettu teema ennen ensimmäistä maalausta (estää välähdyksen).
+const themeInitScript = `(function(){try{var k=${JSON.stringify(
+  THEME_STORAGE_KEY,
+)};var v=${JSON.stringify(
+  THEME_IDS,
+)};var t=localStorage.getItem(k);if(v.indexOf(t)<0){t=${JSON.stringify(
+  DEFAULT_THEME,
+)};}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -31,8 +41,13 @@ export default function RootLayout({
   return (
     <html
       lang="fi"
+      data-theme={DEFAULT_THEME}
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${spaceMono.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col">
         <a
           href="#sisalto"

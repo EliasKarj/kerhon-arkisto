@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeMenu } from "@/components/theme-menu";
 
 type NavItem = {
   href: string;
@@ -36,28 +37,31 @@ export function SiteHeader() {
         >
           Kerhon Arkisto
         </Link>
-        <nav aria-label="Päänavigaatio">
-          <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold uppercase tracking-wide">
-            {NAV_ITEMS.map((item) => {
-              const active = isActive(pathname, item);
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    aria-current={active ? "page" : undefined}
-                    className={`underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
-                      active
-                        ? "text-foreground underline decoration-accent decoration-2"
-                        : "text-muted hover:text-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+          <nav aria-label="Päänavigaatio">
+            <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm font-semibold uppercase tracking-wide">
+              {NAV_ITEMS.map((item) => {
+                const active = isActive(pathname, item);
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      className={`underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                        active
+                          ? "text-foreground underline decoration-accent decoration-2"
+                          : "text-muted hover:text-foreground"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+          <ThemeMenu />
+        </div>
       </div>
     </header>
   );

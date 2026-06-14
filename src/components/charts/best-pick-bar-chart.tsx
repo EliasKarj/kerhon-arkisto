@@ -13,7 +13,7 @@ import {
 import type { CountEntry } from "@/lib/stats";
 import { ChartFrame } from "./chart-frame";
 
-const ACCENT = "#c6f000";
+const ACCENT = "var(--accent)";
 
 /** Best girl/boy -äänten jakauma pylväskaaviona. */
 export function BestPickBarChart({ data }: { data: CountEntry[] }) {
@@ -45,7 +45,7 @@ export function BestPickBarChart({ data }: { data: CountEntry[] }) {
             formatter={(value) => [value, "Ääniä"]}
             contentStyle={{ fontSize: 12 }}
           />
-          <Bar dataKey="count" fill={ACCENT} radius={[4, 4, 0, 0]}>
+          <Bar dataKey="count" fill={ACCENT} radius={[0, 0, 0, 0]}>
             <LabelList dataKey="count" position="top" className="fill-foreground" fontSize={12} />
           </Bar>
         </BarChart>

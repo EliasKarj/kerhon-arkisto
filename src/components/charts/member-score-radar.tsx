@@ -16,7 +16,7 @@ export interface MemberScorePoint {
   score: number;
 }
 
-const ACCENT = "#c6f000";
+const ACCENT = "var(--accent)";
 
 /** Radar, jossa kunkin jäsenen pisteet näkyvät samassa kuvassa (akselit = jäsenet). */
 export function MemberScoreRadar({ data }: { data: MemberScorePoint[] }) {

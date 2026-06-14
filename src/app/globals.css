@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Oletuspaletti (= "Yö"). Käytössä ilman JS:ää / ennen teeman latausta. */
 :root {
   --background: #0f0f12;
   --foreground: #f3efe2;
@@ -7,6 +8,63 @@
   --muted: #9c9789;
   --accent: #c6f000;
   --accent2: #5b8cff;
+  --red: #ff5a45;
+}
+
+/* Valittavat teemat. <html data-theme="..."> asetetaan teemavalikosta ja
+   anti-FOUC-skriptistä. Sama spesifisyys kuin :root → myöhempi voittaa. */
+[data-theme="yo"] {
+  --background: #0f0f12;
+  --foreground: #f3efe2;
+  --panel: #191920;
+  --muted: #9c9789;
+  --accent: #c6f000;
+  --accent2: #5b8cff;
+  --red: #ff5a45;
+}
+[data-theme="amber"] {
+  --background: #14110b;
+  --foreground: #f4ecdc;
+  --panel: #201a12;
+  --muted: #a3947a;
+  --accent: #f2b134;
+  --accent2: #ff7a66;
+  --red: #ff5a45;
+}
+[data-theme="meri"] {
+  --background: #0a1414;
+  --foreground: #e6f2ee;
+  --panel: #11201f;
+  --muted: #84a39c;
+  --accent: #34d8c0;
+  --accent2: #6db6ff;
+  --red: #ff6b5e;
+}
+[data-theme="synth"] {
+  --background: #120e18;
+  --foreground: #f1e9f7;
+  --panel: #1c1626;
+  --muted: #9b8fae;
+  --accent: #c08bff;
+  --accent2: #ff6ad5;
+  --red: #ff5a7a;
+}
+[data-theme="paperi"] {
+  --background: #efe9da;
+  --foreground: #16130c;
+  --panel: #fbf7ec;
+  --muted: #6f685a;
+  --accent: #e5482f;
+  --accent2: #2b6cff;
+  --red: #e5482f;
+}
+[data-theme="terminaali"] {
+  --background: #08100a;
+  --foreground: #cdeccd;
+  --panel: #0e1a10;
+  --muted: #6f9070;
+  --accent: #3ef07a;
+  --accent2: #7fe0a8;
   --red: #ff5a45;
 }
 
