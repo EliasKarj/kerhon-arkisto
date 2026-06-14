@@ -1802,5 +1802,413 @@
     ],
     "bestPick": "Tomie",
     "tags": []
+  },
+
+  {
+    "id": "memories-benkku",
+    "seriesId": "memories",
+    "memberId": "benkku",
+    "score": 3.6,
+    "bulletPoints": [
+      "Kokouspäivänä katsottu",
+      "Artstyle kaikissa erilainen",
+      "Ensimmäinen mielenkiintoisin, keskittyi ihmisten välisiin suhteisiin",
+      "Avaruuden eksistentialismi mielenkiintoinen",
+      "Toka oli komedia, gag anime short time -filmiksi",
+      "Viimeinen oli ihmeellinen ja absurdi"
+    ],
+    "bestPick": "Kapteeni Ivanov",
+    "tags": []
+  },
+  {
+    "id": "memories-eetu-n",
+    "seriesId": "memories",
+    "memberId": "eetu-n",
+    "score": 3.7,
+    "bulletPoints": [
+      "Kanuunaosa nähty tiktokissa ennen",
+      "Eka oli kiinnostavin, parhaiten tarinallisesti luotu",
+      "Leffoissa eri animaatiotyyli",
+      "Kakkosleffassa plot armor näky",
+      "Kolmosessa tuntu että olisi propagandaleffa",
+      "Kaikissa omanlainen pimeä teema"
+    ],
+    "bestPick": "Heintz",
+    "tags": []
+  },
+  {
+    "id": "memories-aki",
+    "seriesId": "memories",
+    "memberId": "aki",
+    "score": 3.4,
+    "bulletPoints": [
+      "Katsottu kokouspäivänä",
+      "Ykkönen hyvä space thriller, rogue AI, surullinen",
+      "Toka leffa hyvä, absurdi komedia",
+      "Kolmonen oli mitä oli",
+      "Worldbuilding ok",
+      "Tarina ihmeellinen ja outo"
+    ],
+    "bestPick": "Heintz",
+    "tags": []
+  },
+  {
+    "id": "memories-mikko",
+    "seriesId": "memories",
+    "memberId": "mikko",
+    "score": 3.7,
+    "bulletPoints": [
+      "Katsottu kokouspäivänä",
+      "Eka leffa thriller, laittaa miettimään, oikein hyvä",
+      "Jokaisesta kolmesta leffasta pätkiä tiktokissa",
+      "Hyvin mentii jengin taustoihin, deeppii keloi",
+      "Vikaleffa anti-war, natsisaksa-vihjaukset, sotapropagandaa",
+      "Musiikki hyvää"
+    ],
+    "bestPick": "Heintz",
+    "tags": []
+  },
+  {
+    "id": "memories-jonni",
+    "seriesId": "memories",
+    "memberId": "jonni",
+    "score": 2.5,
+    "bulletPoints": [
+      "Artstyle paskaa kaikissa, kolmannessa vähän parempi",
+      "Ekassa meinas nukahtaa",
+      "Perus pitää miettiä liikaa ysärin anime",
+      "Toka oli dull, ennalta arvattavissa koko leffa",
+      "Vika oli hyvä, kunnon anti-war"
+    ],
+    "bestPick": "Ei valintaa",
+    "tags": []
+  },
+  {
+    "id": "memories-henri",
+    "seriesId": "memories",
+    "memberId": "henri",
+    "score": 3.8,
+    "bulletPoints": [
+      "Tykkäsin kaikista kolmesta",
+      "Eka parhain",
+      "Hyvää komedia tokassa",
+      "Kolme vähiten lemppari"
+    ],
+    "bestPick": "Heintz",
+    "tags": []
+  },
+
+  {
+    "id": "sonny-boy-jonni",
+    "seriesId": "sonny-boy",
+    "memberId": "jonni",
+    "score": 1.5,
+    "bulletPoints": [
+      "Paskaa",
+      "Uskomaton yappatron",
+      "Ei tapahtunut muuta kuin keskustelukohtauksia",
+      "Väsyneenä katsottu",
+      "Boring, ei päässy inee",
+      "Liian ajattelua vaativa, liian vähän actionia",
+      "Artstyle basic"
+    ],
+    "bestPick": "Rajdhani",
+    "tags": []
+  },
+  {
+    "id": "sonny-boy-eetu-n",
+    "seriesId": "sonny-boy",
+    "memberId": "eetu-n",
+    "score": 3.7,
+    "bulletPoints": [
+      "Visuaalisesti kiva",
+      "Vibat tunteiden kuohu leffasta",
+      "Paljon yappingia",
+      "Tarina kiinnostava",
+      "Joka jaksossa jotain tyyppiä seurattiin",
+      "Hyvä musiikki",
+      "Näyttää kuin ois LSD:tä vetäny"
+    ],
+    "bestPick": "Kissanainen",
+    "tags": []
+  },
+  {
+    "id": "sonny-boy-henri",
+    "seriesId": "sonny-boy",
+    "memberId": "henri",
+    "score": 2.0,
+    "bulletPoints": [
+      "Animaatio uniikki",
+      "Tarina hankalasti tartuttavasti",
+      "Joskus putosin kärryiltä",
+      "Psykedeelinen",
+      "Tuntu et oli aineissa katto"
+    ],
+    "bestPick": "Tiedetyttö opettaja",
+    "tags": []
+  },
+  {
+    "id": "sonny-boy-aki",
+    "seriesId": "sonny-boy",
+    "memberId": "aki",
+    "score": 2.9,
+    "bulletPoints": [
+      "Tarina sekava",
+      "Mitä vittua tässä tapahtuu",
+      "Vaikuttaa ihan siistiltä ja sit pudottiin kärryiltä",
+      "Artstyle OK",
+      "Aineissa oltiin"
+    ],
+    "bestPick": "Rajdhani",
+    "tags": []
+  },
+  {
+    "id": "sonny-boy-benkku",
+    "seriesId": "sonny-boy",
+    "memberId": "benkku",
+    "score": 4.2,
+    "bulletPoints": [
+      "Evangelionin ja mikko-tyypisen eksistentialismin tyyppinen anime",
+      "Tarina parempi mitä kauemmin sitä mietti",
+      "Eksistentiaalinen kriisi",
+      "Ei mitään järkeä, mutta käsitellyt asiat on mielenkiintoisia",
+      "Konsepteja hahmoista"
+    ],
+    "bestPick": "Nozomi",
+    "tags": []
+  },
+
+  {
+    "id": "porco-rosso-mikko",
+    "seriesId": "porco-rosso",
+    "memberId": "mikko",
+    "score": 4.2,
+    "bulletPoints": [
+      "Kuka ei voi olla tykkäämättä Ghibli-leffoista",
+      "Uskomaton soundtrack"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-henri",
+    "seriesId": "porco-rosso",
+    "memberId": "henri",
+    "score": 4.5,
+    "bulletPoints": [
+      "Ghibli kultaa",
+      "One of the all time goats",
+      "Taide mainio",
+      "Soundtrack golden",
+      "Olis kiva ollu saada vastauksia loppuun"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-eetu-t",
+    "seriesId": "porco-rosso",
+    "memberId": "eetu-t",
+    "score": 4.5,
+    "bulletPoints": [
+      "1x katsottu, big fan",
+      "Animaatio hyvä, laadukasta ja nätisti tehty",
+      "Soundtrack tosi hyvä",
+      "Ei tylsä, koko ajan jotain",
+      "Kiinnostavaa yap",
+      "Banger"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-benkku",
+    "seriesId": "porco-rosso",
+    "memberId": "benkku",
+    "score": 4.2,
+    "bulletPoints": [
+      "Siitä on hetki kun oli viimeksi nähnyt leffan",
+      "Tarina vitun hyvä",
+      "Viimeksi katsottu japaniksi, nyt englanniksi ja parempi kokemus",
+      "Päähenkilö kiva",
+      "Muihin Ghibli-leffoihin verrattuna helposti top 5"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-eetu-n",
+    "seriesId": "porco-rosso",
+    "memberId": "eetu-n",
+    "score": 4.5,
+    "bulletPoints": [
+      "Ei oltu hetkeen katsottu",
+      "Suomidubbina seitsemänvuotiaana",
+      "Tarina hyvä, musiikki hyvä",
+      "Kohtaukset hyvät",
+      "Referenssejä muihin Ghibli-leffoihin",
+      "Kyl on hyvä leffa"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-jp",
+    "seriesId": "porco-rosso",
+    "memberId": "jp",
+    "score": 4.7,
+    "bulletPoints": [
+      "Klassikkoleffa, lapsuuden leffa",
+      "Porco Rosso GOAT",
+      "Leffassa käsiteltiin naisen kohtelua sodassa (objektifiointi yms.)",
+      "Kiva että tällaisia näkemyksiä avattiin",
+      "Ois ollu cool jos olisi nähty että kirous puretaan"
+    ],
+    "bestPick": "Gina",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-jonni",
+    "seriesId": "porco-rosso",
+    "memberId": "jonni",
+    "score": 2.2,
+    "bulletPoints": [
+      "Artstyle on upea",
+      "Musiikki hyvä",
+      "Vitun tylsä, tuskaillen maaliin",
+      "Siistin näkönen",
+      "Tarina ei iskenyt"
+    ],
+    "bestPick": "Gina",
+    "tags": []
+  },
+  {
+    "id": "porco-rosso-aki",
+    "seriesId": "porco-rosso",
+    "memberId": "aki",
+    "score": 4.2,
+    "bulletPoints": [
+      "Comfy katsottava, artstyle comfy",
+      "Tarinallisesti OK",
+      "Overall hyvä",
+      "Ei lapsena nähty",
+      "Ihan kiva pikkuleffa tähän väliin"
+    ],
+    "bestPick": "Porco Rosso",
+    "tags": []
+  },
+
+  {
+    "id": "trigun-aki",
+    "seriesId": "trigun",
+    "memberId": "aki",
+    "score": 3.9,
+    "bulletPoints": [
+      "12 jaksoa katsottu, ei tiiä jatkaako",
+      "Ei hitannu niin kovaa",
+      "Cowboy Bebop oli parempi",
+      "Artstyle hyvä ysäri",
+      "Aura farming"
+    ],
+    "bestPick": "Millie Thompson",
+    "tags": []
+  },
+  {
+    "id": "trigun-henri",
+    "seriesId": "trigun",
+    "memberId": "henri",
+    "score": 3.5,
+    "bulletPoints": [
+      "12 jaksoa katsottu, jatkaa loppuun",
+      "Aura farming",
+      "Tykkäsin",
+      "Artstyle"
+    ],
+    "bestPick": "Millie Thompson",
+    "tags": []
+  },
+  {
+    "id": "trigun-eetu-t",
+    "seriesId": "trigun",
+    "memberId": "eetu-t",
+    "score": 3.5,
+    "bulletPoints": [
+      "12 jaksoa katsottu, 1x nopeudella",
+      "Sama viba kun Cowboy Bebop",
+      "Ysäri anime, uusi jakso uusi tarina",
+      "Parani mitä pidemmälle meni",
+      "Ysäri GOAT, taskulämmin",
+      "Törkeä aura päähenkilöllä"
+    ],
+    "bestPick": "Millie Thompson",
+    "tags": []
+  },
+  {
+    "id": "trigun-kossi",
+    "seriesId": "trigun",
+    "memberId": "kossi",
+    "score": 4.8,
+    "bulletPoints": [
+      "26 jaksoa katsottu, on katsonut ennen",
+      "Tarina muuttuu hyvin paljon",
+      "OP on banger",
+      "Tarinallisesti top class"
+    ],
+    "bestPick": "Rem",
+    "tags": []
+  },
+  {
+    "id": "trigun-eetu-n",
+    "seriesId": "trigun",
+    "memberId": "eetu-n",
+    "score": 3.5,
+    "bulletPoints": [
+      "16 jaksoa katsottu",
+      "Tuntu että katsoi lastenohjelmaa",
+      "Uusi jakso, uusi juoni"
+    ],
+    "bestPick": "Meryl",
+    "tags": []
+  },
+  {
+    "id": "trigun-mikko",
+    "seriesId": "trigun",
+    "memberId": "mikko",
+    "score": 3.4,
+    "bulletPoints": [
+      "16 jaksoa katsottu",
+      "Paranee huomattavasti loppua kohti",
+      "12 jaksoa lämmittelyä ja sit lähtee käyntiin",
+      "Ysärin artstyle",
+      "Maailma alkoi mietityttämään (post apocalyptic?)",
+      "Tykkäsi"
+    ],
+    "bestPick": "Millie Thompson",
+    "tags": []
+  },
+  {
+    "id": "trigun-jonni",
+    "seriesId": "trigun",
+    "memberId": "jonni",
+    "score": 2.9,
+    "bulletPoints": [
+      "12 jaksoa katsottu",
+      "Trigun parempi kuin Cowboy Bebop",
+      "Artstyle paskaa",
+      "Huvittava",
+      "Perus kädenlämpönen",
+      "Ehkä katsoo loppuun"
+    ],
+    "bestPick": "Millie Thompson",
+    "tags": []
+  },
+  {
+    "id": "trigun-jp",
+    "seriesId": "trigun",
+    "memberId": "jp",
+    "score": 4.0,
+    "bulletPoints": [],
+    "bestPick": "Millie Thompson",
+    "tags": []
   }
 ]
