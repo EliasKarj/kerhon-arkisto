@@ -33,8 +33,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#sisalto"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-foreground focus:px-3 focus:py-2 focus:text-background focus:shadow-lg"
+        >
+          Siirry sisältöön
+        </a>
         <SiteHeader />
-        <main id="sisalto" className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
+        <main
+          id="sisalto"
+          tabIndex={-1}
+          className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 focus:outline-none sm:px-6"
+        >
           {children}
         </main>
         <footer className="border-t border-black/10 dark:border-white/10">

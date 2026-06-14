@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kerhon Arkisto
 
-## Getting Started
+Kaveriporukan anime- ja elokuva-arvioiden arkisto: pisteet, "best girl/boy"
+-äänet ja tilastot yhdessä paikassa. Portfolioprojekti, joka esittelee
+frontend-osaamista — TypeScript, Next.js App Router, datavisualisoinnit ja
+saavutettavuus.
 
-First, run the development server:
+> **V1** on staattinen demo, joka toimii kolmesta JSON-tiedostosta ilman
+> tietokantaa tai kirjautumista. Tietorakenne on suunniteltu niin, että V2:n
+> ominaisuudet (käyttäjätilit, useat "huoneet") voi lisätä ilman isoa
+> uudelleenkirjoitusta.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Ominaisuudet
+
+- **Dashboard** (`/`) — kerhon kokonaiskeskiarvo, viimeisimmän sarjan best
+  girl/boy -nosto, viimeksi katsotut ja pikalinkit
+- **Sarjan sivu** (`/sarja/[id]`) — perustiedot, **radar-kaavio** jäsenten
+  pisteistä, best girl/boy -äänten **pylväskaavio** ja jäsenten kommenttikortit
+- **Jäsenprofiili** (`/jasen/[id]`) — keskiarvo vs. kerhon keskiarvo,
+  suosikkitagit, best pick -historia ja kaikki arviot
+- **Hall of Fame** (`/hall-of-fame`) — best girl/boy -leaderboard sekä tiukin ja
+  löysin arvioija
+- **Aikajana** (`/aikajana`) — katsotut sarjat aikajärjestyksessä
+- **Jäsen- ja sarjalistat** (`/jasenet`, `/sarjat`)
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Recharts](https://recharts.org) datavisualisointeihin
+- Data: kolme staattista JSON-tiedostoa `data/`-kansiossa
+- Deploy: [Vercel](https://vercel.com)
+
+## Arkkitehtuuri
+
+```
+data/                      # members, series, reviews (JSON, V1:n "tietokanta")
+src/
+├─ app/                    # App Router -reitit (server-komponentit)
+├─ components/             # SeriesCard, MemberCard, ReviewCard, charts/…
+└─ lib/
+   ├─ types.ts            # Member, Series, Review
+   ├─ data.ts             # JSON-lataus ja perushaut
+   ├─ stats.ts            # keskiarvot, ääntenlasku, leaderboard…
+   └─ labels.ts           # jaetut tekstit/formatoinnit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sivut ovat server-komponentteja, jotka lukevat datan ja laskevat tilastot
+palvelimella; vain kaaviot (Recharts) ovat client-komponentteja. Dynaamiset
+reitit esirenderöidään `generateStaticParams`-funktiolla.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Saavutettavuus
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Semanttinen HTML (`header`, `nav`, `main`, `section`, `ol`/`ul`, `time`)
+- "Siirry sisältöön" -hyppylinkki ja näkyvät focus-tilat
+- Kaavioilla tekstimuotoinen `figcaption`-yhteenveto (ruudunlukija + no-JS)
+- Toimii sekä vaaleassa että tummassa tilassa (`prefers-color-scheme`)
 
-## Learn More
+## Kehitys
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev      # http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Muut skriptit:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build    # tuotantobuild
+npm run start    # tuotantopalvelin
+npm run lint     # ESLint
+```
 
-## Deploy on Vercel
+## Data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+V1:n data on `data/`-kansiossa kolmessa tiedostossa: `members.json`,
+`series.json` ja `reviews.json`. Uuden sarjan tai arvion lisääminen onnistuu
+muokkaamalla näitä tiedostoja — tyypit (`src/lib/types.ts`) pitävät rakenteen
+kasassa.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Lisenssi
+
+[MIT](./LICENSE)

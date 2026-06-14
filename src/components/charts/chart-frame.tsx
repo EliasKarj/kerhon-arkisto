@@ -1,6 +1,17 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useSyncExternalStore, type ReactNode } from "react";
+
+const emptySubscribe = () => () => {};
+
+/** false palvelimella ja ensirenderissä, true hydraation jälkeen clientillä. */
+function useHydrated(): boolean {
+  return useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+}
 
 /**
  * Yhteinen kehys kaavioille:
@@ -11,13 +22,12 @@ import { useEffect, useState, type ReactNode } from "react";
  *   no-JS-tilanteeseen.
  */
 export function ChartFrame({ caption, children }: { caption: string; children: ReactNode }) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const hydrated = useHydrated();
 
   return (
     <figure className="flex flex-col gap-2">
       <div className="h-72 w-full text-foreground" aria-hidden>
-        {mounted ? children : null}
+        {hydrated ? children : null}
       </div>
       <figcaption className="sr-only">{caption}</figcaption>
     </figure>
