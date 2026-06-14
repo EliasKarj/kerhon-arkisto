@@ -1476,5 +1476,331 @@
     ],
     "bestPick": "Kagero",
     "tags": []
+  },
+
+  {
+    "id": "no-longer-allowed-jonni",
+    "seriesId": "no-longer-allowed",
+    "memberId": "jonni",
+    "score": 3.5,
+    "bulletPoints": [
+      "Katsoi just äsken loppuun",
+      "Mielenkiintoinen ja erilainen",
+      "Selkeesti suicidal",
+      "Kinda funny",
+      "Infinite pillerit -läppä",
+      "Story meni eteenpäin sitcom-maisesti",
+      "Artstyle välil laiska (etenkin animaatio)"
+    ],
+    "bestPick": "Tama",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-aki",
+    "seriesId": "no-longer-allowed",
+    "memberId": "aki",
+    "score": 3.9,
+    "bulletPoints": [
+      "Mielenkiintoinen komedia",
+      "Kaiken se yrittää tappaa itsensä, mutta ei onnistunu",
+      "Artstyle kiva, perus isekai-tyyppinen",
+      "Truck-kun trope hauska"
+    ],
+    "bestPick": "Tama",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-eetu-t",
+    "seriesId": "no-longer-allowed",
+    "memberId": "eetu-t",
+    "score": 2.5,
+    "bulletPoints": [
+      "Ei paljoo kommentei",
+      "Pelasi lolia ja katsoi 2x",
+      "Konosuba samantyyppinen, sitcom angle",
+      "Animaatio hyvä",
+      "Tasapaksu mid"
+    ],
+    "bestPick": "Annette",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-eetu-n",
+    "seriesId": "no-longer-allowed",
+    "memberId": "eetu-n",
+    "score": 3.5,
+    "bulletPoints": [
+      "Typical isekai",
+      "Tarinasta tykkäsi",
+      "Jakso 11 oli mahtava",
+      "Puu-kohtaus ihmetytti",
+      "Hauskoja hahmoja",
+      "Jokaisessa jaksossa oma juoni"
+    ],
+    "bestPick": "Tama",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-benkku",
+    "seriesId": "no-longer-allowed",
+    "memberId": "benkku",
+    "score": 3.2,
+    "bulletPoints": [
+      "Tarina hyvä",
+      "Hyvin tylsistyny alussa",
+      "Ei tykännyt päähahmosta",
+      "Heti kun Tama tuli niin kiinostui animesta",
+      "Hahmot one dimensional",
+      "Artstyle kiva/geneerinen"
+    ],
+    "bestPick": "Charlotte",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-mikko",
+    "seriesId": "no-longer-allowed",
+    "memberId": "mikko",
+    "score": 3.0,
+    "bulletPoints": [
+      "Perus isekai, Konosuba vibes",
+      "Isekai parodia",
+      "Aavikkojaksot erittäin hyviä",
+      "Lopetusjakso outo",
+      "Sai nauramaan lowkey",
+      "Päähahmo masentunu aurafarmaaja",
+      "Reverse isekai hommia?"
+    ],
+    "bestPick": "Tama",
+    "tags": []
+  },
+  {
+    "id": "no-longer-allowed-henri",
+    "seriesId": "no-longer-allowed",
+    "memberId": "henri",
+    "score": 4.0,
+    "bulletPoints": [
+      "Parody isekai",
+      "Anime esille isekai IRL",
+      "Vihaa tätä isekai"
+    ],
+    "bestPick": "Tama",
+    "tags": []
+  },
+
+  {
+    "id": "talentless-nana-benkku",
+    "seriesId": "talentless-nana",
+    "memberId": "benkku",
+    "score": 4.0,
+    "bulletPoints": [
+      "Ei ollu katsonut aikasemmin",
+      "Hyvin ilonen et finishas",
+      "Anime muuttuu täysin lopussa",
+      "On hauska",
+      "Tietyt hahmot on clueless",
+      "EGO",
+      "Päähenkilö ihana",
+      "Konsepti kiva",
+      "Lopussa existential crisis"
+    ],
+    "bestPick": "Inukai",
+    "tags": []
+  },
+  {
+    "id": "talentless-nana-mikko",
+    "seriesId": "talentless-nana",
+    "memberId": "mikko",
+    "score": 3.2,
+    "bulletPoints": [
+      "Kokonaan katsottu",
+      "Ekan jakson twist kanto pitkälle",
+      "Aika stale 8 jaksosta eteenpäin",
+      "Death Note vibat päähenkilön ja etsivän välillä",
+      "Päähahmosta tykkäsi"
+    ],
+    "bestPick": "Nana",
+    "tags": []
+  },
+  {
+    "id": "talentless-nana-eetu-n",
+    "seriesId": "talentless-nana",
+    "memberId": "eetu-n",
+    "score": 3.0,
+    "bulletPoints": [
+      "Death Note vibat",
+      "Outo fiilis kun odottaa murhaa",
+      "Among Us anime",
+      "Hahmoista tykättiin, varsinkin hahmosta joka ei kuole (Onodera)"
+    ],
+    "bestPick": "Onodera",
+    "tags": []
+  },
+  {
+    "id": "talentless-nana-aki",
+    "seriesId": "talentless-nana",
+    "memberId": "aki",
+    "score": 3.0,
+    "bulletPoints": [
+      "Joskus Aki kattonu, ainakin muutaman jakson",
+      "Tiputettu kesken",
+      "OK",
+      "Murhaaja vs etsivä asettelu",
+      "Ei fiilannu",
+      "Artstyle perus"
+    ],
+    "bestPick": "Inukai",
+    "tags": []
+  },
+  {
+    "id": "talentless-nana-jonni",
+    "seriesId": "talentless-nana",
+    "memberId": "jonni",
+    "score": 4.1,
+    "bulletPoints": [
+      "Ensimmäisen jakson twisti tuli puskista",
+      "Kanto hyvin ekat jaksot",
+      "Vastakkainasettelu oli hyvä",
+      "Onodera GOAT",
+      "Jää tylsäks jossain vaiheessa",
+      "Maku meni kun alettiin yrittämällä yrittää lisätwistiä",
+      "Lässähti"
+    ],
+    "bestPick": "Onodera",
+    "tags": []
+  },
+  {
+    "id": "talentless-nana-henri",
+    "seriesId": "talentless-nana",
+    "memberId": "henri",
+    "score": 3.8,
+    "bulletPoints": [
+      "Eka twist hyvä",
+      "Tykkäsin etsivä vs murhaaja",
+      "Sadge Inukai"
+    ],
+    "bestPick": "Inukai",
+    "tags": []
+  },
+
+  {
+    "id": "mushoku-tensei-eetu-n",
+    "seriesId": "mushoku-tensei",
+    "memberId": "eetu-n",
+    "score": 3.0,
+    "bulletPoints": [
+      "Jaksoon 13/14 asti katsottu",
+      "Isekai fantasia aina menee",
+      "Goonaamis/groomamis-allegationit kovat ainakin alussa",
+      "Maailma hyvin luotu"
+    ],
+    "bestPick": "Sylphie",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-jp",
+    "seriesId": "mushoku-tensei",
+    "memberId": "jp",
+    "score": 0.0,
+    "bulletPoints": [
+      "Gooner-anime",
+      "Ilman goonausta olisi ollut parempi",
+      "Ei päässyt eteenpäin sisällöstä"
+    ],
+    "bestPick": "Puu mikä healattiin alussa",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-jonni",
+    "seriesId": "mushoku-tensei",
+    "memberId": "jonni",
+    "score": 2.0,
+    "bulletPoints": [
+      "Gooner-shitistä ei pääse mihinkään",
+      "Oli potentiaalia, hyvä setting",
+      "Jaksot pilas goonaus",
+      "Wasted potential",
+      "Kaikki muut hahmot melko basic",
+      "Mielenkiintoinen setti: human god"
+    ],
+    "bestPick": "Roxy",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-eetu-t",
+    "seriesId": "mushoku-tensei",
+    "memberId": "eetu-t",
+    "score": 0.9,
+    "bulletPoints": [
+      "Tänään 2x katsottu",
+      "Heti kun se alko niin anime alkoi ahistamaan",
+      "Aina kun se jätkä puhuu se kuulostaa 35-vuotiaalta ja se ahisti",
+      "Setting mid all around",
+      "Sama fiilis kun konosubasta",
+      "Tarina lopusta alko parantuu"
+    ],
+    "bestPick": "Roxy",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-henri",
+    "seriesId": "mushoku-tensei",
+    "memberId": "henri",
+    "score": 3.5,
+    "bulletPoints": [
+      "Mielestäni kertoo kuinka gooner-tyyppi glow up -story",
+      "Tykkäsin"
+    ],
+    "bestPick": "Punatukkanen likka",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-mikko",
+    "seriesId": "mushoku-tensei",
+    "memberId": "mikko",
+    "score": 2.0,
+    "bulletPoints": [
+      "11 jaksoa katsottu",
+      "Allegations ei voi redeemaa",
+      "Pieni kasvu näkyy, mutta asiat oisi voinu näyttää paremmin",
+      "Premise tosi hyvä",
+      "Maailma hieno",
+      "Anime voisi olla tosi hyvä",
+      "Päähahmo on paska"
+    ],
+    "bestPick": "Roxy",
+    "tags": []
+  },
+  {
+    "id": "mushoku-tensei-benkku",
+    "seriesId": "mushoku-tensei",
+    "memberId": "benkku",
+    "score": 4.2,
+    "bulletPoints": [
+      "Benkku lukenut koko kirjasarjan",
+      "Suosittu ollut hyvin pitkään",
+      "Päähenkilön voi jakaa kahteen ihmiseen: Rudeus + Isekai",
+      "Scumbag päähenkilö, aikuistuessa glowup",
+      "Ei pysty modernisoimaan sarjaa",
+      "Biased review koska on lukenut sarjan"
+    ],
+    "bestPick": "Roxy",
+    "tags": []
+  },
+
+  {
+    "id": "junji-ito-collection-eetu-n",
+    "seriesId": "junji-ito-collection",
+    "memberId": "eetu-n",
+    "score": 2.7,
+    "bulletPoints": [
+      "Katsottu tänä aamuna, sivusilmällä",
+      "Mieleenjääviä kohtauksia",
+      "Most fucked up jakso oli 13A, Tomie part 1",
+      "Hyvin kauhua, fobiat esillä",
+      "Artstyle kauhuun sopiva",
+      "Ensimmäinen kauhuanime"
+    ],
+    "bestPick": "Tomie",
+    "tags": []
   }
 ]
