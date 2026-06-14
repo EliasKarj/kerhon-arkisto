@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SeriesCard } from "@/components/series-card";
-import { getSeriesByDateDesc } from "@/lib/data";
+import { getCoverUrl, getMemberById, getSeriesByDateDesc } from "@/lib/data";
+import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getClubAverageScore } from "@/lib/stats";
 
 const QUICK_LINKS = [
@@ -10,9 +11,21 @@ const QUICK_LINKS = [
   { href: "/aikajana", label: "Aikajana", description: "Katsotut kronologisesti" },
 ];
 
+function formatDate(iso: string): string {
+  const [year, month, day] = iso.split("-");
+  return `${Number(day)}.${Number(month)}.${year}`;
+}
+
 export default function HomePage() {
   const seriesByRecency = getSeriesByDateDesc();
   const clubAverage = getClubAverageScore();
+
+  // Nyt katselussa = uusin sarja, jota ei ole vielä arvioitu.
+  const current = seriesByRecency.find((entry) => entry.clubScore === null) ?? null;
+  const currentProposer = current ? getMemberById(current.proposerId) : null;
+  const currentCover = current ? getCoverUrl(current) : null;
+
+  const recent = seriesByRecency.filter((entry) => entry.id !== current?.id).slice(0, 4);
 
   const latestRated = seriesByRecency.find(
     (entry) => entry.clubScore !== null && entry.bestPick !== null,
@@ -27,6 +40,50 @@ export default function HomePage() {
           best girl/boy -valinnat ja tilastot yhdessä paikassa.
         </p>
       </section>
+
+      {/* Nyt katselussa */}
+      {current && (
+        <section
+          aria-label="Nyt katselussa"
+          className="overflow-hidden rounded-xl border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10"
+        >
+          <Link
+            href={`/sarja/${current.id}`}
+            className="group flex flex-col gap-5 p-5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground sm:flex-row sm:items-center sm:gap-6 sm:p-6"
+          >
+            <div className="flex aspect-[2/3] w-24 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-indigo-500/30 to-fuchsia-500/30 text-xl font-bold text-foreground/70 sm:w-28">
+              {currentCover ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={currentCover}
+                  alt={`${current.title} -kansikuva`}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <span aria-hidden>{getInitials(current.title)}</span>
+              )}
+            </div>
+
+            <div className="flex flex-1 flex-col gap-2">
+              <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-indigo-500 dark:text-indigo-400">
+                <span className="inline-block size-2 animate-pulse rounded-full bg-indigo-500" aria-hidden />
+                Nyt katselussa
+              </span>
+              <h2 className="text-2xl font-semibold tracking-tight group-hover:underline sm:text-3xl">
+                {current.title}
+              </h2>
+              <p className="text-sm text-foreground/60">
+                {SERIES_TYPE_LABELS[current.type]} · {seasonLabel(current.clubSeason)} ·{" "}
+                <time dateTime={current.watchedDate}>{formatDate(current.watchedDate)}</time>
+                {currentProposer ? ` · ehdotti ${currentProposer.name}` : ""}
+              </p>
+              <span className="w-fit rounded-full border border-indigo-500/30 bg-background/40 px-3 py-1 text-xs font-medium text-foreground/70">
+                Ei vielä arvioitu
+              </span>
+            </div>
+          </Link>
+        </section>
+      )}
 
       {/* Tilastonostot */}
       <section className="grid gap-4 sm:grid-cols-2" aria-label="Yleiskatsaus">
@@ -61,7 +118,7 @@ export default function HomePage() {
           </Link>
         </div>
         <ul className="grid gap-4 sm:grid-cols-2">
-          {seriesByRecency.slice(0, 4).map((series) => (
+          {recent.map((series) => (
             <li key={series.id}>
               <SeriesCard series={series} />
             </li>
