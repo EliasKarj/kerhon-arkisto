@@ -19,3 +19,13 @@ export function getInitials(title: string): string {
 export function reviewCountLabel(count: number): string {
   return `${count} ${count === 1 ? "arvio" : "arviota"}`;
 }
+
+/** Kerhon kausi numerona -> "Kausi N". */
+export function seasonLabel(season: number): string {
+  return `Kausi ${season}`;
+}
+
+/** "n sarja" / "n sarjaa" -taivutus. */
+export function seriesCountLabel(count: number): string {
+  return `${count} ${count === 1 ? "sarja" : "sarjaa"}`;
+}

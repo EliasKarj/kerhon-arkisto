@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BestPickBarChart } from "@/components/charts/best-pick-bar-chart";
 import { MemberScoreRadar } from "@/components/charts/member-score-radar";
@@ -9,8 +10,13 @@ import {
   getSummaryForSeries,
   series as allSeries,
 } from "@/lib/data";
-import { getInitials, reviewCountLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
+import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getBestPickCounts, getSeriesAverageScore } from "@/lib/stats";
+
+function formatDate(iso: string): string {
+  const [year, month, day] = iso.split("-");
+  return `${Number(day)}.${Number(month)}.${year}`;
+}
 
 export function generateStaticParams() {
   return allSeries.map((entry) => ({ id: entry.id }));
@@ -28,13 +34,15 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   if (!series) notFound();
 
   const reviews = getReviewsForSeries(id);
-  const average = getSeriesAverageScore(id);
+  const score = getSeriesAverageScore(id);
+  const proposer = getMemberById(series.proposerId);
+  const summary = getSummaryForSeries(id);
+
   const radarData = reviews.map((review) => ({
     member: getMemberById(review.memberId)?.name ?? review.memberId,
     score: review.score,
   }));
   const bestPickData = getBestPickCounts(reviews);
-  const summary = getSummaryForSeries(id);
 
   return (
     <article className="flex flex-col gap-10">
@@ -57,26 +65,46 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{series.title}</h1>
             <p className="text-sm text-foreground/60">
-              {SERIES_TYPE_LABELS[series.type]} · {series.season} · {series.year}
+              {SERIES_TYPE_LABELS[series.type]} · {seasonLabel(series.clubSeason)} ·{" "}
+              <time dateTime={series.watchedDate}>{formatDate(series.watchedDate)}</time>
             </p>
+            {proposer && (
+              <p className="text-sm text-foreground/60">
+                Ehdotti{" "}
+                <Link
+                  href={`/jasen/${proposer.id}`}
+                  className="rounded font-medium text-foreground/80 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                >
+                  {proposer.name}
+                </Link>
+              </p>
+            )}
           </div>
 
-          <ul className="flex flex-wrap gap-2" aria-label="Genretagit">
-            {series.genreTags.map((tag) => (
-              <li
-                key={tag}
-                className="rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/70 dark:border-white/15"
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+          {series.genreTags.length > 0 && (
+            <ul className="flex flex-wrap gap-2" aria-label="Genretagit">
+              {series.genreTags.map((tag) => (
+                <li
+                  key={tag}
+                  className="rounded-full border border-black/10 px-2.5 py-0.5 text-xs text-foreground/70 dark:border-white/15"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          )}
 
-          <div className="mt-1 flex items-baseline gap-2">
-            <span className="text-3xl font-bold tabular-nums">{formatScore(average)}</span>
-            <span className="text-sm text-foreground/60">
-              / 5 · {reviewCountLabel(reviews.length)}
+          <div className="mt-1 flex flex-wrap items-baseline gap-x-6 gap-y-1">
+            <span className="flex items-baseline gap-2">
+              <span className="text-3xl font-bold tabular-nums">{formatScore(score)}</span>
+              <span className="text-sm text-foreground/60">/ 5</span>
             </span>
+            {series.bestPick && (
+              <span className="text-sm text-foreground/60">
+                Best girl/boy:{" "}
+                <span className="font-medium text-foreground/80">{series.bestPick}</span>
+              </span>
+            )}
           </div>
         </div>
       </header>
@@ -97,37 +125,47 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
         </section>
       )}
 
-      {/* Kaaviot */}
-      <div className="grid gap-8 md:grid-cols-2">
-        <section className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Jäsenten pisteet</h2>
-          <MemberScoreRadar data={radarData} />
-        </section>
-        <section className="flex flex-col gap-3">
-          <h2 className="text-lg font-semibold">Best girl/boy -äänet</h2>
-          <BestPickBarChart data={bestPickData} />
-        </section>
-      </div>
+      {reviews.length > 0 ? (
+        <>
+          {/* Kaaviot */}
+          <div className="grid gap-8 md:grid-cols-2">
+            <section className="flex flex-col gap-3">
+              <h2 className="text-lg font-semibold">Jäsenten pisteet</h2>
+              <MemberScoreRadar data={radarData} />
+            </section>
+            <section className="flex flex-col gap-3">
+              <h2 className="text-lg font-semibold">Best girl/boy -äänet</h2>
+              <BestPickBarChart data={bestPickData} />
+            </section>
+          </div>
 
-      {/* Kommentit */}
-      <section className="flex flex-col gap-4">
-        <h2 className="text-lg font-semibold">Jäsenten kommentit</h2>
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {reviews.map((review) => {
-            const member = getMemberById(review.memberId);
-            return (
-              <ReviewCard
-                key={review.id}
-                review={review}
-                heading={{
-                  label: member?.name ?? review.memberId,
-                  href: `/jasen/${review.memberId}`,
-                }}
-              />
-            );
-          })}
-        </ul>
-      </section>
+          {/* Kommentit */}
+          <section className="flex flex-col gap-4">
+            <h2 className="text-lg font-semibold">Jäsenten kommentit</h2>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {reviews.map((review) => {
+                const member = getMemberById(review.memberId);
+                return (
+                  <ReviewCard
+                    key={review.id}
+                    review={review}
+                    heading={{
+                      label: member?.name ?? review.memberId,
+                      href: `/jasen/${review.memberId}`,
+                    }}
+                  />
+                );
+              })}
+            </ul>
+          </section>
+        </>
+      ) : (
+        <p className="text-sm text-foreground/60">
+          {series.clubScore === null
+            ? "Tätä sarjaa ei ole vielä arvioitu."
+            : "Jäsenten yksityiskohtaisia kommentteja ei ole kirjattu tälle sarjalle."}
+        </p>
+      )}
     </article>
   );
 }

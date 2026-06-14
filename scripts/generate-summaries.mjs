@@ -37,7 +37,7 @@ const SYSTEM_PROMPT = [
 
 function buildPrompt(entry, entryReviews) {
   const lines = [];
-  lines.push(`Sarja: ${entry.title} (${entry.type}, ${entry.season}, ${entry.year})`);
+  lines.push(`Sarja: ${entry.title} (${entry.type}, kausi ${entry.clubSeason})`);
   if (entry.genreTags?.length) lines.push(`Genret: ${entry.genreTags.join(", ")}`);
   lines.push("");
   lines.push("Jäsenten arviot:");

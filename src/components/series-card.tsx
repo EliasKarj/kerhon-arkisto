@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getReviewsForSeries } from "@/lib/data";
-import { getInitials, reviewCountLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
+import { getMemberById } from "@/lib/data";
+import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getSeriesAverageScore } from "@/lib/stats";
 import type { Series } from "@/lib/types";
 
 /** Sarjakortti listoihin ja dashboardiin. Koko kortti on yksi linkki sarjasivulle. */
 export function SeriesCard({ series }: { series: Series }) {
-  const reviewCount = getReviewsForSeries(series.id).length;
-  const average = getSeriesAverageScore(series.id);
+  const score = getSeriesAverageScore(series.id);
+  const proposer = getMemberById(series.proposerId);
 
   return (
     <Link
@@ -30,11 +30,13 @@ export function SeriesCard({ series }: { series: Series }) {
       <div className="flex min-w-0 flex-col gap-0.5">
         <h3 className="truncate font-medium group-hover:underline">{series.title}</h3>
         <p className="text-xs text-foreground/60">
-          {SERIES_TYPE_LABELS[series.type]} · {series.year}
+          {SERIES_TYPE_LABELS[series.type]} · {seasonLabel(series.clubSeason)}
         </p>
         <p className="mt-auto pt-1 text-sm text-foreground/80">
-          <span className="font-semibold tabular-nums">{formatScore(average)}</span>
-          <span className="text-foreground/50">/5 · {reviewCountLabel(reviewCount)}</span>
+          <span className="font-semibold tabular-nums">{formatScore(score)}</span>
+          <span className="text-foreground/50">
+            /5{proposer ? ` · ehdotti ${proposer.name}` : ""}
+          </span>
         </p>
       </div>
     </Link>

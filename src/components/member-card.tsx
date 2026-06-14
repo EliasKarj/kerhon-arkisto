@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { getReviewsForMember } from "@/lib/data";
-import { getInitials, reviewCountLabel } from "@/lib/labels";
-import { formatScore, getMemberAverageScore } from "@/lib/stats";
+import { getSeriesProposedBy } from "@/lib/data";
+import { getInitials, seriesCountLabel } from "@/lib/labels";
+import { formatScore, getMemberProposedAverage } from "@/lib/stats";
 import type { Member } from "@/lib/types";
 
 /** Jäsenkortti listaan. Koko kortti on yksi linkki jäsenprofiiliin. */
 export function MemberCard({ member }: { member: Member }) {
-  const reviewCount = getReviewsForMember(member.id).length;
-  const average = getMemberAverageScore(member.id);
+  const proposedCount = getSeriesProposedBy(member.id).length;
+  const proposedAverage = getMemberProposedAverage(member.id);
 
   return (
     <Link
@@ -28,12 +28,15 @@ export function MemberCard({ member }: { member: Member }) {
       </div>
 
       <div className="flex flex-col">
-        <span className="font-medium group-hover:underline">{member.name}</span>
+        <span className="font-medium group-hover:underline">
+          {member.name}
+          {member.guest ? <span className="ml-1 text-xs text-foreground/40">(vieras)</span> : null}
+        </span>
         <span className="text-sm text-foreground/60">
+          ehdotti {seriesCountLabel(proposedCount)} · ehdotusten ka{" "}
           <span className="font-semibold tabular-nums text-foreground/80">
-            {formatScore(average)}
+            {formatScore(proposedAverage)}
           </span>
-          /5 · {reviewCountLabel(reviewCount)}
         </span>
       </div>
     </Link>

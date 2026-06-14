@@ -1,11 +1,74 @@
 [
-  {
-    "id": "chainsaw-man",
-    "title": "Chainsaw Man",
-    "type": "anime",
-    "season": "Kausi 1",
-    "year": 2022,
-    "genreTags": ["action", "horror", "comedy", "slice-of-life"],
-    "coverUrl": ""
-  }
+  { "id": "food-wars", "title": "Food Wars! Shokugeki no Soma", "type": "anime", "clubSeason": 1, "watchedDate": "2023-12-10", "proposerId": "mikko", "clubScore": 3, "bestPick": "Alice Nakiri", "genreTags": [], "coverUrl": "" },
+  { "id": "neon-genesis-evangelion", "title": "Neon Genesis Evangelion", "type": "anime", "clubSeason": 1, "watchedDate": "2023-12-28", "proposerId": "eetu-t", "clubScore": 4, "bestPick": "Misato Katsuragi", "genreTags": [], "coverUrl": "" },
+  { "id": "tokyo-ghoul", "title": "Tokyo Ghoul", "type": "anime", "clubSeason": 1, "watchedDate": "2024-01-14", "proposerId": "jonni", "clubScore": 3, "bestPick": "Hinami Kaeguchi", "genreTags": [], "coverUrl": "" },
+  { "id": "mob-psycho-100", "title": "Mob Psycho 100", "type": "anime", "clubSeason": 1, "watchedDate": "2024-02-04", "proposerId": "aki", "clubScore": 4.4, "bestPick": "Dimple", "genreTags": [], "coverUrl": "" },
+  { "id": "hyouka", "title": "Hyouka", "type": "anime", "clubSeason": 1, "watchedDate": "2024-02-25", "proposerId": "benkku", "clubScore": 1.9, "bestPick": "Tomoe Oreki", "genreTags": [], "coverUrl": "" },
+  { "id": "kurokos-basketball", "title": "Kuroko's Basketball", "type": "anime", "clubSeason": 1, "watchedDate": "2024-03-10", "proposerId": "henri", "clubScore": 4.1, "bestPick": "Satsuki Momoi", "genreTags": [], "coverUrl": "" },
+
+  { "id": "serial-experiments-lain", "title": "Serial Experiments Lain", "type": "anime", "clubSeason": 2, "watchedDate": "2024-03-24", "proposerId": "mikko", "clubScore": 3.4, "bestPick": "Alieni", "genreTags": [], "coverUrl": "" },
+  { "id": "berserk", "title": "Berserk", "type": "anime", "clubSeason": 2, "watchedDate": "2024-04-07", "proposerId": "eetu-t", "clubScore": 4, "bestPick": "Casca", "genreTags": [], "coverUrl": "" },
+  { "id": "solo-leveling", "title": "Solo Leveling", "type": "anime", "clubSeason": 2, "watchedDate": "2024-04-21", "proposerId": "jonni", "clubScore": 4.2, "bestPick": "Hae-In Cha", "genreTags": [], "coverUrl": "" },
+  { "id": "komi-cant-communicate", "title": "Komi Can't Communicate", "type": "anime", "clubSeason": 2, "watchedDate": "2024-05-05", "proposerId": "aki", "clubScore": 3.1, "bestPick": "Shuuko Komi", "genreTags": [], "coverUrl": "" },
+  { "id": "konosuba", "title": "KonoSuba: God's Blessing on This Wonderful World!", "type": "anime", "clubSeason": 2, "watchedDate": "2024-05-19", "proposerId": "benkku", "clubScore": 3.4, "bestPick": "Darkness", "genreTags": [], "coverUrl": "" },
+  { "id": "hells-paradise", "title": "Hell's Paradise", "type": "anime", "clubSeason": 2, "watchedDate": "2024-06-14", "proposerId": "henri", "clubScore": 4.2, "bestPick": "Yuzuriha", "genreTags": [], "coverUrl": "" },
+
+  { "id": "banana-fish", "title": "Banana Fish", "type": "anime", "clubSeason": 3, "watchedDate": "2024-06-30", "proposerId": "mikko", "clubScore": 3.8, "bestPick": null, "genreTags": [], "coverUrl": "" },
+  { "id": "kaiju-no-8", "title": "Kaiju No. 8", "type": "anime", "clubSeason": 3, "watchedDate": "2024-07-13", "proposerId": "eetu-t", "clubScore": 4.2, "bestPick": "Mina Ashiro", "genreTags": [], "coverUrl": "" },
+  { "id": "rising-impact", "title": "Rising Impact", "type": "anime", "clubSeason": 3, "watchedDate": "2024-07-28", "proposerId": "jonni", "clubScore": 3.6, "bestPick": "Kiria Nishino", "genreTags": [], "coverUrl": "" },
+  { "id": "viral-hit", "title": "Viral Hit", "type": "anime", "clubSeason": 3, "watchedDate": "2024-08-11", "proposerId": "aki", "clubScore": 3.9, "bestPick": "Bomi Choi", "genreTags": [], "coverUrl": "" },
+  { "id": "punch-line", "title": "Punch Line", "type": "anime", "clubSeason": 3, "watchedDate": "2024-08-25", "proposerId": "benkku", "clubScore": 2.4, "bestPick": "Rabura Chichibu", "genreTags": [], "coverUrl": "" },
+  { "id": "blood-blockade-battlefront", "title": "Blood Blockade Battlefront", "type": "anime", "clubSeason": 3, "watchedDate": "2024-09-08", "proposerId": "henri", "clubScore": 2.9, "bestPick": "Chain Sumeragi", "genreTags": [], "coverUrl": "" },
+
+  { "id": "made-in-abyss", "title": "Made in Abyss", "type": "anime", "clubSeason": 4, "watchedDate": "2024-09-22", "proposerId": "mikko", "clubScore": 4.2, "bestPick": "Nanachi", "genreTags": [], "coverUrl": "" },
+  { "id": "cowboy-bebop", "title": "Cowboy Bebop", "type": "anime", "clubSeason": 4, "watchedDate": "2024-10-06", "proposerId": "eetu-t", "clubScore": 3.5, "bestPick": "Faye Valentine", "genreTags": [], "coverUrl": "" },
+  { "id": "parasyte-the-maxim", "title": "Parasyte: The Maxim", "type": "anime", "clubSeason": 4, "watchedDate": "2024-10-20", "proposerId": "jonni", "clubScore": 3.3, "bestPick": "Migi", "genreTags": [], "coverUrl": "" },
+  { "id": "ossan-newbie-adventurer", "title": "The Ossan Newbie Adventurer", "type": "anime", "clubSeason": 4, "watchedDate": "2024-11-03", "proposerId": "aki", "clubScore": 4.1, "bestPick": "Reanette Elfelt", "genreTags": [], "coverUrl": "" },
+  { "id": "higurashi", "title": "Higurashi: When They Cry", "type": "anime", "clubSeason": 4, "watchedDate": "2024-11-17", "proposerId": "benkku", "clubScore": 3.3, "bestPick": "Mion Sonozaki", "genreTags": [], "coverUrl": "" },
+  { "id": "takt-op-destiny", "title": "Takt Op. Destiny", "type": "anime", "clubSeason": 4, "watchedDate": "2024-12-01", "proposerId": "henri", "clubScore": 2.8, "bestPick": "Titan", "genreTags": [], "coverUrl": "" },
+
+  { "id": "violet-evergarden", "title": "Violet Evergarden", "type": "anime", "clubSeason": 5, "watchedDate": "2024-12-14", "proposerId": "timi", "clubScore": 4, "bestPick": "Cattleya Baudelaire", "genreTags": [], "coverUrl": "" },
+  { "id": "demon-lord-2099", "title": "Demon Lord 2099", "type": "anime", "clubSeason": 5, "watchedDate": "2024-12-29", "proposerId": "mikko", "clubScore": 3.5, "bestPick": "Machina Solege", "genreTags": [], "coverUrl": "" },
+  { "id": "ghost-in-the-shell", "title": "Ghost in the Shell", "type": "movie", "clubSeason": 5, "watchedDate": "2025-01-12", "proposerId": "eetu-t", "clubScore": 3, "bestPick": "Motoko Kusanagi", "genreTags": [], "coverUrl": "" },
+  { "id": "berserk-of-gluttony", "title": "Berserk of Gluttony", "type": "anime", "clubSeason": 5, "watchedDate": "2025-01-26", "proposerId": "jonni", "clubScore": 3, "bestPick": "Myne", "genreTags": [], "coverUrl": "" },
+  { "id": "tsukimichi", "title": "Tsukimichi -Moonlit Fantasy-", "type": "anime", "clubSeason": 5, "watchedDate": "2025-02-09", "proposerId": "aki", "clubScore": 3.6, "bestPick": "Mio", "genreTags": [], "coverUrl": "" },
+  { "id": "ranma-half-2024", "title": "Ranma ½ (2024)", "type": "anime", "clubSeason": 5, "watchedDate": "2025-02-23", "proposerId": "benkku", "clubScore": 3.6, "bestPick": "Souun Tendou", "genreTags": [], "coverUrl": "" },
+  { "id": "uma-musume", "title": "Uma Musume: Pretty Derby", "type": "anime", "clubSeason": 5, "watchedDate": "2025-03-09", "proposerId": "henri", "clubScore": 1.6, "bestPick": "Broye", "genreTags": [], "coverUrl": "" },
+
+  { "id": "pluto", "title": "Pluto", "type": "anime", "clubSeason": 6, "watchedDate": "2025-03-23", "proposerId": "mikko", "clubScore": 4, "bestPick": "Helena", "genreTags": [], "coverUrl": "" },
+  { "id": "akira", "title": "Akira", "type": "movie", "clubSeason": 6, "watchedDate": "2025-04-06", "proposerId": "eetu-t", "clubScore": 3.5, "bestPick": "Kei", "genreTags": [], "coverUrl": "" },
+  { "id": "another", "title": "Another", "type": "anime", "clubSeason": 6, "watchedDate": "2025-04-20", "proposerId": "jonni", "clubScore": 2.9, "bestPick": "Reiko Mikami", "genreTags": [], "coverUrl": "" },
+  { "id": "trillion-game", "title": "Trillion Game", "type": "anime", "clubSeason": 6, "watchedDate": "2025-05-04", "proposerId": "aki", "clubScore": 4.1, "bestPick": "Rinrin Takashi", "genreTags": [], "coverUrl": "" },
+  { "id": "gurren-lagann", "title": "Gurren Lagann", "type": "anime", "clubSeason": 6, "watchedDate": "2025-05-18", "proposerId": "benkku", "clubScore": 4.2, "bestPick": "Yoko Littner", "genreTags": [], "coverUrl": "" },
+  { "id": "monster-girl-doctor", "title": "Monster Girl Doctor", "type": "anime", "clubSeason": 6, "watchedDate": "2025-06-01", "proposerId": "henri", "clubScore": 3.5, "bestPick": "Saphentite Neikes", "genreTags": [], "coverUrl": "" },
+
+  { "id": "86-eighty-six", "title": "86 Eighty-Six", "type": "anime", "clubSeason": 7, "watchedDate": "2025-06-15", "proposerId": "mikko", "clubScore": 4.1, "bestPick": "Anju Emma", "genreTags": [], "coverUrl": "" },
+  { "id": "trigun", "title": "Trigun", "type": "anime", "clubSeason": 7, "watchedDate": "2025-06-29", "proposerId": "eetu-t", "clubScore": 3.7, "bestPick": "Milly Thompson", "genreTags": [], "coverUrl": "" },
+  { "id": "demon-slayer", "title": "Demon Slayer", "type": "anime", "clubSeason": 7, "watchedDate": "2025-07-13", "proposerId": "jonni", "clubScore": 4.3, "bestPick": "Insect Hashira Shinobu", "genreTags": [], "coverUrl": "" },
+  { "id": "mushoku-tensei", "title": "Mushoku Tensei: Jobless Reincarnation", "type": "anime", "clubSeason": 7, "watchedDate": "2025-07-27", "proposerId": "aki", "clubScore": 2.2, "bestPick": "Roxy Migurdia", "genreTags": [], "coverUrl": "" },
+  { "id": "talentless-nana", "title": "Talentless Nana", "type": "anime", "clubSeason": 7, "watchedDate": "2025-08-10", "proposerId": "benkku", "clubScore": 3.5, "bestPick": "Michiru Inukai", "genreTags": [], "coverUrl": "" },
+  { "id": "no-longer-allowed", "title": "No Longer Allowed in Another World", "type": "anime", "clubSeason": 7, "watchedDate": "2025-08-24", "proposerId": "henri", "clubScore": 3.3, "bestPick": "Tama", "genreTags": [], "coverUrl": "" },
+
+  { "id": "porco-rosso", "title": "Porco Rosso", "type": "movie", "clubSeason": 8, "watchedDate": "2025-09-07", "proposerId": "jp", "clubScore": 4.1, "bestPick": "Porco Rosso", "genreTags": [], "coverUrl": "" },
+  { "id": "nana", "title": "Nana", "type": "anime", "clubSeason": 8, "watchedDate": "2025-09-21", "proposerId": "eetu-n", "clubScore": 4.2, "bestPick": "Nana Osaki", "genreTags": [], "coverUrl": "" },
+  { "id": "odd-taxi", "title": "Odd Taxi", "type": "anime", "clubSeason": 8, "watchedDate": "2025-10-05", "proposerId": "mikko", "clubScore": 4, "bestPick": "Miho Shirakawa", "genreTags": [], "coverUrl": "" },
+  { "id": "ninja-scroll", "title": "Ninja Scroll", "type": "movie", "clubSeason": 8, "watchedDate": "2025-10-19", "proposerId": "eetu-t", "clubScore": 3.1, "bestPick": "Kagero", "genreTags": [], "coverUrl": "" },
+  { "id": "frieren", "title": "Frieren: Beyond Journey's End", "type": "anime", "clubSeason": 8, "watchedDate": "2025-11-02", "proposerId": "jonni", "clubScore": 4.6, "bestPick": "Flamme", "genreTags": [], "coverUrl": "" },
+  { "id": "super-crooks", "title": "Super Crooks", "type": "anime", "clubSeason": 8, "watchedDate": "2025-11-16", "proposerId": "aki", "clubScore": 3.1, "bestPick": "Kasey", "genreTags": [], "coverUrl": "" },
+  { "id": "in-spectre", "title": "In/Spectre", "type": "anime", "clubSeason": 8, "watchedDate": "2025-11-30", "proposerId": "benkku", "clubScore": 3.4, "bestPick": "Kotoko Iwanaga", "genreTags": [], "coverUrl": "" },
+  { "id": "inazuma-eleven", "title": "Inazuma Eleven", "type": "anime", "clubSeason": 8, "watchedDate": "2025-12-14", "proposerId": "henri", "clubScore": 2.8, "bestPick": "Hibike Seigou", "genreTags": [], "coverUrl": "" },
+
+  { "id": "master-of-diabolism", "title": "The Master of Diabolism", "type": "anime", "clubSeason": 9, "watchedDate": "2026-01-04", "proposerId": "jp", "clubScore": 3.8, "bestPick": "Wei Wuxian", "genreTags": [], "coverUrl": "" },
+  { "id": "tokyo-revengers", "title": "Tokyo Revengers", "type": "anime", "clubSeason": 9, "watchedDate": "2026-01-18", "proposerId": "eetu-n", "clubScore": 4, "bestPick": "Hinata Tachibana (Future)", "genreTags": [], "coverUrl": "" },
+  { "id": "sonny-boy", "title": "Sonny Boy", "type": "anime", "clubSeason": 9, "watchedDate": "2026-02-01", "proposerId": "mikko", "clubScore": 2.9, "bestPick": "Rajdhani", "genreTags": [], "coverUrl": "" },
+  { "id": "memories", "title": "Memories", "type": "movie", "clubSeason": 9, "watchedDate": "2026-02-15", "proposerId": "eetu-t", "clubScore": 3.5, "bestPick": "Heintz", "genreTags": [], "coverUrl": "" },
+  { "id": "junji-ito-collection", "title": "Junji Ito Collection", "type": "anime", "clubSeason": 9, "watchedDate": "2026-03-01", "proposerId": "jonni", "clubScore": 2.6, "bestPick": "Tomie", "genreTags": [], "coverUrl": "" },
+  { "id": "space-dandy", "title": "Space☆Dandy", "type": "anime", "clubSeason": 9, "watchedDate": "2026-03-15", "proposerId": "aki", "clubScore": 3.7, "bestPick": "Honey", "genreTags": [], "coverUrl": "" },
+  { "id": "steins-gate", "title": "Steins;Gate", "type": "anime", "clubSeason": 9, "watchedDate": "2026-03-29", "proposerId": "benkku", "clubScore": 4.4, "bestPick": "Makise Kurisu", "genreTags": [], "coverUrl": "" },
+  { "id": "overlord", "title": "Overlord", "type": "anime", "clubSeason": 9, "watchedDate": "2026-04-12", "proposerId": "henri", "clubScore": 3.6, "bestPick": "Albedo", "genreTags": [], "coverUrl": "" },
+
+  { "id": "jujutsu-kaisen", "title": "Jujutsu Kaisen", "type": "anime", "clubSeason": 10, "watchedDate": "2026-04-26", "proposerId": "jp", "clubScore": 4.4, "bestPick": "Nanami Kento", "genreTags": [], "coverUrl": "" },
+  { "id": "tower-of-god", "title": "Tower of God", "type": "anime", "clubSeason": 10, "watchedDate": "2026-05-11", "proposerId": "eetu-t", "clubScore": 3.1, "bestPick": "Ha Yuri Jahad", "genreTags": [], "coverUrl": "" },
+  { "id": "chainsaw-man", "title": "Chainsaw Man", "type": "anime", "clubSeason": 10, "watchedDate": "2026-05-24", "proposerId": "mikko", "clubScore": 4.6, "bestPick": "Himeno", "genreTags": ["action", "horror", "comedy", "slice-of-life"], "coverUrl": "" },
+  { "id": "monster", "title": "Monster", "type": "anime", "clubSeason": 10, "watchedDate": "2026-06-14", "proposerId": "eetu-n", "clubScore": null, "bestPick": null, "genreTags": [], "coverUrl": "" }
 ]
