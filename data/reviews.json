@@ -1,0 +1,95 @@
+[
+  {
+    "id": "csm-aki",
+    "seriesId": "chainsaw-man",
+    "memberId": "aki",
+    "score": 4.5,
+    "bulletPoints": [
+      "GOAT",
+      "Hyvä animaatio",
+      "Hyvä tarina",
+      "Päähenkilön tarina surullinen",
+      "RIP Pochita",
+      "Hyvä artstyle"
+    ],
+    "bestPick": "Power",
+    "tags": []
+  },
+  {
+    "id": "csm-eetu-t",
+    "seriesId": "chainsaw-man",
+    "memberId": "eetu-t",
+    "score": 4.7,
+    "bulletPoints": [
+      "Oli hyvä",
+      "1x japanilla katsottu ystävien kanssa",
+      "Hyvä balanssi möhöä ja hempeilyä",
+      "Huumoria myös",
+      "Slice of life ja tissejä",
+      "Hyvä kombo"
+    ],
+    "bestPick": "Makima",
+    "tags": ["mohoo"]
+  },
+  {
+    "id": "csm-eetu-n",
+    "seriesId": "chainsaw-man",
+    "memberId": "eetu-n",
+    "score": 4.7,
+    "bulletPoints": [
+      "Tänään katsottu",
+      "Eniten tykätty slice of life puolesta ja romancesta",
+      "Goon shit good",
+      "Möhö hyvää",
+      "Luulis et olis enemmän goree",
+      "Musiikki ja animaatio hyvää"
+    ],
+    "bestPick": "Himeno",
+    "tags": ["mohoo"]
+  },
+  {
+    "id": "csm-mikko",
+    "seriesId": "chainsaw-man",
+    "memberId": "mikko",
+    "score": 4.6,
+    "bulletPoints": [
+      "Outoa että anime ei ole valittu kerhossa nyt",
+      "Samaa mieltä jengin kanssa",
+      "Kaikille on jotain",
+      "Tarina, musiikki ja animaatio tyyli hyvä"
+    ],
+    "bestPick": "Himeno",
+    "tags": []
+  },
+  {
+    "id": "csm-jonni",
+    "seriesId": "chainsaw-man",
+    "memberId": "jonni",
+    "score": 4.8,
+    "bulletPoints": [
+      "Samaa mieltä jengin kanssa",
+      "Möhö helvetin hyvää",
+      "Animaatiotyyli yes",
+      "Muutama chapter luettu",
+      "Kivasti goree",
+      "Äärimmäisen hyvää möhöö",
+      "Päähahmon motivaatio on mielenkiintoinen"
+    ],
+    "bestPick": "Makima",
+    "tags": ["mohoo", "gore"]
+  },
+  {
+    "id": "csm-henri",
+    "seriesId": "chainsaw-man",
+    "memberId": "henri",
+    "score": 4.6,
+    "bulletPoints": [
+      "Kovaa möhöö",
+      "Hyvää tavaraa",
+      "Hyvä story",
+      "Nice character development"
+    ],
+    "bestPick": "Himeno",
+    "tags": ["mohoo"]
+  }
+]
