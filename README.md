@@ -86,6 +86,10 @@ Claude, `claude-opus-4-8`) ja tallennetaan `data/summaries.json`:iin — sovellu
 ei kutsu mallia ajon aikana, joten sivusto pysyy täysin staattisena eikä
 API-avainta tarvita tuotannossa.
 
+> Generointi on **täysin valinnainen**. Ilman sitä `data/summaries.json` on
+> tyhjä, yhteenvetokortti ei näy ja kaikki muu toimii normaalisti. Koodi
+> demonstroi Claude API -integraation; aja skripti vain jos haluat yhteenvedot.
+
 Generointi vaatii Anthropic API -avaimen ympäristömuuttujana. Aja projektin
 juuresta:
 
