@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BestPickBarChart } from "@/components/charts/best-pick-bar-chart";
 import { MemberScoreRadar } from "@/components/charts/member-score-radar";
+import { ReviewCard } from "@/components/review-card";
 import {
   getMemberById,
   getReviewsForSeries,
@@ -98,48 +98,14 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           {reviews.map((review) => {
             const member = getMemberById(review.memberId);
             return (
-              <li
+              <ReviewCard
                 key={review.id}
-                className="flex flex-col gap-3 rounded-lg border border-black/10 p-4 dark:border-white/10"
-              >
-                <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-medium">
-                    <Link
-                      href={`/jasen/${review.memberId}`}
-                      className="rounded hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-                    >
-                      {member?.name ?? review.memberId}
-                    </Link>
-                  </h3>
-                  <span className="text-sm font-semibold tabular-nums text-foreground/80">
-                    {formatScore(review.score)}/5
-                  </span>
-                </div>
-
-                <p className="text-sm">
-                  <span className="text-foreground/60">Best pick: </span>
-                  <span className="font-medium">{review.bestPick}</span>
-                </p>
-
-                <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-foreground/40">
-                  {review.bulletPoints.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-
-                {review.tags.length > 0 && (
-                  <ul className="flex flex-wrap gap-1.5" aria-label="Tagit">
-                    {review.tags.map((tag) => (
-                      <li
-                        key={tag}
-                        className="rounded-full bg-foreground/5 px-2 py-0.5 text-xs text-foreground/60"
-                      >
-                        #{tag}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
+                review={review}
+                heading={{
+                  label: member?.name ?? review.memberId,
+                  href: `/jasen/${review.memberId}`,
+                }}
+              />
             );
           })}
         </ul>
