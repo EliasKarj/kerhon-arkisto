@@ -8,14 +8,8 @@ import {
   getSeriesById,
   series as allSeries,
 } from "@/lib/data";
+import { getInitials, reviewCountLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getBestPickCounts, getSeriesAverageScore } from "@/lib/stats";
-import type { SeriesType } from "@/lib/types";
-
-const TYPE_LABELS: Record<SeriesType, string> = {
-  anime: "Anime",
-  movie: "Elokuva",
-  series: "Sarja",
-};
 
 export function generateStaticParams() {
   return allSeries.map((entry) => ({ id: entry.id }));
@@ -40,12 +34,6 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   }));
   const bestPickData = getBestPickCounts(reviews);
 
-  const initials = series.title
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase() ?? "")
-    .join("");
-
   return (
     <article className="flex flex-col gap-10">
       {/* Perustiedot */}
@@ -59,7 +47,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
               className="h-full w-full object-cover"
             />
           ) : (
-            <span aria-hidden>{initials}</span>
+            <span aria-hidden>{getInitials(series.title)}</span>
           )}
         </div>
 
@@ -67,7 +55,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           <div className="flex flex-col gap-1">
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{series.title}</h1>
             <p className="text-sm text-foreground/60">
-              {TYPE_LABELS[series.type]} · {series.season} · {series.year}
+              {SERIES_TYPE_LABELS[series.type]} · {series.season} · {series.year}
             </p>
           </div>
 
@@ -85,7 +73,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-3xl font-bold tabular-nums">{formatScore(average)}</span>
             <span className="text-sm text-foreground/60">
-              / 5 · {reviews.length} {reviews.length === 1 ? "arvio" : "arviota"}
+              / 5 · {reviewCountLabel(reviews.length)}
             </span>
           </div>
         </div>
