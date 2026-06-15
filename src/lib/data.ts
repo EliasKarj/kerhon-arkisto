@@ -93,8 +93,3 @@ export function getWatchLinks(seriesId: string): WatchLinks | null {
 export function getMeta(seriesId: string): SeriesMeta | null {
   return meta[seriesId] ?? null;
 }
-
-/** Kaikki metatieto (seriesId -> SeriesMeta). */
-export function getAllMeta(): Record<string, SeriesMeta> {
-  return meta;
-}
