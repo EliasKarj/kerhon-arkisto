@@ -10,7 +10,9 @@
     "generate:summaries": "node scripts/generate-summaries.mjs",
     "fetch:covers": "node scripts/fetch-covers.mjs",
     "fetch:characters": "node scripts/fetch-characters.mjs",
-    "fetch:links": "node scripts/fetch-links.mjs"
+    "fetch:links": "node scripts/fetch-links.mjs",
+    "fetch:meta": "node scripts/fetch-meta.mjs",
+    "build:graph": "node scripts/build-graph.mjs"
   },
   "dependencies": {
     "next": "16.2.9",

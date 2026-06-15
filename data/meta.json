@@ -1,0 +1,1351 @@
+{
+  "food-wars": {
+    "genres": [
+      "Comedy",
+      "Ecchi"
+    ],
+    "studio": "J.C.STAFF",
+    "year": 2015,
+    "episodes": 24,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Food Wars!: Shokugeki no Soma",
+      "Food Wars! The Second Plate",
+      "Food Wars! Shokugeki no Soma OVA"
+    ]
+  },
+  "neon-genesis-evangelion": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Mecha",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "studio": "Gainax",
+    "year": 1995,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Neon Genesis Evangelion: The End of Evangelion",
+      "Neon Genesis Evangelion",
+      "Neon Genesis Evangelion: Death & Rebirth",
+      "Petit Eva: Evangelion@School",
+      "Peaceful Times (F02) Petit Film",
+      "Neon Genesis Evangelion: ANIMA",
+      "Neon Genesis Evangelion: Legend of the Piko Piko Middle School Students",
+      "Evangelion x KATE CM"
+    ]
+  },
+  "tokyo-ghoul": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ],
+    "studio": "Studio Pierrot",
+    "year": 2014,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Tokyo Ghoul",
+      "Tokyo Ghoul: [PINTO]",
+      "Tokyo Ghoul √A",
+      "Tokyo Ghoul: [JACK]",
+      "「unravel」×『Tokyo Ghoul』TV Animation 10th Anniversary Collaboration MV"
+    ]
+  },
+  "mob-psycho-100": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Psychological",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "studio": "bones",
+    "year": 2016,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Mob Psycho 100",
+      "Mob Psycho 100 II",
+      "Mob Psycho mini",
+      "Mob Psycho 100 REIGEN The Miraculous Unknown Psychic"
+    ]
+  },
+  "hyouka": {
+    "genres": [
+      "Mystery",
+      "Romance",
+      "Slice of Life"
+    ],
+    "studio": "Kyoto Animation",
+    "year": 2012,
+    "episodes": 22,
+    "duration": 26,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Hyouka",
+      "Hyouka: What Should Be Had",
+      "Hyouka",
+      "Gusha no Endroll",
+      "Kudryavka no Junban",
+      "Toomawari suru Hina"
+    ]
+  },
+  "kurokos-basketball": {
+    "genres": [
+      "Comedy",
+      "Sports"
+    ],
+    "studio": "Production I.G",
+    "year": 2012,
+    "episodes": 25,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Tadatoshi Fujimaki",
+    "relations": [
+      "Kuroko's Basketball: Tip Off",
+      "Kuroko's Basketball 2",
+      "Kuroko's Basketball",
+      "Kuroko no Basket: Oshaberi Shiyokka",
+      "Kuroko's Basketball Specials",
+      "Winter Cup Highlights Episode 1 – Winter Cup Highlights -Shadow and Light-",
+      "Kuroko's Basketball OVA",
+      "Kuroko no Basket: Zero Step"
+    ]
+  },
+  "serial-experiments-lain": {
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "studio": "Triangle Staff",
+    "year": 1998,
+    "episodes": 13,
+    "duration": 23,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Serial Experiments Lain: The Nightmare of Fabrication"
+    ]
+  },
+  "berserk": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Supernatural"
+    ],
+    "studio": "OLM",
+    "year": 1997,
+    "episodes": 25,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Kentarou Miura",
+    "relations": [
+      "Berserk",
+      "Berserk: The Golden Age Arc I - The Egg of the King",
+      "Berserk: The Golden Age Arc II - The Battle for Doldrey",
+      "Berserk: The Golden Age Arc III - The Advent",
+      "Berserk: The Golden Age Arc - Memorial Edition"
+    ]
+  },
+  "solo-leveling": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "studio": "A-1 Pictures",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "OTHER",
+    "author": null,
+    "relations": [
+      "Solo Leveling",
+      "Solo Leveling Season 2 -Arise from the Shadow-",
+      "Solo Leveling -ReAwakening-"
+    ]
+  },
+  "komi-cant-communicate": {
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Slice of Life"
+    ],
+    "studio": "OLM",
+    "year": 2022,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Komi Can’t Communicate",
+      "Komi Can't Communicate",
+      "Koshaberi Biyori "
+    ]
+  },
+  "konosuba": {
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "studio": "Studio DEEN",
+    "year": 2016,
+    "episodes": 10,
+    "duration": 23,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Konosuba: God's Blessing on This Wonderful World!",
+      "KONOSUBA -God's blessing on this wonderful world!: God's Blessings On This Wonderful Choker!",
+      "KONOSUBA -God's blessing on this wonderful world! 2",
+      "Isekai Quartet",
+      "Konosuba: God's Blessing on This Wonderful World!",
+      "Isekai Quartet 2",
+      "Isekai Quartet The Movie: Another World",
+      "KONOSUBA -An Explosion on This Wonderful World!"
+    ]
+  },
+  "hells-paradise": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Mystery",
+      "Supernatural"
+    ],
+    "studio": "MAPPA",
+    "year": 2023,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Hell’s Paradise: Jigokuraku",
+      "Jigokuraku: Utakata no Yume",
+      "Hell’s Paradise Season 2"
+    ]
+  },
+  "banana-fish": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Psychological",
+      "Thriller"
+    ],
+    "studio": "MAPPA",
+    "year": 2018,
+    "episodes": 24,
+    "duration": 23,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Akimi Yoshida",
+    "relations": [
+      "Banana Fish",
+      "Prayer X"
+    ]
+  },
+  "kaiju-no-8": {
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "studio": "Production I.G",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Kaiju No.8",
+      "Kaiju No. 8 Season 2",
+      "Kaiju No. 8: Mission Recon",
+      "Kaiju No.8: Hoshina's Day Off",
+      "minute! Kaiju No. 8"
+    ]
+  },
+  "rising-impact": {
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Sports"
+    ],
+    "studio": "Lay-duce",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 25,
+    "format": "ONA",
+    "source": "MANGA",
+    "author": "Nakaba Suzuki",
+    "relations": [
+      "Rising Impact",
+      "Rising Impact Season 2"
+    ]
+  },
+  "viral-hit": {
+    "genres": [
+      "Action",
+      "Comedy"
+    ],
+    "studio": "Okuruto Noboru",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 23,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Viral Hit"
+    ]
+  },
+  "punch-line": {
+    "genres": [
+      "Comedy",
+      "Ecchi",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "studio": "MAPPA",
+    "year": 2015,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Punch Line MAX"
+    ]
+  },
+  "blood-blockade-battlefront": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Supernatural"
+    ],
+    "studio": "bones",
+    "year": 2015,
+    "episodes": 12,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Yasuhiro Nightow",
+    "relations": [
+      "Blood Blockade Battlefront",
+      "Blood Blockade Battlefront: King of Kings Restaurant Fit for a King",
+      "Blood Blockade Battlefront & Beyond"
+    ]
+  },
+  "made-in-abyss": {
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "studio": "Kinema Citrus",
+    "year": 2017,
+    "episodes": 13,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Made in Abyss: Dawn of the Deep Soul",
+      "Made in Abyss: Journey's Dawn",
+      "Made in Abyss: Wandering Twilight",
+      "Made in Abyss"
+    ]
+  },
+  "cowboy-bebop": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "studio": "Sunrise",
+    "year": 1998,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Cowboy Bebop: The Movie - Knockin' on Heaven's Door",
+      "Ein's Summer Vacation",
+      "Cowboy Bebop",
+      "Cowboy Bebop Shooting Star",
+      "Cowboy Bebop: Yoseatsume Blues"
+    ]
+  },
+  "parasyte-the-maxim": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Horror",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2014,
+    "episodes": 24,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Hitoshi Iwaaki",
+    "relations": [
+      "Parasyte"
+    ]
+  },
+  "ossan-newbie-adventurer": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "studio": "Yumeta Company",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Shinmai Ossan Bouken-sha, Saikyou Party ni Shinu Hodo Kitaerarete Muteki ni Naru.",
+      "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible"
+    ]
+  },
+  "higurashi": {
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "studio": "Studio DEEN",
+    "year": 2006,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "VISUAL_NOVEL",
+    "author": "Ryukishi07",
+    "relations": [
+      "When They Cry Kai",
+      "Higurashi no Naku Koro ni: Nekogoroshi-hen",
+      "Higurashi no Naku Koro ni Kaku: Outbreak",
+      "Higurashi WHEN THEY CRY: Atonement Arc",
+      "Higurashi WHEN THEY CRY: Eye Opening Arc",
+      "Higurashi WHEN THEY CRY: Time Killing Arc",
+      "Higurashi WHEN THEY CRY: Curse Killing Arc",
+      "Higurashi WHEN THEY CRY: Cotton Drifting Arc"
+    ]
+  },
+  "takt-op-destiny": {
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Music"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2021,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "OTHER",
+    "author": "Ouji Hiroi",
+    "relations": [
+      "takt op.Destiny: Haruka Tsuioku no Anna - Harmony of Hope",
+      "takt op. Bara no Kuchizuke de Ute!"
+    ]
+  },
+  "violet-evergarden": {
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "studio": "Kyoto Animation",
+    "year": 2018,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Violet Evergarden: Special",
+      "Violet Evergarden",
+      "Violet Evergarden: Eternity and the Auto Memory Doll",
+      "Violet Evergarden CM"
+    ]
+  },
+  "demon-lord-2099": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "studio": "J.C.STAFF",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Demon Lord 2099",
+      "Maou 2099",
+      "DEMON LORD 2099",
+      "Maou 2099"
+    ]
+  },
+  "ghost-in-the-shell": {
+    "genres": [
+      "Action",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "studio": "Production I.G",
+    "year": 1995,
+    "episodes": 1,
+    "duration": 83,
+    "format": "MOVIE",
+    "source": "MANGA",
+    "author": "Masamune Shirow",
+    "relations": [
+      "Ghost in the Shell 2: Innocence",
+      "The Ghost in the Shell",
+      "Ghost in the Shell 2.0",
+      "Ghost in the Shell: Stand Alone Complex",
+      "Ghost in the Shell: Arise - Border:1 Ghost Pain",
+      "THE GHOST IN THE SHELL"
+    ]
+  },
+  "berserk-of-gluttony": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "studio": "A.C.G.T.",
+    "year": 2023,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": "Ichika Isshiki",
+    "relations": [
+      "Berserk of Gluttony",
+      "Berserk of Gluttony",
+      "Mattari Kaisetsu: Boushoku no Berserk",
+      "Boushoku no Berserk 2nd Season"
+    ]
+  },
+  "tsukimichi": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "studio": "C2C",
+    "year": 2021,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Tsukimichi: Moonlit Fantasy",
+      "Tsukimichi: Moonlit Fantasy",
+      "TSUKIMICHI -Moonlit Fantasy- Season 2"
+    ]
+  },
+  "ranma-half-2024": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Ecchi",
+      "Romance",
+      "Slice of Life"
+    ],
+    "studio": "MAPPA",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Rumiko Takahashi",
+    "relations": [
+      "Ranma ½",
+      "Ranma ½ (1989)",
+      "Ranma ½",
+      "Anta Nante.",
+      "Ranma1/2 (2024) Season 2"
+    ]
+  },
+  "uma-musume": {
+    "genres": [
+      "Drama",
+      "Music",
+      "Slice of Life",
+      "Sports"
+    ],
+    "studio": "P.A.WORKS",
+    "year": 2018,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "VIDEO_GAME",
+    "author": null,
+    "relations": [
+      "Uma Musume: BNW no Chikai",
+      "UMAYON",
+      "Uma Musume: Cinderella Gray",
+      "Umamusume: Pretty Derby Season 2",
+      "Uma Musume: Pretty Derby Anthology Comic STAR",
+      "Follow Your Fantasy",
+      "Starting Gate!: Uma Musume Pretty Derby",
+      "Uma Musume: Pretty Derby - Star Blossom"
+    ]
+  },
+  "pluto": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Mecha",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "studio": "Studio M2",
+    "year": 2023,
+    "episodes": 8,
+    "duration": 60,
+    "format": "ONA",
+    "source": "MANGA",
+    "author": "Naoki Urasawa",
+    "relations": [
+      "Pluto",
+      "Black Jack",
+      "Astro Boy"
+    ]
+  },
+  "akira": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Horror",
+      "Psychological",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "studio": "Tokyo Movie Shinsha",
+    "year": 1988,
+    "episodes": 1,
+    "duration": 125,
+    "format": "MOVIE",
+    "source": "MANGA",
+    "author": "Katsuhiro Ootomo",
+    "relations": [
+      "Akira",
+      "AKIRA (Shin Anime)"
+    ]
+  },
+  "another": {
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "studio": "P.A.WORKS",
+    "year": 2012,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Another: The Other",
+      "Another",
+      "Another Special",
+      "Another",
+      "Run Run Lantern"
+    ]
+  },
+  "trillion-game": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Psychological"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2024,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Riichirou Inagaki",
+    "relations": [
+      "Trillion Game"
+    ]
+  },
+  "gurren-lagann": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama",
+      "Mecha",
+      "Romance",
+      "Sci-Fi"
+    ],
+    "studio": "Gainax",
+    "year": 2007,
+    "episodes": 27,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Tengen Toppa Gurren Lagann: Ore no Gurren wa Pikka-Pika!!",
+      "Gurren Lagann The Movie: Childhood's End",
+      "Gurren Lagann The Movie: The Lights in the Sky are Stars",
+      "Tengen Toppa Gurren Lagann: Parallel Works",
+      "Tengen Toppa Gurren Lagann: Parallel Works 2",
+      "Tengen Toppa Gurren Lagann",
+      "Tengen Toppa Gurren Lagann: Rasen Shounentan",
+      "Tengen Toppa Gurren Lagann Movie: Lagann-hen Special - Viral no Amai Yume"
+    ]
+  },
+  "monster-girl-doctor": {
+    "genres": [
+      "Comedy",
+      "Ecchi",
+      "Fantasy",
+      "Romance"
+    ],
+    "studio": "Arvo Animation",
+    "year": 2020,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": "Yoshino Origuchi",
+    "relations": [
+      "Monster Girl Doctor",
+      "Monster Musume no Oisha-san"
+    ]
+  },
+  "86-eighty-six": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Mecha",
+      "Sci-Fi"
+    ],
+    "studio": "A-1 Pictures",
+    "year": 2021,
+    "episodes": 11,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "86―EIGHTY-SIX",
+      "86―EIGHTY-SIX",
+      "86 EIGHTY-SIX Part 2",
+      "86: Eighty Six - Koushiki Deformed Manga"
+    ]
+  },
+  "trigun": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "studio": "MADHOUSE",
+    "year": 1998,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Yasuhiro Nightow",
+    "relations": [
+      "Trigun",
+      "Trigun: Badlands Rumble",
+      "Trigun Maximum",
+      "TRIGUN STAMPEDE"
+    ]
+  },
+  "demon-slayer": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Supernatural"
+    ],
+    "studio": "ufotable",
+    "year": 2019,
+    "episodes": 26,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Demon Slayer: Kimetsu no Yaiba",
+      "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+      "Junior High and High School!! Kimetsu Academy Story: Valentine Edition",
+      "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc",
+      "Junior High and High School!! Kimetsu Academy Story: Kimetsu no Utage Special Edition ",
+      "Kimetsu no Yaiba x MLB Tokyo Series presented by Guggenheim"
+    ]
+  },
+  "mushoku-tensei": {
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Ecchi",
+      "Fantasy"
+    ],
+    "studio": "Studio Bind",
+    "year": 2021,
+    "episodes": 11,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Mushoku Tensei: Jobless Reincarnation",
+      "Mushoku Tensei: Jobless Reincarnation",
+      "Mushoku Tensei: Jobless Reincarnation Cour 2"
+    ]
+  },
+  "talentless-nana": {
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural",
+      "Thriller"
+    ],
+    "studio": "Bridge",
+    "year": 2020,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Loose Boy",
+    "relations": [
+      "Talentless Nana",
+      "Munou na Nana: Mini Anime"
+    ]
+  },
+  "no-longer-allowed": {
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Romance",
+      "Slice of Life",
+      "Supernatural"
+    ],
+    "studio": "Atelier Pontdarc",
+    "year": 2024,
+    "episodes": 12,
+    "duration": 23,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "No Longer Allowed In Another World"
+    ]
+  },
+  "porco-rosso": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "studio": "Studio Ghibli",
+    "year": 1992,
+    "episodes": 1,
+    "duration": 93,
+    "format": "MOVIE",
+    "source": "MANGA",
+    "author": "Hayao Miyazaki",
+    "relations": [
+      "The Age of the Flying Boat"
+    ]
+  },
+  "nana": {
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance",
+      "Slice of Life"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2006,
+    "episodes": 47,
+    "duration": 23,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Ai Yazawa",
+    "relations": [
+      "Nana"
+    ]
+  },
+  "odd-taxi": {
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "studio": "OLM",
+    "year": 2021,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Odd Taxi",
+      "ODDTAXI In The Woods",
+      "Odd Taxi Original Picture Drama",
+      "RoOT/Route of Odd Taxi"
+    ]
+  },
+  "ninja-scroll": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Horror",
+      "Romance"
+    ],
+    "studio": "Animate Film",
+    "year": 1993,
+    "episodes": 1,
+    "duration": 94,
+    "format": "MOVIE",
+    "source": "ORIGINAL",
+    "author": "Yoshiaki Kawajiri",
+    "relations": [
+      "Ninja Scroll: The Series"
+    ]
+  },
+  "frieren": {
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2023,
+    "episodes": 28,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Frieren: Beyond Journey’s End",
+      "The Brave",
+      "Sousou no Frieren: ●● no Mahou",
+      "Sunny",
+      "Frieren: Beyond Journey’s End Season 2",
+      "Sousou no Frieren: ●● no Mahou Part 2"
+    ]
+  },
+  "super-crooks": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Supernatural",
+      "Thriller"
+    ],
+    "studio": "bones",
+    "year": 2021,
+    "episodes": 13,
+    "duration": 25,
+    "format": "ONA",
+    "source": "OTHER",
+    "author": null,
+    "relations": []
+  },
+  "in-spectre": {
+    "genres": [
+      "Comedy",
+      "Mystery",
+      "Romance",
+      "Supernatural"
+    ],
+    "studio": "Brain's Base",
+    "year": 2020,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "OTHER",
+    "author": "Kyou Shirodaira",
+    "relations": [
+      "In/Spectre Mini",
+      "Kyokou Uranai",
+      "In/Spectre 2",
+      "Chiyuki no Fashion Check",
+      "In/Spectre"
+    ]
+  },
+  "inazuma-eleven": {
+    "genres": [
+      "Sports",
+      "Supernatural"
+    ],
+    "studio": "OLM",
+    "year": 2008,
+    "episodes": 127,
+    "duration": 25,
+    "format": "TV",
+    "source": "VIDEO_GAME",
+    "author": "Akihiro Hino",
+    "relations": [
+      "Inazuma Eleven GO",
+      "Inazuma Eleven: Saikyou Gundan Ogre Shuurai",
+      "Inazuma Eleven: Choujigen Dream Match",
+      "Inazuma Eleven Ares",
+      "Inazuma Eleven: Outer Code",
+      "Inazuma Eleven",
+      "Inazuma Eleven Outer Code Anthology",
+      "Inazuma Eleven: Soushuuhen - Densetsu no Kickoff"
+    ]
+  },
+  "master-of-diabolism": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Supernatural"
+    ],
+    "studio": "B.CMAY PICTURES",
+    "year": null,
+    "episodes": 15,
+    "duration": 24,
+    "format": "ONA",
+    "source": "OTHER",
+    "author": "Mo Xiang Tong Xiu",
+    "relations": [
+      "The Founder of Diabolism 2",
+      "Grandmaster of Demonic Cultivation: Mo Dao Zu Shi",
+      "The Master of Diabolism Q",
+      "Madou Soshi"
+    ]
+  },
+  "tokyo-revengers": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Romance",
+      "Supernatural"
+    ],
+    "studio": "LIDENFILMS",
+    "year": 2021,
+    "episodes": 24,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Tokyo Revengers",
+      "Tokyo Revengers: Chibi Reve",
+      "Tokyo Revengers Season 2"
+    ]
+  },
+  "sonny-boy": {
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi",
+      "Supernatural"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2021,
+    "episodes": 12,
+    "duration": 25,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": []
+  },
+  "memories": {
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Sci-Fi"
+    ],
+    "studio": "Studio 4°C",
+    "year": 1995,
+    "episodes": 3,
+    "duration": 37,
+    "format": "MOVIE",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Memories"
+    ]
+  },
+  "junji-ito-collection": {
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ],
+    "studio": "Studio DEEN",
+    "year": 2018,
+    "episodes": 12,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Junji Itou",
+    "relations": [
+      "Tomie",
+      "Shin Yami no Koe: Kaidan",
+      "Fragments of Horror",
+      "Voices in the Dark",
+      "Junji Ito Collection: Tomie",
+      "Shiver: Junji Ito Selected Stories",
+      "Museum of Terror",
+      "Junji Ito Horror Comic Collection"
+    ]
+  },
+  "space-dandy": {
+    "genres": [
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "studio": "bones",
+    "year": 2014,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "ORIGINAL",
+    "author": null,
+    "relations": [
+      "Space Dandy 2",
+      "Space☆Dandy Picture Drama",
+      "Viva Namida",
+      "Space Dandy"
+    ]
+  },
+  "steins-gate": {
+    "genres": [
+      "Drama",
+      "Psychological",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "studio": "WHITE FOX",
+    "year": 2011,
+    "episodes": 24,
+    "duration": 24,
+    "format": "TV",
+    "source": "VISUAL_NOVEL",
+    "author": "Nitro Plus",
+    "relations": [
+      "Steins;Gate: Egoistic Poriomania",
+      "Steins;Gate: Soumei Eichi no Cognitive Computing",
+      "Steins;Gate 0: 23β -Divide by Zero-",
+      "Steins;Gate",
+      "Steins;Gate The Movie – Load Region of Déjà Vu",
+      "Steins;Gate: Shijou Saikyou no Slight Fever",
+      "STEINS;GATE: Enkan Rensa no Uroborosu",
+      "Robotics;Notes"
+    ]
+  },
+  "overlord": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2015,
+    "episodes": 13,
+    "duration": 24,
+    "format": "TV",
+    "source": "LIGHT_NOVEL",
+    "author": null,
+    "relations": [
+      "Overlord",
+      "Overlord: Ple Ple Pleiades - Nazarick Saidai no Kiki",
+      "Overlord II",
+      "Overlord: The Undead King",
+      "Overlord: The Dark Hero",
+      "Overlord: Ple Ple Pleiades",
+      "Isekai Quartet",
+      "Isekai Quartet 2"
+    ]
+  },
+  "jujutsu-kaisen": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Supernatural"
+    ],
+    "studio": "MAPPA",
+    "year": 2020,
+    "episodes": 24,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Jujutsu Kaisen",
+      "JUJUTSU KAISEN 0",
+      "JUJUTSU KAISEN Season 2",
+      "Jujutsu Kaisen PV"
+    ]
+  },
+  "tower-of-god": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Mystery"
+    ],
+    "studio": "Telecom Animation Film",
+    "year": 2020,
+    "episodes": 13,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Tower of God",
+      "Tower of God Season 2"
+    ]
+  },
+  "chainsaw-man": {
+    "genres": [
+      "Action",
+      "Drama",
+      "Horror",
+      "Supernatural"
+    ],
+    "studio": "MAPPA",
+    "year": 2022,
+    "episodes": 12,
+    "duration": 25,
+    "format": "TV",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Chainsaw Man",
+      "Time Left",
+      "tablet",
+      "In the Back Room",
+      "Rendezvous",
+      "Fight Song",
+      "Chainsaw Man – The Movie: Reze Arc",
+      "Chainsaw Days"
+    ]
+  },
+  "monster": {
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ],
+    "studio": "MADHOUSE",
+    "year": 2004,
+    "episodes": 74,
+    "duration": 24,
+    "format": "TV",
+    "source": "MANGA",
+    "author": "Naoki Urasawa",
+    "relations": [
+      "Monster"
+    ]
+  },
+  "witch-hat-atelier": {
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "studio": "BUG FILMS",
+    "year": 2026,
+    "episodes": 13,
+    "duration": 24,
+    "format": "ONA",
+    "source": "MANGA",
+    "author": null,
+    "relations": [
+      "Witch Hat Atelier",
+      "Wind's Anthem"
+    ]
+  }
+}
