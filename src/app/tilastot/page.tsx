@@ -146,7 +146,7 @@ export default function StatsPage() {
               title="Sielunkumppanit"
               nameA={soulmates.a.name}
               nameB={soulmates.b.name}
-              detail={`Keskim. pistero ${formatScore(soulmates.meanDiff)} (${soulmates.shared} yhteistä sarjaa)`}
+              detail={`Keskim. piste-ero ${formatScore(soulmates.meanDiff)} (${soulmates.shared} yhteistä sarjaa)`}
             />
           ) : null}
           {opposites ? (
@@ -154,7 +154,7 @@ export default function StatsPage() {
               title="Vastakohdat"
               nameA={opposites.a.name}
               nameB={opposites.b.name}
-              detail={`Keskim. pistero ${formatScore(opposites.meanDiff)} (${opposites.shared} yhteistä sarjaa)`}
+              detail={`Keskim. piste-ero ${formatScore(opposites.meanDiff)} (${opposites.shared} yhteistä sarjaa)`}
             />
           ) : null}
           {controversial ? (

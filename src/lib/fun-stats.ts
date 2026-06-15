@@ -178,12 +178,12 @@ function memberPairs(): MemberPair[] {
   return pairs;
 }
 
-/** Useimmin samaa mieltä oleva pari (pienin keskimääräinen pistero). */
+/** Useimmin samaa mieltä oleva pari (pienin keskimääräinen piste-ero). */
 export function getSoulmates(): MemberPair | null {
   return [...memberPairs()].sort((a, b) => a.meanDiff - b.meanDiff || b.shared - a.shared)[0] ?? null;
 }
 
-/** Useimmin eri mieltä oleva pari (suurin keskimääräinen pistero). */
+/** Useimmin eri mieltä oleva pari (suurin keskimääräinen piste-ero). */
 export function getOpposites(): MemberPair | null {
   return [...memberPairs()].sort((a, b) => b.meanDiff - a.meanDiff || b.shared - a.shared)[0] ?? null;
 }

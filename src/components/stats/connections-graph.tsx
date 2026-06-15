@@ -11,7 +11,7 @@ const KINDS: { id: GraphEdgeKind; label: string }[] = [
 
 /** Build-aikana laskettu yhteysverkko staattisena SVG:nä + hover-korostus. */
 export function ConnectionsGraph({ data }: { data: GraphData }) {
-  const [kind, setKind] = useState<GraphEdgeKind>("studio");
+  const [kind, setKind] = useState<GraphEdgeKind>("genre");
   const [hovered, setHovered] = useState<string | null>(null);
 
   const edges = data.edges.filter((e) => e.kind === kind);
