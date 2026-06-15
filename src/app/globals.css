@@ -124,3 +124,14 @@ body {
     letter-spacing: 0.02em;
   }
 }
+
+/* Piilotettu vierityspalkki (esim. raahattava aikajana). */
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
