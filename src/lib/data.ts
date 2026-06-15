@@ -1,4 +1,4 @@
-import type { Member, Review, Series } from "./types";
+import type { GraphData, Member, Review, Series, SeriesMeta } from "./types";
 
 // Data luetaan suoraan staattisista JSON-tiedostoista (`/data`).
 // JSON-importin päättelemät tyypit ovat laveampia (esim. `type: string`),
@@ -17,6 +17,10 @@ import coversData from "../../data/covers.json";
 import charactersData from "../../data/characters.json";
 // AniListista haetut katselulinkit (build-time, `npm run fetch:links`).
 import linksData from "../../data/links.json";
+// AniListista haettu metatieto (build-time, `npm run fetch:meta`).
+import metaData from "../../data/meta.json";
+// Build-aikainen yhteysverkko (`npm run build:graph`).
+import graphData from "../../data/graph.json";
 
 export interface StreamingLink {
   site: string;
@@ -36,6 +40,8 @@ const summaries = summariesData as Record<string, string>;
 const covers = coversData as Record<string, string>;
 const characterImages = charactersData as Record<string, string>;
 const watchLinks = linksData as Record<string, WatchLinks>;
+const meta = metaData as Record<string, SeriesMeta>;
+export const graph = graphData as GraphData;
 
 export function getMemberById(id: string): Member | undefined {
   return members.find((member) => member.id === id);
@@ -90,4 +96,14 @@ export function getBestPickImage(seriesId: string): string | null {
 /** Sarjan katselulinkit (suoratoistopalvelut + AniList-sivu), tai null. */
 export function getWatchLinks(seriesId: string): WatchLinks | null {
   return watchLinks[seriesId] ?? null;
+}
+
+/** Sarjan AniList-metatieto, tai null jos ei haettu. */
+export function getMeta(seriesId: string): SeriesMeta | null {
+  return meta[seriesId] ?? null;
+}
+
+/** Kaikki metatieto (seriesId -> SeriesMeta). */
+export function getAllMeta(): Record<string, SeriesMeta> {
+  return meta;
 }
