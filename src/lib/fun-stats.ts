@@ -4,6 +4,10 @@ import type { GraphNode, Member, Review, Series } from "./types";
 
 const AVG_EP_MINUTES = 24;
 const MIN_SHARED = 3;
+// Kerho katsoo sarjasta tyypillisesti ~yhden kauden (enintään tämän verran
+// jaksoja); lyhyemmät sarjat lasketaan kokonaan. Elokuvilla episodes = 1, joten
+// niihin tämä ei vaikuta (täysi kesto duration-kentästä).
+const EPISODE_CAP = 12;
 
 export interface WatchTime {
   minutes: number;
@@ -11,13 +15,17 @@ export interface WatchTime {
   days: number;
 }
 
-/** Arvioitu kokonaiskatseluaika kaikista metatiedon sisältävistä sarjoista. */
+/**
+ * Arvioitu kokonaiskatseluaika: sarjoista lasketaan enintään {@link EPISODE_CAP}
+ * jaksoa (kerho katsoo yleensä ~yhden kauden), elokuvat täydellä kestolla.
+ */
 export function getTotalWatchTime(): WatchTime {
   let minutes = 0;
   for (const s of series) {
     const m = getMeta(s.id);
     if (!m || m.episodes == null) continue;
-    minutes += m.episodes * (m.duration ?? AVG_EP_MINUTES);
+    const episodes = Math.min(m.episodes, EPISODE_CAP);
+    minutes += episodes * (m.duration ?? AVG_EP_MINUTES);
   }
   return {
     minutes,
