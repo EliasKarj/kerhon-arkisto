@@ -51,7 +51,7 @@ export interface CountEntry {
 }
 
 /** Yleinen laskuri: ryhmittelee arvot ja lajittelee yleisimmästä harvinaisimpaan. */
-function countBy(values: string[]): CountEntry[] {
+export function countBy(values: string[]): CountEntry[] {
   const counts = new Map<string, number>();
   for (const value of values) {
     counts.set(value, (counts.get(value) ?? 0) + 1);
