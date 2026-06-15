@@ -1,60 +1,88 @@
 # Kerhon Arkisto
 
-Kaveriporukan anime- ja elokuva-arvioiden arkisto: pisteet, "best girl/boy"
--äänet ja tilastot yhdessä paikassa. Portfolioprojekti, joka esittelee
-frontend-osaamista — TypeScript, Next.js App Router, datavisualisoinnit ja
-saavutettavuus.
+Kaveriporukan anime- ja elokuva-arvioiden arkisto: pisteet, **Best character**
+-äänet, tilastot ja animeiden yhteysverkko yhdessä paikassa. Portfolioprojekti,
+joka esittelee frontend-osaamista — TypeScript, Next.js App Router, build-aikainen
+datavisualisointi ja saavutettavuus.
 
-> **V1** on staattinen demo, joka toimii kolmesta JSON-tiedostosta ilman
+**▶ Live-demo:** https://eliaskarj.github.io/kerhon-arkisto/
+
+> V1 on staattinen sivusto, joka toimii `data/`-kansion JSON-tiedostoista ilman
 > tietokantaa tai kirjautumista. Tietorakenne on suunniteltu niin, että V2:n
 > ominaisuudet (käyttäjätilit, useat "huoneet") voi lisätä ilman isoa
 > uudelleenkirjoitusta.
 
 ## Ominaisuudet
 
-- **Dashboard** (`/`) — kerhon kokonaiskeskiarvo, viimeisimmän sarjan best
-  girl/boy -nosto, viimeksi katsotut ja pikalinkit
-- **Sarjan sivu** (`/sarja/[id]`) — perustiedot, **radar-kaavio** jäsenten
-  pisteistä, best girl/boy -äänten **pylväskaavio** ja jäsenten kommenttikortit
-- **Jäsenprofiili** (`/jasen/[id]`) — keskiarvo vs. kerhon keskiarvo,
-  suosikkitagit, best pick -historia ja kaikki arviot
-- **Hall of Fame** (`/hall-of-fame`) — best girl/boy -leaderboard sekä tiukin ja
-  löysin arvioija
-- **Aikajana** (`/aikajana`) — katsotut sarjat aikajärjestyksessä
-- **Jäsen- ja sarjalistat** (`/jasenet`, `/sarjat`)
+- **Etusivu** (`/`) — "Nyt katselussa" -banneri suoratoistolinkkeineen, kerhon
+  kokonaiskeskiarvo, katseluaika/henkilö ja viimeksi katsotut (best character
+  korteissa)
+- **Sarjat** (`/sarjat`) — kaikki sarjat kausittain ryhmiteltynä + **genre-suodatin**
+- **Sarjasivu** (`/sarja/[id]`) — **radar-kaavio** jäsenten pisteistä, **Best
+  character** -äänten pylväskaavio, lempihahmon kuva ja kommenttikortit
+- **Jäsenet / jäsenprofiili** (`/jasenet`, `/jasen/[id]`) — keskiarvo vs. kerho,
+  suosikkitagit, best pick -historia ja arviot
+- **Hall of Fame** (`/hall-of-fame`) — parhaat/huonoimmat sarjat, tiukin ja löysin
+  arvioija sekä best character -leaderboard
+- **Tilastot** (`/tilastot`) — "turhaa ja hauskaa" trivia-dataa ja **animeiden
+  yhteysverkko** (build-aikainen d3-force-layout, solmuina animekannet)
+- **Aikajana** (`/aikajana`) — vaakasuora, hiirellä raahattava aikajana
+- **Teemavalitsin** — 6 väriteemaa (tumma neo-brutalist -oletus), valinta muistuu
+  selaimessa
 
 ## Tech stack
 
-- [Next.js](https://nextjs.org) 16 (App Router) + TypeScript
-- [Tailwind CSS](https://tailwindcss.com) v4
-- [Recharts](https://recharts.org) datavisualisointeihin
-- Data: kolme staattista JSON-tiedostoa `data/`-kansiossa
-- Deploy: [Vercel](https://vercel.com)
+- [Next.js](https://nextjs.org) 16 (App Router, **staattinen export**) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com) v4 (neo-brutalist -teema, CSS-muuttujat)
+- [Recharts](https://recharts.org) kaavioihin
+- [d3-force](https://github.com/d3/d3-force) — verkkokaavion layout **build-aikana**
+- [AniList](https://anilist.co) GraphQL — kannet, hahmot, linkit ja metadata
+  haetaan **build-aikana** staattiseksi dataksi (ei ajonaikaista API:a)
+- Deploy: **GitHub Pages** (GitHub Actions)
 
 ## Arkkitehtuuri
 
 ```
-data/                      # members, series, reviews (JSON, V1:n "tietokanta")
+data/                 # JSON-data (V1:n "tietokanta") + build-aikana haettu data
 src/
-├─ app/                    # App Router -reitit (server-komponentit)
-├─ components/             # SeriesCard, MemberCard, ReviewCard, charts/…
+├─ app/               # App Router -reitit (server-komponentit)
+├─ components/
+│  ├─ charts/         # Recharts-kaaviot (client) + ChartFrame
+│  ├─ stats/          # ConnectionsGraph-verkkokaavio + tilastokortit
+│  └─ …               # SeriesCard, ReviewCard, SeriesBrowser, Timeline, …
 └─ lib/
-   ├─ types.ts            # Member, Series, Review
-   ├─ data.ts             # JSON-lataus ja perushaut
-   ├─ stats.ts            # keskiarvot, ääntenlasku, leaderboard…
-   └─ labels.ts           # jaetut tekstit/formatoinnit
+   ├─ types.ts        # Member, Series, Review, SeriesMeta, Graph*
+   ├─ data.ts         # JSON-lataus ja perushaut
+   ├─ stats.ts        # keskiarvot, ääntenlasku, leaderboard
+   ├─ fun-stats.ts    # Tilastot-välilehden trivia-funktiot
+   ├─ themes.ts       # väriteemat
+   └─ labels.ts       # jaetut tekstit/formatoinnit
+scripts/              # build-aikaiset datahakuskriptit (AniList, d3-force)
 ```
 
 Sivut ovat server-komponentteja, jotka lukevat datan ja laskevat tilastot
-palvelimella; vain kaaviot (Recharts) ovat client-komponentteja. Dynaamiset
-reitit esirenderöidään `generateStaticParams`-funktiolla.
+build-aikana. Vain interaktiiviset osat ovat client-komponentteja: kaaviot
+(Recharts), verkkokaavio, teemavalitsin, sarjaselain (suodatin) ja aikajana
+(raahaus). Dynaamiset reitit esirenderöidään `generateStaticParams`-funktiolla ja
+koko sivusto viedään staattisena (`output: "export"`).
 
-## Saavutettavuus
+## Data ja build-skriptit
 
-- Semanttinen HTML (`header`, `nav`, `main`, `section`, `ol`/`ul`, `time`)
-- "Siirry sisältöön" -hyppylinkki ja näkyvät focus-tilat
-- Kaavioilla tekstimuotoinen `figcaption`-yhteenveto (ruudunlukija + no-JS)
-- Toimii sekä vaaleassa että tummassa tilassa (`prefers-color-scheme`)
+Perusdata on `data/`-kansiossa: `members.json`, `series.json`, `reviews.json`.
+Loput haetaan build-aikana AniListista (tai lasketaan) ja commitoidaan staattisena
+datana:
+
+| Tiedosto | Sisältö | Skripti |
+| --- | --- | --- |
+| `covers.json` | kansikuvat | `npm run fetch:covers` |
+| `characters.json` | lempihahmojen kuvat | `npm run fetch:characters` |
+| `links.json` | suoratoistolinkit | `npm run fetch:links` |
+| `meta.json` | genre, studio, vuosi, jaksot, lähde, … | `npm run fetch:meta` |
+| `graph.json` | yhteysverkon layout (d3-force) | `npm run build:graph` |
+
+Skriptit hakevat AniListin julkisesta GraphQL-rajapinnasta (ilmainen, ei
+API-avainta) ja tulostavat osumat tarkistettavaksi. Uuden sarjan lisää
+muokkaamalla `series.json`:ia ja ajamalla skriptit uudelleen.
 
 ## Kehitys
 
@@ -66,81 +94,24 @@ npm run dev      # http://localhost:3000
 Muut skriptit:
 
 ```bash
-npm run build    # tuotantobuild
-npm run start    # tuotantopalvelin
+npm run build    # staattinen export (out/)
 npm run lint     # ESLint
 ```
 
-## Data
+## Deploy
 
-V1:n data on `data/`-kansiossa kolmessa tiedostossa: `members.json`,
-`series.json` ja `reviews.json`. Uuden sarjan tai arvion lisääminen onnistuu
-muokkaamalla näitä tiedostoja — tyypit (`src/lib/types.ts`) pitävät rakenteen
-kasassa.
+Sivusto deployataan **GitHub Pagesiin** automaattisesti `main`-haaran pushista
+(`.github/workflows/nextjs.yml`). Pages-konfiguraatio hallitaan suoraan
+`next.config.ts`:ssä: `output: "export"`, `trailingSlash`, `images.unoptimized` ja
+projektisivun `basePath` (vain CI:ssä `GITHUB_PAGES`-ympäristömuuttujalla).
 
-## AI-yhteenveto
+## Saavutettavuus
 
-Sarjasivulla voi näkyä lyhyt tekoälyn tiivistämä yhteenveto kerhon arvioista.
-Yhteenvedot generoidaan **build-aikana** erillisellä skriptillä (Anthropic
-Claude, `claude-opus-4-8`) ja tallennetaan `data/summaries.json`:iin — sovellus
-ei kutsu mallia ajon aikana, joten sivusto pysyy täysin staattisena eikä
-API-avainta tarvita tuotannossa.
-
-> Generointi on **täysin valinnainen**. Ilman sitä `data/summaries.json` on
-> tyhjä, yhteenvetokortti ei näy ja kaikki muu toimii normaalisti. Koodi
-> demonstroi Claude API -integraation; aja skripti vain jos haluat yhteenvedot.
-
-Generointi vaatii Anthropic API -avaimen ympäristömuuttujana. Aja projektin
-juuresta:
-
-```powershell
-# PowerShell
-$env:ANTHROPIC_API_KEY = "sk-ant-..."
-npm run generate:summaries
-```
-
-```bash
-# bash
-ANTHROPIC_API_KEY=sk-ant-... npm run generate:summaries
-```
-
-Skripti lukee `data/`-tiedostot, kirjoittaa yhteenvedot ja `data/summaries.json`
-commitoidaan staattisena datana. Avainta ei koskaan tallenneta repoon
-(`.env*`-tiedostot ovat `.gitignore`ssa).
-
-## Kansikuvat
-
-Sarjojen kansikuvat haetaan **build-aikana** [AniList](https://anilist.co)-rajapinnasta
-(GraphQL, ilmainen, ei API-avainta) ja tallennetaan `data/covers.json`:iin
-(`{ seriesId: kuvaUrl }`). Sovellus ei hae kuvia ajon aikana — kuvat ladataan
-AniListin CDN:stä (`s4.anilist.co`) suoraan selaimeen.
-
-Päivitä kuvat tarvittaessa projektin juuresta:
-
-```bash
-npm run fetch:covers
-```
-
-Skripti hakee jokaiselle `series.json`:n sarjalle parhaan osuman (leffat suosivat
-MOVIE-muotoa, hankalille nimille on tarkemmat hakusanat) ja tulostaa osumat
-tarkistettavaksi. `data/covers.json` commitoidaan staattisena datana.
-
-Lisäksi jokaisen sarjan **lempihahmosta** (kerhon best girl/boy, `series.bestPick`)
-haetaan kuva — `data/characters.json`. Hahmo haetaan kyseisen animen omasta
-hahmolistasta ja täsmätään nimeen, jotta vältetään väärät osumat; jos täsmäystä
-ei löydy (esim. vapaamuotoiset lempinimet), näytetään pelkkä nimi.
-
-```bash
-npm run fetch:characters
-```
-
-Lisäksi jokaiselle sarjalle haetaan **katselulinkit** (AniListin `externalLinks`,
-suoratoistopalvelut + AniList-sivu) → `data/links.json`. Etusivun "Nyt katselussa"
--banneri näyttää nykyisen animen suoratoistolinkit.
-
-```bash
-npm run fetch:links
-```
+- Semanttinen HTML (`header`, `nav`, `main`, `section`, `ol`/`ul`, `time`)
+- "Siirry sisältöön" -hyppylinkki ja näkyvät focus-tilat
+- Kaavioilla tekstimuotoinen `figcaption`-yhteenveto (ruudunlukija + no-JS)
+- Verkkokaaviolla `role="img"` + aria-label; teemavalitsin tab-roolein
+- Pakotettu tumma teema; käyttäjä voi vaihtaa väriteemaa teemavalitsimesta
 
 ## Lisenssi
 
