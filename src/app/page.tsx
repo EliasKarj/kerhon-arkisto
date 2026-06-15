@@ -159,7 +159,7 @@ export default function HomePage() {
             </div>
             <div className="flex min-w-0 flex-col gap-0.5">
               <span className="text-xs font-semibold uppercase tracking-wide text-muted">
-                Best girl/boy — {latestRated.title}
+                Best character — {latestRated.title}
               </span>
               <span className="text-2xl font-bold uppercase group-hover:underline">
                 {latestRated.bestPick}

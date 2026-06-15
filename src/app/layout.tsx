@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · Kerhon Arkisto",
   },
   description:
-    "Kaveriporukan anime- ja elokuva-arvioiden arkisto: arvostelut, best girl/boy -äänet ja tilastot.",
+    "Kaveriporukan anime- ja elokuva-arvioiden arkisto: arvostelut, Best character -äänet ja tilastot.",
 };
 
 export default function RootLayout({

@@ -15,7 +15,7 @@ export default function MembersIndexPage() {
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Jäsenet</h1>
         <p className="max-w-prose text-muted">
-          Kerhon arvioijat. Avaa jäsen nähdäksesi hänen ehdotuksensa, arvionsa ja best girl/boy
+          Kerhon arvioijat. Avaa jäsen nähdäksesi hänen ehdotuksensa, arvionsa ja Best character
           -valintansa.
         </p>
       </div>

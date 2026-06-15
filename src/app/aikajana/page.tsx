@@ -53,7 +53,7 @@ export default function TimelinePage() {
                 {SERIES_TYPE_LABELS[entry.type]} ·{" "}
                 <span className="font-mono font-bold text-accent">{formatScore(score)}</span>/5
                 {proposer ? ` · ehdotti ${proposer.name}` : ""}
-                {entry.bestPick ? ` · best girl/boy: ${entry.bestPick}` : ""}
+                {entry.bestPick ? ` · Best character: ${entry.bestPick}` : ""}
               </p>
             </li>
           );

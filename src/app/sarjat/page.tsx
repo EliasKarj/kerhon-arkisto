@@ -15,7 +15,7 @@ export default function SeriesIndexPage() {
         <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Sarjat</h1>
         <p className="max-w-prose text-muted">
           Kaikki kerhon arvioimat {series.length} sarjaa ja elokuvaa, uusin ensin. Avaa sarja
-          nähdäksesi pisteet, best girl/boy -valinnan ja jäsenten kommentit.
+          nähdäksesi pisteet, Best character -valinnan ja jäsenten kommentit.
         </p>
       </div>
 

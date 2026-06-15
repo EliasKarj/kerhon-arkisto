@@ -18,7 +18,7 @@ const ACCENT = "var(--accent)";
 /** Best girl/boy -äänten jakauma pylväskaaviona. */
 export function BestPickBarChart({ data }: { data: CountEntry[] }) {
   const caption =
-    "Best girl/boy -äänet: " +
+    "Best character -äänet: " +
     data.map((entry) => `${entry.label} ${entry.count}`).join(", ") +
     ".";
 

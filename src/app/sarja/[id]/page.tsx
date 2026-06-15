@@ -125,7 +125,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           </div>
           <div className="flex flex-col gap-0.5">
             <span className="text-xs font-semibold uppercase tracking-wide text-muted">
-              Kerhon lempihahmo (best girl/boy)
+              Kerhon lempihahmo (Best character)
             </span>
             <span className="text-xl font-bold uppercase">{series.bestPick}</span>
           </div>
@@ -157,7 +157,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
               <MemberScoreRadar data={radarData} />
             </section>
             <section className="flex flex-col gap-3">
-              <h2 className="text-lg font-bold uppercase tracking-tight">Best girl/boy -äänet</h2>
+              <h2 className="text-lg font-bold uppercase tracking-tight">Best character -äänet</h2>
               <BestPickBarChart data={bestPickData} />
             </section>
           </div>
