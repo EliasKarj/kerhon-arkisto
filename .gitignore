@@ -42,3 +42,8 @@ next-env.d.ts
 
 # paikalliset design-mockupit
 mockups/
+
+# kehitys-/agentti-artefaktit (paikallisia, ei julkaista)
+AGENTS.md
+CLAUDE.md
+docs/superpowers/
