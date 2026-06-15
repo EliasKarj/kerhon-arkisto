@@ -16,6 +16,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/jasenet", label: "Jäsenet", matchPrefix: "/jasen" },
   { href: "/hall-of-fame", label: "Hall of Fame" },
   { href: "/aikajana", label: "Aikajana" },
+  { href: "/tilastot", label: "Tilastot" },
 ];
 
 function isActive(pathname: string, item: NavItem): boolean {
