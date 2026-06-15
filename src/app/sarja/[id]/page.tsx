@@ -9,7 +9,6 @@ import {
   getMemberById,
   getReviewsForSeries,
   getSeriesById,
-  getSummaryForSeries,
   series as allSeries,
 } from "@/lib/data";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
@@ -38,7 +37,6 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   const reviews = getReviewsForSeries(id);
   const score = getSeriesAverageScore(id);
   const proposer = getMemberById(series.proposerId);
-  const summary = getSummaryForSeries(id);
   const cover = getCoverUrl(series);
   const bestPickImage = getBestPickImage(id);
 
@@ -129,22 +127,6 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
             </span>
             <span className="text-xl font-bold uppercase">{series.bestPick}</span>
           </div>
-        </section>
-      )}
-
-      {/* AI-yhteenveto */}
-      {summary && (
-        <section
-          aria-label="AI-yhteenveto"
-          className="flex flex-col gap-2 border-2 border-foreground bg-panel p-5 shadow-[6px_6px_0_var(--color-accent)]"
-        >
-          <h2 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-accent">
-            <span aria-hidden>✨</span> AI-yhteenveto
-          </h2>
-          <p className="text-foreground/90">{summary}</p>
-          <p className="text-xs text-muted">
-            Tekoälyn kerhon arvioista tiivistämä — voi sisältää epätarkkuuksia.
-          </p>
         </section>
       )}
 

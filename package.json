@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:summaries": "node scripts/generate-summaries.mjs",
     "fetch:covers": "node scripts/fetch-covers.mjs",
     "fetch:characters": "node scripts/fetch-characters.mjs",
     "fetch:links": "node scripts/fetch-links.mjs",
@@ -21,7 +20,6 @@
     "recharts": "^3.8.1"
   },
   "devDependencies": {
-    "@anthropic-ai/sdk": "^0.104.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

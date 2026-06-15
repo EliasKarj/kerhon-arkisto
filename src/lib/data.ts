@@ -6,9 +6,6 @@ import type { GraphData, Member, Review, Series, SeriesMeta } from "./types";
 import membersData from "../../data/members.json";
 import seriesData from "../../data/series.json";
 import reviewsData from "../../data/reviews.json";
-// AI-generoidut yhteenvedot (build-time, `npm run generate:summaries`).
-// Avain = seriesId, arvo = yhteenvetoteksti. Voi olla tyhjä.
-import summariesData from "../../data/summaries.json";
 // AniListista haetut kansikuvat (build-time, `npm run fetch:covers`).
 // Avain = seriesId, arvo = kuvan URL.
 import coversData from "../../data/covers.json";
@@ -36,7 +33,6 @@ export interface WatchLinks {
 export const members: Member[] = membersData as Member[];
 export const series: Series[] = seriesData as Series[];
 export const reviews: Review[] = reviewsData as Review[];
-const summaries = summariesData as Record<string, string>;
 const covers = coversData as Record<string, string>;
 const characterImages = charactersData as Record<string, string>;
 const watchLinks = linksData as Record<string, WatchLinks>;
@@ -76,11 +72,6 @@ export function getSeriesProposedBy(memberId: string): Series[] {
 /** Sarjat kokouspäivän mukaan, uusin ensin (aikajana, "viimeksi katsottu"). */
 export function getSeriesByDateDesc(): Series[] {
   return [...series].sort((a, b) => b.watchedDate.localeCompare(a.watchedDate));
-}
-
-/** AI-generoitu yhteenveto sarjalle, tai null jos sitä ei ole vielä generoitu. */
-export function getSummaryForSeries(seriesId: string): string | null {
-  return summaries[seriesId] ?? null;
 }
 
 /** Sarjan kansikuvan URL: ensisijaisesti datassa annettu, muuten haettu. */
