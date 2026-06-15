@@ -50,3 +50,40 @@ export interface Review {
   bestPick: string;
   tags: string[];
 }
+
+/** AniListista haettu sarjan metatieto (build-time, `data/meta.json`). */
+export interface SeriesMeta {
+  genres: string[];
+  studio: string | null;
+  year: number | null;
+  episodes: number | null;
+  /** Minuuttia per jakso. */
+  duration: number | null;
+  format: string | null;
+  /** Lähde, esim. MANGA/ORIGINAL/LIGHT_NOVEL. */
+  source: string | null;
+  author: string | null;
+  relations: string[];
+}
+
+export type GraphEdgeKind = "studio" | "genre" | "author";
+
+export interface GraphNode {
+  id: string;
+  title: string;
+  x: number;
+  y: number;
+  /** Kokonaisaste kaikkien reunatyyppien yli. */
+  degree: number;
+}
+
+export interface GraphEdge {
+  source: string;
+  target: string;
+  kind: GraphEdgeKind;
+}
+
+export interface GraphData {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+}
