@@ -42,6 +42,11 @@ export function SeriesCard({ series }: { series: Series }) {
             /5{proposer ? ` · ${proposer.name}` : ""}
           </span>
         </p>
+        {series.bestPick ? (
+          <p className="truncate text-xs uppercase tracking-wide text-muted">
+            <span className="text-accent">★</span> {series.bestPick}
+          </p>
+        ) : null}
       </div>
     </Link>
   );

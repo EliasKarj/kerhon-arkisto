@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { SeriesCard } from "@/components/series-card";
 import {
-  getBestPickImage,
   getCoverUrl,
   getMemberById,
   getSeriesByDateDesc,
   getWatchLinks,
 } from "@/lib/data";
+import { getTotalWatchTime } from "@/lib/fun-stats";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getClubAverageScore } from "@/lib/stats";
 
@@ -33,10 +33,7 @@ export default function HomePage() {
 
   const recent = seriesByRecency.filter((entry) => entry.id !== current?.id).slice(0, 4);
 
-  const latestRated = seriesByRecency.find(
-    (entry) => entry.clubScore !== null && entry.bestPick !== null,
-  );
-  const latestRatedImage = latestRated ? getBestPickImage(latestRated.id) : null;
+  const watchTime = getTotalWatchTime();
 
   return (
     <div className="flex flex-col gap-10">
@@ -140,34 +137,15 @@ export default function HomePage() {
           </span>
         </div>
 
-        {latestRated && (
-          <Link
-            href={`/sarja/${latestRated.id}`}
-            className="surface surface-link group flex items-center gap-4 p-5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            <div className="flex aspect-[3/4] w-16 shrink-0 items-center justify-center overflow-hidden border-2 border-foreground bg-background text-base font-bold text-muted">
-              {latestRatedImage ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={latestRatedImage}
-                  alt={`${latestRated.bestPick} -hahmokuva`}
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <span aria-hidden>{getInitials(latestRated.bestPick ?? latestRated.title)}</span>
-              )}
-            </div>
-            <div className="flex min-w-0 flex-col gap-0.5">
-              <span className="text-xs font-semibold uppercase tracking-wide text-muted">
-                Best character — {latestRated.title}
-              </span>
-              <span className="text-2xl font-bold uppercase group-hover:underline">
-                {latestRated.bestPick}
-              </span>
-              <span className="text-sm text-muted">viimeisimmästä arvioidusta sarjasta</span>
-            </div>
-          </Link>
-        )}
+        <div className="surface flex flex-col gap-1 p-5">
+          <span className="text-xs font-semibold uppercase tracking-wide text-muted">
+            Katseluaika / henkilö
+          </span>
+          <span className="font-mono text-5xl font-bold text-accent">{watchTime.hours} h</span>
+          <span className="text-sm text-muted">
+            ≈ {watchTime.days} vrk animea putkeen tässä kerhossa
+          </span>
+        </div>
       </section>
 
       {/* Viimeksi katsotut */}
