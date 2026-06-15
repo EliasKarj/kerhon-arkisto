@@ -80,6 +80,12 @@
   --font-mono: var(--font-space-mono);
 }
 
+/* Skaalaa koko käyttöliittymä ~25 % suuremmaksi: kaikki rem-pohjaiset koot
+   (fontit, välit, leveydet) kasvavat juuren fonttikoosta. */
+html {
+  font-size: 125%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -133,5 +139,22 @@ body {
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+  /* Häivytä sisältö vaakasuunnan reunoilla (esim. aikajana). */
+  .edge-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 3rem,
+      #000 calc(100% - 3rem),
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 3rem,
+      #000 calc(100% - 3rem),
+      transparent
+    );
   }
 }

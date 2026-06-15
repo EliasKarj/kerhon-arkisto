@@ -107,7 +107,7 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
         onPointerUp={endDrag}
         onPointerLeave={endDrag}
         onClickCapture={onClickCapture}
-        className={`no-scrollbar select-none overflow-x-auto pb-2 ${grabbing ? "cursor-grabbing" : "cursor-grab"}`}
+        className={`no-scrollbar edge-fade-x select-none overflow-x-auto pb-2 ${grabbing ? "cursor-grabbing" : "cursor-grab"}`}
       >
         <ol className="flex min-w-max items-start pt-10">
           {items.map((item) => (
