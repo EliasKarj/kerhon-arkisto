@@ -34,29 +34,46 @@ export function getTotalWatchTime(): WatchTime {
   };
 }
 
-/** Genrejakauma (yleisin ensin). */
-export function getGenreDistribution(): CountEntry[] {
-  const all: string[] = [];
-  for (const s of series) {
-    const m = getMeta(s.id);
-    if (m) all.push(...m.genres);
-  }
-  return countBy(all);
+/** Yksi kaavion pylväs: otsikko, määrä ja siihen kuuluvat animet (hover-tooltipiin). */
+export interface CountBucket {
+  label: string;
+  count: number;
+  titles: string[];
 }
 
-/** Vuosikymmenjakauma, vanhimmasta uusimpaan. */
-export function getDecadeDistribution(): CountEntry[] {
-  const counts = new Map<number, number>();
+/** Ryhmittelee (otsikko, animenimi) -parit pylväiksi; suurin ensin. */
+function bucketBy(entries: { label: string; title: string }[]): CountBucket[] {
+  const map = new Map<string, string[]>();
+  for (const entry of entries) {
+    const list = map.get(entry.label) ?? [];
+    list.push(entry.title);
+    map.set(entry.label, list);
+  }
+  return [...map.entries()]
+    .map(([label, titles]) => ({ label, count: titles.length, titles }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "fi"));
+}
+
+/** Genrejakauma (yleisin ensin), kukin pylväs sisältää animet. */
+export function getGenreDistribution(): CountBucket[] {
+  const entries: { label: string; title: string }[] = [];
+  for (const s of series) {
+    const m = getMeta(s.id);
+    if (m) for (const g of m.genres) entries.push({ label: g, title: s.title });
+  }
+  return bucketBy(entries);
+}
+
+/** Vuosikymmenjakauma, vanhimmasta uusimpaan, kukin pylväs sisältää animet. */
+export function getDecadeDistribution(): CountBucket[] {
+  const entries: { label: string; title: string }[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
     if (m?.year != null) {
-      const decade = Math.floor(m.year / 10) * 10;
-      counts.set(decade, (counts.get(decade) ?? 0) + 1);
+      entries.push({ label: `${Math.floor(m.year / 10) * 10}-luku`, title: s.title });
     }
   }
-  return [...counts.entries()]
-    .sort((a, b) => a[0] - b[0])
-    .map(([decade, count]) => ({ label: `${decade}-luku`, count }));
+  return bucketBy(entries).sort((a, b) => parseInt(a.label, 10) - parseInt(b.label, 10));
 }
 
 function seriesByYear(pick: "min" | "max"): Series | null {
@@ -90,14 +107,14 @@ const SOURCE_LABELS: Record<string, string> = {
   OTHER: "Muu",
 };
 
-/** Lähdejakauma (manga/originaali/...). */
-export function getSourceDistribution(): CountEntry[] {
-  const labels: string[] = [];
+/** Lähdejakauma (manga/originaali/...), kukin pylväs sisältää animet. */
+export function getSourceDistribution(): CountBucket[] {
+  const entries: { label: string; title: string }[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
-    if (m?.source) labels.push(SOURCE_LABELS[m.source] ?? "Muu");
+    if (m?.source) entries.push({ label: SOURCE_LABELS[m.source] ?? "Muu", title: s.title });
   }
-  return countBy(labels);
+  return bucketBy(entries);
 }
 
 /** Studiojakauma (eniten esiintynyt ensin). */

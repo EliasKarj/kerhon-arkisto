@@ -10,18 +10,45 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { CountEntry } from "@/lib/stats";
+import type { CountBucket } from "@/lib/fun-stats";
 import { ChartFrame } from "./chart-frame";
 
 const ACCENT = "var(--accent)";
 
-/** Yleinen pylväskaavio CountEntry-datalle (genre/vuosikymmen/lähde). */
+/** Hover-tooltip, joka listaa pylvääseen kuuluvat animet. */
+function BucketTooltip({
+  active,
+  payload,
+  valueLabel,
+}: {
+  active?: boolean;
+  payload?: { payload: CountBucket }[];
+  valueLabel: string;
+}) {
+  if (!active || !payload?.length) return null;
+  const bucket = payload[0].payload;
+  const shown = bucket.titles.slice(0, 12);
+  const rest = bucket.titles.length - shown.length;
+  return (
+    <div className="surface-flat max-w-[240px] bg-panel p-2 text-xs">
+      <p className="font-bold uppercase tracking-tight">
+        {bucket.label} — {bucket.count} {valueLabel.toLowerCase()}
+      </p>
+      <p className="mt-1 text-muted">
+        {shown.join(", ")}
+        {rest > 0 ? ` +${rest} muuta` : ""}
+      </p>
+    </div>
+  );
+}
+
+/** Yleinen pylväskaavio CountBucket-datalle (genre/vuosikymmen/lähde). */
 export function CountBarChart({
   data,
   caption,
   valueLabel,
 }: {
-  data: CountEntry[];
+  data: CountBucket[];
   caption: string;
   valueLabel: string;
 }) {
@@ -47,11 +74,7 @@ export function CountBarChart({
             tickLine={false}
             width={24}
           />
-          <Tooltip
-            cursor={{ fillOpacity: 0.08 }}
-            formatter={(value) => [value, valueLabel]}
-            contentStyle={{ fontSize: 12 }}
-          />
+          <Tooltip cursor={{ fillOpacity: 0.08 }} content={<BucketTooltip valueLabel={valueLabel} />} />
           <Bar dataKey="count" fill={ACCENT} radius={[0, 0, 0, 0]}>
             <LabelList dataKey="count" position="top" className="fill-foreground" fontSize={12} />
           </Bar>

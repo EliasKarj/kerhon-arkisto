@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CountBarChart } from "@/components/charts/count-bar-chart";
 import { ConnectionsGraph } from "@/components/stats/connections-graph";
 import { FunFactCard, PairCard, StatHero } from "@/components/stats/stat-cards";
-import { getMeta, graph } from "@/lib/data";
+import { getCoverUrl, getMeta, getSeriesById, graph } from "@/lib/data";
 import {
   getDecadeDistribution,
   getGenreDistribution,
@@ -50,6 +50,13 @@ export default function StatsPage() {
   const hottest = getHottestTake();
   const topCharacter = getTopCharacter();
 
+  const covers: Record<string, string | null> = Object.fromEntries(
+    graph.nodes.map((node) => {
+      const s = getSeriesById(node.id);
+      return [node.id, s ? getCoverUrl(s) : null];
+    }),
+  );
+
   const sampleNote = "Perustuu sarjoihin, joissa on jäsenkohtaiset arviot.";
 
   return (
@@ -87,7 +94,7 @@ export default function StatsPage() {
       {/* Yhteyksien verkko */}
       <section className="flex flex-col gap-4">
         <h2 className="sec-title w-fit text-lg">Yhteyksien verkko</h2>
-        <ConnectionsGraph data={graph} />
+        <ConnectionsGraph data={graph} covers={covers} />
         <div className="grid gap-4 sm:grid-cols-2">
           {mostConnected ? (
             <FunFactCard title="Verkostoitunein">

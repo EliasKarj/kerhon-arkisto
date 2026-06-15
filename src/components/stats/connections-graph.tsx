@@ -10,7 +10,13 @@ const KINDS: { id: GraphEdgeKind; label: string }[] = [
 ];
 
 /** Build-aikana laskettu yhteysverkko staattisena SVG:nä + hover-korostus. */
-export function ConnectionsGraph({ data }: { data: GraphData }) {
+export function ConnectionsGraph({
+  data,
+  covers,
+}: {
+  data: GraphData;
+  covers: Record<string, string | null>;
+}) {
   const [kind, setKind] = useState<GraphEdgeKind>("genre");
   const [hovered, setHovered] = useState<string | null>(null);
 
@@ -24,6 +30,11 @@ export function ConnectionsGraph({ data }: { data: GraphData }) {
       if (e.target === hovered) neighbors.add(e.source);
     }
   }
+
+  // Hoverattu solmu viimeiseksi, jotta se piirtyy muiden päälle.
+  const orderedNodes = [...data.nodes].sort(
+    (a, b) => Number(a.id === hovered) - Number(b.id === hovered),
+  );
 
   return (
     <div className="flex flex-col gap-3">
@@ -64,35 +75,55 @@ export function ConnectionsGraph({ data }: { data: GraphData }) {
               />
             );
           })}
-          {data.nodes.map((n) => {
+          {orderedNodes.map((n) => {
             const isHovered = n.id === hovered;
             const isNeighbor = neighbors.has(n.id);
             const dim = hovered != null && !isHovered && !isNeighbor;
-            const size = 10 + Math.min(n.degree, 8) * 1.5;
+            const base = 18 + Math.min(n.degree, 8) * 2;
+            const size = isHovered ? base * 1.7 : base;
+            const x = n.x - size / 2;
+            const y = n.y - size / 2;
+            const cover = covers[n.id];
             return (
               <g
                 key={n.id}
-                opacity={dim ? 0.25 : 1}
+                opacity={dim ? 0.3 : 1}
                 onMouseEnter={() => setHovered(n.id)}
                 onMouseLeave={() => setHovered(null)}
                 className="cursor-pointer"
               >
+                {cover ? (
+                  <image
+                    href={cover}
+                    x={x}
+                    y={y}
+                    width={size}
+                    height={size}
+                    preserveAspectRatio="xMidYMid slice"
+                  />
+                ) : (
+                  <rect x={x} y={y} width={size} height={size} fill="var(--color-foreground)" />
+                )}
                 <rect
-                  x={n.x - size / 2}
-                  y={n.y - size / 2}
+                  x={x}
+                  y={y}
                   width={size}
                   height={size}
-                  fill={isHovered ? "var(--accent)" : "var(--color-foreground)"}
-                  stroke="var(--color-foreground)"
-                  strokeWidth={2}
+                  fill="none"
+                  stroke={isHovered ? "var(--accent)" : "var(--color-foreground)"}
+                  strokeWidth={isHovered ? 3 : 2}
                 />
                 {(isHovered || isNeighbor) && (
                   <text
-                    x={n.x + size / 2 + 4}
-                    y={n.y + 4}
-                    fontSize={isHovered ? 18 : 14}
+                    x={n.x}
+                    y={y - 4}
+                    textAnchor="middle"
+                    fontSize={isHovered ? 20 : 14}
                     fontWeight={700}
                     fill="var(--color-foreground)"
+                    stroke="var(--color-background)"
+                    strokeWidth={0.5}
+                    paintOrder="stroke"
                   >
                     {n.title}
                   </text>
