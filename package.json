@@ -13,6 +13,7 @@
     "fetch:meta": "node scripts/fetch-meta.mjs",
     "build:graph": "node scripts/build-graph.mjs",
     "seed:db": "node --env-file=.env.local scripts/seed-db.mjs",
+    "backfill:derived": "node --env-file=.env.local scripts/backfill-derived.mjs",
     "test": "node --import tsx --test src/lib/data.test.ts src/lib/admin/auth-token.test.ts src/lib/admin/validation.test.ts src/lib/admin/anilist.test.ts"
   },
   "dependencies": {
