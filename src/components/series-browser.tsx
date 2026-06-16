@@ -1,33 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { SeriesCard } from "@/components/series-card";
+import { SeriesCard, type SeriesCardVM } from "@/components/series-card";
 import { seasonLabel } from "@/lib/labels";
-import type { Series } from "@/lib/types";
 
 export interface BrowserItem {
-  series: Series;
+  card: SeriesCardVM;
+  clubSeason: number;
+  watchedDate: string;
   genres: string[];
 }
 
 interface SeasonGroup {
   season: number;
-  series: Series[];
+  items: BrowserItem[];
 }
 
 /** Ryhmittelee suodatetut sarjat kausittain, uusin kausi ensin. */
 function groupBySeason(items: BrowserItem[]): SeasonGroup[] {
-  const bySeason = new Map<number, Series[]>();
+  const bySeason = new Map<number, BrowserItem[]>();
   for (const item of items) {
-    const list = bySeason.get(item.series.clubSeason) ?? [];
-    list.push(item.series);
-    bySeason.set(item.series.clubSeason, list);
+    const list = bySeason.get(item.clubSeason) ?? [];
+    list.push(item);
+    bySeason.set(item.clubSeason, list);
   }
   return [...bySeason.entries()]
     .sort((a, b) => b[0] - a[0])
     .map(([season, list]) => ({
       season,
-      series: list.sort((a, b) => b.watchedDate.localeCompare(a.watchedDate)),
+      items: list.sort((a, b) => b.watchedDate.localeCompare(a.watchedDate)),
     }));
 }
 
@@ -75,9 +76,9 @@ export function SeriesBrowser({ items, allGenres }: { items: BrowserItem[]; allG
           <div key={group.season} className="flex flex-col gap-3">
             <h2 className="sec-title w-fit text-sm">{seasonLabel(group.season)}</h2>
             <ul className="grid gap-4 sm:grid-cols-2">
-              {group.series.map((s) => (
-                <li key={s.id}>
-                  <SeriesCard series={s} />
+              {group.items.map((item) => (
+                <li key={item.card.id}>
+                  <SeriesCard item={item.card} />
                 </li>
               ))}
             </ul>

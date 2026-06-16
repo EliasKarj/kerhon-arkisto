@@ -2,11 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ReviewCard } from "@/components/review-card";
 import {
-  getMemberById,
-  getReviewsForMember,
-  getSeriesById,
-  getSeriesProposedBy,
-  members as allMembers,
+  getRoomData,
+  memberById,
+  reviewsForMember,
+  seriesById,
+  seriesProposedBy,
 } from "@/lib/data";
 import { getInitials, seasonLabel, seriesCountLabel } from "@/lib/labels";
 import {
@@ -16,25 +16,27 @@ import {
   getTagCounts,
 } from "@/lib/stats";
 
-export function generateStaticParams() {
-  return allMembers.map((member) => ({ id: member.id }));
+export async function generateStaticParams() {
+  const { members } = await getRoomData();
+  return members.map((member) => ({ id: member.id }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/jasen/[id]">) {
   const { id } = await params;
-  const member = getMemberById(id);
-  return { title: member ? member.name : "Jäsen" };
+  const { members } = await getRoomData();
+  return { title: memberById(members, id)?.name ?? "Jäsen" };
 }
 
 export default async function MemberPage({ params }: PageProps<"/jasen/[id]">) {
   const { id } = await params;
-  const member = getMemberById(id);
+  const room = await getRoomData();
+  const member = memberById(room.members, id);
   if (!member) notFound();
 
-  const proposed = getSeriesProposedBy(id);
-  const reviews = getReviewsForMember(id);
-  const proposedAverage = getMemberProposedAverage(id);
-  const clubAverage = getClubAverageScore();
+  const proposed = seriesProposedBy(room.series, id);
+  const reviews = reviewsForMember(room.reviews, id);
+  const proposedAverage = getMemberProposedAverage(room.series, id);
+  const clubAverage = getClubAverageScore(room.series);
   const tagCounts = getTagCounts(reviews);
 
   const diff =
@@ -145,7 +147,7 @@ export default async function MemberPage({ params }: PageProps<"/jasen/[id]">) {
           <h2 className="sec-title w-fit text-lg">Arviot</h2>
           <ul className="grid gap-5 sm:grid-cols-2">
             {reviews.map((review) => {
-              const series = getSeriesById(review.seriesId);
+              const series = seriesById(room.series, review.seriesId);
               return (
                 <ReviewCard
                   key={review.id}

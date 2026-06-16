@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CountBarChart } from "@/components/charts/count-bar-chart";
 import { ConnectionsGraph } from "@/components/stats/connections-graph";
 import { FunFactCard, PairCard, StatHero } from "@/components/stats/stat-cards";
-import { getCoverUrl, getMeta, getSeriesById, graph } from "@/lib/data";
+import { getCoverUrl, getMeta, getRoomData, graph, seriesById } from "@/lib/data";
 import {
   getDecadeDistribution,
   getGenreDistribution,
@@ -33,26 +33,27 @@ function seriesLink(id: string, title: string) {
   );
 }
 
-export default function StatsPage() {
-  const watch = getTotalWatchTime();
-  const controversial = getMostControversial();
-  const agreed = getMostAgreed();
+export default async function StatsPage() {
+  const { members, series, reviews } = await getRoomData();
+  const watch = getTotalWatchTime(series);
+  const controversial = getMostControversial(series, reviews);
+  const agreed = getMostAgreed(series, reviews);
   const mostConnected = getMostConnectedAnime();
   const isolated = getMostIsolatedAnime();
-  const genres = getGenreDistribution().slice(0, 8);
-  const decades = getDecadeDistribution();
-  const sources = getSourceDistribution();
-  const studios = getStudioCounts().slice(0, 6);
-  const oldest = getOldestSeries();
-  const newest = getNewestSeries();
-  const soulmates = getSoulmates();
-  const opposites = getOpposites();
-  const hottest = getHottestTake();
-  const topCharacter = getTopCharacter();
+  const genres = getGenreDistribution(series).slice(0, 8);
+  const decades = getDecadeDistribution(series);
+  const sources = getSourceDistribution(series);
+  const studios = getStudioCounts(series).slice(0, 6);
+  const oldest = getOldestSeries(series);
+  const newest = getNewestSeries(series);
+  const soulmates = getSoulmates(members, reviews);
+  const opposites = getOpposites(members, reviews);
+  const hottest = getHottestTake(series, reviews, members);
+  const topCharacter = getTopCharacter(series);
 
   const covers: Record<string, string | null> = Object.fromEntries(
     graph.nodes.map((node) => {
-      const s = getSeriesById(node.id);
+      const s = seriesById(series, node.id);
       return [node.id, s ? getCoverUrl(s) : null];
     }),
   );

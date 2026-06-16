@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Timeline, type TimelineItem } from "@/components/timeline";
-import { getMemberById, getSeriesByDateDesc } from "@/lib/data";
+import { getRoomData, memberById, seriesByDateDesc } from "@/lib/data";
 import { seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
-import { formatScore, getSeriesAverageScore } from "@/lib/stats";
+import { formatScore } from "@/lib/stats";
 
 export const metadata: Metadata = {
   title: "Aikajana",
@@ -13,16 +13,17 @@ function formatDate(iso: string): string {
   return `${Number(day)}.${Number(month)}.${year}`;
 }
 
-export default function TimelinePage() {
-  const items: TimelineItem[] = getSeriesByDateDesc().map((entry) => {
-    const proposer = getMemberById(entry.proposerId);
+export default async function TimelinePage() {
+  const { members, series } = await getRoomData();
+  const items: TimelineItem[] = seriesByDateDesc(series).map((entry) => {
+    const proposer = memberById(members, entry.proposerId);
     return {
       id: entry.id,
       title: entry.title,
       meta: `${seasonLabel(entry.clubSeason)} · ${formatDate(entry.watchedDate)}`,
       watchedDate: entry.watchedDate,
       typeLabel: SERIES_TYPE_LABELS[entry.type],
-      score: formatScore(getSeriesAverageScore(entry.id)),
+      score: formatScore(entry.clubScore),
       proposer: proposer ? proposer.name : null,
       bestPick: entry.bestPick,
     };

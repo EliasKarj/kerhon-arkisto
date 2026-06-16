@@ -6,42 +6,44 @@ import { ReviewCard } from "@/components/review-card";
 import {
   getBestPickImage,
   getCoverUrl,
-  getMemberById,
-  getReviewsForSeries,
-  getSeriesById,
-  series as allSeries,
+  getRoomData,
+  memberById,
+  reviewsForSeries,
+  seriesById,
 } from "@/lib/data";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
-import { formatScore, getBestPickCounts, getSeriesAverageScore } from "@/lib/stats";
+import { formatScore, getBestPickCounts, getSeriesScore } from "@/lib/stats";
 
 function formatDate(iso: string): string {
   const [year, month, day] = iso.split("-");
   return `${Number(day)}.${Number(month)}.${year}`;
 }
 
-export function generateStaticParams() {
-  return allSeries.map((entry) => ({ id: entry.id }));
+export async function generateStaticParams() {
+  const { series } = await getRoomData();
+  return series.map((entry) => ({ id: entry.id }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/sarja/[id]">) {
   const { id } = await params;
-  const series = getSeriesById(id);
-  return { title: series ? series.title : "Sarja" };
+  const { series } = await getRoomData();
+  return { title: seriesById(series, id)?.title ?? "Sarja" };
 }
 
 export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   const { id } = await params;
-  const series = getSeriesById(id);
+  const room = await getRoomData();
+  const series = seriesById(room.series, id);
   if (!series) notFound();
 
-  const reviews = getReviewsForSeries(id);
-  const score = getSeriesAverageScore(id);
-  const proposer = getMemberById(series.proposerId);
+  const reviews = reviewsForSeries(room.reviews, id);
+  const score = getSeriesScore(room.series, id);
+  const proposer = memberById(room.members, series.proposerId);
   const cover = getCoverUrl(series);
   const bestPickImage = getBestPickImage(id);
 
   const radarData = reviews.map((review) => ({
-    member: getMemberById(review.memberId)?.name ?? review.memberId,
+    member: memberById(room.members, review.memberId)?.name ?? review.memberId,
     score: review.score,
   }));
   const bestPickData = getBestPickCounts(reviews);
@@ -149,7 +151,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
             <h2 className="text-lg font-bold uppercase tracking-tight">Jäsenten kommentit</h2>
             <ul className="grid gap-5 sm:grid-cols-2">
               {reviews.map((review) => {
-                const member = getMemberById(review.memberId);
+                const member = memberById(room.members, review.memberId);
                 return (
                   <ReviewCard
                     key={review.id}

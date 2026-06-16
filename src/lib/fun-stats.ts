@@ -1,5 +1,5 @@
 import { countBy, getBestPickLeaderboard, type CountEntry } from "./stats";
-import { getMeta, graph, members, reviews, series } from "./data";
+import { getMeta, graph } from "./data";
 import type { GraphNode, Member, Review, Series } from "./types";
 
 const AVG_EP_MINUTES = 24;
@@ -19,7 +19,7 @@ export interface WatchTime {
  * Arvioitu kokonaiskatseluaika: sarjoista lasketaan enintään {@link EPISODE_CAP}
  * jaksoa (kerho katsoo yleensä ~yhden kauden), elokuvat täydellä kestolla.
  */
-export function getTotalWatchTime(): WatchTime {
+export function getTotalWatchTime(series: Series[]): WatchTime {
   let minutes = 0;
   for (const s of series) {
     const m = getMeta(s.id);
@@ -55,7 +55,7 @@ function bucketBy(entries: { label: string; title: string }[]): CountBucket[] {
 }
 
 /** Genrejakauma (yleisin ensin), kukin pylväs sisältää animet. */
-export function getGenreDistribution(): CountBucket[] {
+export function getGenreDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
@@ -65,7 +65,7 @@ export function getGenreDistribution(): CountBucket[] {
 }
 
 /** Vuosikymmenjakauma, vanhimmasta uusimpaan, kukin pylväs sisältää animet. */
-export function getDecadeDistribution(): CountBucket[] {
+export function getDecadeDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
@@ -76,7 +76,7 @@ export function getDecadeDistribution(): CountBucket[] {
   return bucketBy(entries).sort((a, b) => parseInt(a.label, 10) - parseInt(b.label, 10));
 }
 
-function seriesByYear(pick: "min" | "max"): Series | null {
+function seriesByYear(series: Series[], pick: "min" | "max"): Series | null {
   let best: { series: Series; year: number } | null = null;
   for (const s of series) {
     const m = getMeta(s.id);
@@ -88,12 +88,12 @@ function seriesByYear(pick: "min" | "max"): Series | null {
   return best?.series ?? null;
 }
 
-export function getOldestSeries(): Series | null {
-  return seriesByYear("min");
+export function getOldestSeries(series: Series[]): Series | null {
+  return seriesByYear(series, "min");
 }
 
-export function getNewestSeries(): Series | null {
-  return seriesByYear("max");
+export function getNewestSeries(series: Series[]): Series | null {
+  return seriesByYear(series, "max");
 }
 
 const SOURCE_LABELS: Record<string, string> = {
@@ -108,7 +108,7 @@ const SOURCE_LABELS: Record<string, string> = {
 };
 
 /** Lähdejakauma (manga/originaali/...), kukin pylväs sisältää animet. */
-export function getSourceDistribution(): CountBucket[] {
+export function getSourceDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
@@ -118,7 +118,7 @@ export function getSourceDistribution(): CountBucket[] {
 }
 
 /** Studiojakauma (eniten esiintynyt ensin). */
-export function getStudioCounts(): CountEntry[] {
+export function getStudioCounts(series: Series[]): CountEntry[] {
   const studios: string[] = [];
   for (const s of series) {
     const m = getMeta(s.id);
@@ -144,7 +144,7 @@ export interface SeriesSpread {
 }
 
 /** Sarjat joilla on >=2 jäsenkohtaista arviota, pistehajonta laskettuna. */
-function seriesSpreads(): SeriesSpread[] {
+function seriesSpreads(series: Series[], reviews: Review[]): SeriesSpread[] {
   const out: SeriesSpread[] = [];
   for (const s of series) {
     const rs = reviews.filter((r) => r.seriesId === s.id);
@@ -157,12 +157,15 @@ function seriesSpreads(): SeriesSpread[] {
   return out;
 }
 
-export function getMostControversial(): SeriesSpread | null {
-  return [...seriesSpreads()].sort((a, b) => b.spread - a.spread)[0] ?? null;
+export function getMostControversial(series: Series[], reviews: Review[]): SeriesSpread | null {
+  return [...seriesSpreads(series, reviews)].sort((a, b) => b.spread - a.spread)[0] ?? null;
 }
 
-export function getMostAgreed(): SeriesSpread | null {
-  return [...seriesSpreads()].sort((a, b) => a.spread - b.spread || b.count - a.count)[0] ?? null;
+export function getMostAgreed(series: Series[], reviews: Review[]): SeriesSpread | null {
+  return (
+    [...seriesSpreads(series, reviews)].sort((a, b) => a.spread - b.spread || b.count - a.count)[0] ??
+    null
+  );
 }
 
 export interface MemberPair {
@@ -173,7 +176,7 @@ export interface MemberPair {
 }
 
 /** Jäsenparit, joilla on >=MIN_SHARED yhdessä arvioitua sarjaa. */
-function memberPairs(): MemberPair[] {
+function memberPairs(members: Member[], reviews: Review[]): MemberPair[] {
   const officials = members.filter((m) => !m.guest);
   const byMember = new Map<string, Map<string, number>>();
   for (const r of reviews) {
@@ -204,13 +207,19 @@ function memberPairs(): MemberPair[] {
 }
 
 /** Useimmin samaa mieltä oleva pari (pienin keskimääräinen piste-ero). */
-export function getSoulmates(): MemberPair | null {
-  return [...memberPairs()].sort((a, b) => a.meanDiff - b.meanDiff || b.shared - a.shared)[0] ?? null;
+export function getSoulmates(members: Member[], reviews: Review[]): MemberPair | null {
+  return (
+    [...memberPairs(members, reviews)].sort((a, b) => a.meanDiff - b.meanDiff || b.shared - a.shared)[0] ??
+    null
+  );
 }
 
 /** Useimmin eri mieltä oleva pari (suurin keskimääräinen piste-ero). */
-export function getOpposites(): MemberPair | null {
-  return [...memberPairs()].sort((a, b) => b.meanDiff - a.meanDiff || b.shared - a.shared)[0] ?? null;
+export function getOpposites(members: Member[], reviews: Review[]): MemberPair | null {
+  return (
+    [...memberPairs(members, reviews)].sort((a, b) => b.meanDiff - a.meanDiff || b.shared - a.shared)[0] ??
+    null
+  );
 }
 
 export interface HottestTake {
@@ -222,7 +231,11 @@ export interface HottestTake {
 }
 
 /** Yksittäinen arvio kauimpana sarjan kerhokeskiarvosta. */
-export function getHottestTake(): HottestTake | null {
+export function getHottestTake(
+  series: Series[],
+  reviews: Review[],
+  members: Member[],
+): HottestTake | null {
   let best: HottestTake | null = null;
   for (const s of series) {
     const rs = reviews.filter((r) => r.seriesId === s.id);
@@ -240,6 +253,6 @@ export function getHottestTake(): HottestTake | null {
 }
 
 /** Eniten ääniä kerännyt best character (yhteisvalinnoista). */
-export function getTopCharacter(): CountEntry | null {
-  return getBestPickLeaderboard()[0] ?? null;
+export function getTopCharacter(series: Series[]): CountEntry | null {
+  return getBestPickLeaderboard(series)[0] ?? null;
 }

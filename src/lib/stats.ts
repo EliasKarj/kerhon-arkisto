@@ -1,10 +1,4 @@
-import {
-  getReviewsForMember,
-  getSeriesById,
-  getSeriesProposedBy,
-  members,
-  series as allSeries,
-} from "./data";
+import { reviewsForMember, seriesProposedBy } from "./data";
 import type { Member, Review, Series } from "./types";
 
 /** Keskiarvo pisteistä, tai null jos arvioita ei ole. */
@@ -14,32 +8,32 @@ export function getAverageScore(reviews: Review[]): number | null {
   return sum / reviews.length;
 }
 
-/** Sarjan kerhon yhteisarvosana (tilastodatasta), tai null jos ei arvioitu. */
-export function getSeriesScore(seriesId: string): number | null {
-  return getSeriesById(seriesId)?.clubScore ?? null;
+/** Sarjan kerhon yhteisarvosana, tai null jos ei arvioitu. */
+export function getSeriesScore(series: Series[], seriesId: string): number | null {
+  return series.find((s) => s.id === seriesId)?.clubScore ?? null;
 }
 
 /** Kaikki arvioidut sarjat (joilla on yhteisarvosana). */
-export function getRatedSeries(): Series[] {
-  return allSeries.filter((entry) => entry.clubScore !== null);
+export function getRatedSeries(series: Series[]): Series[] {
+  return series.filter((entry) => entry.clubScore !== null);
 }
 
 /** Koko kerhon keskiarvo kaikista arvioiduista sarjoista. */
-export function getClubAverageScore(): number | null {
-  const rated = getRatedSeries();
+export function getClubAverageScore(series: Series[]): number | null {
+  const rated = getRatedSeries(series);
   if (rated.length === 0) return null;
   const sum = rated.reduce((total, entry) => total + (entry.clubScore ?? 0), 0);
   return sum / rated.length;
 }
 
 /** Jäsenen kirjaamien arvioiden keskiarvo (vain detaljiarvioista). */
-export function getMemberReviewAverage(memberId: string): number | null {
-  return getAverageScore(getReviewsForMember(memberId));
+export function getMemberReviewAverage(reviews: Review[], memberId: string): number | null {
+  return getAverageScore(reviewsForMember(reviews, memberId));
 }
 
 /** Jäsenen ehdottamien arvioitujen sarjojen keskiarvo. */
-export function getMemberProposedAverage(memberId: string): number | null {
-  const rated = getSeriesProposedBy(memberId).filter((entry) => entry.clubScore !== null);
+export function getMemberProposedAverage(series: Series[], memberId: string): number | null {
+  const rated = seriesProposedBy(series, memberId).filter((entry) => entry.clubScore !== null);
   if (rated.length === 0) return null;
   const sum = rated.reduce((total, entry) => total + (entry.clubScore ?? 0), 0);
   return sum / rated.length;
@@ -61,7 +55,7 @@ export function countBy(values: string[]): CountEntry[] {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "fi"));
 }
 
-/** Best girl/boy -äänten jakauma annetuista (jäsenkohtaisista) arvioista. */
+/** Best character -äänten jakauma annetuista (jäsenkohtaisista) arvioista. */
 export function getBestPickCounts(reviews: Review[]): CountEntry[] {
   return countBy(reviews.map((review) => review.bestPick));
 }
@@ -71,25 +65,25 @@ export function getTagCounts(reviews: Review[]): CountEntry[] {
   return countBy(reviews.flatMap((review) => review.tags));
 }
 
-/** Kaikkien aikojen best girl/boy -leaderboard sarjojen yhteisvalinnoista. */
-export function getBestPickLeaderboard(): CountEntry[] {
-  const picks = allSeries
+/** Kaikkien aikojen best character -leaderboard sarjojen yhteisvalinnoista. */
+export function getBestPickLeaderboard(series: Series[]): CountEntry[] {
+  const picks = series
     .map((entry) => entry.bestPick)
     .filter((pick): pick is string => pick !== null);
   return countBy(picks);
 }
 
 /** Korkeimmin arvioidut sarjat (Top). */
-export function getTopSeries(limit: number): Series[] {
-  return getRatedSeries()
+export function getTopSeries(series: Series[], limit: number): Series[] {
+  return getRatedSeries(series)
     .slice()
     .sort((a, b) => (b.clubScore ?? 0) - (a.clubScore ?? 0))
     .slice(0, limit);
 }
 
 /** Matalimmin arvioidut sarjat (Bottom). */
-export function getBottomSeries(limit: number): Series[] {
-  return getRatedSeries()
+export function getBottomSeries(series: Series[], limit: number): Series[] {
+  return getRatedSeries(series)
     .slice()
     .sort((a, b) => (a.clubScore ?? 0) - (b.clubScore ?? 0))
     .slice(0, limit);
@@ -100,10 +94,10 @@ export interface SeasonAverage {
   average: number;
 }
 
-/** Kausien keskiarvot (kuten tilaston "Kausien keskiarvot" -kaavio). */
-export function getSeasonAverages(): SeasonAverage[] {
+/** Kausien keskiarvot. */
+export function getSeasonAverages(series: Series[]): SeasonAverage[] {
   const bySeason = new Map<number, number[]>();
-  for (const entry of getRatedSeries()) {
+  for (const entry of getRatedSeries(series)) {
     const list = bySeason.get(entry.clubSeason) ?? [];
     list.push(entry.clubScore ?? 0);
     bySeason.set(entry.clubSeason, list);
@@ -129,9 +123,9 @@ export interface ReviewerExtremes {
 }
 
 /** Tiukin ja löysin arvioija kirjattujen detaljiarvioiden keskiarvon perusteella. */
-export function getReviewerExtremes(): ReviewerExtremes | null {
+export function getReviewerExtremes(members: Member[], reviews: Review[]): ReviewerExtremes | null {
   const standings: ReviewerStanding[] = members
-    .map((member) => ({ member, average: getMemberReviewAverage(member.id) }))
+    .map((member) => ({ member, average: getMemberReviewAverage(reviews, member.id) }))
     .filter((standing): standing is ReviewerStanding => standing.average !== null);
 
   if (standings.length === 0) return null;
@@ -150,6 +144,3 @@ export function formatScore(value: number | null, digits = 1): string {
   if (value === null) return "–";
   return value.toFixed(digits);
 }
-
-// Käytetään edelleen alias-nimellä sarjan pistemäärälle.
-export { getSeriesScore as getSeriesAverageScore };

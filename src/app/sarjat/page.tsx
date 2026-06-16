@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
 import { SeriesBrowser, type BrowserItem } from "@/components/series-browser";
-import { getMeta, series as allSeries } from "@/lib/data";
+import { getCoverUrl, getMeta, getRoomData, memberById } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Sarjat",
 };
 
-export default function SeriesIndexPage() {
-  const items: BrowserItem[] = allSeries.map((series) => ({
-    series,
-    genres: getMeta(series.id)?.genres ?? [],
+export default async function SeriesIndexPage() {
+  const { members, series } = await getRoomData();
+  const items: BrowserItem[] = series.map((s) => ({
+    card: {
+      id: s.id,
+      title: s.title,
+      type: s.type,
+      clubSeason: s.clubSeason,
+      score: s.clubScore,
+      proposerName: memberById(members, s.proposerId)?.name ?? null,
+      cover: getCoverUrl(s),
+      bestPick: s.bestPick,
+    },
+    clubSeason: s.clubSeason,
+    watchedDate: s.watchedDate,
+    genres: getMeta(s.id)?.genres ?? [],
   }));
   const allGenres = [...new Set(items.flatMap((item) => item.genres))].sort((a, b) =>
     a.localeCompare(b),

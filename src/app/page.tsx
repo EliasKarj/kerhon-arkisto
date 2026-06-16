@@ -2,9 +2,10 @@ import Link from "next/link";
 import { SeriesCard } from "@/components/series-card";
 import {
   getCoverUrl,
-  getMemberById,
-  getSeriesByDateDesc,
+  getRoomData,
   getWatchLinks,
+  memberById,
+  seriesByDateDesc,
 } from "@/lib/data";
 import { getTotalWatchTime } from "@/lib/fun-stats";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
@@ -22,18 +23,19 @@ function formatDate(iso: string): string {
   return `${Number(day)}.${Number(month)}.${year}`;
 }
 
-export default function HomePage() {
-  const seriesByRecency = getSeriesByDateDesc();
-  const clubAverage = getClubAverageScore();
+export default async function HomePage() {
+  const { members, series } = await getRoomData();
+  const seriesByRecency = seriesByDateDesc(series);
+  const clubAverage = getClubAverageScore(series);
 
   const current = seriesByRecency.find((entry) => entry.clubScore === null) ?? null;
-  const currentProposer = current ? getMemberById(current.proposerId) : null;
+  const currentProposer = current ? memberById(members, current.proposerId) : null;
   const currentCover = current ? getCoverUrl(current) : null;
   const currentLinks = current ? getWatchLinks(current.id) : null;
 
   const recent = seriesByRecency.filter((entry) => entry.id !== current?.id).slice(0, 4);
 
-  const watchTime = getTotalWatchTime();
+  const watchTime = getTotalWatchTime(series);
 
   return (
     <div className="flex flex-col gap-10">
@@ -160,9 +162,20 @@ export default function HomePage() {
           </Link>
         </div>
         <ul className="grid gap-5 sm:grid-cols-2">
-          {recent.map((series) => (
-            <li key={series.id}>
-              <SeriesCard series={series} />
+          {recent.map((s) => (
+            <li key={s.id}>
+              <SeriesCard
+                item={{
+                  id: s.id,
+                  title: s.title,
+                  type: s.type,
+                  clubSeason: s.clubSeason,
+                  score: s.clubScore,
+                  proposerName: memberById(members, s.proposerId)?.name ?? null,
+                  cover: getCoverUrl(s),
+                  bestPick: s.bestPick,
+                }}
+              />
             </li>
           ))}
         </ul>

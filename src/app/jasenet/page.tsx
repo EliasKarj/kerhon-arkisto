@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { MemberCard } from "@/components/member-card";
-import { members } from "@/lib/data";
+import { MemberCard, type MemberCardVM } from "@/components/member-card";
+import { getRoomData, seriesProposedBy } from "@/lib/data";
+import { getMemberProposedAverage } from "@/lib/stats";
+import type { Member, Series } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Jäsenet",
 };
 
-export default function MembersIndexPage() {
+function memberVM(member: Member, series: Series[]): MemberCardVM {
+  return {
+    id: member.id,
+    name: member.name,
+    avatarUrl: member.avatarUrl,
+    guest: member.guest,
+    proposedCount: seriesProposedBy(series, member.id).length,
+    proposedAverage: getMemberProposedAverage(series, member.id),
+  };
+}
+
+export default async function MembersIndexPage() {
+  const { members, series } = await getRoomData();
   const official = members.filter((member) => !member.guest);
   const guests = members.filter((member) => member.guest);
 
@@ -25,7 +39,7 @@ export default function MembersIndexPage() {
         <ul className="grid gap-4 sm:grid-cols-2">
           {official.map((member) => (
             <li key={member.id}>
-              <MemberCard member={member} />
+              <MemberCard item={memberVM(member, series)} />
             </li>
           ))}
         </ul>
@@ -37,7 +51,7 @@ export default function MembersIndexPage() {
           <ul className="grid gap-4 sm:grid-cols-2">
             {guests.map((member) => (
               <li key={member.id}>
-                <MemberCard member={member} />
+                <MemberCard item={memberVM(member, series)} />
               </li>
             ))}
           </ul>

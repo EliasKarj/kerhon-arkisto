@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getRoomData } from "@/lib/data";
 import { seasonLabel } from "@/lib/labels";
 import {
   formatScore,
@@ -44,10 +45,11 @@ function SeriesRanking({ title, entries }: { title: string; entries: Series[] })
   );
 }
 
-export default function HallOfFamePage() {
-  const top = getTopSeries(5);
-  const bottom = getBottomSeries(5);
-  const extremes = getReviewerExtremes();
+export default async function HallOfFamePage() {
+  const { members, series, reviews } = await getRoomData();
+  const top = getTopSeries(series, 5);
+  const bottom = getBottomSeries(series, 5);
+  const extremes = getReviewerExtremes(members, reviews);
 
   return (
     <div className="flex flex-col gap-10">
