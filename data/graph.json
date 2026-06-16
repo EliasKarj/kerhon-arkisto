@@ -3,456 +3,449 @@
     {
       "id": "hyouka",
       "title": "Hyouka",
-      "x": 200,
+      "x": 394,
       "y": 60,
       "degree": 6
     },
     {
       "id": "banana-fish",
       "title": "Banana Fish",
-      "x": 280,
-      "y": 362,
+      "x": 539,
+      "y": 529,
       "degree": 38
     },
     {
       "id": "parasyte-the-maxim",
       "title": "Parasyte: The Maxim",
-      "x": 225,
-      "y": 423,
+      "x": 645,
+      "y": 674,
       "degree": 44
     },
     {
       "id": "ranma-half-2024",
       "title": "Ranma ½ (2024)",
-      "x": 161,
-      "y": 176,
+      "x": 295,
+      "y": 322,
       "degree": 27
     },
     {
       "id": "pluto",
       "title": "Pluto",
-      "x": 292,
-      "y": 455,
+      "x": 748,
+      "y": 423,
       "degree": 37
     },
     {
       "id": "trigun",
       "title": "Trigun",
-      "x": 180,
-      "y": 314,
+      "x": 487,
+      "y": 456,
       "degree": 54
     },
     {
       "id": "ninja-scroll",
       "title": "Ninja Scroll",
-      "x": 174,
-      "y": 268,
+      "x": 331,
+      "y": 634,
       "degree": 30
     },
     {
       "id": "memories",
       "title": "Memories",
-      "x": 253,
-      "y": 393,
+      "x": 505,
+      "y": 612,
       "degree": 43
     },
     {
       "id": "witch-hat-atelier",
       "title": "Witch Hat Atelier",
-      "x": 113,
-      "y": 282,
+      "x": 349,
+      "y": 790,
       "degree": 20
     },
     {
       "id": "food-wars",
       "title": "Food Wars! Shokugeki no Soma",
       "x": 60,
-      "y": 231,
+      "y": 479,
       "degree": 5
     },
     {
       "id": "neon-genesis-evangelion",
       "title": "Neon Genesis Evangelion",
-      "x": 232,
-      "y": 469,
+      "x": 766,
+      "y": 579,
       "degree": 37
     },
     {
       "id": "tokyo-ghoul",
       "title": "Tokyo Ghoul",
-      "x": 286,
-      "y": 409,
+      "x": 713,
+      "y": 507,
       "degree": 38
     },
     {
       "id": "mob-psycho-100",
       "title": "Mob Psycho 100",
-      "x": 234,
-      "y": 254,
+      "x": 521,
+      "y": 373,
       "degree": 50
     },
     {
       "id": "kurokos-basketball",
       "title": "Kuroko's Basketball",
-      "x": 150,
-      "y": 587,
+      "x": 533,
+      "y": 940,
       "degree": 3
     },
     {
       "id": "solo-leveling",
       "title": "Solo Leveling",
-      "x": 201,
-      "y": 238,
+      "x": 297,
+      "y": 717,
       "degree": 22
     },
     {
       "id": "hells-paradise",
       "title": "Hell's Paradise",
-      "x": 246,
-      "y": 346,
+      "x": 608,
+      "y": 362,
       "degree": 37
     },
     {
       "id": "rising-impact",
       "title": "Rising Impact",
-      "x": 132,
-      "y": 421,
+      "x": 210,
+      "y": 731,
       "degree": 9
     },
     {
       "id": "blood-blockade-battlefront",
       "title": "Blood Blockade Battlefront",
-      "x": 195,
-      "y": 192,
+      "x": 416,
+      "y": 228,
       "degree": 27
     },
     {
       "id": "takt-op-destiny",
       "title": "Takt Op. Destiny",
-      "x": 125,
-      "y": 375,
+      "x": 489,
+      "y": 851,
       "degree": 19
     },
     {
       "id": "serial-experiments-lain",
       "title": "Serial Experiments Lain",
-      "x": 313,
-      "y": 378,
+      "x": 782,
+      "y": 340,
       "degree": 35
     },
     {
       "id": "komi-cant-communicate",
       "title": "Komi Can't Communicate",
-      "x": 249,
-      "y": 131,
+      "x": 590,
+      "y": 206,
       "degree": 12
     },
     {
       "id": "viral-hit",
       "title": "Viral Hit",
-      "x": 101,
-      "y": 190,
+      "x": 172,
+      "y": 417,
       "degree": 10
     },
     {
       "id": "made-in-abyss",
       "title": "Made in Abyss",
-      "x": 213,
-      "y": 330,
+      "x": 610,
+      "y": 757,
       "degree": 38
     },
     {
       "id": "ossan-newbie-adventurer",
       "title": "The Ossan Newbie Adventurer",
-      "x": 107,
-      "y": 236,
+      "x": 226,
+      "y": 489,
       "degree": 30
     },
     {
       "id": "violet-evergarden",
       "title": "Violet Evergarden",
-      "x": 255,
-      "y": 177,
+      "x": 556,
+      "y": 289,
       "degree": 15
     },
     {
       "id": "berserk-of-gluttony",
       "title": "Berserk of Gluttony",
-      "x": 261,
-      "y": 224,
+      "x": 366,
+      "y": 550,
       "degree": 40
     },
     {
       "id": "berserk",
       "title": "Berserk",
-      "x": 240,
-      "y": 300,
+      "x": 626,
+      "y": 518,
       "degree": 48
     },
     {
       "id": "konosuba",
       "title": "KonoSuba: God's Blessing on This Wonderful World!",
-      "x": 119,
-      "y": 328,
+      "x": 244,
+      "y": 645,
       "degree": 25
     },
     {
       "id": "kaiju-no-8",
       "title": "Kaiju No. 8",
-      "x": 171,
-      "y": 483,
+      "x": 436,
+      "y": 779,
       "degree": 12
     },
     {
       "id": "punch-line",
       "title": "Punch Line",
-      "x": 140,
-      "y": 252,
+      "x": 260,
+      "y": 405,
       "degree": 21
     },
     {
       "id": "cowboy-bebop",
       "title": "Cowboy Bebop",
-      "x": 307,
-      "y": 332,
+      "x": 523,
+      "y": 768,
       "degree": 38
     },
     {
       "id": "higurashi",
       "title": "Higurashi: When They Cry",
-      "x": 346,
-      "y": 394,
+      "x": 853,
+      "y": 569,
       "degree": 25
     },
     {
       "id": "demon-lord-2099",
       "title": "Demon Lord 2099",
-      "x": 186,
-      "y": 360,
+      "x": 279,
+      "y": 561,
       "degree": 49
     },
     {
       "id": "tsukimichi",
       "title": "Tsukimichi -Moonlit Fantasy-",
-      "x": 86,
-      "y": 312,
+      "x": 192,
+      "y": 572,
       "degree": 30
     },
     {
       "id": "trillion-game",
       "title": "Trillion Game",
-      "x": 219,
-      "y": 377,
+      "x": 453,
+      "y": 539,
       "degree": 45
     },
     {
       "id": "86-eighty-six",
       "title": "86 Eighty-Six",
-      "x": 159,
-      "y": 391,
+      "x": 418,
+      "y": 623,
       "degree": 30
     },
     {
       "id": "mushoku-tensei",
       "title": "Mushoku Tensei: Jobless Reincarnation",
-      "x": 222,
-      "y": 161,
+      "x": 157,
+      "y": 657,
       "degree": 21
     },
     {
       "id": "porco-rosso",
       "title": "Porco Rosso",
-      "x": 228,
-      "y": 208,
+      "x": 313,
+      "y": 478,
       "degree": 43
     },
     {
       "id": "ghost-in-the-shell",
       "title": "Ghost in the Shell",
-      "x": 238,
-      "y": 515,
+      "x": 800,
+      "y": 496,
       "degree": 20
     },
     {
       "id": "akira",
       "title": "Akira",
-      "x": 198,
-      "y": 453,
+      "x": 661,
+      "y": 434,
       "degree": 42
     },
     {
       "id": "gurren-lagann",
       "title": "Gurren Lagann",
-      "x": 207,
-      "y": 284,
+      "x": 434,
+      "y": 383,
       "degree": 44
     },
     {
       "id": "talentless-nana",
       "title": "Talentless Nana",
-      "x": 265,
-      "y": 485,
+      "x": 835,
+      "y": 413,
       "degree": 28
     },
     {
       "id": "nana",
       "title": "Nana",
-      "x": 134,
-      "y": 206,
+      "x": 382,
+      "y": 311,
       "degree": 19
     },
     {
       "id": "in-spectre",
       "title": "In/Spectre",
-      "x": 288,
-      "y": 194,
+      "x": 503,
+      "y": 217,
       "degree": 21
     },
     {
       "id": "uma-musume",
       "title": "Uma Musume: Pretty Derby",
-      "x": 330,
-      "y": 241,
+      "x": 940,
+      "y": 558,
       "degree": 5
     },
     {
       "id": "another",
       "title": "Another",
-      "x": 325,
-      "y": 471,
+      "x": 783,
+      "y": 736,
       "degree": 24
     },
     {
       "id": "monster-girl-doctor",
       "title": "Monster Girl Doctor",
-      "x": 128,
-      "y": 160,
+      "x": 207,
+      "y": 333,
       "degree": 15
     },
     {
       "id": "demon-slayer",
       "title": "Demon Slayer",
-      "x": 146,
-      "y": 298,
+      "x": 347,
+      "y": 394,
       "degree": 42
     },
     {
       "id": "no-longer-allowed",
       "title": "No Longer Allowed in Another World",
-      "x": 188,
-      "y": 145,
+      "x": 329,
+      "y": 238,
       "degree": 22
     },
     {
       "id": "odd-taxi",
       "title": "Odd Taxi",
-      "x": 340,
-      "y": 348,
+      "x": 887,
+      "y": 485,
       "degree": 23
     },
     {
       "id": "super-crooks",
       "title": "Super Crooks",
-      "x": 274,
-      "y": 316,
+      "x": 695,
+      "y": 351,
       "degree": 36
     },
     {
       "id": "frieren",
       "title": "Frieren: Beyond Journey's End",
-      "x": 267,
-      "y": 270,
+      "x": 384,
+      "y": 706,
       "degree": 28
     },
     {
       "id": "inazuma-eleven",
       "title": "Inazuma Eleven",
-      "x": 344,
-      "y": 170,
+      "x": 876,
+      "y": 258,
       "degree": 3
     },
     {
       "id": "sonny-boy",
       "title": "Sonny Boy",
-      "x": 165,
-      "y": 437,
+      "x": 679,
+      "y": 590,
       "degree": 43
     },
     {
       "id": "space-dandy",
       "title": "Space☆Dandy",
-      "x": 155,
-      "y": 129,
+      "x": 242,
+      "y": 249,
       "degree": 8
     },
     {
       "id": "jujutsu-kaisen",
       "title": "Jujutsu Kaisen",
-      "x": 295,
-      "y": 240,
+      "x": 469,
+      "y": 300,
       "degree": 33
     },
     {
       "id": "master-of-diabolism",
       "title": "The Master of Diabolism",
-      "x": 301,
-      "y": 286,
+      "x": 592,
+      "y": 601,
       "degree": 47
     },
     {
       "id": "steins-gate",
       "title": "Steins;Gate",
-      "x": 319,
-      "y": 425,
+      "x": 732,
+      "y": 663,
       "degree": 25
     },
     {
       "id": "tower-of-god",
       "title": "Tower of God",
-      "x": 192,
-      "y": 407,
+      "x": 471,
+      "y": 695,
       "degree": 42
     },
     {
       "id": "tokyo-revengers",
       "title": "Tokyo Revengers",
-      "x": 153,
-      "y": 345,
+      "x": 400,
+      "y": 467,
       "degree": 33
     },
     {
       "id": "junji-ito-collection",
       "title": "Junji Ito Collection",
-      "x": 259,
-      "y": 439,
+      "x": 574,
+      "y": 445,
       "degree": 30
     },
     {
       "id": "overlord",
       "title": "Overlord",
-      "x": 167,
-      "y": 222,
+      "x": 558,
+      "y": 685,
       "degree": 29
     },
     {
       "id": "chainsaw-man",
       "title": "Chainsaw Man",
-      "x": 334,
-      "y": 302,
+      "x": 643,
+      "y": 278,
       "degree": 39
-    },
-    {
-      "id": "one-piece",
-      "title": "ONE PIECE",
-      "x": 940,
-      "y": 940,
-      "degree": 0
     },
     {
       "id": "monster",
       "title": "Monster",
-      "x": 204,
-      "y": 499,
+      "x": 819,
+      "y": 652,
       "degree": 32
     }
   ],
