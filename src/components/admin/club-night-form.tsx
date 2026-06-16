@@ -12,6 +12,8 @@ const emptyReview = (): ReviewInput => ({ memberId: null, guestName: null, score
 export interface ClubNightFormProps {
   members: Member[];
   editSeriesId?: string;
+  /** Uuden kerhoillan oletuskausi (yleensä uusin kausi). */
+  defaultSeason?: number;
   initial?: {
     chosen: ChosenAnime;
     clubSeason: number;
@@ -23,10 +25,10 @@ export interface ClubNightFormProps {
   };
 }
 
-export function ClubNightForm({ members, editSeriesId, initial }: ClubNightFormProps) {
+export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }: ClubNightFormProps) {
   const router = useRouter();
   const [chosen, setChosen] = useState<ChosenAnime | undefined>(initial?.chosen);
-  const [clubSeason, setClubSeason] = useState(initial?.clubSeason ?? 1);
+  const [clubSeason, setClubSeason] = useState(initial?.clubSeason ?? defaultSeason ?? 1);
   const [watchedDate, setWatchedDate] = useState(initial?.watchedDate ?? "");
   const [proposerId, setProposerId] = useState(initial?.proposerId ?? "");
   const [clubScore, setClubScore] = useState<string>(initial?.clubScore != null ? String(initial.clubScore) : "");
