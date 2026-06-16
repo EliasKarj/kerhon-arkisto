@@ -21,7 +21,7 @@ export default async function SeriesIndexPage() {
     },
     clubSeason: s.clubSeason,
     watchedDate: s.watchedDate,
-    genres: getMeta(s.id)?.genres ?? [],
+    genres: getMeta(s)?.genres ?? [],
   }));
   const allGenres = [...new Set(items.flatMap((item) => item.genres))].sort((a, b) =>
     a.localeCompare(b),

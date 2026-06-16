@@ -40,7 +40,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   const score = getSeriesScore(room.series, id);
   const proposer = memberById(room.members, series.proposerId);
   const cover = getCoverUrl(series);
-  const bestPickImage = getBestPickImage(id);
+  const bestPickImage = getBestPickImage(series);
 
   const radarData = reviews.map((review) => ({
     member: memberById(room.members, review.memberId)?.name ?? review.memberId,

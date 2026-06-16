@@ -22,7 +22,7 @@ export interface WatchTime {
 export function getTotalWatchTime(series: Series[]): WatchTime {
   let minutes = 0;
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (!m || m.episodes == null) continue;
     const episodes = Math.min(m.episodes, EPISODE_CAP);
     minutes += episodes * (m.duration ?? AVG_EP_MINUTES);
@@ -58,7 +58,7 @@ function bucketBy(entries: { label: string; title: string }[]): CountBucket[] {
 export function getGenreDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (m) for (const g of m.genres) entries.push({ label: g, title: s.title });
   }
   return bucketBy(entries);
@@ -68,7 +68,7 @@ export function getGenreDistribution(series: Series[]): CountBucket[] {
 export function getDecadeDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (m?.year != null) {
       entries.push({ label: `${Math.floor(m.year / 10) * 10}-luku`, title: s.title });
     }
@@ -79,7 +79,7 @@ export function getDecadeDistribution(series: Series[]): CountBucket[] {
 function seriesByYear(series: Series[], pick: "min" | "max"): Series | null {
   let best: { series: Series; year: number } | null = null;
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (m?.year == null) continue;
     if (!best || (pick === "min" ? m.year < best.year : m.year > best.year)) {
       best = { series: s, year: m.year };
@@ -111,7 +111,7 @@ const SOURCE_LABELS: Record<string, string> = {
 export function getSourceDistribution(series: Series[]): CountBucket[] {
   const entries: { label: string; title: string }[] = [];
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (m?.source) entries.push({ label: SOURCE_LABELS[m.source] ?? "Muu", title: s.title });
   }
   return bucketBy(entries);
@@ -121,7 +121,7 @@ export function getSourceDistribution(series: Series[]): CountBucket[] {
 export function getStudioCounts(series: Series[]): CountEntry[] {
   const studios: string[] = [];
   for (const s of series) {
-    const m = getMeta(s.id);
+    const m = getMeta(s);
     if (m?.studio) studios.push(m.studio);
   }
   return countBy(studios);

@@ -97,17 +97,17 @@ export function getCoverUrl(series: Series): string | null {
   return series.coverUrl || covers[series.id] || null;
 }
 
-/** Sarjan lempihahmon (best character) kuvan URL, tai null jos ei löytynyt. */
-export function getBestPickImage(seriesId: string): string | null {
-  return characterImages[seriesId] ?? null;
+/** Sarjan lempihahmon kuva: DB-first, fallback JSONiin. */
+export function getBestPickImage(series: Series): string | null {
+  return series.bestPickImage ?? characterImages[series.id] ?? null;
 }
 
-/** Sarjan katselulinkit (suoratoistopalvelut + AniList-sivu), tai null. */
-export function getWatchLinks(seriesId: string): WatchLinks | null {
-  return watchLinks[seriesId] ?? null;
+/** Sarjan katselulinkit: DB-first, fallback JSONiin. */
+export function getWatchLinks(series: Series): WatchLinks | null {
+  return series.watchLinks ?? watchLinks[series.id] ?? null;
 }
 
-/** Sarjan AniList-metatieto, tai null jos ei haettu. */
-export function getMeta(seriesId: string): SeriesMeta | null {
-  return meta[seriesId] ?? null;
+/** Sarjan AniList-metatieto: DB-first, fallback build-aikaiseen JSONiin. */
+export function getMeta(series: Series): SeriesMeta | null {
+  return series.meta ?? meta[series.id] ?? null;
 }

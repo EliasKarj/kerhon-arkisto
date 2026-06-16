@@ -137,8 +137,8 @@ export default async function StatsPage() {
               ))}
             </ul>
             <div className="mt-2 flex flex-wrap gap-3 text-sm text-muted">
-              {oldest ? <span>Vanhin: {seriesLink(oldest.id, oldest.title)} ({getMeta(oldest.id)?.year})</span> : null}
-              {newest ? <span>Uusin: {seriesLink(newest.id, newest.title)} ({getMeta(newest.id)?.year})</span> : null}
+              {oldest ? <span>Vanhin: {seriesLink(oldest.id, oldest.title)} ({getMeta(oldest)?.year})</span> : null}
+              {newest ? <span>Uusin: {seriesLink(newest.id, newest.title)} ({getMeta(newest)?.year})</span> : null}
             </div>
           </div>
         </div>
