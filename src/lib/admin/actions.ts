@@ -138,6 +138,9 @@ export async function updateClubNight(seriesId: string, input: ClubNightInput): 
   if (errors.length) return { error: errors.join(" ") };
   const ids = await loadExistingIds();
   const rows = await buildRows(input, ids, seriesId);
+  // Korvaa arviot kokonaan: poista vanhat, ettei lomakkeesta poistettu arvio jää kantaan.
+  const del = await supabaseAdmin.from("reviews").delete().eq("series_id", seriesId);
+  if (del.error) return { error: `Arviot (poisto): ${del.error.message}` };
   const writeErr = await writeRows(rows);
   if (writeErr) return writeErr;
   revalidatePublic(seriesId, input.proposerId);
