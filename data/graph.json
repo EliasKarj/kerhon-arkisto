@@ -1,455 +1,1852 @@
 {
   "nodes": [
     {
-      "id": "food-wars",
-      "title": "Food Wars! Shokugeki no Soma",
-      "x": 88,
-      "y": 155,
-      "degree": 5
-    },
-    {
-      "id": "neon-genesis-evangelion",
-      "title": "Neon Genesis Evangelion",
-      "x": 660,
-      "y": 544,
-      "degree": 37
-    },
-    {
-      "id": "tokyo-ghoul",
-      "title": "Tokyo Ghoul",
-      "x": 660,
-      "y": 445,
-      "degree": 38
-    },
-    {
-      "id": "mob-psycho-100",
-      "title": "Mob Psycho 100",
-      "x": 435,
-      "y": 595,
-      "degree": 50
-    },
-    {
       "id": "hyouka",
       "title": "Hyouka",
-      "x": 254,
+      "x": 200,
       "y": 60,
       "degree": 6
     },
     {
-      "id": "kurokos-basketball",
-      "title": "Kuroko's Basketball",
-      "x": 940,
-      "y": 342,
-      "degree": 3
-    },
-    {
-      "id": "serial-experiments-lain",
-      "title": "Serial Experiments Lain",
-      "x": 510,
-      "y": 446,
-      "degree": 35
-    },
-    {
-      "id": "berserk",
-      "title": "Berserk",
-      "x": 360,
-      "y": 546,
-      "degree": 48
-    },
-    {
-      "id": "solo-leveling",
-      "title": "Solo Leveling",
-      "x": 211,
-      "y": 745,
-      "degree": 22
-    },
-    {
-      "id": "komi-cant-communicate",
-      "title": "Komi Can't Communicate",
-      "x": 210,
-      "y": 646,
-      "degree": 12
-    },
-    {
-      "id": "konosuba",
-      "title": "KonoSuba: God's Blessing on This Wonderful World!",
-      "x": 210,
-      "y": 447,
-      "degree": 25
-    },
-    {
-      "id": "hells-paradise",
-      "title": "Hell's Paradise",
-      "x": 359,
-      "y": 347,
-      "degree": 37
-    },
-    {
       "id": "banana-fish",
       "title": "Banana Fish",
-      "x": 509,
-      "y": 346,
-      "degree": 38
-    },
-    {
-      "id": "kaiju-no-8",
-      "title": "Kaiju No. 8",
-      "x": 735,
-      "y": 395,
-      "degree": 12
-    },
-    {
-      "id": "rising-impact",
-      "title": "Rising Impact",
-      "x": 660,
-      "y": 345,
-      "degree": 9
-    },
-    {
-      "id": "viral-hit",
-      "title": "Viral Hit",
-      "x": 60,
-      "y": 646,
-      "degree": 10
-    },
-    {
-      "id": "punch-line",
-      "title": "Punch Line",
-      "x": 214,
-      "y": 239,
-      "degree": 21
-    },
-    {
-      "id": "blood-blockade-battlefront",
-      "title": "Blood Blockade Battlefront",
-      "x": 209,
-      "y": 348,
-      "degree": 27
-    },
-    {
-      "id": "made-in-abyss",
-      "title": "Made in Abyss",
-      "x": 286,
-      "y": 794,
-      "degree": 38
-    },
-    {
-      "id": "cowboy-bebop",
-      "title": "Cowboy Bebop",
-      "x": 436,
-      "y": 694,
+      "x": 280,
+      "y": 362,
       "degree": 38
     },
     {
       "id": "parasyte-the-maxim",
       "title": "Parasyte: The Maxim",
-      "x": 586,
-      "y": 694,
+      "x": 225,
+      "y": 423,
       "degree": 44
-    },
-    {
-      "id": "ossan-newbie-adventurer",
-      "title": "The Ossan Newbie Adventurer",
-      "x": 135,
-      "y": 596,
-      "degree": 30
-    },
-    {
-      "id": "higurashi",
-      "title": "Higurashi: When They Cry",
-      "x": 661,
-      "y": 643,
-      "degree": 25
-    },
-    {
-      "id": "takt-op-destiny",
-      "title": "Takt Op. Destiny",
-      "x": 211,
-      "y": 844,
-      "degree": 19
-    },
-    {
-      "id": "violet-evergarden",
-      "title": "Violet Evergarden",
-      "x": 359,
-      "y": 248,
-      "degree": 15
-    },
-    {
-      "id": "demon-lord-2099",
-      "title": "Demon Lord 2099",
-      "x": 435,
-      "y": 496,
-      "degree": 49
-    },
-    {
-      "id": "ghost-in-the-shell",
-      "title": "Ghost in the Shell",
-      "x": 736,
-      "y": 593,
-      "degree": 20
-    },
-    {
-      "id": "berserk-of-gluttony",
-      "title": "Berserk of Gluttony",
-      "x": 285,
-      "y": 496,
-      "degree": 40
-    },
-    {
-      "id": "tsukimichi",
-      "title": "Tsukimichi -Moonlit Fantasy-",
-      "x": 135,
-      "y": 497,
-      "degree": 30
     },
     {
       "id": "ranma-half-2024",
       "title": "Ranma ½ (2024)",
-      "x": 140,
-      "y": 289,
+      "x": 161,
+      "y": 176,
       "degree": 27
-    },
-    {
-      "id": "uma-musume",
-      "title": "Uma Musume: Pretty Derby",
-      "x": 634,
-      "y": 168,
-      "degree": 5
     },
     {
       "id": "pluto",
       "title": "Pluto",
-      "x": 585,
-      "y": 495,
+      "x": 292,
+      "y": 455,
       "degree": 37
-    },
-    {
-      "id": "akira",
-      "title": "Akira",
-      "x": 511,
-      "y": 644,
-      "degree": 42
-    },
-    {
-      "id": "another",
-      "title": "Another",
-      "x": 735,
-      "y": 494,
-      "degree": 24
-    },
-    {
-      "id": "trillion-game",
-      "title": "Trillion Game",
-      "x": 436,
-      "y": 794,
-      "degree": 45
-    },
-    {
-      "id": "gurren-lagann",
-      "title": "Gurren Lagann",
-      "x": 435,
-      "y": 396,
-      "degree": 44
-    },
-    {
-      "id": "monster-girl-doctor",
-      "title": "Monster Girl Doctor",
-      "x": 65,
-      "y": 339,
-      "degree": 15
-    },
-    {
-      "id": "86-eighty-six",
-      "title": "86 Eighty-Six",
-      "x": 586,
-      "y": 594,
-      "degree": 30
     },
     {
       "id": "trigun",
       "title": "Trigun",
-      "x": 361,
-      "y": 645,
+      "x": 180,
+      "y": 314,
       "degree": 54
-    },
-    {
-      "id": "demon-slayer",
-      "title": "Demon Slayer",
-      "x": 286,
-      "y": 695,
-      "degree": 42
-    },
-    {
-      "id": "mushoku-tensei",
-      "title": "Mushoku Tensei: Jobless Reincarnation",
-      "x": 60,
-      "y": 547,
-      "degree": 21
-    },
-    {
-      "id": "talentless-nana",
-      "title": "Talentless Nana",
-      "x": 510,
-      "y": 545,
-      "degree": 28
-    },
-    {
-      "id": "no-longer-allowed",
-      "title": "No Longer Allowed in Another World",
-      "x": 289,
-      "y": 189,
-      "degree": 22
-    },
-    {
-      "id": "porco-rosso",
-      "title": "Porco Rosso",
-      "x": 284,
-      "y": 298,
-      "degree": 43
-    },
-    {
-      "id": "nana",
-      "title": "Nana",
-      "x": 461,
-      "y": 202,
-      "degree": 19
-    },
-    {
-      "id": "odd-taxi",
-      "title": "Odd Taxi",
-      "x": 511,
-      "y": 843,
-      "degree": 23
     },
     {
       "id": "ninja-scroll",
       "title": "Ninja Scroll",
-      "x": 135,
-      "y": 398,
+      "x": 174,
+      "y": 268,
       "degree": 30
-    },
-    {
-      "id": "frieren",
-      "title": "Frieren: Beyond Journey's End",
-      "x": 136,
-      "y": 696,
-      "degree": 28
-    },
-    {
-      "id": "super-crooks",
-      "title": "Super Crooks",
-      "x": 584,
-      "y": 296,
-      "degree": 36
-    },
-    {
-      "id": "in-spectre",
-      "title": "In/Spectre",
-      "x": 547,
-      "y": 206,
-      "degree": 21
-    },
-    {
-      "id": "inazuma-eleven",
-      "title": "Inazuma Eleven",
-      "x": 283,
-      "y": 940,
-      "degree": 3
-    },
-    {
-      "id": "master-of-diabolism",
-      "title": "The Master of Diabolism",
-      "x": 361,
-      "y": 744,
-      "degree": 47
-    },
-    {
-      "id": "tokyo-revengers",
-      "title": "Tokyo Revengers",
-      "x": 285,
-      "y": 596,
-      "degree": 33
-    },
-    {
-      "id": "sonny-boy",
-      "title": "Sonny Boy",
-      "x": 511,
-      "y": 744,
-      "degree": 43
     },
     {
       "id": "memories",
       "title": "Memories",
-      "x": 360,
-      "y": 446,
+      "x": 253,
+      "y": 393,
       "degree": 43
-    },
-    {
-      "id": "junji-ito-collection",
-      "title": "Junji Ito Collection",
-      "x": 585,
-      "y": 395,
-      "degree": 30
-    },
-    {
-      "id": "space-dandy",
-      "title": "Space☆Dandy",
-      "x": 385,
-      "y": 153,
-      "degree": 8
-    },
-    {
-      "id": "steins-gate",
-      "title": "Steins;Gate",
-      "x": 661,
-      "y": 743,
-      "degree": 25
-    },
-    {
-      "id": "overlord",
-      "title": "Overlord",
-      "x": 136,
-      "y": 795,
-      "degree": 29
-    },
-    {
-      "id": "jujutsu-kaisen",
-      "title": "Jujutsu Kaisen",
-      "x": 285,
-      "y": 397,
-      "degree": 33
-    },
-    {
-      "id": "tower-of-god",
-      "title": "Tower of God",
-      "x": 210,
-      "y": 546,
-      "degree": 42
-    },
-    {
-      "id": "chainsaw-man",
-      "title": "Chainsaw Man",
-      "x": 434,
-      "y": 297,
-      "degree": 39
-    },
-    {
-      "id": "monster",
-      "title": "Monster",
-      "x": 586,
-      "y": 793,
-      "degree": 32
     },
     {
       "id": "witch-hat-atelier",
       "title": "Witch Hat Atelier",
-      "x": 361,
-      "y": 844,
+      "x": 113,
+      "y": 282,
       "degree": 20
+    },
+    {
+      "id": "food-wars",
+      "title": "Food Wars! Shokugeki no Soma",
+      "x": 60,
+      "y": 231,
+      "degree": 5
+    },
+    {
+      "id": "neon-genesis-evangelion",
+      "title": "Neon Genesis Evangelion",
+      "x": 232,
+      "y": 469,
+      "degree": 37
+    },
+    {
+      "id": "tokyo-ghoul",
+      "title": "Tokyo Ghoul",
+      "x": 286,
+      "y": 409,
+      "degree": 38
+    },
+    {
+      "id": "mob-psycho-100",
+      "title": "Mob Psycho 100",
+      "x": 234,
+      "y": 254,
+      "degree": 50
+    },
+    {
+      "id": "kurokos-basketball",
+      "title": "Kuroko's Basketball",
+      "x": 150,
+      "y": 587,
+      "degree": 3
+    },
+    {
+      "id": "solo-leveling",
+      "title": "Solo Leveling",
+      "x": 201,
+      "y": 238,
+      "degree": 22
+    },
+    {
+      "id": "hells-paradise",
+      "title": "Hell's Paradise",
+      "x": 246,
+      "y": 346,
+      "degree": 37
+    },
+    {
+      "id": "rising-impact",
+      "title": "Rising Impact",
+      "x": 132,
+      "y": 421,
+      "degree": 9
+    },
+    {
+      "id": "blood-blockade-battlefront",
+      "title": "Blood Blockade Battlefront",
+      "x": 195,
+      "y": 192,
+      "degree": 27
+    },
+    {
+      "id": "takt-op-destiny",
+      "title": "Takt Op. Destiny",
+      "x": 125,
+      "y": 375,
+      "degree": 19
+    },
+    {
+      "id": "serial-experiments-lain",
+      "title": "Serial Experiments Lain",
+      "x": 313,
+      "y": 378,
+      "degree": 35
+    },
+    {
+      "id": "komi-cant-communicate",
+      "title": "Komi Can't Communicate",
+      "x": 249,
+      "y": 131,
+      "degree": 12
+    },
+    {
+      "id": "viral-hit",
+      "title": "Viral Hit",
+      "x": 101,
+      "y": 190,
+      "degree": 10
+    },
+    {
+      "id": "made-in-abyss",
+      "title": "Made in Abyss",
+      "x": 213,
+      "y": 330,
+      "degree": 38
+    },
+    {
+      "id": "ossan-newbie-adventurer",
+      "title": "The Ossan Newbie Adventurer",
+      "x": 107,
+      "y": 236,
+      "degree": 30
+    },
+    {
+      "id": "violet-evergarden",
+      "title": "Violet Evergarden",
+      "x": 255,
+      "y": 177,
+      "degree": 15
+    },
+    {
+      "id": "berserk-of-gluttony",
+      "title": "Berserk of Gluttony",
+      "x": 261,
+      "y": 224,
+      "degree": 40
+    },
+    {
+      "id": "berserk",
+      "title": "Berserk",
+      "x": 240,
+      "y": 300,
+      "degree": 48
+    },
+    {
+      "id": "konosuba",
+      "title": "KonoSuba: God's Blessing on This Wonderful World!",
+      "x": 119,
+      "y": 328,
+      "degree": 25
+    },
+    {
+      "id": "kaiju-no-8",
+      "title": "Kaiju No. 8",
+      "x": 171,
+      "y": 483,
+      "degree": 12
+    },
+    {
+      "id": "punch-line",
+      "title": "Punch Line",
+      "x": 140,
+      "y": 252,
+      "degree": 21
+    },
+    {
+      "id": "cowboy-bebop",
+      "title": "Cowboy Bebop",
+      "x": 307,
+      "y": 332,
+      "degree": 38
+    },
+    {
+      "id": "higurashi",
+      "title": "Higurashi: When They Cry",
+      "x": 346,
+      "y": 394,
+      "degree": 25
+    },
+    {
+      "id": "demon-lord-2099",
+      "title": "Demon Lord 2099",
+      "x": 186,
+      "y": 360,
+      "degree": 49
+    },
+    {
+      "id": "tsukimichi",
+      "title": "Tsukimichi -Moonlit Fantasy-",
+      "x": 86,
+      "y": 312,
+      "degree": 30
+    },
+    {
+      "id": "trillion-game",
+      "title": "Trillion Game",
+      "x": 219,
+      "y": 377,
+      "degree": 45
+    },
+    {
+      "id": "86-eighty-six",
+      "title": "86 Eighty-Six",
+      "x": 159,
+      "y": 391,
+      "degree": 30
+    },
+    {
+      "id": "mushoku-tensei",
+      "title": "Mushoku Tensei: Jobless Reincarnation",
+      "x": 222,
+      "y": 161,
+      "degree": 21
+    },
+    {
+      "id": "porco-rosso",
+      "title": "Porco Rosso",
+      "x": 228,
+      "y": 208,
+      "degree": 43
+    },
+    {
+      "id": "ghost-in-the-shell",
+      "title": "Ghost in the Shell",
+      "x": 238,
+      "y": 515,
+      "degree": 20
+    },
+    {
+      "id": "akira",
+      "title": "Akira",
+      "x": 198,
+      "y": 453,
+      "degree": 42
+    },
+    {
+      "id": "gurren-lagann",
+      "title": "Gurren Lagann",
+      "x": 207,
+      "y": 284,
+      "degree": 44
+    },
+    {
+      "id": "talentless-nana",
+      "title": "Talentless Nana",
+      "x": 265,
+      "y": 485,
+      "degree": 28
+    },
+    {
+      "id": "nana",
+      "title": "Nana",
+      "x": 134,
+      "y": 206,
+      "degree": 19
+    },
+    {
+      "id": "in-spectre",
+      "title": "In/Spectre",
+      "x": 288,
+      "y": 194,
+      "degree": 21
+    },
+    {
+      "id": "uma-musume",
+      "title": "Uma Musume: Pretty Derby",
+      "x": 330,
+      "y": 241,
+      "degree": 5
+    },
+    {
+      "id": "another",
+      "title": "Another",
+      "x": 325,
+      "y": 471,
+      "degree": 24
+    },
+    {
+      "id": "monster-girl-doctor",
+      "title": "Monster Girl Doctor",
+      "x": 128,
+      "y": 160,
+      "degree": 15
+    },
+    {
+      "id": "demon-slayer",
+      "title": "Demon Slayer",
+      "x": 146,
+      "y": 298,
+      "degree": 42
+    },
+    {
+      "id": "no-longer-allowed",
+      "title": "No Longer Allowed in Another World",
+      "x": 188,
+      "y": 145,
+      "degree": 22
+    },
+    {
+      "id": "odd-taxi",
+      "title": "Odd Taxi",
+      "x": 340,
+      "y": 348,
+      "degree": 23
+    },
+    {
+      "id": "super-crooks",
+      "title": "Super Crooks",
+      "x": 274,
+      "y": 316,
+      "degree": 36
+    },
+    {
+      "id": "frieren",
+      "title": "Frieren: Beyond Journey's End",
+      "x": 267,
+      "y": 270,
+      "degree": 28
+    },
+    {
+      "id": "inazuma-eleven",
+      "title": "Inazuma Eleven",
+      "x": 344,
+      "y": 170,
+      "degree": 3
+    },
+    {
+      "id": "sonny-boy",
+      "title": "Sonny Boy",
+      "x": 165,
+      "y": 437,
+      "degree": 43
+    },
+    {
+      "id": "space-dandy",
+      "title": "Space☆Dandy",
+      "x": 155,
+      "y": 129,
+      "degree": 8
+    },
+    {
+      "id": "jujutsu-kaisen",
+      "title": "Jujutsu Kaisen",
+      "x": 295,
+      "y": 240,
+      "degree": 33
+    },
+    {
+      "id": "master-of-diabolism",
+      "title": "The Master of Diabolism",
+      "x": 301,
+      "y": 286,
+      "degree": 47
+    },
+    {
+      "id": "steins-gate",
+      "title": "Steins;Gate",
+      "x": 319,
+      "y": 425,
+      "degree": 25
+    },
+    {
+      "id": "tower-of-god",
+      "title": "Tower of God",
+      "x": 192,
+      "y": 407,
+      "degree": 42
+    },
+    {
+      "id": "tokyo-revengers",
+      "title": "Tokyo Revengers",
+      "x": 153,
+      "y": 345,
+      "degree": 33
+    },
+    {
+      "id": "junji-ito-collection",
+      "title": "Junji Ito Collection",
+      "x": 259,
+      "y": 439,
+      "degree": 30
+    },
+    {
+      "id": "overlord",
+      "title": "Overlord",
+      "x": 167,
+      "y": 222,
+      "degree": 29
+    },
+    {
+      "id": "chainsaw-man",
+      "title": "Chainsaw Man",
+      "x": 334,
+      "y": 302,
+      "degree": 39
+    },
+    {
+      "id": "one-piece",
+      "title": "ONE PIECE",
+      "x": 940,
+      "y": 940,
+      "degree": 0
+    },
+    {
+      "id": "monster",
+      "title": "Monster",
+      "x": 204,
+      "y": 499,
+      "degree": 32
     }
   ],
   "edges": [
+    {
+      "source": "hyouka",
+      "target": "ranma-half-2024",
+      "kind": "genre"
+    },
+    {
+      "source": "hyouka",
+      "target": "komi-cant-communicate",
+      "kind": "genre"
+    },
+    {
+      "source": "hyouka",
+      "target": "violet-evergarden",
+      "kind": "studio"
+    },
+    {
+      "source": "hyouka",
+      "target": "nana",
+      "kind": "genre"
+    },
+    {
+      "source": "hyouka",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "hyouka",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "parasyte-the-maxim",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "ranma-half-2024",
+      "kind": "studio"
+    },
+    {
+      "source": "banana-fish",
+      "target": "pluto",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "trigun",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "memories",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "neon-genesis-evangelion",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "hells-paradise",
+      "kind": "studio"
+    },
+    {
+      "source": "banana-fish",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "punch-line",
+      "kind": "studio"
+    },
+    {
+      "source": "banana-fish",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "jujutsu-kaisen",
+      "kind": "studio"
+    },
+    {
+      "source": "banana-fish",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "chainsaw-man",
+      "kind": "studio"
+    },
+    {
+      "source": "banana-fish",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "banana-fish",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "pluto",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "trigun",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "trigun",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "ninja-scroll",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "memories",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "neon-genesis-evangelion",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "takt-op-destiny",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "kaiju-no-8",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "trillion-game",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "nana",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "frieren",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "sonny-boy",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "monster",
+      "kind": "studio"
+    },
+    {
+      "source": "parasyte-the-maxim",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "trigun",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "ninja-scroll",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "food-wars",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "hells-paradise",
+      "kind": "studio"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "blood-blockade-battlefront",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "komi-cant-communicate",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "viral-hit",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "punch-line",
+      "kind": "studio"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "nana",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "jujutsu-kaisen",
+      "kind": "studio"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "ranma-half-2024",
+      "target": "chainsaw-man",
+      "kind": "studio"
+    },
+    {
+      "source": "pluto",
+      "target": "trigun",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "memories",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "neon-genesis-evangelion",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "hells-paradise",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "kaiju-no-8",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "pluto",
+      "target": "monster",
+      "kind": "author"
+    },
+    {
+      "source": "pluto",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "ninja-scroll",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "memories",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "witch-hat-atelier",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "neon-genesis-evangelion",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "solo-leveling",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "hells-paradise",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "rising-impact",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "blood-blockade-battlefront",
+      "kind": "author"
+    },
+    {
+      "source": "trigun",
+      "target": "blood-blockade-battlefront",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "takt-op-destiny",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "viral-hit",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "kaiju-no-8",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "trillion-game",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "nana",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "frieren",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "sonny-boy",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "space-dandy",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "trigun",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "trigun",
+      "target": "monster",
+      "kind": "studio"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "memories",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "witch-hat-atelier",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "solo-leveling",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "hells-paradise",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "takt-op-destiny",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "ninja-scroll",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "witch-hat-atelier",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "neon-genesis-evangelion",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "tokyo-ghoul",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "mob-psycho-100",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "hells-paradise",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "rising-impact",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "space-dandy",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "memories",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "solo-leveling",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "violet-evergarden",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "witch-hat-atelier",
+      "target": "overlord",
+      "kind": "genre"
+    },
     {
       "source": "food-wars",
       "target": "konosuba",
@@ -464,11 +1861,6 @@
       "source": "food-wars",
       "target": "demon-lord-2099",
       "kind": "studio"
-    },
-    {
-      "source": "food-wars",
-      "target": "ranma-half-2024",
-      "kind": "genre"
     },
     {
       "source": "food-wars",
@@ -487,27 +1879,12 @@
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "serial-experiments-lain",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "berserk",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
       "target": "hells-paradise",
       "kind": "genre"
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "banana-fish",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "kaiju-no-8",
+      "target": "serial-experiments-lain",
       "kind": "genre"
     },
     {
@@ -517,12 +1894,22 @@
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "cowboy-bebop",
+      "target": "berserk-of-gluttony",
       "kind": "genre"
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "parasyte-the-maxim",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "kaiju-no-8",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "cowboy-bebop",
       "kind": "genre"
     },
     {
@@ -537,32 +1924,27 @@
     },
     {
       "source": "neon-genesis-evangelion",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
       "target": "ghost-in-the-shell",
       "kind": "genre"
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
       "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "trillion-game",
       "kind": "genre"
     },
     {
@@ -577,27 +1959,17 @@
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
       "target": "talentless-nana",
       "kind": "genre"
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "porco-rosso",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "demon-slayer",
       "kind": "genre"
     },
     {
@@ -612,32 +1984,7 @@
     },
     {
       "source": "neon-genesis-evangelion",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
       "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "neon-genesis-evangelion",
-      "target": "steins-gate",
       "kind": "genre"
     },
     {
@@ -647,7 +1994,27 @@
     },
     {
       "source": "neon-genesis-evangelion",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
       "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "neon-genesis-evangelion",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
@@ -667,22 +2034,7 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "serial-experiments-lain",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "berserk",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
       "target": "hells-paradise",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "banana-fish",
       "kind": "genre"
     },
     {
@@ -692,17 +2044,27 @@
     },
     {
       "source": "tokyo-ghoul",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
       "target": "made-in-abyss",
       "kind": "genre"
     },
     {
       "source": "tokyo-ghoul",
-      "target": "cowboy-bebop",
+      "target": "berserk-of-gluttony",
       "kind": "genre"
     },
     {
       "source": "tokyo-ghoul",
-      "target": "parasyte-the-maxim",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "cowboy-bebop",
       "kind": "genre"
     },
     {
@@ -717,37 +2079,7 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "ghost-in-the-shell",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
       "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "gurren-lagann",
       "kind": "genre"
     },
     {
@@ -757,12 +2089,22 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "trigun",
+      "target": "porco-rosso",
       "kind": "genre"
     },
     {
       "source": "tokyo-ghoul",
-      "target": "demon-slayer",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "gurren-lagann",
       "kind": "genre"
     },
     {
@@ -772,7 +2114,17 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "porco-rosso",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "demon-slayer",
       "kind": "genre"
     },
     {
@@ -782,27 +2134,7 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
       "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-ghoul",
-      "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
@@ -812,12 +2144,12 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "memories",
+      "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
       "source": "tokyo-ghoul",
-      "target": "junji-ito-collection",
+      "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
@@ -827,12 +2159,17 @@
     },
     {
       "source": "tokyo-ghoul",
-      "target": "jujutsu-kaisen",
+      "target": "tower-of-god",
       "kind": "genre"
     },
     {
       "source": "tokyo-ghoul",
-      "target": "tower-of-god",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "tokyo-ghoul",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
@@ -847,32 +2184,32 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "serial-experiments-lain",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "berserk",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "komi-cant-communicate",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "hells-paradise",
       "kind": "genre"
     },
     {
       "source": "mob-psycho-100",
-      "target": "banana-fish",
+      "target": "rising-impact",
       "kind": "genre"
     },
     {
       "source": "mob-psycho-100",
-      "target": "rising-impact",
+      "target": "blood-blockade-battlefront",
+      "kind": "studio"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "blood-blockade-battlefront",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "komi-cant-communicate",
       "kind": "genre"
     },
     {
@@ -882,37 +2219,7 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "punch-line",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "blood-blockade-battlefront",
-      "kind": "studio"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "blood-blockade-battlefront",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "parasyte-the-maxim",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "higurashi",
       "kind": "genre"
     },
     {
@@ -922,17 +2229,32 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "ghost-in-the-shell",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "demon-lord-2099",
       "kind": "genre"
     },
     {
@@ -942,37 +2264,7 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "uma-musume",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "gurren-lagann",
       "kind": "genre"
     },
     {
@@ -982,12 +2274,22 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "trigun",
+      "target": "porco-rosso",
       "kind": "genre"
     },
     {
       "source": "mob-psycho-100",
-      "target": "demon-slayer",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "gurren-lagann",
       "kind": "genre"
     },
     {
@@ -997,17 +2299,32 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "nana",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "uma-musume",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "no-longer-allowed",
       "kind": "genre"
     },
     {
@@ -1027,32 +2344,7 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
-      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
@@ -1062,17 +2354,32 @@
     },
     {
       "source": "mob-psycho-100",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "mob-psycho-100",
       "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
       "source": "mob-psycho-100",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
       "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "mob-psycho-100",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
@@ -1086,33 +2393,8 @@
       "kind": "genre"
     },
     {
-      "source": "hyouka",
-      "target": "komi-cant-communicate",
-      "kind": "genre"
-    },
-    {
-      "source": "hyouka",
-      "target": "violet-evergarden",
-      "kind": "studio"
-    },
-    {
-      "source": "hyouka",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "hyouka",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "hyouka",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "hyouka",
-      "target": "in-spectre",
+      "source": "kurokos-basketball",
+      "target": "rising-impact",
       "kind": "genre"
     },
     {
@@ -1122,13 +2404,443 @@
     },
     {
       "source": "kurokos-basketball",
-      "target": "rising-impact",
+      "target": "ghost-in-the-shell",
+      "kind": "studio"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "hells-paradise",
       "kind": "genre"
     },
     {
-      "source": "kurokos-basketball",
-      "target": "ghost-in-the-shell",
+      "source": "solo-leveling",
+      "target": "takt-op-destiny",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "86-eighty-six",
       "kind": "studio"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "solo-leveling",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "blood-blockade-battlefront",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "serial-experiments-lain",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "made-in-abyss",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "punch-line",
+      "kind": "studio"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "jujutsu-kaisen",
+      "kind": "studio"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "chainsaw-man",
+      "kind": "studio"
+    },
+    {
+      "source": "hells-paradise",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "rising-impact",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "rising-impact",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "rising-impact",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "rising-impact",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "rising-impact",
+      "target": "uma-musume",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "viral-hit",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "super-crooks",
+      "kind": "studio"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "space-dandy",
+      "kind": "studio"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "blood-blockade-battlefront",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "ossan-newbie-adventurer",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "trillion-game",
+      "kind": "studio"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "nana",
+      "kind": "studio"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "frieren",
+      "kind": "studio"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "sonny-boy",
+      "kind": "studio"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "takt-op-destiny",
+      "target": "monster",
+      "kind": "studio"
+    },
+    {
+      "source": "serial-experiments-lain",
+      "target": "made-in-abyss",
+      "kind": "genre"
     },
     {
       "source": "serial-experiments-lain",
@@ -1137,32 +2849,12 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "hells-paradise",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "banana-fish",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
       "target": "punch-line",
       "kind": "genre"
     },
     {
       "source": "serial-experiments-lain",
-      "target": "made-in-abyss",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
       "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "parasyte-the-maxim",
       "kind": "genre"
     },
     {
@@ -1173,6 +2865,16 @@
     {
       "source": "serial-experiments-lain",
       "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "serial-experiments-lain",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "serial-experiments-lain",
+      "target": "86-eighty-six",
       "kind": "genre"
     },
     {
@@ -1182,22 +2884,7 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
       "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "trillion-game",
       "kind": "genre"
     },
     {
@@ -1207,32 +2894,7 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
       "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "super-crooks",
       "kind": "genre"
     },
     {
@@ -1242,12 +2904,22 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "master-of-diabolism",
+      "target": "another",
       "kind": "genre"
     },
     {
       "source": "serial-experiments-lain",
-      "target": "tokyo-revengers",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "serial-experiments-lain",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "serial-experiments-lain",
+      "target": "super-crooks",
       "kind": "genre"
     },
     {
@@ -1257,12 +2929,12 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "memories",
+      "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
       "source": "serial-experiments-lain",
-      "target": "junji-ito-collection",
+      "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
@@ -1272,372 +2944,42 @@
     },
     {
       "source": "serial-experiments-lain",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
       "target": "tower-of-god",
       "kind": "genre"
     },
     {
       "source": "serial-experiments-lain",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "serial-experiments-lain",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "solo-leveling",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "komi-cant-communicate",
-      "kind": "studio"
-    },
-    {
-      "source": "berserk",
-      "target": "konosuba",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "hells-paradise",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "banana-fish",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "blood-blockade-battlefront",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "made-in-abyss",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "parasyte-the-maxim",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "higurashi",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "takt-op-destiny",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "violet-evergarden",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "odd-taxi",
-      "kind": "studio"
-    },
-    {
-      "source": "berserk",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "inazuma-eleven",
-      "kind": "studio"
-    },
-    {
-      "source": "berserk",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
       "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
-      "source": "berserk",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
+      "source": "serial-experiments-lain",
       "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
-      "source": "berserk",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk",
+      "source": "serial-experiments-lain",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "berserk",
+      "source": "serial-experiments-lain",
       "target": "monster",
       "kind": "genre"
     },
     {
-      "source": "berserk",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "konosuba",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "hells-paradise",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "made-in-abyss",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "takt-op-destiny",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "86-eighty-six",
+      "source": "komi-cant-communicate",
+      "target": "berserk",
       "kind": "studio"
     },
     {
-      "source": "solo-leveling",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "solo-leveling",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
       "source": "komi-cant-communicate",
-      "target": "ranma-half-2024",
+      "target": "porco-rosso",
       "kind": "genre"
     },
     {
       "source": "komi-cant-communicate",
       "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "komi-cant-communicate",
-      "target": "monster-girl-doctor",
-      "kind": "genre"
-    },
-    {
-      "source": "komi-cant-communicate",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "komi-cant-communicate",
-      "target": "porco-rosso",
       "kind": "genre"
     },
     {
@@ -1647,13 +2989,23 @@
     },
     {
       "source": "komi-cant-communicate",
-      "target": "odd-taxi",
-      "kind": "studio"
+      "target": "in-spectre",
+      "kind": "genre"
     },
     {
       "source": "komi-cant-communicate",
-      "target": "in-spectre",
+      "target": "monster-girl-doctor",
       "kind": "genre"
+    },
+    {
+      "source": "komi-cant-communicate",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "komi-cant-communicate",
+      "target": "odd-taxi",
+      "kind": "studio"
     },
     {
       "source": "komi-cant-communicate",
@@ -1661,521 +3013,6 @@
       "kind": "studio"
     },
     {
-      "source": "konosuba",
-      "target": "punch-line",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "made-in-abyss",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "higurashi",
-      "kind": "studio"
-    },
-    {
-      "source": "konosuba",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "monster-girl-doctor",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "junji-ito-collection",
-      "kind": "studio"
-    },
-    {
-      "source": "konosuba",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "konosuba",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "banana-fish",
-      "kind": "studio"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "punch-line",
-      "kind": "studio"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "blood-blockade-battlefront",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "made-in-abyss",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "higurashi",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "ranma-half-2024",
-      "kind": "studio"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "jujutsu-kaisen",
-      "kind": "studio"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "chainsaw-man",
-      "kind": "studio"
-    },
-    {
-      "source": "hells-paradise",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "punch-line",
-      "kind": "studio"
-    },
-    {
-      "source": "banana-fish",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "parasyte-the-maxim",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "higurashi",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "ghost-in-the-shell",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "ranma-half-2024",
-      "kind": "studio"
-    },
-    {
-      "source": "banana-fish",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "jujutsu-kaisen",
-      "kind": "studio"
-    },
-    {
-      "source": "banana-fish",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "chainsaw-man",
-      "kind": "studio"
-    },
-    {
-      "source": "banana-fish",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "banana-fish",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "parasyte-the-maxim",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "ghost-in-the-shell",
-      "kind": "studio"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "ghost-in-the-shell",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "kaiju-no-8",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "uma-musume",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "rising-impact",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "viral-hit",
-      "target": "blood-blockade-battlefront",
-      "kind": "genre"
-    },
-    {
       "source": "viral-hit",
       "target": "ossan-newbie-adventurer",
       "kind": "genre"
@@ -2192,22 +3029,7 @@
     },
     {
       "source": "viral-hit",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "viral-hit",
       "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "viral-hit",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "viral-hit",
-      "target": "trigun",
       "kind": "genre"
     },
     {
@@ -2216,198 +3038,13 @@
       "kind": "genre"
     },
     {
-      "source": "punch-line",
-      "target": "blood-blockade-battlefront",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "ranma-half-2024",
-      "kind": "studio"
-    },
-    {
-      "source": "punch-line",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
+      "source": "viral-hit",
       "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "monster-girl-doctor",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "space-dandy",
-      "kind": "genre"
-    },
-    {
-      "source": "punch-line",
-      "target": "jujutsu-kaisen",
-      "kind": "studio"
-    },
-    {
-      "source": "punch-line",
-      "target": "chainsaw-man",
-      "kind": "studio"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "trigun",
-      "kind": "author"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "super-crooks",
-      "kind": "studio"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "space-dandy",
-      "kind": "studio"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "blood-blockade-battlefront",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "cowboy-bebop",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "parasyte-the-maxim",
       "kind": "genre"
     },
     {
       "source": "made-in-abyss",
       "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "higurashi",
       "kind": "genre"
     },
     {
@@ -2417,462 +3054,152 @@
     },
     {
       "source": "made-in-abyss",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
       "target": "berserk-of-gluttony",
       "kind": "genre"
     },
     {
       "source": "made-in-abyss",
-      "target": "tsukimichi",
+      "target": "berserk",
       "kind": "genre"
     },
     {
       "source": "made-in-abyss",
-      "target": "pluto",
+      "target": "konosuba",
       "kind": "genre"
     },
     {
       "source": "made-in-abyss",
-      "target": "akira",
+      "target": "cowboy-bebop",
       "kind": "genre"
     },
     {
       "source": "made-in-abyss",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "made-in-abyss",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "parasyte-the-maxim",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "ossan-newbie-adventurer",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "ghost-in-the-shell",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "cowboy-bebop",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
       "target": "higurashi",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "takt-op-destiny",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "demon-lord-2099",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "ghost-in-the-shell",
+      "source": "made-in-abyss",
+      "target": "tsukimichi",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "trillion-game",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "86-eighty-six",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "trigun",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "trigun",
+      "source": "made-in-abyss",
+      "target": "mushoku-tensei",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "porco-rosso",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "nana",
-      "kind": "studio"
+      "source": "made-in-abyss",
+      "target": "akira",
+      "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
       "target": "odd-taxi",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "frieren",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "super-crooks",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
       "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "steins-gate",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "tower-of-god",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "made-in-abyss",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "parasyte-the-maxim",
+      "source": "made-in-abyss",
       "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "parasyte-the-maxim",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "takt-op-destiny",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "demon-lord-2099",
       "kind": "genre"
     },
     {
       "source": "ossan-newbie-adventurer",
       "target": "berserk-of-gluttony",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "demon-lord-2099",
       "kind": "genre"
     },
     {
@@ -2882,17 +3209,22 @@
     },
     {
       "source": "ossan-newbie-adventurer",
-      "target": "ranma-half-2024",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "ossan-newbie-adventurer",
+      "target": "porco-rosso",
       "kind": "genre"
     },
     {
       "source": "ossan-newbie-adventurer",
       "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "trillion-game",
       "kind": "genre"
     },
     {
@@ -2907,17 +3239,7 @@
     },
     {
       "source": "ossan-newbie-adventurer",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
       "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "mushoku-tensei",
       "kind": "genre"
     },
     {
@@ -2927,16 +3249,6 @@
     },
     {
       "source": "ossan-newbie-adventurer",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
       "target": "frieren",
       "kind": "genre"
     },
@@ -2947,7 +3259,7 @@
     },
     {
       "source": "ossan-newbie-adventurer",
-      "target": "memories",
+      "target": "tower-of-god",
       "kind": "genre"
     },
     {
@@ -2956,173 +3268,28 @@
       "kind": "genre"
     },
     {
-      "source": "ossan-newbie-adventurer",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "ossan-newbie-adventurer",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "junji-ito-collection",
-      "kind": "studio"
-    },
-    {
-      "source": "higurashi",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "higurashi",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
+      "source": "violet-evergarden",
       "target": "berserk-of-gluttony",
       "kind": "genre"
     },
     {
-      "source": "takt-op-destiny",
-      "target": "tsukimichi",
+      "source": "violet-evergarden",
+      "target": "berserk",
       "kind": "genre"
     },
     {
-      "source": "takt-op-destiny",
-      "target": "trillion-game",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "trigun",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "demon-slayer",
+      "source": "violet-evergarden",
+      "target": "demon-lord-2099",
       "kind": "genre"
     },
     {
-      "source": "takt-op-destiny",
+      "source": "violet-evergarden",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "violet-evergarden",
       "target": "nana",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "frieren",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "takt-op-destiny",
-      "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "violet-evergarden",
-      "target": "demon-lord-2099",
-      "kind": "genre"
-    },
-    {
-      "source": "violet-evergarden",
-      "target": "berserk-of-gluttony",
       "kind": "genre"
     },
     {
@@ -3137,17 +3304,7 @@
     },
     {
       "source": "violet-evergarden",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "violet-evergarden",
       "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "violet-evergarden",
-      "target": "nana",
       "kind": "genre"
     },
     {
@@ -3166,8 +3323,603 @@
       "kind": "genre"
     },
     {
-      "source": "violet-evergarden",
-      "target": "witch-hat-atelier",
+      "source": "berserk-of-gluttony",
+      "target": "berserk",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "nana",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk-of-gluttony",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "konosuba",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "higurashi",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "odd-taxi",
+      "kind": "studio"
+    },
+    {
+      "source": "berserk",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "inazuma-eleven",
+      "kind": "studio"
+    },
+    {
+      "source": "berserk",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "berserk",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "punch-line",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "higurashi",
+      "kind": "studio"
+    },
+    {
+      "source": "konosuba",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "konosuba",
+      "target": "junji-ito-collection",
+      "kind": "studio"
+    },
+    {
+      "source": "konosuba",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "cowboy-bebop",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "ghost-in-the-shell",
+      "kind": "studio"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "kaiju-no-8",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "space-dandy",
+      "kind": "genre"
+    },
+    {
+      "source": "punch-line",
+      "target": "jujutsu-kaisen",
+      "kind": "studio"
+    },
+    {
+      "source": "punch-line",
+      "target": "chainsaw-man",
+      "kind": "studio"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "demon-lord-2099",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "cowboy-bebop",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "junji-ito-collection",
+      "kind": "studio"
+    },
+    {
+      "source": "higurashi",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "higurashi",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "tsukimichi",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "porco-rosso",
       "kind": "genre"
     },
     {
@@ -3177,32 +3929,7 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "berserk-of-gluttony",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
       "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "trillion-game",
       "kind": "genre"
     },
     {
@@ -3217,22 +3944,7 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
       "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "mushoku-tensei",
       "kind": "genre"
     },
     {
@@ -3242,12 +3954,7 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "ninja-scroll",
+      "target": "super-crooks",
       "kind": "genre"
     },
     {
@@ -3257,27 +3964,7 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
       "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "memories",
       "kind": "genre"
     },
     {
@@ -3287,17 +3974,17 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-lord-2099",
       "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-lord-2099",
+      "target": "steins-gate",
       "kind": "genre"
     },
     {
@@ -3307,17 +3994,367 @@
     },
     {
       "source": "demon-lord-2099",
-      "target": "chainsaw-man",
+      "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
       "source": "demon-lord-2099",
-      "target": "witch-hat-atelier",
+      "target": "overlord",
       "kind": "genre"
     },
     {
-      "source": "ghost-in-the-shell",
-      "target": "pluto",
+      "source": "demon-lord-2099",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "trillion-game",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "mushoku-tensei",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "tsukimichi",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "86-eighty-six",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "talentless-nana",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "nana",
+      "kind": "studio"
+    },
+    {
+      "source": "trillion-game",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "frieren",
+      "kind": "studio"
+    },
+    {
+      "source": "trillion-game",
+      "target": "sonny-boy",
+      "kind": "studio"
+    },
+    {
+      "source": "trillion-game",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "trillion-game",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "trillion-game",
+      "target": "monster",
+      "kind": "studio"
+    },
+    {
+      "source": "trillion-game",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "ghost-in-the-shell",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "86-eighty-six",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "porco-rosso",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "mushoku-tensei",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "akira",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "gurren-lagann",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "nana",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "frieren",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "porco-rosso",
+      "target": "chainsaw-man",
       "kind": "genre"
     },
     {
@@ -3327,22 +4364,7 @@
     },
     {
       "source": "ghost-in-the-shell",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "ghost-in-the-shell",
       "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "ghost-in-the-shell",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "ghost-in-the-shell",
-      "target": "trigun",
       "kind": "genre"
     },
     {
@@ -3352,283 +4374,293 @@
     },
     {
       "source": "ghost-in-the-shell",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "ghost-in-the-shell",
       "target": "steins-gate",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "tsukimichi",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "pluto",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
+      "source": "akira",
       "target": "gurren-lagann",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "monster-girl-doctor",
+      "source": "akira",
+      "target": "talentless-nana",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "86-eighty-six",
+      "source": "akira",
+      "target": "another",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
+      "source": "akira",
       "target": "demon-slayer",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
+      "source": "akira",
       "target": "super-crooks",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "master-of-diabolism",
+      "source": "akira",
+      "target": "sonny-boy",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
+      "source": "akira",
       "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
-      "source": "berserk-of-gluttony",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "berserk-of-gluttony",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "ranma-half-2024",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "monster-girl-doctor",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
+      "source": "akira",
       "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
-      "source": "tsukimichi",
-      "target": "memories",
+      "source": "akira",
+      "target": "steins-gate",
       "kind": "genre"
     },
     {
-      "source": "tsukimichi",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "tsukimichi",
+      "source": "akira",
       "target": "tower-of-god",
       "kind": "genre"
     },
     {
-      "source": "tsukimichi",
-      "target": "witch-hat-atelier",
+      "source": "akira",
+      "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "trillion-game",
+      "source": "akira",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "gurren-lagann",
+      "source": "akira",
+      "target": "overlord",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "monster-girl-doctor",
+      "source": "akira",
+      "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "trigun",
+      "source": "akira",
+      "target": "monster",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "ranma-half-2024",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "ranma-half-2024",
+      "source": "gurren-lagann",
       "target": "nana",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "ranma-half-2024",
+      "source": "gurren-lagann",
       "target": "in-spectre",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
+      "source": "gurren-lagann",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "space-dandy",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "gurren-lagann",
       "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
-      "source": "ranma-half-2024",
+      "source": "gurren-lagann",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "in-spectre",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "demon-slayer",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "odd-taxi",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "super-crooks",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
       "target": "jujutsu-kaisen",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "talentless-nana",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "nana",
+      "target": "uma-musume",
+      "kind": "genre"
+    },
+    {
+      "source": "nana",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "nana",
+      "target": "frieren",
       "kind": "studio"
     },
     {
-      "source": "ranma-half-2024",
-      "target": "chainsaw-man",
+      "source": "nana",
+      "target": "sonny-boy",
       "kind": "studio"
+    },
+    {
+      "source": "nana",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "nana",
+      "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "nana",
+      "target": "monster",
+      "kind": "studio"
+    },
+    {
+      "source": "in-spectre",
+      "target": "another",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "monster-girl-doctor",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "no-longer-allowed",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "in-spectre",
+      "target": "junji-ito-collection",
+      "kind": "genre"
     },
     {
       "source": "uma-musume",
@@ -3636,231 +4668,6 @@
       "kind": "studio"
     },
     {
-      "source": "uma-musume",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "akira",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "pluto",
-      "target": "monster",
-      "kind": "author"
-    },
-    {
-      "source": "pluto",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "another",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "trillion-game",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "akira",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "another",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
       "source": "another",
       "target": "odd-taxi",
       "kind": "genre"
@@ -3872,7 +4679,7 @@
     },
     {
       "source": "another",
-      "target": "in-spectre",
+      "target": "sonny-boy",
       "kind": "genre"
     },
     {
@@ -3882,12 +4689,7 @@
     },
     {
       "source": "another",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "another",
-      "target": "memories",
+      "target": "steins-gate",
       "kind": "genre"
     },
     {
@@ -3897,437 +4699,17 @@
     },
     {
       "source": "another",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "another",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
       "source": "another",
       "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "gurren-lagann",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "trigun",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "talentless-nana",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "nana",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "frieren",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "trillion-game",
-      "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "trillion-game",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "monster-girl-doctor",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "86-eighty-six",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "space-dandy",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "gurren-lagann",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "monster-girl-doctor",
-      "target": "mushoku-tensei",
       "kind": "genre"
     },
     {
       "source": "monster-girl-doctor",
       "target": "no-longer-allowed",
-      "kind": "genre"
-    },
-    {
-      "source": "monster-girl-doctor",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "monster-girl-doctor",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "monster-girl-doctor",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "trigun",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "86-eighty-six",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "demon-slayer",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "nana",
-      "kind": "studio"
-    },
-    {
-      "source": "trigun",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "frieren",
-      "kind": "studio"
-    },
-    {
-      "source": "trigun",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "trigun",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "space-dandy",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "trigun",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "trigun",
-      "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "trigun",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "mushoku-tensei",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "talentless-nana",
       "kind": "genre"
     },
     {
@@ -4337,12 +4719,7 @@
     },
     {
       "source": "demon-slayer",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "ninja-scroll",
+      "target": "super-crooks",
       "kind": "genre"
     },
     {
@@ -4352,7 +4729,12 @@
     },
     {
       "source": "demon-slayer",
-      "target": "super-crooks",
+      "target": "sonny-boy",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-slayer",
+      "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
@@ -4362,17 +4744,12 @@
     },
     {
       "source": "demon-slayer",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "demon-slayer",
       "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "memories",
       "kind": "genre"
     },
     {
@@ -4387,150 +4764,10 @@
     },
     {
       "source": "demon-slayer",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "demon-slayer",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "demon-slayer",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "mushoku-tensei",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "odd-taxi",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "talentless-nana",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "no-longer-allowed",
-      "target": "porco-rosso",
-      "kind": "genre"
-    },
-    {
-      "source": "no-longer-allowed",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "no-longer-allowed",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "no-longer-allowed",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
       "source": "no-longer-allowed",
       "target": "master-of-diabolism",
       "kind": "genre"
@@ -4539,96 +4776,6 @@
       "source": "no-longer-allowed",
       "target": "tokyo-revengers",
       "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "nana",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "ninja-scroll",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "super-crooks",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "in-spectre",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "porco-rosso",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "nana",
-      "target": "frieren",
-      "kind": "studio"
-    },
-    {
-      "source": "nana",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "nana",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "nana",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "nana",
-      "target": "monster",
-      "kind": "studio"
     },
     {
       "source": "odd-taxi",
@@ -4642,22 +4789,12 @@
     },
     {
       "source": "odd-taxi",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "odd-taxi",
       "target": "sonny-boy",
       "kind": "genre"
     },
     {
       "source": "odd-taxi",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "odd-taxi",
-      "target": "junji-ito-collection",
+      "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
@@ -4672,107 +4809,17 @@
     },
     {
       "source": "odd-taxi",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "frieren",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "ninja-scroll",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "frieren",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "frieren",
-      "target": "sonny-boy",
-      "kind": "studio"
-    },
-    {
-      "source": "frieren",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "frieren",
-      "target": "overlord",
-      "kind": "studio"
-    },
-    {
-      "source": "frieren",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "frieren",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "frieren",
-      "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "frieren",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
-      "target": "master-of-diabolism",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
       "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "odd-taxi",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "super-crooks",
+      "target": "sonny-boy",
       "kind": "genre"
     },
     {
@@ -4782,147 +4829,72 @@
     },
     {
       "source": "super-crooks",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
       "target": "jujutsu-kaisen",
       "kind": "genre"
     },
     {
       "source": "super-crooks",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "super-crooks",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "in-spectre",
       "target": "master-of-diabolism",
       "kind": "genre"
     },
     {
-      "source": "in-spectre",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "in-spectre",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "in-spectre",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "in-spectre",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "tokyo-revengers",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "overlord",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "master-of-diabolism",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-revengers",
-      "target": "sonny-boy",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-revengers",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-revengers",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-revengers",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "tokyo-revengers",
-      "target": "chainsaw-man",
-      "kind": "genre"
-    },
-    {
-      "source": "sonny-boy",
-      "target": "memories",
-      "kind": "genre"
-    },
-    {
-      "source": "sonny-boy",
-      "target": "junji-ito-collection",
-      "kind": "genre"
-    },
-    {
-      "source": "sonny-boy",
+      "source": "super-crooks",
       "target": "steins-gate",
       "kind": "genre"
     },
     {
-      "source": "sonny-boy",
+      "source": "super-crooks",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "super-crooks",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "super-crooks",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "super-crooks",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "super-crooks",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "frieren",
+      "target": "sonny-boy",
+      "kind": "studio"
+    },
+    {
+      "source": "frieren",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "frieren",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "frieren",
       "target": "overlord",
+      "kind": "studio"
+    },
+    {
+      "source": "frieren",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "frieren",
+      "target": "monster",
       "kind": "studio"
     },
     {
@@ -4932,8 +4904,33 @@
     },
     {
       "source": "sonny-boy",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "sonny-boy",
+      "target": "steins-gate",
+      "kind": "genre"
+    },
+    {
+      "source": "sonny-boy",
       "target": "tower-of-god",
       "kind": "genre"
+    },
+    {
+      "source": "sonny-boy",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "sonny-boy",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "sonny-boy",
+      "target": "overlord",
+      "kind": "studio"
     },
     {
       "source": "sonny-boy",
@@ -4951,63 +4948,68 @@
       "kind": "genre"
     },
     {
-      "source": "memories",
+      "source": "jujutsu-kaisen",
+      "target": "master-of-diabolism",
+      "kind": "genre"
+    },
+    {
+      "source": "jujutsu-kaisen",
+      "target": "tower-of-god",
+      "kind": "genre"
+    },
+    {
+      "source": "jujutsu-kaisen",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "jujutsu-kaisen",
       "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
-      "source": "memories",
-      "target": "space-dandy",
-      "kind": "genre"
+      "source": "jujutsu-kaisen",
+      "target": "chainsaw-man",
+      "kind": "studio"
     },
     {
-      "source": "memories",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "memories",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "memories",
+      "source": "jujutsu-kaisen",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "memories",
-      "target": "monster",
-      "kind": "genre"
-    },
-    {
-      "source": "memories",
-      "target": "witch-hat-atelier",
-      "kind": "genre"
-    },
-    {
-      "source": "junji-ito-collection",
-      "target": "steins-gate",
-      "kind": "genre"
-    },
-    {
-      "source": "junji-ito-collection",
-      "target": "jujutsu-kaisen",
-      "kind": "genre"
-    },
-    {
-      "source": "junji-ito-collection",
+      "source": "master-of-diabolism",
       "target": "tower-of-god",
       "kind": "genre"
     },
     {
-      "source": "junji-ito-collection",
+      "source": "master-of-diabolism",
+      "target": "tokyo-revengers",
+      "kind": "genre"
+    },
+    {
+      "source": "master-of-diabolism",
+      "target": "junji-ito-collection",
+      "kind": "genre"
+    },
+    {
+      "source": "master-of-diabolism",
+      "target": "overlord",
+      "kind": "genre"
+    },
+    {
+      "source": "master-of-diabolism",
       "target": "chainsaw-man",
       "kind": "genre"
     },
     {
-      "source": "junji-ito-collection",
+      "source": "master-of-diabolism",
       "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "steins-gate",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
@@ -5016,33 +5018,18 @@
       "kind": "genre"
     },
     {
-      "source": "overlord",
-      "target": "tower-of-god",
+      "source": "tower-of-god",
+      "target": "tokyo-revengers",
       "kind": "genre"
     },
     {
-      "source": "overlord",
-      "target": "monster",
-      "kind": "studio"
-    },
-    {
-      "source": "overlord",
-      "target": "witch-hat-atelier",
+      "source": "tower-of-god",
+      "target": "junji-ito-collection",
       "kind": "genre"
     },
     {
-      "source": "jujutsu-kaisen",
-      "target": "tower-of-god",
-      "kind": "genre"
-    },
-    {
-      "source": "jujutsu-kaisen",
-      "target": "chainsaw-man",
-      "kind": "studio"
-    },
-    {
-      "source": "jujutsu-kaisen",
-      "target": "chainsaw-man",
+      "source": "tower-of-god",
+      "target": "overlord",
       "kind": "genre"
     },
     {
@@ -5056,9 +5043,29 @@
       "kind": "genre"
     },
     {
-      "source": "tower-of-god",
-      "target": "witch-hat-atelier",
+      "source": "tokyo-revengers",
+      "target": "junji-ito-collection",
       "kind": "genre"
+    },
+    {
+      "source": "tokyo-revengers",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "junji-ito-collection",
+      "target": "chainsaw-man",
+      "kind": "genre"
+    },
+    {
+      "source": "junji-ito-collection",
+      "target": "monster",
+      "kind": "genre"
+    },
+    {
+      "source": "overlord",
+      "target": "monster",
+      "kind": "studio"
     },
     {
       "source": "chainsaw-man",
