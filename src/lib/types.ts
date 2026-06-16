@@ -87,3 +87,10 @@ export interface GraphData {
   nodes: GraphNode[];
   edges: GraphEdge[];
 }
+
+/** Yhden pyynnön ydindatan tilannekuva (Supabasesta ladattu). */
+export interface RoomData {
+  members: Member[];
+  series: Series[];
+  reviews: Review[];
+}
