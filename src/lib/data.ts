@@ -1,7 +1,7 @@
 import { cache } from "react";
 import { supabase } from "./supabase";
 import { rowToSeries } from "./series-mapper";
-import type { GraphData, Member, Review, RoomData, Series, SeriesMeta, StreamingLink, WatchLinks } from "./types";
+import type { GraphData, Member, Review, RoomData, Series, SeriesMeta, WatchLinks } from "./types";
 export type { StreamingLink, WatchLinks } from "./types";
 
 // Ydindata (members/series/reviews) luetaan Supabasesta per pyyntö (getRoomData).
