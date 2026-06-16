@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { rowToSeries } from "./data.ts";
+import { rowToSeries } from "./series-mapper.ts";
 
 test("rowToSeries maps snake_case columns incl. new derived fields", () => {
   const row = {
