@@ -36,6 +36,14 @@ export interface Series {
   genreTags: string[];
   /** Kansikuvan URL; tyhjä merkkijono jos ei kuvaa. */
   coverUrl: string;
+  /** AniList-meta DB:stä, tai null (fallback data/meta.json). */
+  meta: SeriesMeta | null;
+  /** Lempihahmon kuva-URL DB:stä, tai null (fallback data/characters.json). */
+  bestPickImage: string | null;
+  /** Katselulinkit DB:stä, tai null (fallback data/links.json). */
+  watchLinks: WatchLinks | null;
+  /** AniList media-id, tai null. */
+  anilistId: number | null;
 }
 
 export interface Review {
@@ -49,6 +57,17 @@ export interface Review {
   /** Jäsenen suosikkihahmo/-valinta ("best girl/boy"). */
   bestPick: string;
   tags: string[];
+}
+
+export interface StreamingLink {
+  site: string;
+  url: string;
+  color: string | null;
+  icon: string | null;
+}
+export interface WatchLinks {
+  anilist: string | null;
+  streaming: StreamingLink[];
 }
 
 /** AniListista haettu sarjan metatieto (build-time, `data/meta.json`). */

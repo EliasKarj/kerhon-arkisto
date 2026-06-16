@@ -12,7 +12,8 @@
     "fetch:links": "node scripts/fetch-links.mjs",
     "fetch:meta": "node scripts/fetch-meta.mjs",
     "build:graph": "node scripts/build-graph.mjs",
-    "seed:db": "node --env-file=.env.local scripts/seed-db.mjs"
+    "seed:db": "node --env-file=.env.local scripts/seed-db.mjs",
+    "test": "node --import tsx --test src/lib/data.test.ts src/lib/admin/auth-token.test.ts src/lib/admin/validation.test.ts src/lib/admin/anilist.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
@@ -30,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }

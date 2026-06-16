@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { supabase } from "./supabase";
-import type { GraphData, Member, Review, RoomData, Series, SeriesMeta } from "./types";
+import type { GraphData, Member, Review, RoomData, Series, SeriesMeta, StreamingLink, WatchLinks } from "./types";
+export type { StreamingLink, WatchLinks } from "./types";
 
 // Ydindata (members/series/reviews) luetaan Supabasesta per pyyntö (getRoomData).
 // Johdettu data (kannet, hahmot, linkit, meta, graph) on edelleen build-aikaista
@@ -16,22 +17,31 @@ import metaData from "../../data/meta.json";
 // Build-aikainen yhteysverkko (`npm run build:graph`).
 import graphData from "../../data/graph.json";
 
-export interface StreamingLink {
-  site: string;
-  url: string;
-  color: string | null;
-  icon: string | null;
-}
-export interface WatchLinks {
-  anilist: string | null;
-  streaming: StreamingLink[];
-}
 
 const covers = coversData as Record<string, string>;
 const characterImages = charactersData as Record<string, string>;
 const watchLinks = linksData as Record<string, WatchLinks>;
 const meta = metaData as Record<string, SeriesMeta>;
 export const graph = graphData as GraphData;
+
+export function rowToSeries(s: Record<string, unknown>): Series {
+  return {
+    id: s.id as string,
+    title: s.title as string,
+    type: s.type as Series["type"],
+    clubSeason: s.club_season as number,
+    watchedDate: s.watched_date as string,
+    proposerId: s.proposer_id as string,
+    clubScore: s.club_score === null || s.club_score === undefined ? null : Number(s.club_score),
+    bestPick: (s.best_pick as string | null) ?? null,
+    genreTags: (s.genre_tags as string[] | null) ?? [],
+    coverUrl: (s.cover_url as string | null) ?? "",
+    meta: (s.meta as SeriesMeta | null) ?? null,
+    bestPickImage: (s.best_pick_image as string | null) ?? null,
+    watchLinks: (s.watch_links as WatchLinks | null) ?? null,
+    anilistId: (s.anilist_id as number | null) ?? null,
+  };
+}
 
 /** Lataa ydindatan Supabasesta kerran per pyyntö (React cache dedupaa). */
 export const getRoomData = cache(async (): Promise<RoomData> => {
@@ -49,18 +59,7 @@ export const getRoomData = cache(async (): Promise<RoomData> => {
     avatarUrl: m.avatar_url,
     guest: m.guest,
   }));
-  const series: Series[] = (seriesRes.data ?? []).map((s) => ({
-    id: s.id,
-    title: s.title,
-    type: s.type,
-    clubSeason: s.club_season,
-    watchedDate: s.watched_date,
-    proposerId: s.proposer_id,
-    clubScore: s.club_score === null ? null : Number(s.club_score),
-    bestPick: s.best_pick,
-    genreTags: s.genre_tags ?? [],
-    coverUrl: s.cover_url ?? "",
-  }));
+  const series: Series[] = (seriesRes.data ?? []).map(rowToSeries);
   const reviews: Review[] = (reviewsRes.data ?? []).map((r) => ({
     id: r.id,
     seriesId: r.series_id,
