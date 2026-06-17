@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeMenu } from "@/components/theme-menu";
+import { AuthNav } from "@/components/auth/auth-nav";
 
 type NavItem = {
   href: string;
@@ -62,6 +63,7 @@ export function SiteHeader() {
             </ul>
           </nav>
           <ThemeMenu />
+          <AuthNav />
         </div>
       </div>
     </header>
