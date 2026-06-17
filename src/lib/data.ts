@@ -4,6 +4,7 @@ import { rowToSeries } from "./series-mapper";
 import { computeDisplayScore } from "./score";
 import type { GraphData, Member, Review, RoomData, Series, SeriesMeta, WatchLinks } from "./types";
 export type { StreamingLink, WatchLinks } from "./types";
+export { reviewsForMember, seriesProposedBy } from "./queries";
 
 // Ydindata (members/series/reviews) luetaan Supabasesta per pyyntö (getRoomData).
 // Johdettu data (kannet, hahmot, linkit, meta, graph) on edelleen build-aikaista
@@ -79,18 +80,6 @@ export function seriesById(series: Series[], id: string): Series | undefined {
 /** Kaikki tietyn sarjan jäsenkohtaiset arviot. */
 export function reviewsForSeries(reviews: Review[], seriesId: string): Review[] {
   return reviews.filter((r) => r.seriesId === seriesId);
-}
-
-/** Kaikki tietyn jäsenen kirjaamat arviot. */
-export function reviewsForMember(reviews: Review[], memberId: string): Review[] {
-  return reviews.filter((r) => r.memberId === memberId);
-}
-
-/** Jäsenen ehdottamat sarjat, uusin ensin. */
-export function seriesProposedBy(series: Series[], memberId: string): Series[] {
-  return series
-    .filter((s) => s.proposerId === memberId)
-    .sort((a, b) => b.watchedDate.localeCompare(a.watchedDate));
 }
 
 /** Sarjat kokouspäivän mukaan, uusin ensin. */

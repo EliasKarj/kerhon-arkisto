@@ -1,4 +1,4 @@
-import { reviewsForMember, seriesProposedBy } from "./data";
+import { reviewsForMember, seriesProposedBy } from "./queries";
 import type { Member, Review, Series } from "./types";
 
 /** Keskiarvo pisteistä, tai null jos arvioita ei ole. */
