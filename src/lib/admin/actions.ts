@@ -174,3 +174,20 @@ export async function updateClubNight(seriesId: string, input: ClubNightInput): 
   revalidatePublic(seriesId, input.proposerId);
   return { ok: true, seriesId };
 }
+
+/** Poistaa sarjan kokonaan: arviot, sitä koskevat sessiot (cascade) ja itse sarjan. */
+export async function deleteSeries(seriesId: string): Promise<{ error: string } | { ok: true }> {
+  await requireAdmin();
+  // FK-järjestys: sessiot ensin (session_reviews/presence poistuvat cascadella),
+  // sitten julkiset arviot, sitten sarja.
+  const delSessions = await supabaseAdmin.from("sessions").delete().eq("series_id", seriesId);
+  if (delSessions.error) return { error: `Sessiot: ${delSessions.error.message}` };
+  const delReviews = await supabaseAdmin.from("reviews").delete().eq("series_id", seriesId);
+  if (delReviews.error) return { error: `Arviot: ${delReviews.error.message}` };
+  const delSeries = await supabaseAdmin.from("series").delete().eq("id", seriesId);
+  if (delSeries.error) return { error: `Sarja: ${delSeries.error.message}` };
+  for (const p of PUBLIC_PATHS) revalidatePath(p);
+  revalidatePath("/aikajana");
+  revalidatePath("/hallinta");
+  return { ok: true };
+}

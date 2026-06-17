@@ -36,7 +36,7 @@ export function SessionForm({ members, series }: { members: Member[]; series: Se
         newSeries: mode === "new"
           ? { anilistId: chosen?.anilistId ?? null, manualTitle: chosen?.manual ? chosen.title : (chosen?.title ?? null), clubSeason, watchedDate: watchedDate || new Date().toISOString().slice(0, 10), proposerId }
           : null,
-        scheduledAt: scheduledAt || null,
+        scheduledAt: scheduledAt ? new Date(scheduledAt).toISOString() : null,
         reviewMode, scoreVisibility, joinPolicy,
         attendees: joinPolicy === "invited" ? attendees : [],
       });
@@ -71,7 +71,7 @@ export function SessionForm({ members, series }: { members: Member[]; series: Se
                   {members.map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}
                 </select>
               </label>
-              <label className="flex flex-col gap-1 text-sm text-muted">Katselupäivä
+              <label className="flex flex-col gap-1 text-sm text-muted">Ehdotuspäivä
                 <input type="date" value={watchedDate} onChange={(e) => setWatchedDate(e.target.value)} className={field} />
               </label>
             </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getRoomData, seriesByDateDesc } from "@/lib/data";
 import { seasonLabel } from "@/lib/labels";
+import { DeleteSeriesButton } from "@/components/admin/delete-series-button";
 
 export default async function HallintaDashboard() {
   const { series } = await getRoomData();
@@ -20,7 +21,10 @@ export default async function HallintaDashboard() {
         {list.map((s) => (
           <li key={s.id} className="flex items-center justify-between py-2">
             <span className="font-bold">{s.title} <span className="font-mono text-sm text-muted">· {seasonLabel(s.clubSeason)}{s.clubScore === null ? " · nyt katselussa" : ""}</span></span>
-            <Link href={`/hallinta/sarja/${s.id}`} className="font-mono text-sm font-bold hover:underline">[ muokkaa ]</Link>
+            <span className="flex items-center gap-3">
+              <Link href={`/hallinta/sarja/${s.id}`} className="font-mono text-sm font-bold hover:underline">[ muokkaa ]</Link>
+              <DeleteSeriesButton seriesId={s.id} title={s.title} />
+            </span>
           </li>
         ))}
       </ul>
