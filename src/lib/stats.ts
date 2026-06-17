@@ -55,9 +55,9 @@ export function countBy(values: string[]): CountEntry[] {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, "fi"));
 }
 
-/** Best character -äänten jakauma annetuista (jäsenkohtaisista) arvioista. */
+/** Best character -äänten jakauma annetuista (jäsenkohtaisista) arvioista. Tyhjä valinta ei ole ääni. */
 export function getBestPickCounts(reviews: Review[]): CountEntry[] {
-  return countBy(reviews.map((review) => review.bestPick));
+  return countBy(reviews.map((review) => review.bestPick.trim()).filter(Boolean));
 }
 
 /** Tagien esiintymät annetuista arvioista. */
@@ -69,7 +69,7 @@ export function getTagCounts(reviews: Review[]): CountEntry[] {
 export function getBestPickLeaderboard(series: Series[]): CountEntry[] {
   const picks = series
     .map((entry) => entry.bestPick)
-    .filter((pick): pick is string => pick !== null);
+    .filter((pick): pick is string => pick !== null && pick.trim() !== "");
   return countBy(picks);
 }
 
