@@ -30,12 +30,15 @@ export function AuthNav() {
     );
   }
   return (
-    <Link href="/tili" className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-muted hover:text-foreground">
-      {user.avatar ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={user.avatar} alt="" className="size-6 border-2 border-foreground object-cover" />
-      ) : null}
-      {user.name}
-    </Link>
+    <div className="flex items-center gap-4 text-sm font-semibold uppercase tracking-wide">
+      <Link href="/kerhoillat" className="text-muted hover:text-foreground">Kerhoillat</Link>
+      <Link href="/tili" className="flex items-center gap-2 text-muted hover:text-foreground">
+        {user.avatar ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={user.avatar} alt="" className="size-6 border-2 border-foreground object-cover" />
+        ) : null}
+        {user.name}
+      </Link>
+    </div>
   );
 }

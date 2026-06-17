@@ -42,6 +42,17 @@ export async function listSessions(): Promise<ClubSession[]> {
   return (data ?? []).map(mapSessionRow);
 }
 
+/** Jäsenelle: ei-päättyneet sessiot joihin viewer voi liittyä (käynnissä + tulevat). */
+export async function listJoinableSessions(): Promise<ClubSession[]> {
+  const account = await getCurrentAccount();
+  const memberId = account?.memberId ?? null;
+  const isAdmin = account?.isAdmin === true;
+  if (!memberId && !isAdmin) return [];
+  const { data, error } = await supabaseAdmin.from("sessions").select("*").neq("status", "ended").order("scheduled_at", { ascending: true });
+  if (error) throw new Error(error.message);
+  return (data ?? []).map(mapSessionRow).filter((s) => isAdmin || canJoinSession(s, memberId));
+}
+
 export async function createSession(input: CreateSessionInput): Promise<{ error: string } | { ok: true; id: string }> {
   await requireAdmin();
 
