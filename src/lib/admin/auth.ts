@@ -2,6 +2,7 @@ import "server-only";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { signToken, verifyToken } from "./auth-token";
+import { getCurrentAccount } from "@/lib/auth/account";
 
 const COOKIE = "ka_admin";
 const MAX_AGE_S = 60 * 60 * 24 * 30; // 30 vrk
@@ -38,4 +39,16 @@ export async function isAuthed(): Promise<boolean> {
 /** Server-puolen portti: redirectaa /kirjaudu jos ei kirjautunut. */
 export async function requireAuth(): Promise<void> {
   if (!(await isAuthed())) redirect("/kirjaudu");
+}
+
+/** Admin jos jaettu salasana kelpaa TAI kirjautunut tili on admin. */
+export async function isAdmin(): Promise<boolean> {
+  if (await isAuthed()) return true;
+  const account = await getCurrentAccount();
+  return account?.isAdmin === true;
+}
+
+/** Server-portti adminille: redirect /tili jos ei admin. */
+export async function requireAdmin(): Promise<void> {
+  if (!(await isAdmin())) redirect("/tili");
 }

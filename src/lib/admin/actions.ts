@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { supabaseAdmin } from "./supabase-admin";
-import { isAuthed, requireAuth, setSessionCookie, clearSessionCookie } from "./auth";
+import { isAdmin, requireAdmin, setSessionCookie, clearSessionCookie } from "./auth";
 import { passwordMatches } from "./auth-token";
 import { checkRateLimit, resetRateLimit } from "./rate-limit";
 import {
@@ -53,7 +53,7 @@ export async function logout(): Promise<void> {
 }
 
 export async function searchAnimeAction(term: string): Promise<AnimeSearchResult[]> {
-  if (!(await isAuthed())) return [];
+  if (!(await isAdmin())) return [];
   if (!term.trim()) return [];
   return searchAnime(term.trim());
 }
@@ -138,7 +138,7 @@ async function writeRows(rows: Awaited<ReturnType<typeof buildRows>>): Promise<{
 }
 
 export async function saveClubNight(input: ClubNightInput): Promise<{ error: string } | { ok: true; seriesId: string }> {
-  await requireAuth();
+  await requireAdmin();
   const errors = validateClubNight(input);
   if (errors.length) return { error: errors.join(" ") };
   // Vain AniList-haku ja id-lataus voivat heittää → siisti virheviesti.
@@ -156,7 +156,7 @@ export async function saveClubNight(input: ClubNightInput): Promise<{ error: str
 }
 
 export async function updateClubNight(seriesId: string, input: ClubNightInput): Promise<{ error: string } | { ok: true; seriesId: string }> {
-  await requireAuth();
+  await requireAdmin();
   const errors = validateClubNight(input);
   if (errors.length) return { error: errors.join(" ") };
   let rows: Awaited<ReturnType<typeof buildRows>>;
