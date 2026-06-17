@@ -15,12 +15,13 @@ export async function GET(request: Request) {
         const username = (meta.user_name ?? meta.full_name ?? meta.name ?? null) as string | null;
         const avatar = (meta.avatar_url ?? meta.picture ?? null) as string | null;
         // Upsert vain discord-kentat + user_id -> EI ylikirjoita member_id/is_admin (eivat mukana).
-        await supabaseAdmin
+        const { error: upsertError } = await supabaseAdmin
           .from("accounts")
           .upsert(
             { user_id: user.id, discord_username: username, discord_avatar: avatar },
             { onConflict: "user_id" },
           );
+        if (upsertError) console.error("accounts upsert (callback):", upsertError.message);
       }
     }
   }
