@@ -1,6 +1,7 @@
 import type { Series, SeriesMeta, WatchLinks } from "./types";
 
 export function rowToSeries(s: Record<string, unknown>): Series {
+  const clubScore = s.club_score === null || s.club_score === undefined ? null : Number(s.club_score);
   return {
     id: s.id as string,
     title: s.title as string,
@@ -8,7 +9,8 @@ export function rowToSeries(s: Record<string, unknown>): Series {
     clubSeason: s.club_season as number,
     watchedDate: s.watched_date as string,
     proposerId: s.proposer_id as string,
-    clubScore: s.club_score === null || s.club_score === undefined ? null : Number(s.club_score),
+    clubScore,
+    displayScore: clubScore,
     bestPick: (s.best_pick as string | null) ?? null,
     genreTags: (s.genre_tags as string[] | null) ?? [],
     coverUrl: (s.cover_url as string | null) ?? "",

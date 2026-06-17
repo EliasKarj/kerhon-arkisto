@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { supabase } from "./supabase";
 import { rowToSeries } from "./series-mapper";
+import { computeDisplayScore } from "./score";
 import type { GraphData, Member, Review, RoomData, Series, SeriesMeta, WatchLinks } from "./types";
 export type { StreamingLink, WatchLinks } from "./types";
 
@@ -40,7 +41,7 @@ export const getRoomData = cache(async (): Promise<RoomData> => {
     avatarUrl: m.avatar_url,
     guest: m.guest,
   }));
-  const series: Series[] = (seriesRes.data ?? []).map(rowToSeries);
+  const baseSeries: Series[] = (seriesRes.data ?? []).map(rowToSeries);
   const reviews: Review[] = (reviewsRes.data ?? []).map((r) => ({
     id: r.id,
     seriesId: r.series_id,
@@ -49,6 +50,13 @@ export const getRoomData = cache(async (): Promise<RoomData> => {
     bulletPoints: r.bullet_points ?? [],
     bestPick: r.best_pick ?? "",
     tags: r.tags ?? [],
+  }));
+  const series: Series[] = baseSeries.map((s) => ({
+    ...s,
+    displayScore: computeDisplayScore(
+      reviews.filter((r) => r.seriesId === s.id),
+      s.clubScore,
+    ),
   }));
   return { members, series, reviews };
 });

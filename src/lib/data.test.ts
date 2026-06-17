@@ -15,6 +15,7 @@ test("rowToSeries maps snake_case columns incl. new derived fields", () => {
   };
   const s = rowToSeries(row);
   assert.equal(s.clubScore, 4.2);
+  assert.equal(s.displayScore, 4.2);
   assert.equal(s.meta?.studio, "MAPPA");
   assert.equal(s.bestPickImage, "char.jpg");
   assert.equal(s.watchLinks?.anilist, "https://a");
@@ -28,6 +29,7 @@ test("rowToSeries tolerates null derived fields", () => {
     cover_url: null, meta: null, best_pick_image: null, watch_links: null, anilist_id: null,
   });
   assert.equal(s.clubScore, null);
+  assert.equal(s.displayScore, null);
   assert.equal(s.meta, null);
   assert.equal(s.genreTags.length, 0);
   assert.equal(s.coverUrl, "");

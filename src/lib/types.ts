@@ -31,6 +31,8 @@ export interface Series {
   proposerId: Member["id"];
   /** Kerhon yhteisarvosana asteikolla 0–5, tai null jos ei vielä arvioitu. */
   clubScore: number | null;
+  /** Näytettävä pistemäärä: jäsenarvioiden keskiarvo, tai clubScore jos ei arvioita. Laskettu getRoomDatassa. */
+  displayScore: number | null;
   /** Best girl/hahmo ("best pick"), tai null. */
   bestPick: string | null;
   genreTags: string[];
