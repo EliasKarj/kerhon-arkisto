@@ -17,6 +17,7 @@
     "test": "node --import tsx --test src/lib/data.test.ts src/lib/admin/auth-token.test.ts src/lib/admin/validation.test.ts src/lib/admin/anilist.test.ts src/lib/admin/rate-limit.test.ts"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.108.2",
     "next": "16.2.9",
     "react": "19.2.4",
