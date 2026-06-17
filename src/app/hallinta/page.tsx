@@ -9,7 +9,10 @@ export default async function HallintaDashboard() {
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold uppercase tracking-tight">Kojelauta</h1>
-        <Link href="/hallinta/kerhoilta" className="border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Uusi kerhoilta</Link>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/hallinta/tilit" className="border-2 border-foreground bg-panel px-4 py-2 font-bold uppercase tracking-tight">Tilit &amp; linkitys</Link>
+          <Link href="/hallinta/kerhoilta" className="border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Uusi kerhoilta</Link>
+        </div>
       </div>
       <p className="text-sm text-muted">Uudet sarjat näkyvät yhteysverkossa (Tilastot) vasta seuraavan deployn jälkeen.</p>
       <ul className="flex flex-col divide-y-2 divide-foreground/15">
