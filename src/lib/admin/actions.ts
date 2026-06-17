@@ -1,10 +1,12 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { supabaseAdmin } from "./supabase-admin";
 import { isAuthed, requireAuth, setSessionCookie, clearSessionCookie } from "./auth";
 import { passwordMatches } from "./auth-token";
+import { checkRateLimit, resetRateLimit } from "./rate-limit";
 import {
   fetchAnimeDetail, searchAnime, mediaToCover, mediaToMeta, mediaToType,
   mediaToWatchLinks, matchCharacterImage, type AnimeSearchResult,
@@ -21,11 +23,26 @@ function revalidatePublic(seriesId: string, proposerId: string) {
   revalidatePath(`/jasen/${proposerId}`);
 }
 
+/** Käyttäjäystävällinen viesti AniList-/DB-virheelle (ei rumaa error boundarya). */
+function actionErrorMessage(e: unknown): string {
+  const msg = e instanceof Error ? e.message : String(e);
+  if (msg.startsWith("AniList")) {
+    return `Animen tietojen haku AniListista epäonnistui (${msg}). Yritä hetken päästä uudelleen.`;
+  }
+  return `Tallennus epäonnistui: ${msg}`;
+}
+
 export async function login(_prev: unknown, formData: FormData): Promise<{ error: string } | void> {
-  const password = String(formData.get("password") ?? "");
   const expected = process.env.ADMIN_PASSWORD;
   if (!expected) return { error: "ADMIN_PASSWORD puuttuu palvelimelta." };
+  const hdrs = await headers();
+  const ip = hdrs.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  const key = `login:${ip}`;
+  const rl = checkRateLimit(key, Date.now());
+  if (!rl.allowed) return { error: `Liikaa kirjautumisyrityksiä. Yritä ${rl.retryAfterS} s kuluttua.` };
+  const password = String(formData.get("password") ?? "");
   if (!passwordMatches(password, expected)) return { error: "Väärä salasana." };
+  resetRateLimit(key);
   await setSessionCookie();
   redirect("/hallinta");
 }
@@ -124,8 +141,14 @@ export async function saveClubNight(input: ClubNightInput): Promise<{ error: str
   await requireAuth();
   const errors = validateClubNight(input);
   if (errors.length) return { error: errors.join(" ") };
-  const ids = await loadExistingIds();
-  const rows = await buildRows(input, ids);
+  // Vain AniList-haku ja id-lataus voivat heittää → siisti virheviesti.
+  let rows: Awaited<ReturnType<typeof buildRows>>;
+  try {
+    const ids = await loadExistingIds();
+    rows = await buildRows(input, ids);
+  } catch (e) {
+    return { error: actionErrorMessage(e) };
+  }
   const writeErr = await writeRows(rows);
   if (writeErr) return writeErr;
   revalidatePublic(rows.seriesId, input.proposerId);
@@ -136,8 +159,13 @@ export async function updateClubNight(seriesId: string, input: ClubNightInput): 
   await requireAuth();
   const errors = validateClubNight(input);
   if (errors.length) return { error: errors.join(" ") };
-  const ids = await loadExistingIds();
-  const rows = await buildRows(input, ids, seriesId);
+  let rows: Awaited<ReturnType<typeof buildRows>>;
+  try {
+    const ids = await loadExistingIds();
+    rows = await buildRows(input, ids, seriesId);
+  } catch (e) {
+    return { error: actionErrorMessage(e) };
+  }
   // Korvaa arviot kokonaan: poista vanhat, ettei lomakkeesta poistettu arvio jää kantaan.
   const del = await supabaseAdmin.from("reviews").delete().eq("series_id", seriesId);
   if (del.error) return { error: `Arviot (poisto): ${del.error.message}` };
