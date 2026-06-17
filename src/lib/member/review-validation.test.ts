@@ -16,6 +16,14 @@ test("sanitizeMyReview trims and drops empty bullets/tags", () => {
   assert.deepEqual(out.bulletPoints, ["hyvä"]);
   assert.deepEqual(out.tags, ["a"]);
 });
+test("validateMyReview caps oversized text fields", () => {
+  assert.ok(validateMyReview({ score: 4, bestPick: "x".repeat(200), bulletPoints: [], tags: [] }).length > 0);
+  assert.ok(validateMyReview({ score: 4, bestPick: "", bulletPoints: Array(30).fill("a"), tags: [] }).length > 0);
+  assert.ok(validateMyReview({ score: 4, bestPick: "", bulletPoints: ["a".repeat(700)], tags: [] }).length > 0);
+  assert.ok(validateMyReview({ score: 4, bestPick: "", bulletPoints: [], tags: Array(30).fill("t") }).length > 0);
+  assert.ok(validateMyReview({ score: 4, bestPick: "", bulletPoints: [], tags: ["t".repeat(60)] }).length > 0);
+});
+
 test("resolveReviewMemberId returns memberId for a linked account, else null", () => {
   assert.equal(resolveReviewMemberId({ memberId: "elias" }), "elias");
   assert.equal(resolveReviewMemberId({ memberId: null }), null);
