@@ -23,7 +23,7 @@ export default async function TimelinePage() {
       meta: `${seasonLabel(entry.clubSeason)} · ${formatDate(entry.watchedDate)}`,
       watchedDate: entry.watchedDate,
       typeLabel: SERIES_TYPE_LABELS[entry.type],
-      score: formatScore(entry.clubScore),
+      score: formatScore(entry.displayScore),
       proposer: proposer ? proposer.name : null,
       bestPick: entry.bestPick,
     };

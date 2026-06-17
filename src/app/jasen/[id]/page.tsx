@@ -115,7 +115,7 @@ export default async function MemberPage({ params }: PageProps<"/jasen/[id]">) {
                   </span>
                 </div>
                 <span className="shrink-0 font-mono text-sm font-bold text-accent">
-                  {formatScore(entry.clubScore)}
+                  {formatScore(entry.displayScore)}
                 </span>
               </li>
             ))}

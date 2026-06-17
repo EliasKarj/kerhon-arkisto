@@ -240,7 +240,7 @@ export function getHottestTake(
   for (const s of series) {
     const rs = reviews.filter((r) => r.seriesId === s.id);
     if (rs.length === 0) continue;
-    const base = s.clubScore ?? rs.reduce((total, r) => total + r.score, 0) / rs.length;
+    const base = s.displayScore ?? rs.reduce((total, r) => total + r.score, 0) / rs.length;
     for (const r of rs) {
       const diff = Math.abs(r.score - base);
       if (!best || diff > best.diff) {

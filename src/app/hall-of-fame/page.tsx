@@ -36,7 +36,7 @@ function SeriesRanking({ title, entries }: { title: string; entries: Series[] })
               </span>
             </div>
             <span className="shrink-0 font-mono text-lg font-bold text-accent">
-              {formatScore(entry.clubScore)}
+              {formatScore(entry.displayScore)}
             </span>
           </li>
         ))}

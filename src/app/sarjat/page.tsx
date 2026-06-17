@@ -14,7 +14,7 @@ export default async function SeriesIndexPage() {
       title: s.title,
       type: s.type,
       clubSeason: s.clubSeason,
-      score: s.clubScore,
+      score: s.displayScore,
       proposerName: memberById(members, s.proposerId)?.name ?? null,
       cover: getCoverUrl(s),
       bestPick: s.bestPick,
