@@ -8,21 +8,21 @@ export function getAverageScore(reviews: Review[]): number | null {
   return sum / reviews.length;
 }
 
-/** Sarjan kerhon yhteisarvosana, tai null jos ei arvioitu. */
+/** Sarjan näytettävä arvosana (review-keskiarvo ?? clubScore), tai null jos ei arvioitu. */
 export function getSeriesScore(series: Series[], seriesId: string): number | null {
-  return series.find((s) => s.id === seriesId)?.clubScore ?? null;
+  return series.find((s) => s.id === seriesId)?.displayScore ?? null;
 }
 
-/** Kaikki arvioidut sarjat (joilla on yhteisarvosana). */
+/** Kaikki arvioidut sarjat (joilla on displayScore). */
 export function getRatedSeries(series: Series[]): Series[] {
-  return series.filter((entry) => entry.clubScore !== null);
+  return series.filter((entry) => entry.displayScore !== null);
 }
 
 /** Koko kerhon keskiarvo kaikista arvioiduista sarjoista. */
 export function getClubAverageScore(series: Series[]): number | null {
   const rated = getRatedSeries(series);
   if (rated.length === 0) return null;
-  const sum = rated.reduce((total, entry) => total + (entry.clubScore ?? 0), 0);
+  const sum = rated.reduce((total, entry) => total + (entry.displayScore ?? 0), 0);
   return sum / rated.length;
 }
 
@@ -33,9 +33,9 @@ export function getMemberReviewAverage(reviews: Review[], memberId: string): num
 
 /** Jäsenen ehdottamien arvioitujen sarjojen keskiarvo. */
 export function getMemberProposedAverage(series: Series[], memberId: string): number | null {
-  const rated = seriesProposedBy(series, memberId).filter((entry) => entry.clubScore !== null);
+  const rated = seriesProposedBy(series, memberId).filter((entry) => entry.displayScore !== null);
   if (rated.length === 0) return null;
-  const sum = rated.reduce((total, entry) => total + (entry.clubScore ?? 0), 0);
+  const sum = rated.reduce((total, entry) => total + (entry.displayScore ?? 0), 0);
   return sum / rated.length;
 }
 
@@ -77,7 +77,7 @@ export function getBestPickLeaderboard(series: Series[]): CountEntry[] {
 export function getTopSeries(series: Series[], limit: number): Series[] {
   return getRatedSeries(series)
     .slice()
-    .sort((a, b) => (b.clubScore ?? 0) - (a.clubScore ?? 0))
+    .sort((a, b) => (b.displayScore ?? 0) - (a.displayScore ?? 0))
     .slice(0, limit);
 }
 
@@ -85,7 +85,7 @@ export function getTopSeries(series: Series[], limit: number): Series[] {
 export function getBottomSeries(series: Series[], limit: number): Series[] {
   return getRatedSeries(series)
     .slice()
-    .sort((a, b) => (a.clubScore ?? 0) - (b.clubScore ?? 0))
+    .sort((a, b) => (a.displayScore ?? 0) - (b.displayScore ?? 0))
     .slice(0, limit);
 }
 
@@ -99,7 +99,7 @@ export function getSeasonAverages(series: Series[]): SeasonAverage[] {
   const bySeason = new Map<number, number[]>();
   for (const entry of getRatedSeries(series)) {
     const list = bySeason.get(entry.clubSeason) ?? [];
-    list.push(entry.clubScore ?? 0);
+    list.push(entry.displayScore ?? 0);
     bySeason.set(entry.clubSeason, list);
   }
   return [...bySeason.entries()]
