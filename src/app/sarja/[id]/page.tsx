@@ -13,15 +13,15 @@ import {
 } from "@/lib/data";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getBestPickCounts, getSeriesScore } from "@/lib/stats";
+import { getCurrentAccount } from "@/lib/auth/account";
+import { MyReviewSection } from "@/components/member/my-review-section";
+import type { MyReviewInput } from "@/lib/member/review-validation";
+
+export const dynamic = "force-dynamic";
 
 function formatDate(iso: string): string {
   const [year, month, day] = iso.split("-");
   return `${Number(day)}.${Number(month)}.${year}`;
-}
-
-export async function generateStaticParams() {
-  const { series } = await getRoomData();
-  return series.map((entry) => ({ id: entry.id }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/sarja/[id]">) {
@@ -37,6 +37,13 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
   if (!series) notFound();
 
   const reviews = reviewsForSeries(room.reviews, id);
+  const account = await getCurrentAccount();
+  const myReview = account?.memberId
+    ? reviews.find((r) => r.memberId === account.memberId) ?? null
+    : null;
+  const myReviewInput: MyReviewInput | null = myReview
+    ? { score: myReview.score, bestPick: myReview.bestPick, bulletPoints: myReview.bulletPoints, tags: myReview.tags }
+    : null;
   const score = getSeriesScore(room.series, id);
   const proposer = memberById(room.members, series.proposerId);
   const cover = getCoverUrl(series);
@@ -130,6 +137,25 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
             <span className="text-xl font-bold uppercase">{series.bestPick}</span>
           </div>
         </section>
+      )}
+
+      {/* Sinun arviosi */}
+      {!account ? (
+        <section className="surface flex flex-col gap-2 border-l-8 border-l-accent p-4" aria-label="Sinun arviosi">
+          <h2 className="text-lg font-bold uppercase tracking-tight">Sinun arviosi</h2>
+          <p className="text-sm text-muted">
+            <Link href="/tili" className="font-semibold text-foreground hover:underline">Kirjaudu Discordilla</Link> arvioidaksesi.
+          </p>
+        </section>
+      ) : !account.memberId ? (
+        <section className="surface flex flex-col gap-2 border-l-8 border-l-accent p-4" aria-label="Sinun arviosi">
+          <h2 className="text-lg font-bold uppercase tracking-tight">Sinun arviosi</h2>
+          <p className="text-sm text-muted">
+            Tilisi odottaa linkitystä — <Link href="/tili" className="font-semibold text-foreground hover:underline">tili</Link>.
+          </p>
+        </section>
+      ) : (
+        <MyReviewSection seriesId={id} initialReview={myReviewInput} />
       )}
 
       {reviews.length > 0 ? (
