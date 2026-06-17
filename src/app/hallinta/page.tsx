@@ -11,6 +11,7 @@ export default async function HallintaDashboard() {
         <h1 className="text-3xl font-bold uppercase tracking-tight">Kojelauta</h1>
         <div className="flex flex-wrap gap-2">
           <Link href="/hallinta/tilit" className="border-2 border-foreground bg-panel px-4 py-2 font-bold uppercase tracking-tight">Tilit &amp; linkitys</Link>
+          <Link href="/hallinta/kerhoillat" className="border-2 border-foreground bg-panel px-4 py-2 font-bold uppercase tracking-tight">Kerhoillat</Link>
           <Link href="/hallinta/kerhoilta" className="border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Uusi kerhoilta</Link>
         </div>
       </div>

@@ -10,7 +10,7 @@ import { validateMyReview, sanitizeMyReview, type MyReviewInput } from "@/lib/me
 import { validateSessionInput, canEnterReview, canJoinSession, presentMembers, redactReviews } from "./rules";
 import type { ClubSession, RedactedReview, SessionReview } from "./types";
 
-export function mapSessionRow(r: Record<string, unknown>): ClubSession {
+function mapSessionRow(r: Record<string, unknown>): ClubSession {
   return {
     id: r.id as string,
     seriesId: r.series_id as string,
