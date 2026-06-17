@@ -94,6 +94,11 @@ export async function updateSession(
 
 export async function deleteSession(id: string): Promise<{ error: string } | { ok: true }> {
   await requireAdmin();
+  // Vain ajastetun session voi perua (ei käynnissä olevaa eikä päättynyttä).
+  const { data: existing, error: gErr } = await supabaseAdmin.from("sessions").select("status").eq("id", id).maybeSingle();
+  if (gErr) return { error: gErr.message };
+  if (!existing) return { error: "Sessiota ei löydy." };
+  if (existing.status !== "scheduled") return { error: "Vain ajastetun kerhoillan voi perua." };
   const { error } = await supabaseAdmin.from("sessions").delete().eq("id", id);
   if (error) return { error: error.message };
   revalidatePath("/hallinta/kerhoillat");
