@@ -1,9 +1,16 @@
 const HELSINKI = "Europe/Helsinki";
 const DEFAULT_SITE = "https://kerhon-arkisto.vercel.app";
 
+function siteBase(): string {
+  return (process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE).replace(/\/$/, "");
+}
+
 export function roomUrl(sessionId: string): string {
-  const base = (process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE).replace(/\/$/, "");
-  return `${base}/kerhoilta/${sessionId}`;
+  return `${siteBase()}/kerhoilta/${sessionId}`;
+}
+
+export function seriesUrl(seriesId: string): string {
+  return `${siteBase()}/sarja/${seriesId}`;
 }
 
 export function buildScheduledMessage(input: { title: string; scheduledAtIso: string | null; roomUrl: string }): string {
@@ -15,6 +22,25 @@ export function buildScheduledMessage(input: { title: string; scheduledAtIso: st
 
 export function buildStartedMessage(input: { title: string; roomUrl: string }): string {
   return `🔴 @here Kerhoilta alkoi nyt: ${input.title}\nLiity: ${input.roomUrl}`;
+}
+
+export function buildEndedMessage(input: {
+  title: string;
+  scores: { name: string; score: number }[];
+  topPick: { name: string; votes: number } | null;
+  seriesUrl: string;
+}): string {
+  const lines = [`🏁 Kerhoilta päättyi: ${input.title}`];
+  if (input.scores.length > 0) {
+    const avg = input.scores.reduce((total, s) => total + s.score, 0) / input.scores.length;
+    lines.push(`Keskiarvo: ${avg.toFixed(1)}/5 (${input.scores.length} arviota)`);
+    lines.push(`Pisteet: ${input.scores.map((s) => `${s.name} ${s.score}`).join(" · ")}`);
+  } else {
+    lines.push("Ei arvioita.");
+  }
+  if (input.topPick) lines.push(`Best character: ${input.topPick.name} (${input.topPick.votes} ääntä)`);
+  lines.push(`Tulokset: ${input.seriesUrl}`);
+  return lines.join("\n");
 }
 
 /** Best-effort: lähettää viestin Discord-webhookiin. Ei koskaan heitä; ohittaa jos env puuttuu. */

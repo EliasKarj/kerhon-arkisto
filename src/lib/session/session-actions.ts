@@ -9,7 +9,7 @@ import { reviewId } from "@/lib/admin/validation";
 import { validateMyReview, sanitizeMyReview, type MyReviewInput } from "@/lib/member/review-validation";
 import { validateSessionInput, canEnterReview, canJoinSession, presentMembers, redactReviews } from "./rules";
 import type { ClubSession, RedactedReview, SessionReview } from "./types";
-import { sendDiscordMessage, buildScheduledMessage, buildStartedMessage, roomUrl } from "./notify";
+import { sendDiscordMessage, buildScheduledMessage, buildStartedMessage, buildEndedMessage, roomUrl, seriesUrl } from "./notify";
 
 function mapSessionRow(r: Record<string, unknown>): ClubSession {
   return {
@@ -183,6 +183,23 @@ export async function endSession(id: string): Promise<{ error: string } | { ok: 
   revalidatePath(`/kerhoilta/${id}`);
   revalidatePath("/hallinta/kerhoillat");
   revalidateAfterCommit(seriesId);
+
+  // Tuloskoonti Discordiin (best-effort).
+  const { data: memberRows } = await supabaseAdmin.from("members").select("id,name");
+  const nameOf = new Map((memberRows ?? []).map((m) => [m.id as string, m.name as string]));
+  const scores = (staged ?? [])
+    .filter((r) => r.score !== null && r.score !== undefined)
+    .map((r) => ({ name: nameOf.get(r.member_id as string) ?? (r.member_id as string), score: Number(r.score) }));
+  const pickCounts = new Map<string, number>();
+  for (const r of staged ?? []) {
+    const pick = ((r.best_pick as string) ?? "").trim();
+    if (pick) pickCounts.set(pick, (pickCounts.get(pick) ?? 0) + 1);
+  }
+  let topPick: { name: string; votes: number } | null = null;
+  for (const [name, votes] of pickCounts) if (!topPick || votes > topPick.votes) topPick = { name, votes };
+  await sendDiscordMessage(
+    buildEndedMessage({ title: await seriesTitle(seriesId), scores, topPick, seriesUrl: seriesUrl(seriesId) }),
+  );
   return { ok: true };
 }
 
