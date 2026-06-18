@@ -9,6 +9,7 @@ import { reviewId } from "@/lib/admin/validation";
 import { validateMyReview, sanitizeMyReview, type MyReviewInput } from "@/lib/member/review-validation";
 import { validateSessionInput, canEnterReview, canJoinSession, presentMembers, redactReviews } from "./rules";
 import type { ClubSession, RedactedReview, SessionReview } from "./types";
+import { sendDiscordMessage, buildScheduledMessage, buildStartedMessage, roomUrl } from "./notify";
 
 function mapSessionRow(r: Record<string, unknown>): ClubSession {
   return {
@@ -23,6 +24,11 @@ function mapSessionRow(r: Record<string, unknown>): ClubSession {
     startedAt: (r.started_at as string | null) ?? null,
     endedAt: (r.ended_at as string | null) ?? null,
   };
+}
+
+async function seriesTitle(seriesId: string): Promise<string> {
+  const { data } = await supabaseAdmin.from("series").select("title").eq("id", seriesId).maybeSingle();
+  return (data?.title as string | undefined) ?? seriesId;
 }
 
 export interface CreateSessionInput {
@@ -77,6 +83,13 @@ export async function createSession(input: CreateSessionInput): Promise<{ error:
   }).select("id").single();
   if (error) return { error: error.message };
   revalidatePath("/hallinta/kerhoillat");
+  await sendDiscordMessage(
+    buildScheduledMessage({
+      title: await seriesTitle(seriesId),
+      scheduledAtIso: input.scheduledAt,
+      roomUrl: roomUrl(data.id as string),
+    }),
+  );
   return { ok: true, id: data.id as string };
 }
 
@@ -128,12 +141,18 @@ export async function startSession(id: string): Promise<{ error: string } | { ok
   const { data: live, error: lErr } = await supabaseAdmin.from("sessions").select("id").eq("status", "live").limit(1);
   if (lErr) return { error: lErr.message };
   if (live && live.length > 0 && live[0].id !== id) return { error: "Toinen kerhoilta on jo käynnissä." };
-  const { error } = await supabaseAdmin.from("sessions")
+  const { data: updated, error } = await supabaseAdmin.from("sessions")
     .update({ status: "live", started_at: new Date().toISOString() })
-    .eq("id", id).eq("status", "scheduled");
+    .eq("id", id).eq("status", "scheduled")
+    .select("series_id");
   if (error) return { error: error.message };
   revalidatePath(`/kerhoilta/${id}`);
   revalidatePath("/hallinta/kerhoillat");
+  if (updated && updated.length > 0) {
+    await sendDiscordMessage(
+      buildStartedMessage({ title: await seriesTitle(updated[0].series_id as string), roomUrl: roomUrl(id) }),
+    );
+  }
   return { ok: true };
 }
 
