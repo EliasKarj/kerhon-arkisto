@@ -1,117 +1,123 @@
 # Kerhon Arkisto
 
-Kaveriporukan anime- ja elokuva-arvioiden arkisto: pisteet, **Best character**
--äänet, tilastot ja animeiden yhteysverkko yhdessä paikassa. Portfolioprojekti,
-joka esittelee frontend-osaamista — TypeScript, Next.js App Router, build-aikainen
-datavisualisointi ja saavutettavuus.
+Kaveriporukan kerhosovellus animejen ja elokuvien yhteiseen arviointiin:
+julkinen **arkisto** (arviot, Best character -äänet, tilastot, yhteysverkko),
+jäsenten **omat arviot**, **live-kerhoillat** ja **Discord-ilmoitukset** — kaikki
+yhdessä paikassa.
 
-**▶ Live-demo:** https://eliaskarj.github.io/kerhon-arkisto/
+**▶ Live:** https://kerhon-arkisto.vercel.app
 
-> V1 on staattinen sivusto, joka toimii `data/`-kansion JSON-tiedostoista ilman
-> tietokantaa tai kirjautumista. Tietorakenne on suunniteltu niin, että V2:n
-> ominaisuudet (käyttäjätilit, useat "huoneet") voi lisätä ilman isoa
-> uudelleenkirjoitusta.
+Täysstack-projekti: TypeScript, Next.js App Router (server-komponentit + Server
+Actions), Supabase (Postgres + Auth), build-aikainen datavisualisointi ja
+saavutettavuus.
 
-## Ominaisuudet
+## Mitä se tekee
 
-- **Etusivu** (`/`) — "Nyt katselussa" -banneri suoratoistolinkkeineen, kerhon
-  kokonaiskeskiarvo, katseluaika/henkilö ja viimeksi katsotut (best character
-  korteissa)
-- **Sarjat** (`/sarjat`) — kaikki sarjat kausittain ryhmiteltynä + **genre-suodatin**
-- **Sarjasivu** (`/sarja/[id]`) — **radar-kaavio** jäsenten pisteistä, **Best
-  character** -äänten pylväskaavio, lempihahmon kuva ja kommenttikortit
-- **Jäsenet / jäsenprofiili** (`/jasenet`, `/jasen/[id]`) — keskiarvo vs. kerho,
-  suosikkitagit, best pick -historia ja arviot
-- **Hall of Fame** (`/hall-of-fame`) — parhaat/huonoimmat sarjat, tiukin ja löysin
-  arvioija sekä best character -leaderboard
-- **Tilastot** (`/tilastot`) — "turhaa ja hauskaa" trivia-dataa ja **animeiden
-  yhteysverkko** (build-aikainen d3-force-layout, solmuina animekannet)
-- **Aikajana** (`/aikajana`) — vaakasuora, hiirellä raahattava aikajana
-- **Teemavalitsin** — 6 väriteemaa (tumma neo-brutalist -oletus), valinta muistuu
-  selaimessa
+**Julkinen arkisto** (ei kirjautumista):
+
+- **Etusivu** — "Nyt katselussa", kerhon kokonaiskeskiarvo, katseluaika/henkilö, viimeksi katsotut
+- **Sarjat** — kausittain ryhmiteltynä + genre-suodatin
+- **Sarjasivu** — radar-kaavio jäsenten pisteistä, Best character -äänet, lempihahmon kuva, kommentit
+- **Jäsenet / jäsenprofiili** — keskiarvo vs. kerho, suosikkitagit, best pick -historia
+- **Hall of Fame** — parhaat/huonoimmat sarjat, tiukin/löysin arvioija, best character -leaderboard
+- **Tilastot** — trivia-dataa + animeiden **yhteysverkko** (build-aikainen d3-force-layout)
+- **Aikajana** — vaakasuora, raahattava aikajana
+- **Teemavalitsin** — 6 väriteemaa (tumma neo-brutalist -oletus)
+
+**Jäsenet** (Discord-kirjautuminen):
+
+- Kirjautuminen Discordilla; admin linkittää tilin kerhon jäseneen
+- **Oma arvio** suoraan sarjasivulla (lisää/muokkaa/poista) — sarjan pistemäärä on jäsenarvioiden keskiarvo
+- **Live-kerhoillat:** liity huoneeseen, näe läsnäolo ja arviot reaaliajassa
+
+**Admin** (jäsentili tai jaettu salasana):
+
+- Kerhoiltojen kirjaus (sarja + kaikkien arviot) AniList-haulla
+- Tilien linkitys jäseniin
+- **Live-sessioiden ajastus** (per-sessio-asetukset: kuka syöttää, pisteiden paljastus, ketkä liittyvät) ja puheenjohtajana ajaminen
+
+**Live-kerhoilta** (`/kerhoilta/[id]`): puheenjohtaja aloittaa session, jäsenet
+syöttävät arviot huoneessa (pollaus ~3 s), pisteet voivat olla piilossa
+paljastukseen asti (palvelinpuolen redaktio), ja päättyessä arviot julkaistaan
+arkistoon. Ajastuksesta, alkamisesta ja päättymisestä lähtee **Discord-ilmoitus**.
 
 ## Tech stack
 
-- [Next.js](https://nextjs.org) 16 (App Router, **staattinen export**) + TypeScript
-- [Tailwind CSS](https://tailwindcss.com) v4 (neo-brutalist -teema, CSS-muuttujat)
-- [Recharts](https://recharts.org) kaavioihin
-- [d3-force](https://github.com/d3/d3-force) — verkkokaavion layout **build-aikana**
-- [AniList](https://anilist.co) GraphQL — kannet, hahmot, linkit ja metadata
-  haetaan **build-aikana** staattiseksi dataksi (ei ajonaikaista API:a)
-- Deploy: **GitHub Pages** (GitHub Actions)
+- **[Next.js](https://nextjs.org) 16** — App Router, React Server Components, **Server Actions**, palvelinrenderöinti
+- **TypeScript**
+- **[Tailwind CSS](https://tailwindcss.com) v4** — neo-brutalist-teema, CSS-muuttujat, vaihdettavat teemat
+- **[Supabase](https://supabase.com)** — Postgres (RLS) + **Auth (Discord OAuth)** `@supabase/ssr`:llä
+- **[Recharts](https://recharts.org)** kaavioihin; **[d3-force](https://github.com/d3/d3-force)** verkkokaavion layoutiin (build-aikana)
+- **[AniList](https://anilist.co) GraphQL** — kannet/hahmot/linkit/metadata (ilmainen, ei API-avainta)
+- **Discord webhook** — kerhoilta-ilmoitukset
+- Deploy: **[Vercel](https://vercel.com)**
 
 ## Arkkitehtuuri
 
+- **Data** on Supabase Postgresissa (`members`, `series`, `reviews`, `accounts`, `sessions`, …). Sivut ovat async server-komponentteja jotka lukevat `getRoomData()`:lla (React `cache()` per pyyntö).
+- **Johdettu data** (kannet, hahmot, linkit, AniList-meta) tallennetaan sarjan riville; vanhalle datalle on build-aikainen JSON-fallback. Yhteysverkko (`graph.json`) rakennetaan build-aikana d3-forcella kannasta.
+- **Kirjoitukset** menevät Next **Server Actioneiden** kautta `service_role`-clientilla (palvelin-only). Identiteetti tulee aina palvelimelta (`getCurrentAccount()`), ei clientiltä. Julkinen luku on anon/publishable-avaimella + RLS public-SELECT.
+- **Pistemäärä** = jäsenarvioiden keskiarvo, fallback tallennettuun yhteisarvosanaan kun arvioita ei ole (`displayScore`).
+- **Live-sessiot:** session aikana arviot menevät erilliseen staging-tauluun (ei julkinen), näkyvyys redaktoidaan palvelimella, ja `endSession` commitoi ne julkiseen `reviews`-tauluun.
+
 ```
-data/                 # JSON-data (V1:n "tietokanta") + build-aikana haettu data
+db/                   # SQL-skeemat (sovelletaan Supabasen SQL-editorissa)
 src/
-├─ app/               # App Router -reitit (server-komponentit)
-├─ components/
-│  ├─ charts/         # Recharts-kaaviot (client) + ChartFrame
-│  ├─ stats/          # ConnectionsGraph-verkkokaavio + tilastokortit
-│  └─ …               # SeriesCard, ReviewCard, SeriesBrowser, Timeline, …
+├─ app/               # App Router -reitit (server-komponentit, /hallinta, /kerhoilta, …)
+├─ components/        # kortit, kaaviot, admin- ja sessio-UI
 └─ lib/
-   ├─ types.ts        # Member, Series, Review, SeriesMeta, Graph*
-   ├─ data.ts         # JSON-lataus ja perushaut
-   ├─ stats.ts        # keskiarvot, ääntenlasku, leaderboard
-   ├─ fun-stats.ts    # Tilastot-välilehden trivia-funktiot
-   ├─ themes.ts       # väriteemat
-   └─ labels.ts       # jaetut tekstit/formatoinnit
-scripts/              # build-aikaiset datahakuskriptit (AniList, d3-force)
+   ├─ data.ts, stats.ts, fun-stats.ts, score.ts   # datakerros + tilastot (puhtaat funktiot)
+   ├─ admin/          # write-UI server actionit, AniList, auth (jaettu salasana)
+   ├─ auth/           # Supabase-auth-clientit + getCurrentAccount + säännöt
+   ├─ member/         # jäsenten itsepalvelu-arvioiden actionit + validointi
+   └─ session/        # live-kerhoilta: säännöt, actionit, pollaus, Discord-notify
+scripts/              # build-aikaiset datahaut (AniList) + d3-force-graph + seed/backfill
 ```
 
-Sivut ovat server-komponentteja, jotka lukevat datan ja laskevat tilastot
-build-aikana. Vain interaktiiviset osat ovat client-komponentteja: kaaviot
-(Recharts), verkkokaavio, teemavalitsin, sarjaselain (suodatin) ja aikajana
-(raahaus). Dynaamiset reitit esirenderöidään `generateStaticParams`-funktiolla ja
-koko sivusto viedään staattisena (`output: "export"`).
-
-## Data ja build-skriptit
-
-Perusdata on `data/`-kansiossa: `members.json`, `series.json`, `reviews.json`.
-Loput haetaan build-aikana AniListista (tai lasketaan) ja commitoidaan staattisena
-datana:
-
-| Tiedosto | Sisältö | Skripti |
-| --- | --- | --- |
-| `covers.json` | kansikuvat | `npm run fetch:covers` |
-| `characters.json` | lempihahmojen kuvat | `npm run fetch:characters` |
-| `links.json` | suoratoistolinkit | `npm run fetch:links` |
-| `meta.json` | genre, studio, vuosi, jaksot, lähde, … | `npm run fetch:meta` |
-| `graph.json` | yhteysverkon layout (d3-force) | `npm run build:graph` |
-
-Skriptit hakevat AniListin julkisesta GraphQL-rajapinnasta (ilmainen, ei
-API-avainta) ja tulostavat osumat tarkistettavaksi. Uuden sarjan lisää
-muokkaamalla `series.json`:ia ja ajamalla skriptit uudelleen.
+Logiikka on puhtaina, testattavina funktioina (`node --test`); verkko/DB ovat ohuita kääreitä.
 
 ## Kehitys
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-```
-
-Muut skriptit:
-
-```bash
-npm run build    # staattinen export (out/)
+npm test         # yksikkötestit (node --test + tsx)
+npm run build    # tuotantobuild
 npm run lint     # ESLint
 ```
 
-## Deploy
+Datan/graafin skriptit (vaativat `.env.local`-ympäristömuuttujat):
 
-Sivusto deployataan **GitHub Pagesiin** automaattisesti `main`-haaran pushista
-(`.github/workflows/nextjs.yml`). Pages-konfiguraatio hallitaan suoraan
-`next.config.ts`:ssä: `output: "export"`, `trailingSlash`, `images.unoptimized` ja
-projektisivun `basePath` (vain CI:ssä `GITHUB_PAGES`-ympäristömuuttujalla).
+```bash
+npm run seed:db          # JSON -> Postgres (kertaluontoinen)
+npm run backfill:derived # johdettu JSON -> kannan sarakkeet
+npm run build:graph      # yhteysverkon layout kannasta -> data/graph.json
+npm run fetch:meta       # (ja fetch:covers / fetch:characters / fetch:links) AniListista
+```
+
+### Ympäristömuuttujat
+
+`.env.local`-tiedostoon (gitignored) + Vercelin Environment Variables -kohtaan:
+
+| Muuttuja | Käyttö |
+| --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase-projektin URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | julkinen luku (publishable/anon, RLS) |
+| `SUPABASE_SERVICE_ROLE_KEY` | **palvelin-only** kirjoitusavain (secret) |
+| `ADMIN_PASSWORD` | jaettu admin-salasana (`/kirjaudu`) |
+| `ADMIN_SESSION_SECRET` | admin-cookien HMAC-allekirjoitus |
+| `DISCORD_WEBHOOK_URL` | (valinnainen) kerhoilta-ilmoitukset |
+| `NEXT_PUBLIC_SITE_URL` | (valinnainen) absoluuttiset linkit ilmoituksissa |
+
+Supabase Auth → Providers → **Discord** pitää olla päällä, ja `…/auth/callback` sallittuna redirect-URL:ina.
+
+## Data
+
+Oikeaa kaveriporukan dataa. Ainoa henkilötieto on jäsenten etunimi-lempinimet (tarkoituksella). Salaisuuksia ei ole koskaan commitoitu — kaikki avaimet ovat ympäristömuuttujissa.
 
 ## Saavutettavuus
 
-- Semanttinen HTML (`header`, `nav`, `main`, `section`, `ol`/`ul`, `time`)
-- "Siirry sisältöön" -hyppylinkki ja näkyvät focus-tilat
-- Kaavioilla tekstimuotoinen `figcaption`-yhteenveto (ruudunlukija + no-JS)
-- Verkkokaaviolla `role="img"` + aria-label; teemavalitsin tab-roolein
-- Pakotettu tumma teema; käyttäjä voi vaihtaa väriteemaa teemavalitsimesta
+Semanttinen HTML, "Siirry sisältöön" -hyppylinkki, näkyvät focus-tilat, kaavioiden tekstimuotoiset `figcaption`-yhteenvedot, `role="img"` + aria-label verkkokaaviolle.
 
 ## Lisenssi
 
