@@ -14,7 +14,7 @@
     "build:graph": "node --env-file=.env.local scripts/build-graph.mjs",
     "seed:db": "node --env-file=.env.local scripts/seed-db.mjs",
     "backfill:derived": "node --env-file=.env.local scripts/backfill-derived.mjs",
-    "test": "node --import tsx --test src/lib/data.test.ts src/lib/admin/auth-token.test.ts src/lib/admin/validation.test.ts src/lib/admin/anilist.test.ts src/lib/admin/rate-limit.test.ts src/lib/auth/admin-rules.test.ts src/lib/score.test.ts src/lib/stats.test.ts src/lib/member/review-validation.test.ts src/lib/session/rules.test.ts"
+    "test": "node --import tsx --test src/lib/data.test.ts src/lib/admin/auth-token.test.ts src/lib/admin/validation.test.ts src/lib/admin/anilist.test.ts src/lib/admin/rate-limit.test.ts src/lib/auth/admin-rules.test.ts src/lib/score.test.ts src/lib/stats.test.ts src/lib/member/review-validation.test.ts src/lib/session/rules.test.ts src/lib/session/notify.test.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
