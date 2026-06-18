@@ -89,16 +89,31 @@ export function LiveRoom({
 
           <section className="flex flex-col gap-3">
             <h2 className="sec-title w-fit text-lg">Arviot</h2>
-            <ul className="flex flex-col divide-y-2 divide-foreground/15">
+            <ul className="flex flex-col gap-3">
               {reviews.map((r) => (
-                <li key={r.memberId} className="flex items-center justify-between py-2">
-                  <span className="font-bold">{nameOf(r.memberId)}</span>
-                  <span className="font-mono text-sm">
-                    {r.redacted ? "✓ arvioinut" : r.score !== null ? `${formatScore(r.score)}/5${r.bestPick ? ` · ${r.bestPick}` : ""}` : "—"}
-                  </span>
+                <li key={r.memberId} className="surface-flat flex flex-col gap-2 p-3">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="font-bold uppercase tracking-tight">{nameOf(r.memberId)}</span>
+                    <span className="font-mono text-sm font-bold text-accent">
+                      {r.redacted ? "✓ arvioinut" : r.score !== null ? `${formatScore(r.score)}/5` : "—"}
+                    </span>
+                  </div>
+                  {!r.redacted && r.bestPick ? (
+                    <p className="text-sm"><span className="text-muted">Best pick: </span><span className="font-semibold">{r.bestPick}</span></p>
+                  ) : null}
+                  {!r.redacted && r.bulletPoints.length > 0 ? (
+                    <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-accent">
+                      {r.bulletPoints.map((b, i) => <li key={i}>{b}</li>)}
+                    </ul>
+                  ) : null}
+                  {!r.redacted && r.tags.length > 0 ? (
+                    <ul className="flex flex-wrap gap-1.5" aria-label="Tagit">
+                      {r.tags.map((t) => <li key={t} className="border-2 border-foreground px-2 py-0.5 text-xs font-medium text-muted">#{t}</li>)}
+                    </ul>
+                  ) : null}
                 </li>
               ))}
-              {reviews.length === 0 && <li className="py-2 text-muted">Ei vielä arvioita.</li>}
+              {reviews.length === 0 && <li className="text-muted">Ei vielä arvioita.</li>}
             </ul>
           </section>
 
