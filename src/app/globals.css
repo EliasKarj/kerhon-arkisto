@@ -2,70 +2,41 @@
 
 /* Oletuspaletti (= "Yö"). Käytössä ilman JS:ää / ennen teeman latausta. */
 :root {
-  --background: #0f0f12;
-  --foreground: #f3efe2;
-  --panel: #191920;
-  --muted: #9c9789;
-  --accent: #c6f000;
-  --accent2: #5b8cff;
-  --red: #ff5a45;
+  --background: #0f0f12; --foreground: #f3efe2; --panel: #191920; --muted: #9c9789;
+  --accent: #c6f000; --accent2: #5b8cff; --red: #ff5a45;
+  --ink: #0a0a0c; --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.16);
+  --radius: 14px;
 }
 
-/* Valittavat teemat. <html data-theme="..."> asetetaan teemavalikosta ja
-   anti-FOUC-skriptistä. Sama spesifisyys kuin :root → myöhempi voittaa. */
 [data-theme="yo"] {
-  --background: #0f0f12;
-  --foreground: #f3efe2;
-  --panel: #191920;
-  --muted: #9c9789;
-  --accent: #c6f000;
-  --accent2: #5b8cff;
-  --red: #ff5a45;
+  --background:#0f0f12; --foreground:#f3efe2; --panel:#191920; --muted:#9c9789;
+  --accent:#c6f000; --accent2:#5b8cff; --red:#ff5a45;
+  --ink:#0a0a0c; --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
 }
 [data-theme="amber"] {
-  --background: #14110b;
-  --foreground: #f4ecdc;
-  --panel: #201a12;
-  --muted: #a3947a;
-  --accent: #f2b134;
-  --accent2: #ff7a66;
-  --red: #ff5a45;
+  --background:#14110b; --foreground:#f4ecdc; --panel:#201a12; --muted:#a3947a;
+  --accent:#f2b134; --accent2:#ff7a66; --red:#ff5a45;
+  --ink:#0a0a0c; --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
 }
 [data-theme="meri"] {
-  --background: #0a1414;
-  --foreground: #e6f2ee;
-  --panel: #11201f;
-  --muted: #84a39c;
-  --accent: #34d8c0;
-  --accent2: #6db6ff;
-  --red: #ff6b5e;
+  --background:#0a1414; --foreground:#e6f2ee; --panel:#11201f; --muted:#84a39c;
+  --accent:#34d8c0; --accent2:#6db6ff; --red:#ff6b5e;
+  --ink:#06100f; --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
 }
 [data-theme="synth"] {
-  --background: #120e18;
-  --foreground: #f1e9f7;
-  --panel: #1c1626;
-  --muted: #9b8fae;
-  --accent: #c08bff;
-  --accent2: #ff6ad5;
-  --red: #ff5a7a;
+  --background:#120e18; --foreground:#f1e9f7; --panel:#1c1626; --muted:#9b8fae;
+  --accent:#c08bff; --accent2:#ff6ad5; --red:#ff5a7a;
+  --ink:#0a0612; --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
 }
 [data-theme="paperi"] {
-  --background: #efe9da;
-  --foreground: #16130c;
-  --panel: #fbf7ec;
-  --muted: #6f685a;
-  --accent: #e5482f;
-  --accent2: #2b6cff;
-  --red: #e5482f;
+  --background:#efe9da; --foreground:#16130c; --panel:#fbf7ec; --muted:#6f685a;
+  --accent:#e5482f; --accent2:#2b6cff; --red:#e5482f;
+  --ink:#16130c; --line:rgba(0,0,0,.12); --line-strong:rgba(0,0,0,.22);
 }
 [data-theme="terminaali"] {
-  --background: #08100a;
-  --foreground: #cdeccd;
-  --panel: #0e1a10;
-  --muted: #6f9070;
-  --accent: #3ef07a;
-  --accent2: #7fe0a8;
-  --red: #ff5a45;
+  --background:#08100a; --foreground:#cdeccd; --panel:#0e1a10; --muted:#6f9070;
+  --accent:#3ef07a; --accent2:#7fe0a8; --red:#ff5a45;
+  --ink:#040a06; --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
 }
 
 @theme inline {
@@ -76,15 +47,15 @@
   --color-accent: var(--accent);
   --color-accent2: var(--accent2);
   --color-red: var(--red);
+  --color-ink: var(--ink);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
   --font-sans: var(--font-space-grotesk);
   --font-mono: var(--font-space-mono);
 }
 
-/* Skaalaa koko käyttöliittymä ~25 % suuremmaksi: kaikki rem-pohjaiset koot
-   (fontit, välit, leveydet) kasvavat juuren fonttikoosta. */
-html {
-  font-size: 125%;
-}
+/* Normaali skaalaus (aiemmin 125% -> "chunky"-tunnu pois). */
+html { font-size: 100%; }
 
 body {
   background: var(--background);
@@ -92,69 +63,122 @@ body {
   font-family: var(--font-space-grotesk), system-ui, sans-serif;
 }
 
-/* Brutalist-komponenttiluokat: paksu reuna + kova offset-varjo. */
 @layer components {
+  /* Rauhallinen oletuspinta. */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  /* Sarjakuva-paneeli (charmi-hetket). */
+  .ink-panel {
+    background: var(--panel);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.45);
+  }
+  .halftone {
+    background-image: radial-gradient(var(--line-strong) 1px, transparent 1.6px);
+    background-size: 7px 7px;
+  }
+  .sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 9px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+  }
+  .score-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--ink);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.1rem 0.45rem;
+    font-family: var(--font-space-mono), monospace;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .sec-head {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+  .sec-head::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 46px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    transform: skewX(-18deg);
+  }
+
+  /* --- Siirtymä-aliakset: vanhat luokat saavat uuden rauhallisen ilmeen. --- */
   .surface {
     background: var(--panel);
-    border: 2px solid var(--foreground);
-    box-shadow: 5px 5px 0 var(--foreground);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
   }
   .surface-flat {
     background: var(--panel);
-    border: 2px solid var(--foreground);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
   }
   .surface-link {
-    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    transition: transform 0.12s ease, border-color 0.12s ease;
   }
   .surface-link:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0 var(--accent);
+    transform: translateY(-3px);
+    border-color: var(--line-strong);
   }
   .chip {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    border: 2px solid var(--foreground);
-    padding: 0.15rem 0.6rem;
-    font-size: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.78rem;
     font-weight: 600;
   }
   .sec-title {
+    position: relative;
     display: inline-block;
-    background: var(--accent2);
-    color: #0b0b0d;
-    border: 2px solid var(--foreground);
-    padding: 0.1rem 0.6rem;
+    background: transparent;
+    color: var(--foreground);
+    border: 0;
+    padding: 0 0 0.35rem 0;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.015em;
+    text-transform: none;
+  }
+  .sec-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    transform: skewX(-18deg);
   }
 }
 
-/* Piilotettu vierityspalkki (esim. raahattava aikajana). */
 @layer utilities {
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Häivytä sisältö vaakasuunnan reunoilla (esim. aikajana). */
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
   .edge-fade-x {
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent,
-      #000 3rem,
-      #000 calc(100% - 3rem),
-      transparent
-    );
-    mask-image: linear-gradient(
-      to right,
-      transparent,
-      #000 3rem,
-      #000 calc(100% - 3rem),
-      transparent
-    );
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent);
   }
 }
