@@ -59,12 +59,12 @@ export default function RootLayout({
         <main
           id="sisalto"
           tabIndex={-1}
-          className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 focus:outline-none sm:px-6"
+          className="mx-auto w-full max-w-[1640px] flex-1 px-5 py-9 focus:outline-none sm:px-8 lg:px-12"
         >
           {children}
         </main>
-        <footer className="border-t-2 border-foreground">
-          <div className="mx-auto w-full max-w-5xl px-4 py-6 text-sm font-medium uppercase tracking-wide text-muted sm:px-6">
+        <footer className="border-t border-line">
+          <div className="mx-auto w-full max-w-[1640px] px-5 py-6 text-sm font-medium text-muted sm:px-8 lg:px-12">
             Kerhon Arkisto — kaveriporukan arvioarkisto.
           </div>
         </footer>
