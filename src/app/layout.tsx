@@ -65,7 +65,15 @@ export default function RootLayout({
         </main>
         <footer className="border-t border-line">
           <div className="mx-auto w-full max-w-[1640px] px-5 py-6 text-sm font-medium text-muted sm:px-8 lg:px-12">
-            Kerhon Arkisto — kaveriporukan arvioarkisto.
+            <a
+              href="https://github.com/EliasKarj/kerhon-arkisto"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Lähdekoodi GitHubissa
+              <span aria-hidden>↗</span>
+            </a>
           </div>
         </footer>
       </body>
