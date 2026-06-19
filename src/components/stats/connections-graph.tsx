@@ -46,7 +46,7 @@ export function ConnectionsGraph({
             role="tab"
             aria-selected={k.id === kind}
             onClick={() => setKind(k.id)}
-            className={`border-2 border-foreground px-3 py-1 text-sm font-bold uppercase tracking-tight focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+            className={`border-2 border-foreground px-3 py-1 text-sm font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               k.id === kind ? "bg-accent text-background" : "bg-panel hover:bg-foreground/10"
             }`}
           >

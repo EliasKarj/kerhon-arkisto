@@ -61,7 +61,7 @@ export default async function MemberPage({ params }: PageProps<"/jasen/[id]">) {
           )}
         </div>
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
             {member.name}
             {member.guest ? (
               <span className="ml-2 align-middle text-sm font-normal text-muted">(vieras)</span>
@@ -105,7 +105,7 @@ export default async function MemberPage({ params }: PageProps<"/jasen/[id]">) {
                 <div className="flex min-w-0 flex-col">
                   <Link
                     href={`/sarja/${entry.id}`}
-                    className="truncate text-sm font-bold uppercase tracking-tight hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="truncate text-sm font-bold tracking-tight hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   >
                     {entry.title}
                   </Link>

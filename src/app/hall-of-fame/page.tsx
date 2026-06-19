@@ -27,7 +27,7 @@ function SeriesRanking({ title, entries }: { title: string; entries: Series[] })
             <div className="flex min-w-0 flex-1 flex-col">
               <Link
                 href={`/sarja/${entry.id}`}
-                className="truncate font-bold uppercase tracking-tight hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="truncate font-bold tracking-tight hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {entry.title}
               </Link>
@@ -54,7 +54,7 @@ export default async function HallOfFamePage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Hall of Fame</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Hall of Fame</h1>
         <p className="max-w-prose text-muted">
           Kerhon parhaat ja huonoimmat animet kaikkien aikojen yhteisarvosanojen mukaan, sekä
           arviointitilastoja.
@@ -77,7 +77,7 @@ export default async function HallOfFamePage() {
               </span>
               <Link
                 href={`/jasen/${extremes.strictest.member.id}`}
-                className="w-fit text-xl font-bold uppercase hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="w-fit text-xl font-bold hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {extremes.strictest.member.name}
               </Link>
@@ -94,7 +94,7 @@ export default async function HallOfFamePage() {
               </span>
               <Link
                 href={`/jasen/${extremes.loosest.member.id}`}
-                className="w-fit text-xl font-bold uppercase hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="w-fit text-xl font-bold hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {extremes.loosest.member.name}
               </Link>

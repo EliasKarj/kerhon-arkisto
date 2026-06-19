@@ -33,7 +33,7 @@ export function MemberCard({ item }: { item: MemberCardVM }) {
       </div>
 
       <div className="flex flex-col">
-        <span className="font-bold uppercase tracking-tight group-hover:underline">
+        <span className="font-bold tracking-tight group-hover:underline">
           {item.name}
           {item.guest ? <span className="ml-1 text-xs font-normal text-muted">(vieras)</span> : null}
         </span>

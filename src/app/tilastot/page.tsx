@@ -63,7 +63,7 @@ export default async function StatsPage() {
   return (
     <div className="flex flex-col gap-10">
       <section className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Tilastot</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Tilastot</h1>
         <p className="max-w-prose text-muted">
           Turhaa ja hauskaa dataa kerhon animeista ja niiden yhteyksistä.
         </p>
@@ -115,23 +115,23 @@ export default async function StatsPage() {
         <h2 className="sec-title w-fit text-lg">Animet numeroina</h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="surface-flat p-4">
-            <h3 className="mb-2 text-sm font-bold uppercase tracking-tight">Genret</h3>
+            <h3 className="mb-2 text-sm font-bold tracking-tight">Genret</h3>
             <CountBarChart data={genres} caption={`Genret: ${genres.map((g) => `${g.label} ${g.count}`).join(", ")}.`} valueLabel="Sarjoja" />
           </div>
           <div className="surface-flat p-4">
-            <h3 className="mb-2 text-sm font-bold uppercase tracking-tight">Vuosikymmenet</h3>
+            <h3 className="mb-2 text-sm font-bold tracking-tight">Vuosikymmenet</h3>
             <CountBarChart data={decades} caption={`Vuosikymmenet: ${decades.map((d) => `${d.label} ${d.count}`).join(", ")}.`} valueLabel="Sarjoja" />
           </div>
           <div className="surface-flat p-4">
-            <h3 className="mb-2 text-sm font-bold uppercase tracking-tight">Lähde</h3>
+            <h3 className="mb-2 text-sm font-bold tracking-tight">Lähde</h3>
             <CountBarChart data={sources} caption={`Lähteet: ${sources.map((s) => `${s.label} ${s.count}`).join(", ")}.`} valueLabel="Sarjoja" />
           </div>
           <div className="surface-flat flex flex-col gap-2 p-4">
-            <h3 className="text-sm font-bold uppercase tracking-tight">Studiot</h3>
+            <h3 className="text-sm font-bold tracking-tight">Studiot</h3>
             <ul className="flex flex-col divide-y-2 divide-foreground/15">
               {studios.map((s) => (
                 <li key={s.label} className="flex items-center justify-between py-1.5">
-                  <span className="font-bold uppercase tracking-tight">{s.label}</span>
+                  <span className="font-bold tracking-tight">{s.label}</span>
                   <span className="font-mono font-bold text-accent">{s.count}</span>
                 </li>
               ))}

@@ -32,7 +32,7 @@ export default async function TimelinePage() {
   return (
     <section className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Aikajana</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Aikajana</h1>
         <p className="max-w-prose text-muted">
           Kerhon katsomat sarjat aikajärjestyksessä, uusin vasemmalla. Vedä aikajanaa
           sivuttain selataksesi vanhempiin.

@@ -14,7 +14,7 @@ export default async function EditSeriesPage({ params }: { params: Promise<{ id:
   }));
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-3xl font-bold uppercase tracking-tight">Muokkaa: {s.title}</h1>
+      <h1 className="text-3xl font-bold tracking-tight">Muokkaa: {s.title}</h1>
       <ClubNightForm
         members={members}
         editSeriesId={s.id}

@@ -17,7 +17,7 @@ export function ReviewCard({
   return (
     <li className="surface flex flex-col gap-3 p-4">
       <div className="flex items-baseline justify-between gap-2">
-        <h3 className="font-bold uppercase tracking-tight">
+        <h3 className="font-bold tracking-tight">
           <Link
             href={heading.href}
             className="hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"

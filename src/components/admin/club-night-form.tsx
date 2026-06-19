@@ -112,7 +112,7 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
       </section>
 
       {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
-      <button type="button" onClick={submit} disabled={pending} className="border-2 border-foreground bg-accent px-4 py-3 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
+      <button type="button" onClick={submit} disabled={pending} className="border-2 border-foreground bg-accent px-4 py-3 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
         {pending ? "Tallennetaan…" : editSeriesId ? "Tallenna muutokset" : "Tallenna kerhoilta"}
       </button>
     </div>

@@ -126,7 +126,7 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
                 {item.meta}
               </time>
               <div className="surface mt-3 flex flex-col gap-1.5 p-4">
-                <h2 className="text-xl font-bold uppercase tracking-tight">
+                <h2 className="text-xl font-bold tracking-tight">
                   <Link
                     href={`/sarja/${item.id}`}
                     draggable={false}

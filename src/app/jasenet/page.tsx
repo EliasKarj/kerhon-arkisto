@@ -27,7 +27,7 @@ export default async function MembersIndexPage() {
   return (
     <section className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold uppercase tracking-tight sm:text-4xl">Jäsenet</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Jäsenet</h1>
         <p className="max-w-prose text-muted">
           Kerhon arvioijat. Avaa jäsen nähdäksesi hänen ehdotuksensa, arvionsa ja Best character
           -valintansa.

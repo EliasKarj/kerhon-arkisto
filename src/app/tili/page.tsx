@@ -12,7 +12,7 @@ export default async function AccountPage() {
   if (!account) {
     return (
       <section className="mx-auto flex max-w-sm flex-col gap-5 py-12">
-        <h1 className="text-3xl font-bold uppercase tracking-tight">Tili</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Tili</h1>
         <p className="text-muted">Kirjaudu Discordilla nähdäksesi tilisi.</p>
         <DiscordLoginButton />
       </section>
@@ -27,7 +27,7 @@ export default async function AccountPage() {
 
   return (
     <section className="mx-auto flex max-w-sm flex-col gap-5 py-12">
-      <h1 className="text-3xl font-bold uppercase tracking-tight">Tili</h1>
+      <h1 className="text-3xl font-bold tracking-tight">Tili</h1>
       <div className="surface flex flex-col gap-2 p-5">
         <span className="text-sm font-semibold uppercase tracking-wide text-muted">
           Discord: {account.discordUsername ?? "—"}

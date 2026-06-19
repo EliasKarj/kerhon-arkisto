@@ -70,7 +70,7 @@ export function MyReviewSection({
 
   return (
     <section className="surface flex flex-col gap-3 border-l-8 border-l-accent p-4" aria-label="Sinun arviosi">
-      <h2 className="text-lg font-bold uppercase tracking-tight">Sinun arviosi</h2>
+      <h2 className="text-lg font-bold tracking-tight">Sinun arviosi</h2>
 
       {!editing && review && (
         <div className="flex flex-col gap-2">
@@ -91,7 +91,7 @@ export function MyReviewSection({
       )}
 
       {!editing && !review && (
-        <button type="button" onClick={openEdit} className="w-fit border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">
+        <button type="button" onClick={openEdit} className="w-fit border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">
           Lisää arvio
         </button>
       )}
@@ -112,10 +112,10 @@ export function MyReviewSection({
           </label>
           {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
           <div className="flex gap-2">
-            <button type="button" onClick={submit} disabled={pending} className="border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
+            <button type="button" onClick={submit} disabled={pending} className="border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
               {pending ? "Tallennetaan…" : "Tallenna"}
             </button>
-            <button type="button" onClick={() => { setEditing(false); setError(null); }} className="border-2 border-foreground bg-panel px-4 py-2 font-bold uppercase tracking-tight">Peruuta</button>
+            <button type="button" onClick={() => { setEditing(false); setError(null); }} className="border-2 border-foreground bg-panel px-4 py-2 font-bold tracking-tight">Peruuta</button>
           </div>
         </div>
       )}

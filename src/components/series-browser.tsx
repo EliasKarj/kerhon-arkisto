@@ -40,7 +40,7 @@ export function SeriesBrowser({ items, allGenres }: { items: BrowserItem[]; allG
   const groups = groupBySeason(filtered);
 
   function chipClass(active: boolean): string {
-    return `border-2 border-foreground px-3 py-1 text-sm font-bold uppercase tracking-tight focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+    return `border-2 border-foreground px-3 py-1 text-sm font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
       active ? "bg-accent text-background" : "bg-panel hover:bg-foreground/10"
     }`;
   }

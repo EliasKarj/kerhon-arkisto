@@ -9,7 +9,7 @@ export default async function AccountsAdminPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-3xl font-bold uppercase tracking-tight">Tilit & linkitys</h1>
+      <h1 className="text-3xl font-bold tracking-tight">Tilit & linkitys</h1>
       <p className="text-sm text-muted">
         Liitä kirjautunut Discord-tili kerhon jäseneen. Yksi jäsen ↔ yksi tili.
       </p>

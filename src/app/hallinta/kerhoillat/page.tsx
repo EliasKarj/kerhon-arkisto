@@ -9,8 +9,8 @@ export default async function SessionsAdminPage() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold uppercase tracking-tight">Kerhoillat</h1>
-        <Link href="/hallinta/kerhoillat/uusi" className="border-2 border-foreground bg-accent px-4 py-2 font-bold uppercase tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Uusi kerhoilta</Link>
+        <h1 className="text-3xl font-bold tracking-tight">Kerhoillat</h1>
+        <Link href="/hallinta/kerhoillat/uusi" className="border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Uusi kerhoilta</Link>
       </div>
       {sessions.length === 0 ? (
         <p className="text-muted">Ei vielä kerhoiltoja.</p>

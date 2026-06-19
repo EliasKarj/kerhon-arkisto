@@ -22,7 +22,7 @@ export function SeriesCard({ item }: { item: SeriesCardVM }) {
       href={`/sarja/${item.id}`}
       className="surface surface-link group flex gap-4 p-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden border-2 border-foreground bg-background text-sm font-bold text-muted">
+      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-background text-sm font-bold text-muted">
         {item.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -37,20 +37,23 @@ export function SeriesCard({ item }: { item: SeriesCardVM }) {
       </div>
 
       <div className="flex min-w-0 flex-col gap-0.5">
-        <h3 className="truncate font-bold uppercase leading-tight tracking-tight group-hover:underline">
+        <h3 className="truncate font-bold leading-tight tracking-tight group-hover:underline">
           {item.title}
         </h3>
         <p className="text-xs uppercase tracking-wide text-muted">
           {SERIES_TYPE_LABELS[item.type]} · {seasonLabel(item.clubSeason)}
         </p>
-        <p className="mt-auto pt-1 text-sm">
-          <span className="font-mono text-lg font-bold text-accent">{formatScore(item.score)}</span>
-          <span className="text-muted">
-            /5{item.proposerName ? ` · ${item.proposerName}` : ""}
+        <p className="mt-auto flex items-center gap-2 pt-1 text-sm">
+          <span className="score-badge text-base">
+            {formatScore(item.score)}
+            <span className="ml-0.5 text-[0.7em] opacity-70">/5</span>
           </span>
+          {item.proposerName ? (
+            <span className="truncate text-muted">{item.proposerName}</span>
+          ) : null}
         </p>
         {item.bestPick ? (
-          <p className="truncate text-xs uppercase tracking-wide text-muted">
+          <p className="truncate text-xs text-muted">
             <span className="text-accent">★</span> {item.bestPick}
           </p>
         ) : null}

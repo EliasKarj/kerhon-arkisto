@@ -74,7 +74,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
 
         <div className="flex flex-1 flex-col gap-3">
           <div className="flex flex-col gap-1">
-            <h1 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
+            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
               {series.title}
             </h1>
             <p className="text-sm uppercase tracking-wide text-muted">
@@ -134,7 +134,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
             <span className="text-xs font-semibold uppercase tracking-wide text-muted">
               Kerhon lempihahmo (Best character)
             </span>
-            <span className="text-xl font-bold uppercase">{series.bestPick}</span>
+            <span className="text-xl font-bold">{series.bestPick}</span>
           </div>
         </section>
       )}
@@ -142,14 +142,14 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
       {/* Sinun arviosi */}
       {!account ? (
         <section className="surface flex flex-col gap-2 border-l-8 border-l-accent p-4" aria-label="Sinun arviosi">
-          <h2 className="text-lg font-bold uppercase tracking-tight">Sinun arviosi</h2>
+          <h2 className="text-lg font-bold tracking-tight">Sinun arviosi</h2>
           <p className="text-sm text-muted">
             <Link href="/tili" className="font-semibold text-foreground hover:underline">Kirjaudu Discordilla</Link> arvioidaksesi.
           </p>
         </section>
       ) : !account.memberId ? (
         <section className="surface flex flex-col gap-2 border-l-8 border-l-accent p-4" aria-label="Sinun arviosi">
-          <h2 className="text-lg font-bold uppercase tracking-tight">Sinun arviosi</h2>
+          <h2 className="text-lg font-bold tracking-tight">Sinun arviosi</h2>
           <p className="text-sm text-muted">
             Tilisi odottaa linkitystä — <Link href="/tili" className="font-semibold text-foreground hover:underline">tili</Link>.
           </p>
@@ -163,18 +163,18 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           {/* Kaaviot */}
           <div className="grid gap-8 md:grid-cols-2">
             <section className="flex flex-col gap-3">
-              <h2 className="text-lg font-bold uppercase tracking-tight">Jäsenten pisteet</h2>
+              <h2 className="text-lg font-bold tracking-tight">Jäsenten pisteet</h2>
               <MemberScoreRadar data={radarData} />
             </section>
             <section className="flex flex-col gap-3">
-              <h2 className="text-lg font-bold uppercase tracking-tight">Best character -äänet</h2>
+              <h2 className="text-lg font-bold tracking-tight">Best character -äänet</h2>
               <BestPickBarChart data={bestPickData} />
             </section>
           </div>
 
           {/* Kommentit */}
           <section className="flex flex-col gap-4">
-            <h2 className="text-lg font-bold uppercase tracking-tight">Jäsenten kommentit</h2>
+            <h2 className="text-lg font-bold tracking-tight">Jäsenten kommentit</h2>
             <ul className="grid gap-5 sm:grid-cols-2">
               {reviews.map((review) => {
                 const member = memberById(room.members, review.memberId);

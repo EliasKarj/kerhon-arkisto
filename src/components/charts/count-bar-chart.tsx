@@ -31,7 +31,7 @@ function BucketTooltip({
   const rest = bucket.titles.length - shown.length;
   return (
     <div className="surface-flat max-w-[240px] bg-panel p-2 text-xs">
-      <p className="font-bold uppercase tracking-tight">
+      <p className="font-bold tracking-tight">
         {bucket.label} — {bucket.count} {valueLabel.toLowerCase()}
       </p>
       <p className="mt-1 text-muted">

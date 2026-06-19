@@ -45,7 +45,7 @@ export default async function HomePage() {
       {current && (
         <section
           aria-label="Nyt katselussa"
-          className="flex flex-col gap-5 border-2 border-foreground bg-panel p-5 shadow-[8px_8px_0_var(--color-accent)] sm:flex-row sm:items-center sm:gap-6 sm:p-6"
+          className="ink-panel halftone flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6"
         >
           <Link
             href={`/sarja/${current.id}`}
@@ -65,11 +65,11 @@ export default async function HomePage() {
           </Link>
 
           <div className="flex flex-1 flex-col gap-2">
-            <span className="flex w-fit -rotate-1 items-center gap-2 border-2 border-foreground bg-accent px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-background">
-              <span className="inline-block size-2 animate-pulse rounded-full bg-background" aria-hidden />
+            <span className="sticker -rotate-2 px-2.5 py-1 text-xs font-bold uppercase tracking-wide">
+              <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
               Nyt katselussa
             </span>
-            <h2 className="text-2xl font-bold uppercase tracking-tight sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               <Link
                 href={`/sarja/${current.id}`}
                 className="hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -82,7 +82,7 @@ export default async function HomePage() {
               <time dateTime={current.watchedDate}>{formatDate(current.watchedDate)}</time>
               {currentProposer ? ` · ehdotti ${currentProposer.name}` : ""}
             </p>
-            <span className="w-fit border-2 border-foreground bg-background px-2.5 py-0.5 font-mono text-xs font-semibold">
+            <span className="w-fit rounded-md border border-line bg-background px-2.5 py-0.5 font-mono text-xs font-semibold text-muted">
               EI VIELÄ ARVIOITU
             </span>
 
@@ -191,7 +191,7 @@ export default async function HomePage() {
                 href={link.href}
                 className="surface surface-link flex h-full flex-col gap-1 p-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                <span className="font-bold uppercase tracking-tight">{link.label}</span>
+                <span className="font-bold tracking-tight">{link.label}</span>
                 <span className="text-sm text-muted">{link.description}</span>
               </Link>
             </li>
