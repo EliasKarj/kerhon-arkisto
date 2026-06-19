@@ -59,7 +59,7 @@ export default function RootLayout({
         <main
           id="sisalto"
           tabIndex={-1}
-          className="mx-auto w-full max-w-[1640px] flex-1 px-5 py-9 focus:outline-none sm:px-8 lg:px-12"
+          className="mx-auto w-full max-w-[1640px] flex-1 px-5 pb-12 pt-4 focus:outline-none sm:px-8 lg:px-12"
         >
           {children}
         </main>
