@@ -20,9 +20,9 @@ export function SeriesCard({ item }: { item: SeriesCardVM }) {
   return (
     <Link
       href={`/sarja/${item.id}`}
-      className="surface surface-link group flex gap-4 p-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="ink-panel halftone group flex gap-4 p-3 transition-all duration-150 hover:-translate-y-1 hover:-rotate-1 hover:shadow-[6px_6px_0_var(--color-accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
-      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden rounded-md border border-line bg-background text-sm font-bold text-muted">
+      <div className="flex aspect-[2/3] w-14 shrink-0 items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-sm font-bold text-muted">
         {item.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img

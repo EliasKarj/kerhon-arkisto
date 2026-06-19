@@ -11,13 +11,6 @@ import { getTotalWatchTime } from "@/lib/fun-stats";
 import { getInitials, seasonLabel, SERIES_TYPE_LABELS } from "@/lib/labels";
 import { formatScore, getClubAverageScore } from "@/lib/stats";
 
-const QUICK_LINKS = [
-  { href: "/sarjat", label: "Sarjat", description: "Kaikki arvioidut sarjat" },
-  { href: "/jasenet", label: "Jäsenet", description: "Kerhon arvioijat" },
-  { href: "/hall-of-fame", label: "Hall of Fame", description: "Parhaat, huonoimmat ja tilastot" },
-  { href: "/aikajana", label: "Aikajana", description: "Katsotut kronologisesti" },
-];
-
 function formatDate(iso: string): string {
   const [year, month, day] = iso.split("-");
   return `${Number(day)}.${Number(month)}.${year}`;
@@ -176,24 +169,6 @@ export default async function HomePage() {
                   bestPick: s.bestPick,
                 }}
               />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Pikalinkit */}
-      <section className="flex flex-col gap-4">
-        <h2 className="sec-title w-fit text-lg">Selaa</h2>
-        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {QUICK_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="surface surface-link flex h-full flex-col gap-1 p-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <span className="font-bold tracking-tight">{link.label}</span>
-                <span className="text-sm text-muted">{link.description}</span>
-              </Link>
             </li>
           ))}
         </ul>
