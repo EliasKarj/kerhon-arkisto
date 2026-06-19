@@ -65,7 +65,7 @@ export default async function HomePage() {
           </Link>
 
           <div className="flex flex-1 flex-col gap-2">
-            <span className="sticker -rotate-2 px-2.5 py-1 text-xs font-bold uppercase tracking-wide">
+            <span className="sticker w-fit -rotate-2 self-start px-2.5 py-1 text-xs font-bold uppercase tracking-wide">
               <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
               Nyt katselussa
             </span>
@@ -129,7 +129,7 @@ export default async function HomePage() {
 
       {/* Tilastonostot */}
       <section className="grid gap-5 sm:grid-cols-2" aria-label="Yleiskatsaus">
-        <div className="surface flex flex-col gap-1 p-5">
+        <div className="flex flex-col gap-1">
           <span className="text-xs font-semibold uppercase tracking-wide text-muted">
             Kerhon kokonaiskeskiarvo
           </span>
@@ -139,7 +139,7 @@ export default async function HomePage() {
           </span>
         </div>
 
-        <div className="surface flex flex-col gap-1 p-5">
+        <div className="flex flex-col gap-1">
           <span className="text-xs font-semibold uppercase tracking-wide text-muted">
             Katseluaika / henkilö
           </span>

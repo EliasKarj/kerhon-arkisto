@@ -25,7 +25,7 @@ function isActive(pathname: string, item: NavItem): boolean {
 export function SiteHeader() {
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-20 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-6 px-5 sm:px-8 lg:px-12">
         <Link href="/" className="flex items-center gap-2.5 font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
           <span aria-hidden className="grid size-7 -rotate-3 place-items-center rounded-lg border-2 border-ink bg-accent text-[13px] font-bold text-ink shadow-[2px_2px_0_rgba(0,0,0,.5)]">KA</span>

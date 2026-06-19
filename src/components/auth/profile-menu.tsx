@@ -64,7 +64,7 @@ export function ProfileMenu() {
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="menu"
         aria-expanded={open}
-        className="flex items-center gap-2 rounded-full border border-line bg-panel py-1 pl-1 pr-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="flex items-center gap-2 rounded-full py-1 pl-1 pr-2 text-sm font-semibold transition-colors hover:bg-panel focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         {user.avatar ? (
           // eslint-disable-next-line @next/next/no-img-element
