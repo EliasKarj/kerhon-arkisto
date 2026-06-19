@@ -51,7 +51,7 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --font-sans: var(--font-space-grotesk);
-  --font-mono: var(--font-space-mono);
+  --font-mono: var(--font-space-grotesk);
 }
 
 /* Normaali skaalaus (aiemmin 125% -> "chunky"-tunnu pois). */
@@ -100,7 +100,7 @@ body {
     border: 2px solid var(--accent);
     border-radius: 8px;
     padding: 0.1rem 0.45rem;
-    font-family: var(--font-space-mono), monospace;
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
   }
