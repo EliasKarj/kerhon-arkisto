@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Space_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
@@ -64,7 +65,13 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="border-t border-line">
-          <div className="mx-auto w-full max-w-[1640px] px-5 py-6 text-sm font-medium text-muted sm:px-8 lg:px-12">
+          <div className="mx-auto flex w-full max-w-[1640px] items-center justify-between px-5 py-6 text-sm font-medium text-muted sm:px-8 lg:px-12">
+            <Link
+              href="/palaute"
+              className="transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Palaute
+            </Link>
             <a
               href="https://github.com/EliasKarj/kerhon-arkisto"
               target="_blank"
