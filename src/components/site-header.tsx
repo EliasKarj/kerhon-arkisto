@@ -27,10 +27,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-20 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-6 px-5 sm:px-8 lg:px-12">
-        <Link href="/" className="font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
-          Kerhon Arkisto
-        </Link>
-        <nav aria-label="Päänavigaatio" className="flex min-w-0 flex-1 overflow-x-auto no-scrollbar">
+        <div className="flex flex-1 justify-start">
+          <Link href="/" className="font-bold tracking-tight focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            Kerhon Arkisto
+          </Link>
+        </div>
+        <nav aria-label="Päänavigaatio" className="flex min-w-0 overflow-x-auto no-scrollbar">
           <ul className="flex items-center gap-1 text-sm font-medium">
             {NAV_ITEMS.map((item) => {
               const active = isActive(pathname, item);
@@ -52,7 +54,7 @@ export function SiteHeader() {
             })}
           </ul>
         </nav>
-        <div className="ml-auto shrink-0">
+        <div className="flex flex-1 shrink-0 justify-end">
           <ProfileMenu />
         </div>
       </div>
