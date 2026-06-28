@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { listSessions } from "@/lib/session/session-actions";
 import { getRoomData, seriesById } from "@/lib/data";
+import { CancelSessionButton } from "@/components/admin/cancel-session-button";
 
 const STATUS_LABEL: Record<string, string> = { scheduled: "Ajastettu", live: "Käynnissä", ended: "Päättynyt" };
 
@@ -21,7 +22,12 @@ export default async function SessionsAdminPage() {
               <span className="font-bold">{seriesById(series, s.seriesId)?.title ?? s.seriesId}
                 <span className="ml-2 font-mono text-sm text-muted">· {STATUS_LABEL[s.status] ?? s.status}{s.scheduledAt ? ` · ${new Date(s.scheduledAt).toLocaleString("fi-FI")}` : ""}</span>
               </span>
-              <Link href={`/kerhoilta/${s.id}`} className="font-mono text-sm font-bold hover:underline">[ huone → ]</Link>
+              <span className="flex items-center gap-3">
+                {s.status === "scheduled" ? (
+                  <CancelSessionButton sessionId={s.id} title={seriesById(series, s.seriesId)?.title ?? s.seriesId} />
+                ) : null}
+                <Link href={`/kerhoilta/${s.id}`} className="font-mono text-sm font-bold hover:underline">[ huone → ]</Link>
+              </span>
             </li>
           ))}
         </ul>
