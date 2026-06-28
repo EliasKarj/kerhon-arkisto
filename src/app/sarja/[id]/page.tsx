@@ -194,7 +194,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
         </>
       ) : (
         <p className="text-sm text-muted">
-          {series.clubScore === null
+          {series.displayScore === null
             ? "Tätä sarjaa ei ole vielä arvioitu."
             : "Jäsenten yksityiskohtaisia kommentteja ei ole kirjattu tälle sarjalle."}
         </p>

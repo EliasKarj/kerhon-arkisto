@@ -21,7 +21,7 @@ export default async function HomePage() {
   const seriesByRecency = seriesByDateDesc(series);
   const clubAverage = getClubAverageScore(series);
 
-  const current = seriesByRecency.find((entry) => entry.clubScore === null) ?? null;
+  const current = seriesByRecency.find((entry) => entry.displayScore === null) ?? null;
   const currentProposer = current ? memberById(members, current.proposerId) : null;
   const currentCover = current ? getCoverUrl(current) : null;
   const currentLinks = current ? getWatchLinks(current) : null;

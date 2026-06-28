@@ -21,7 +21,7 @@ export default async function HallintaDashboard() {
       <ul className="flex flex-col divide-y-2 divide-foreground/15">
         {list.map((s) => (
           <li key={s.id} className="flex items-center justify-between py-2">
-            <span className="font-bold">{s.title} <span className="font-mono text-sm text-muted">· {seasonLabel(s.clubSeason)}{s.clubScore === null ? " · nyt katselussa" : ""}</span></span>
+            <span className="font-bold">{s.title} <span className="font-mono text-sm text-muted">· {seasonLabel(s.clubSeason)}{s.displayScore === null ? " · nyt katselussa" : ""}</span></span>
             <span className="flex items-center gap-3">
               <Link href={`/hallinta/sarja/${s.id}`} className="font-mono text-sm font-bold hover:underline">[ muokkaa ]</Link>
               <DeleteSeriesButton seriesId={s.id} title={s.title} />

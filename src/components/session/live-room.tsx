@@ -13,11 +13,13 @@ import { formatScore } from "@/lib/stats";
 
 const field = "border-2 border-foreground bg-background px-3 py-2";
 
-function ReviewFields({ onSubmit, pending }: { onSubmit: (input: MyReviewInput) => void; pending: boolean }) {
-  const [score, setScore] = useState("4");
-  const [bestPick, setBestPick] = useState("");
-  const [bullets, setBullets] = useState("");
-  const [tags, setTags] = useState("");
+type ReviewInitial = { score: number | null; bestPick: string; bulletPoints: string[]; tags: string[] };
+
+function ReviewFields({ onSubmit, pending, initial }: { onSubmit: (input: MyReviewInput) => void; pending: boolean; initial?: ReviewInitial }) {
+  const [score, setScore] = useState(initial?.score != null ? String(initial.score) : "4");
+  const [bestPick, setBestPick] = useState(initial?.bestPick ?? "");
+  const [bullets, setBullets] = useState((initial?.bulletPoints ?? []).join("\n"));
+  const [tags, setTags] = useState((initial?.tags ?? []).join(", "));
   return (
     <div className="flex flex-col gap-2">
       <input type="number" step="0.1" min={0} max={5} value={score} onChange={(e) => setScore(e.target.value)} placeholder="Pisteet 0–5" className={field} />
@@ -120,7 +122,11 @@ export function LiveRoom({
           {canMemberEnter && (
             <section className="surface flex flex-col gap-3 border-l-8 border-l-accent p-4">
               <h2 className="text-lg font-bold tracking-tight">Sinun arviosi{myReview && !myReview.redacted && myReview.score !== null ? ` (${formatScore(myReview.score)}/5)` : myReview ? " (tallennettu)" : ""}</h2>
-              <ReviewFields pending={pending} onSubmit={(input) => run(() => saveSessionReview(sessionId, input))} />
+              <ReviewFields
+                pending={pending}
+                initial={myReview && !myReview.redacted ? { score: myReview.score, bestPick: myReview.bestPick ?? "", bulletPoints: myReview.bulletPoints, tags: myReview.tags } : undefined}
+                onSubmit={(input) => run(() => saveSessionReview(sessionId, input))}
+              />
             </section>
           )}
 
@@ -131,9 +137,15 @@ export function LiveRoom({
                 <option value="">— valitse jäsen —</option>
                 {members.map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}
               </select>
-              {chairmanTarget && (
-                <ReviewFields pending={pending} onSubmit={(input) => run(() => saveSessionReviewAsChairman(sessionId, chairmanTarget, input))} />
-              )}
+              {chairmanTarget && (() => {
+                const existing = reviews.find((r) => r.memberId === chairmanTarget);
+                const initial = existing && !existing.redacted
+                  ? { score: existing.score, bestPick: existing.bestPick ?? "", bulletPoints: existing.bulletPoints, tags: existing.tags }
+                  : undefined;
+                return (
+                  <ReviewFields key={chairmanTarget} pending={pending} initial={initial} onSubmit={(input) => run(() => saveSessionReviewAsChairman(sessionId, chairmanTarget, input))} />
+                );
+              })()}
             </section>
           )}
 
