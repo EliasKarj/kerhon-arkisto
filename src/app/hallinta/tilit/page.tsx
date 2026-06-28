@@ -1,10 +1,14 @@
 import { listAccounts } from "@/lib/admin/account-actions";
+import { isDeveloper } from "@/lib/admin/auth";
 import { getRoomData, memberById } from "@/lib/data";
 import { AccountRow } from "@/components/admin/account-row";
 
 export default async function AccountsAdminPage() {
-  const accounts = await listAccounts();
-  const { members } = await getRoomData();
+  const [accounts, { members }, canManageRoles] = await Promise.all([
+    listAccounts(),
+    getRoomData(),
+    isDeveloper(),
+  ]);
   const linkedMemberIds = new Set(accounts.map((a) => a.memberId).filter(Boolean) as string[]);
 
   return (
@@ -27,6 +31,7 @@ export default async function AccountsAdminPage() {
                 account={a}
                 linkedMemberName={a.memberId ? (memberById(members, a.memberId)?.name ?? null) : null}
                 availableMembers={availableMembers}
+                canManageRoles={canManageRoles}
               />
             );
           })}

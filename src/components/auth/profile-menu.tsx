@@ -8,6 +8,7 @@ interface MenuUser {
   name: string;
   avatar: string | null;
   isAdmin: boolean;
+  isDeveloper: boolean;
   memberId: string | null;
 }
 
@@ -25,8 +26,14 @@ export function ProfileMenu() {
       const name = meta.user_name ?? meta.full_name ?? meta.name ?? "Tili";
       const avatar = meta.avatar_url ?? meta.picture ?? null;
       const { data: acc } = await supabase
-        .from("accounts").select("is_admin,member_id").eq("user_id", data.user.id).maybeSingle();
-      setUser({ name, avatar, isAdmin: Boolean(acc?.is_admin), memberId: (acc?.member_id as string | null) ?? null });
+        .from("accounts").select("is_admin,is_developer,member_id").eq("user_id", data.user.id).maybeSingle();
+      const isDeveloper = Boolean(acc?.is_developer);
+      setUser({
+        name, avatar,
+        isAdmin: Boolean(acc?.is_admin) || isDeveloper,
+        isDeveloper,
+        memberId: (acc?.member_id as string | null) ?? null,
+      });
     })();
   }, []);
 
@@ -79,7 +86,7 @@ export function ProfileMenu() {
       {open && (
         <div role="menu" aria-label="Profiili" className="absolute right-0 z-50 mt-2 w-60 overflow-hidden rounded-[13px] border border-line-strong bg-panel shadow-[0_18px_40px_rgba(0,0,0,.5)]">
           <div className="border-b border-line px-4 py-3">
-            <div className="font-semibold">{user.name}{user.isAdmin ? <span className="ml-2 font-mono text-[11px] font-bold text-accent">ADMIN</span> : null}</div>
+            <div className="font-semibold">{user.name}{user.isDeveloper ? <span className="ml-2 font-mono text-[11px] font-bold text-accent">DEVELOPER</span> : user.isAdmin ? <span className="ml-2 font-mono text-[11px] font-bold text-accent">ADMIN</span> : null}</div>
             <div className="text-xs text-muted">Discord · kirjautunut</div>
           </div>
           <Link role="menuitem" href={user.memberId ? `/jasen/${user.memberId}` : "/tili"} className={item} onClick={() => setOpen(false)}>Oma profiili</Link>

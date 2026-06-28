@@ -52,3 +52,14 @@ export async function isAdmin(): Promise<boolean> {
 export async function requireAdmin(): Promise<void> {
   if (!(await isAdmin())) redirect("/tili");
 }
+
+/** Developer = adminin yläpuolella. Vain kirjautunut developer-tili (ei jaettu salasana). */
+export async function isDeveloper(): Promise<boolean> {
+  const account = await getCurrentAccount();
+  return account?.isDeveloper === true;
+}
+
+/** Server-portti developerille: redirect /tili jos ei developer. */
+export async function requireDeveloper(): Promise<void> {
+  if (!(await isDeveloper())) redirect("/tili");
+}

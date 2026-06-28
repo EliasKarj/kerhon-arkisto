@@ -2,6 +2,7 @@ export interface AccountLite {
   userId: string;
   memberId: string | null;
   isAdmin: boolean;
+  isDeveloper?: boolean;
 }
 
 /** Admin jos jaettu salasana kelpaa TAI tili on admin. */
@@ -21,6 +22,12 @@ export function canLinkMember(memberId: string, targetUserId: string, accounts: 
 export function canRemoveAdmin(userId: string, accounts: AccountLite[]): boolean {
   const admins = accounts.filter((a) => a.isAdmin);
   return !(admins.length === 1 && admins[0]?.userId === userId);
+}
+
+/** Saako tililta poistaa developerin: estetaan jos se on viimeinen developer (lukkiutumissuoja). */
+export function canRemoveDeveloper(userId: string, accounts: AccountLite[]): boolean {
+  const devs = accounts.filter((a) => a.isDeveloper);
+  return !(devs.length === 1 && devs[0]?.userId === userId);
 }
 
 /** Kopioidaanko Discord-avatar jasenelle: vain jos jasenella ei kuvaa, avatar on, ja valinta paalla. */

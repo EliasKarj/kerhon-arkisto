@@ -4,16 +4,18 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { Member } from "@/lib/types";
 import type { AccountListItem } from "@/lib/admin/account-actions";
-import { linkAccount, unlinkAccount, setAccountAdmin } from "@/lib/admin/account-actions";
+import { linkAccount, unlinkAccount, setAccountAdmin, setAccountDeveloper } from "@/lib/admin/account-actions";
 
 export function AccountRow({
   account,
   linkedMemberName,
   availableMembers,
+  canManageRoles,
 }: {
   account: AccountListItem;
   linkedMemberName: string | null;
   availableMembers: Member[];
+  canManageRoles: boolean;
 }) {
   const router = useRouter();
   const [memberId, setMemberId] = useState("");
@@ -38,7 +40,11 @@ export function AccountRow({
           <img src={account.discordAvatar} alt="" className="size-8 border-2 border-foreground object-cover" />
         ) : null}
         <span className="font-bold">{account.discordUsername ?? account.userId.slice(0, 8)}</span>
-        {account.isAdmin ? <span className="font-mono text-xs text-accent">ADMIN</span> : null}
+        {account.isDeveloper ? (
+          <span className="font-mono text-xs font-bold text-accent">DEVELOPER</span>
+        ) : account.isAdmin ? (
+          <span className="font-mono text-xs text-accent">ADMIN</span>
+        ) : null}
         <span className="ml-auto font-mono text-sm text-muted">
           {linkedMemberName ? `→ ${linkedMemberName}` : "linkittämätön"}
         </span>
@@ -64,9 +70,16 @@ export function AccountRow({
             </button>
           </>
         )}
-        <button type="button" disabled={pending} onClick={() => run(() => setAccountAdmin(account.userId, !account.isAdmin))} className="border-2 border-foreground bg-panel px-3 py-1.5 text-sm font-bold disabled:opacity-50">
-          {account.isAdmin ? "Poista admin" : "Tee admin"}
-        </button>
+        {canManageRoles ? (
+          <>
+            <button type="button" disabled={pending} onClick={() => run(() => setAccountAdmin(account.userId, !account.isAdmin))} className="border-2 border-foreground bg-panel px-3 py-1.5 text-sm font-bold disabled:opacity-50">
+              {account.isAdmin ? "Poista admin" : "Tee admin"}
+            </button>
+            <button type="button" disabled={pending} onClick={() => run(() => setAccountDeveloper(account.userId, !account.isDeveloper))} className="border-2 border-foreground bg-panel px-3 py-1.5 text-sm font-bold disabled:opacity-50">
+              {account.isDeveloper ? "Poista developer" : "Tee developer"}
+            </button>
+          </>
+        ) : null}
       </div>
       {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
     </div>

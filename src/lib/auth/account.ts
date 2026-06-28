@@ -4,7 +4,9 @@ import { createSupabaseServer } from "./supabase-server";
 export interface CurrentAccount {
   userId: string;
   memberId: string | null;
+  /** Tehollinen admin: tallennettu is_admin TAI developer (developer on adminin yläpuolella). */
   isAdmin: boolean;
+  isDeveloper: boolean;
   discordUsername: string | null;
   discordAvatar: string | null;
 }
@@ -16,12 +18,14 @@ export async function getCurrentAccount(): Promise<CurrentAccount | null> {
   if (!user) return null;
   const { data } = await supabase.from("accounts").select("*").eq("user_id", user.id).maybeSingle();
   if (!data) {
-    return { userId: user.id, memberId: null, isAdmin: false, discordUsername: null, discordAvatar: null };
+    return { userId: user.id, memberId: null, isAdmin: false, isDeveloper: false, discordUsername: null, discordAvatar: null };
   }
+  const isDeveloper = Boolean(data.is_developer);
   return {
     userId: data.user_id as string,
     memberId: (data.member_id as string | null) ?? null,
-    isAdmin: Boolean(data.is_admin),
+    isAdmin: Boolean(data.is_admin) || isDeveloper,
+    isDeveloper,
     discordUsername: (data.discord_username as string | null) ?? null,
     discordAvatar: (data.discord_avatar as string | null) ?? null,
   };
