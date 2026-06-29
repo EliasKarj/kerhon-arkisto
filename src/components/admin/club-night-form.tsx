@@ -6,8 +6,9 @@ import type { Member } from "@/lib/types";
 import type { ClubNightInput, ReviewInput } from "@/lib/admin/validation";
 import { saveClubNight, updateClubNight } from "@/lib/admin/actions";
 import { AnimeSearch, type ChosenAnime } from "./anime-search";
+import { CharacterPicker } from "@/components/character-picker";
 
-const emptyReview = (): ReviewInput => ({ memberId: null, guestName: null, score: 4, bulletPoints: [], bestPick: "", tags: [] });
+const emptyReview = (): ReviewInput => ({ memberId: null, guestName: null, score: 4, bulletPoints: [], bestPick: "", bestPickImage: null, tags: [] });
 
 export interface ClubNightFormProps {
   members: Member[];
@@ -21,6 +22,7 @@ export interface ClubNightFormProps {
     proposerId: string;
     clubScore: number | null;
     bestPick: string;
+    bestPickImage: string | null;
     reviews: ReviewInput[];
   };
 }
@@ -33,6 +35,7 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
   const [proposerId, setProposerId] = useState(initial?.proposerId ?? "");
   const [clubScore, setClubScore] = useState<string>(initial?.clubScore != null ? String(initial.clubScore) : "");
   const [bestPick, setBestPick] = useState(initial?.bestPick ?? "");
+  const [bestPickImage, setBestPickImage] = useState<string | null>(initial?.bestPickImage ?? null);
   const [reviews, setReviews] = useState<ReviewInput[]>(initial?.reviews ?? []);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -52,6 +55,7 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
       proposerId,
       clubScore: clubScore.trim() === "" ? null : Number(clubScore),
       bestPick: bestPick.trim() || null,
+      bestPickImage: bestPick.trim() ? bestPickImage : null,
       reviews,
     };
     startTransition(async () => {
@@ -86,9 +90,14 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
         <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Kerhon pisteet (tyhjä = nyt katselussa)
           <input type="number" step="0.1" min={0} max={5} value={clubScore} onChange={(e) => setClubScore(e.target.value)} className={field} />
         </label>
-        <label className="flex flex-col gap-1 text-sm font-semibold text-muted sm:col-span-2">Best character / best pick
-          <input value={bestPick} onChange={(e) => setBestPick(e.target.value)} className={field} />
-        </label>
+        <div className="flex flex-col gap-1 text-sm font-semibold text-muted sm:col-span-2">Best character / best pick
+          <CharacterPicker
+            anilistId={chosen?.anilistId ?? null}
+            value={bestPick}
+            image={bestPickImage}
+            onChange={(name, img) => { setBestPick(name); setBestPickImage(img); }}
+          />
+        </div>
       </section>
 
       <section className="flex flex-col gap-3">
@@ -102,7 +111,13 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
               </select>
               <input placeholder="…tai uuden vieraan nimi" value={r.guestName ?? ""} onChange={(e) => updateReview(i, { guestName: e.target.value || null })} className={field} />
               <input type="number" step="0.1" min={0} max={5} placeholder="Pisteet 0–5" value={r.score} onChange={(e) => updateReview(i, { score: Number(e.target.value) })} className={field} />
-              <input placeholder="Henkilökohtainen best pick" value={r.bestPick} onChange={(e) => updateReview(i, { bestPick: e.target.value })} className={field} />
+              <CharacterPicker
+                anilistId={chosen?.anilistId ?? null}
+                value={r.bestPick}
+                image={r.bestPickImage}
+                onChange={(name, img) => updateReview(i, { bestPick: name, bestPickImage: img })}
+                placeholder="Henkilökohtainen best pick"
+              />
             </div>
             <textarea placeholder="Bulletit (yksi per rivi)" value={r.bulletPoints.join("\n")} onChange={(e) => updateReview(i, { bulletPoints: e.target.value.split("\n").map((s) => s.trim()).filter(Boolean) })} className={`${field} min-h-20`} />
             <button type="button" onClick={() => setReviews((rs) => rs.filter((_, j) => j !== i))} className="self-end font-mono text-sm hover:underline">[ poista arvio ]</button>

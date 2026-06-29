@@ -58,6 +58,8 @@ export interface Review {
   bulletPoints: string[];
   /** Jäsenen suosikkihahmo/-valinta ("best girl/boy"). */
   bestPick: string;
+  /** Valitun hahmon kuva-URL (AniList), tai null. */
+  bestPickImage: string | null;
   tags: string[];
 }
 

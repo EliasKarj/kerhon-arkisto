@@ -10,10 +10,11 @@ export default async function RoomPage({ params }: PageProps<"/kerhoilta/[id]">)
   const initial = await getRoomState(id);
   if (!initial.session) notFound();
   const { members, series } = await getRoomData();
-  const seriesTitle = seriesById(series, initial.session.seriesId)?.title ?? "Kerhoilta";
+  const roomSeries = seriesById(series, initial.session.seriesId);
+  const seriesTitle = roomSeries?.title ?? "Kerhoilta";
   return (
     <div className="flex flex-col gap-6">
-      <LiveRoom sessionId={id} initial={initial} seriesTitle={seriesTitle} members={members} />
+      <LiveRoom sessionId={id} initial={initial} seriesTitle={seriesTitle} members={members} anilistId={roomSeries?.anilistId ?? null} />
     </div>
   );
 }

@@ -30,10 +30,15 @@ export function ReviewCard({
         </span>
       </div>
 
-      <p className="text-sm">
-        <span className="text-muted">Best pick: </span>
-        <span className="font-semibold">{review.bestPick}</span>
-      </p>
+      {review.bestPick ? (
+        <p className="flex items-center gap-2 text-sm">
+          {review.bestPickImage ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={review.bestPickImage} alt="" className="size-9 shrink-0 rounded border-2 border-foreground object-cover" />
+          ) : null}
+          <span><span className="text-muted">Best pick: </span><span className="font-semibold">{review.bestPick}</span></span>
+        </p>
+      ) : null}
 
       <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-accent">
         {review.bulletPoints.map((point, index) => (

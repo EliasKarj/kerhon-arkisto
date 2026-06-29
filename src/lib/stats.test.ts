@@ -25,7 +25,7 @@ test("getClubAverageScore averages displayScore of rated", () => {
 });
 
 test("getBestPickCounts ignores empty/whitespace picks", () => {
-  const rev = (bestPick: string): Review => ({ id: "x", seriesId: "s", memberId: "m", score: 4, bulletPoints: [], bestPick, tags: [] });
+  const rev = (bestPick: string): Review => ({ id: "x", seriesId: "s", memberId: "m", score: 4, bulletPoints: [], bestPick, bestPickImage: null, tags: [] });
   const counts = getBestPickCounts([rev("Power"), rev(""), rev("   "), rev("Power")]);
   assert.deepEqual(counts, [{ label: "Power", count: 2 }]);
 });

@@ -8,9 +8,10 @@ import { isAdmin, requireAdmin, setSessionCookie, clearSessionCookie } from "./a
 import { passwordMatches } from "./auth-token";
 import { checkRateLimit, resetRateLimit } from "./rate-limit";
 import {
-  fetchAnimeDetail, searchAnime, mediaToCover, mediaToMeta, mediaToType,
-  mediaToWatchLinks, matchCharacterImage, type AnimeSearchResult,
+  fetchAnimeDetail, searchAnime, fetchCharacters, mediaToCover, mediaToMeta, mediaToType,
+  mediaToWatchLinks, matchCharacterImage, type AnimeSearchResult, type SeriesCharacter,
 } from "./anilist";
+import { getCurrentAccount } from "@/lib/auth/account";
 import {
   slugify, uniqueId, reviewId, validateClubNight, type ClubNightInput,
 } from "./validation";
@@ -59,6 +60,17 @@ export async function searchAnimeAction(term: string): Promise<AnimeSearchResult
   return searchAnime(term.trim());
 }
 
+/** Sarjan hahmot kuvineen best character -valitsimeen. Sallittu kirjautuneille (jäsen/admin). */
+export async function seriesCharactersAction(anilistId: number): Promise<SeriesCharacter[]> {
+  const account = await getCurrentAccount();
+  if (!account || !anilistId) return [];
+  try {
+    return await fetchCharacters(anilistId);
+  } catch {
+    return [];
+  }
+}
+
 /** Rakentaa sarja/arvio/guest-rivit ja derivoi AniList-datan palvelimella (ei luota clientiin). */
 async function buildRows(
   input: ClubNightInput,
@@ -83,6 +95,8 @@ async function buildRows(
     watchLinks = mediaToWatchLinks(media);
     bestPickImage = input.bestPick ? matchCharacterImage(input.bestPick, media.characters?.nodes ?? []) : null;
   }
+  // Valitsimen antama tarkka kuva voittaa sumean haun.
+  if (input.bestPickImage) bestPickImage = input.bestPickImage;
 
   const seriesId = fixedSeriesId ?? uniqueId(slugify(title), ids.series);
   const memberPool = new Set(ids.members);
@@ -104,7 +118,8 @@ async function buildRows(
     }
     return {
       id: reviewId(seriesId, memberId as string), series_id: seriesId, member_id: memberId as string,
-      score: r.score, bullet_points: r.bulletPoints, best_pick: r.bestPick, tags: r.tags,
+      score: r.score, bullet_points: r.bulletPoints, best_pick: r.bestPick,
+      best_pick_image: r.bestPick.trim() ? (r.bestPickImage ?? null) : null, tags: r.tags,
     };
   });
 

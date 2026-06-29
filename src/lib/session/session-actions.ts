@@ -172,7 +172,8 @@ export async function endSession(id: string): Promise<{ error: string } | { ok: 
       id: reviewId(seriesId, r.member_id as string),
       series_id: seriesId, member_id: r.member_id as string,
       score: Number(r.score), bullet_points: (r.bullet_points as string[]) ?? [],
-      best_pick: (r.best_pick as string) ?? "", tags: (r.tags as string[]) ?? [],
+      best_pick: (r.best_pick as string) ?? "", best_pick_image: (r.best_pick_image as string | null) ?? null,
+      tags: (r.tags as string[]) ?? [],
     }));
   if (rows.length) {
     const { error: upErr } = await supabaseAdmin.from("reviews").upsert(rows, { onConflict: "id" });
@@ -215,7 +216,8 @@ async function upsertStagedReview(sessionId: string, memberId: string, input: My
   const clean = sanitizeMyReview(input);
   const { error } = await supabaseAdmin.from("session_reviews").upsert({
     session_id: sessionId, member_id: memberId, score: clean.score,
-    best_pick: clean.bestPick, bullet_points: clean.bulletPoints, tags: clean.tags,
+    best_pick: clean.bestPick, best_pick_image: clean.bestPickImage,
+    bullet_points: clean.bulletPoints, tags: clean.tags,
     updated_at: new Date().toISOString(),
   }, { onConflict: "session_id,member_id" });
   if (error) return { error: error.message };
@@ -287,6 +289,7 @@ export async function getRoomState(sessionId: string): Promise<RoomState> {
     memberId: r.member_id as string,
     score: r.score === null || r.score === undefined ? null : Number(r.score),
     bestPick: (r.best_pick as string) ?? "",
+    bestPickImage: (r.best_pick_image as string | null) ?? null,
     bulletPoints: (r.bullet_points as string[]) ?? [],
     tags: (r.tags as string[]) ?? [],
   }));

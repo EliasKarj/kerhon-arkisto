@@ -21,8 +21,8 @@ test("reviewId combines series and member", () => {
 const valid: ClubNightInput = {
   anilistId: 5, manualTitle: null, manualType: null,
   clubSeason: 10, watchedDate: "2026-06-01", proposerId: "aki",
-  clubScore: 4.2, bestPick: "Power",
-  reviews: [{ memberId: "aki", guestName: null, score: 4, bulletPoints: ["hyvä"], bestPick: "Power", tags: [] }],
+  clubScore: 4.2, bestPick: "Power", bestPickImage: null,
+  reviews: [{ memberId: "aki", guestName: null, score: 4, bulletPoints: ["hyvä"], bestPick: "Power", bestPickImage: null, tags: [] }],
 };
 
 test("validateClubNight accepts a valid club night", () => {
@@ -40,6 +40,6 @@ test("validateClubNight rejects out-of-range scores", () => {
 });
 
 test("validateClubNight rejects a review with no member and no guest", () => {
-  const errs = validateClubNight({ ...valid, reviews: [{ memberId: null, guestName: null, score: 3, bulletPoints: [], bestPick: "", tags: [] }] });
+  const errs = validateClubNight({ ...valid, reviews: [{ memberId: null, guestName: null, score: 3, bulletPoints: [], bestPick: "", bestPickImage: null, tags: [] }] });
   assert.ok(errs.some((e) => e.toLowerCase().includes("arvioija")));
 });

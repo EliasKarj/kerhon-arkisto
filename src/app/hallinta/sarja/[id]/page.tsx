@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getRoomData, reviewsForSeries, seriesById } from "@/lib/data";
+import { getBestPickImage, getRoomData, reviewsForSeries, seriesById } from "@/lib/data";
 import { ClubNightForm } from "@/components/admin/club-night-form";
 import type { ReviewInput } from "@/lib/admin/validation";
 
@@ -10,7 +10,7 @@ export default async function EditSeriesPage({ params }: { params: Promise<{ id:
   if (!s) notFound();
   const reviewInputs: ReviewInput[] = reviewsForSeries(reviews, id).map((r) => ({
     memberId: r.memberId, guestName: null, score: r.score,
-    bulletPoints: r.bulletPoints, bestPick: r.bestPick, tags: r.tags,
+    bulletPoints: r.bulletPoints, bestPick: r.bestPick, bestPickImage: r.bestPickImage, tags: r.tags,
   }));
   return (
     <div className="flex flex-col gap-6">
@@ -25,6 +25,7 @@ export default async function EditSeriesPage({ params }: { params: Promise<{ id:
           proposerId: s.proposerId,
           clubScore: s.clubScore,
           bestPick: s.bestPick ?? "",
+          bestPickImage: getBestPickImage(s),
           reviews: reviewInputs,
         }}
       />

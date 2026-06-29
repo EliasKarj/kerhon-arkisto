@@ -9,24 +9,26 @@ import {
   startSession, endSession, saveSessionReview, saveSessionReviewAsChairman,
 } from "@/lib/session/session-actions";
 import { useRoomPolling } from "@/lib/session/use-room-polling";
+import { CharacterPicker } from "@/components/character-picker";
 import { formatScore } from "@/lib/stats";
 
 const field = "border-2 border-foreground bg-background px-3 py-2";
 
-type ReviewInitial = { score: number | null; bestPick: string; bulletPoints: string[]; tags: string[] };
+type ReviewInitial = { score: number | null; bestPick: string; bestPickImage: string | null; bulletPoints: string[]; tags: string[] };
 
-function ReviewFields({ onSubmit, pending, initial }: { onSubmit: (input: MyReviewInput) => void; pending: boolean; initial?: ReviewInitial }) {
+function ReviewFields({ onSubmit, pending, initial, anilistId }: { onSubmit: (input: MyReviewInput) => void; pending: boolean; initial?: ReviewInitial; anilistId: number | null }) {
   const [score, setScore] = useState(initial?.score != null ? String(initial.score) : "4");
   const [bestPick, setBestPick] = useState(initial?.bestPick ?? "");
+  const [bestPickImage, setBestPickImage] = useState<string | null>(initial?.bestPickImage ?? null);
   const [bullets, setBullets] = useState((initial?.bulletPoints ?? []).join("\n"));
   const [tags, setTags] = useState((initial?.tags ?? []).join(", "));
   return (
     <div className="flex flex-col gap-2">
       <input type="number" step="0.1" min={0} max={5} value={score} onChange={(e) => setScore(e.target.value)} placeholder="Pisteet 0–5" className={field} />
-      <input value={bestPick} onChange={(e) => setBestPick(e.target.value)} placeholder="Best character" className={field} />
+      <CharacterPicker anilistId={anilistId} value={bestPick} image={bestPickImage} onChange={(name, img) => { setBestPick(name); setBestPickImage(img); }} />
       <textarea value={bullets} onChange={(e) => setBullets(e.target.value)} placeholder="Kommentit (yksi/rivi)" className={`${field} min-h-20`} />
       <input value={tags} onChange={(e) => setTags(e.target.value)} placeholder="Tagit (pilkulla)" className={field} />
-      <button type="button" disabled={pending} onClick={() => onSubmit({ score: Number(score), bestPick, bulletPoints: bullets.split("\n"), tags: tags.split(/[,\n]/) })}
+      <button type="button" disabled={pending} onClick={() => onSubmit({ score: Number(score), bestPick, bestPickImage, bulletPoints: bullets.split("\n"), tags: tags.split(/[,\n]/) })}
         className="w-fit border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
         {pending ? "Tallennetaan…" : "Tallenna arvio"}
       </button>
@@ -35,9 +37,9 @@ function ReviewFields({ onSubmit, pending, initial }: { onSubmit: (input: MyRevi
 }
 
 export function LiveRoom({
-  sessionId, initial, seriesTitle, members,
+  sessionId, initial, seriesTitle, members, anilistId,
 }: {
-  sessionId: string; initial: RoomState; seriesTitle: string; members: Member[];
+  sessionId: string; initial: RoomState; seriesTitle: string; members: Member[]; anilistId: number | null;
 }) {
   const state = useRoomPolling(sessionId, initial);
   const [error, setError] = useState<string | null>(null);
@@ -101,7 +103,13 @@ export function LiveRoom({
                     </span>
                   </div>
                   {!r.redacted && r.bestPick ? (
-                    <p className="text-sm"><span className="text-muted">Best pick: </span><span className="font-semibold">{r.bestPick}</span></p>
+                    <p className="flex items-center gap-2 text-sm">
+                      {r.bestPickImage ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={r.bestPickImage} alt="" className="size-8 rounded border-2 border-foreground object-cover" />
+                      ) : null}
+                      <span><span className="text-muted">Best pick: </span><span className="font-semibold">{r.bestPick}</span></span>
+                    </p>
                   ) : null}
                   {!r.redacted && r.bulletPoints.length > 0 ? (
                     <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-accent">
@@ -124,7 +132,8 @@ export function LiveRoom({
               <h2 className="text-lg font-bold tracking-tight">Sinun arviosi{myReview && !myReview.redacted && myReview.score !== null ? ` (${formatScore(myReview.score)}/5)` : myReview ? " (tallennettu)" : ""}</h2>
               <ReviewFields
                 pending={pending}
-                initial={myReview && !myReview.redacted ? { score: myReview.score, bestPick: myReview.bestPick ?? "", bulletPoints: myReview.bulletPoints, tags: myReview.tags } : undefined}
+                anilistId={anilistId}
+                initial={myReview && !myReview.redacted ? { score: myReview.score, bestPick: myReview.bestPick ?? "", bestPickImage: myReview.bestPickImage, bulletPoints: myReview.bulletPoints, tags: myReview.tags } : undefined}
                 onSubmit={(input) => run(() => saveSessionReview(sessionId, input))}
               />
             </section>
@@ -140,10 +149,10 @@ export function LiveRoom({
               {chairmanTarget && (() => {
                 const existing = reviews.find((r) => r.memberId === chairmanTarget);
                 const initial = existing && !existing.redacted
-                  ? { score: existing.score, bestPick: existing.bestPick ?? "", bulletPoints: existing.bulletPoints, tags: existing.tags }
+                  ? { score: existing.score, bestPick: existing.bestPick ?? "", bestPickImage: existing.bestPickImage, bulletPoints: existing.bulletPoints, tags: existing.tags }
                   : undefined;
                 return (
-                  <ReviewFields key={chairmanTarget} pending={pending} initial={initial} onSubmit={(input) => run(() => saveSessionReviewAsChairman(sessionId, chairmanTarget, input))} />
+                  <ReviewFields key={chairmanTarget} pending={pending} anilistId={anilistId} initial={initial} onSubmit={(input) => run(() => saveSessionReviewAsChairman(sessionId, chairmanTarget, input))} />
                 );
               })()}
             </section>

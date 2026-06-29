@@ -50,6 +50,7 @@ export const getRoomData = cache(async (): Promise<RoomData> => {
     score: Number(r.score),
     bulletPoints: r.bullet_points ?? [],
     bestPick: r.best_pick ?? "",
+    bestPickImage: r.best_pick_image ?? null,
     tags: r.tags ?? [],
   }));
   const series: Series[] = baseSeries.map((s) => ({

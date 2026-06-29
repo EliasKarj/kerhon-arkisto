@@ -132,3 +132,23 @@ export async function fetchAnimeDetail(anilistId: number): Promise<AniListMedia>
   const data = await gql<{ Media: AniListMedia }>(DETAIL_QUERY, { id: anilistId });
   return data.Media;
 }
+
+export interface SeriesCharacter {
+  name: string;
+  image: string | null;
+}
+
+const CHARACTERS_QUERY = `query($id:Int){ Media(id:$id, type:ANIME){
+  characters(sort:[ROLE,RELEVANCE], perPage:50){ nodes{ name{ full } image{ large } } }
+} }`;
+
+/** Hahmot kuvineen best character -valitsinta varten (kevyt kysely). */
+export async function fetchCharacters(anilistId: number): Promise<SeriesCharacter[]> {
+  const data = await gql<{ Media: { characters?: { nodes: { name: { full: string | null }; image: { large: string | null } }[] } } }>(
+    CHARACTERS_QUERY,
+    { id: anilistId },
+  );
+  return (data.Media.characters?.nodes ?? [])
+    .map((n) => ({ name: n.name?.full ?? "", image: n.image?.large ?? null }))
+    .filter((c) => c.name);
+}

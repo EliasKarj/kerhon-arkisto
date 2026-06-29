@@ -36,6 +36,7 @@ export async function saveMyReview(
     score: clean.score,
     bullet_points: clean.bulletPoints,
     best_pick: clean.bestPick,
+    best_pick_image: clean.bestPickImage,
     tags: clean.tags,
   };
   const { error } = await supabaseAdmin.from("reviews").upsert(row, { onConflict: "id" });

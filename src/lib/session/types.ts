@@ -20,6 +20,7 @@ export interface SessionReview {
   memberId: string;
   score: number | null;
   bestPick: string;
+  bestPickImage: string | null;
   bulletPoints: string[];
   tags: string[];
 }
@@ -29,6 +30,7 @@ export interface RedactedReview {
   hasReviewed: boolean;
   score: number | null;
   bestPick: string | null;
+  bestPickImage: string | null;
   bulletPoints: string[];
   tags: string[];
   redacted: boolean;

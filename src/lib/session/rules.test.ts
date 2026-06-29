@@ -25,8 +25,8 @@ test("presentMembers: only those seen within the window", () => {
 });
 
 const reviews: SessionReview[] = [
-  { memberId: "aki", score: 4, bestPick: "Power", bulletPoints: ["hyvä"], tags: [] },
-  { memberId: "eetu", score: 2, bestPick: "x", bulletPoints: [], tags: [] },
+  { memberId: "aki", score: 4, bestPick: "Power", bestPickImage: null, bulletPoints: ["hyvä"], tags: [] },
+  { memberId: "eetu", score: 2, bestPick: "x", bestPickImage: null, bulletPoints: [], tags: [] },
 ];
 
 test("redactReviews: hidden+live hides OTHERS' scores from a non-chairman, keeps own", () => {

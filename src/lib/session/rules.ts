@@ -34,9 +34,9 @@ export function redactReviews(
   return reviews.map((r) => {
     const reveal = globalReveal || r.memberId === ctx.viewerMemberId;
     if (reveal) {
-      return { memberId: r.memberId, hasReviewed: true, score: r.score, bestPick: r.bestPick, bulletPoints: r.bulletPoints, tags: r.tags, redacted: false };
+      return { memberId: r.memberId, hasReviewed: true, score: r.score, bestPick: r.bestPick, bestPickImage: r.bestPickImage, bulletPoints: r.bulletPoints, tags: r.tags, redacted: false };
     }
-    return { memberId: r.memberId, hasReviewed: true, score: null, bestPick: null, bulletPoints: [], tags: [], redacted: true };
+    return { memberId: r.memberId, hasReviewed: true, score: null, bestPick: null, bestPickImage: null, bulletPoints: [], tags: [], redacted: true };
   });
 }
 

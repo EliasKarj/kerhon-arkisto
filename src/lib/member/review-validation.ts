@@ -1,6 +1,7 @@
 export interface MyReviewInput {
   score: number;
   bestPick: string;
+  bestPickImage: string | null;
   bulletPoints: string[];
   tags: string[];
 }
@@ -30,9 +31,12 @@ export function validateMyReview(input: MyReviewInput): string[] {
 
 /** Siivoaa syötteen DB-riviä varten: trimmaa, pudottaa tyhjät bulletit/tagit. */
 export function sanitizeMyReview(input: MyReviewInput): MyReviewInput {
+  const bestPick = input.bestPick.trim();
   return {
     score: input.score,
-    bestPick: input.bestPick.trim(),
+    bestPick,
+    // Säilytä kuva vain jos hahmolla on nimi (muuten roikkuva kuva ilman pickiä).
+    bestPickImage: bestPick && input.bestPickImage?.trim() ? input.bestPickImage.trim() : null,
     bulletPoints: input.bulletPoints.map((b) => b.trim()).filter(Boolean),
     tags: input.tags.map((t) => t.trim()).filter(Boolean),
   };

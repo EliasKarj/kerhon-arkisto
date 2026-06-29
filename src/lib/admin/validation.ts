@@ -4,6 +4,7 @@ export interface ReviewInput {
   score: number;
   bulletPoints: string[];
   bestPick: string;
+  bestPickImage: string | null;
   tags: string[];
 }
 
@@ -16,6 +17,7 @@ export interface ClubNightInput {
   proposerId: string;
   clubScore: number | null;
   bestPick: string | null;
+  bestPickImage: string | null;
   reviews: ReviewInput[];
 }
 

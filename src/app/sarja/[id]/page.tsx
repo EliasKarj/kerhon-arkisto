@@ -42,7 +42,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
     ? reviews.find((r) => r.memberId === account.memberId) ?? null
     : null;
   const myReviewInput: MyReviewInput | null = myReview
-    ? { score: myReview.score, bestPick: myReview.bestPick, bulletPoints: myReview.bulletPoints, tags: myReview.tags }
+    ? { score: myReview.score, bestPick: myReview.bestPick, bestPickImage: myReview.bestPickImage, bulletPoints: myReview.bulletPoints, tags: myReview.tags }
     : null;
   const score = getSeriesScore(room.series, id);
   const proposer = memberById(room.members, series.proposerId);
@@ -155,7 +155,7 @@ export default async function SeriesPage({ params }: PageProps<"/sarja/[id]">) {
           </p>
         </section>
       ) : (
-        <MyReviewSection seriesId={id} initialReview={myReviewInput} />
+        <MyReviewSection seriesId={id} anilistId={series.anilistId} initialReview={myReviewInput} />
       )}
 
       {reviews.length > 0 ? (

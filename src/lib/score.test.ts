@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { computeDisplayScore } from "./score.ts";
 import type { Review } from "./types.ts";
 
-const rev = (score: number): Review => ({ id: "x", seriesId: "s", memberId: "m", score, bulletPoints: [], bestPick: "", tags: [] });
+const rev = (score: number): Review => ({ id: "x", seriesId: "s", memberId: "m", score, bulletPoints: [], bestPick: "", bestPickImage: null, tags: [] });
 
 test("computeDisplayScore averages when reviews exist", () => {
   assert.equal(computeDisplayScore([rev(4), rev(2)], 5), 3);

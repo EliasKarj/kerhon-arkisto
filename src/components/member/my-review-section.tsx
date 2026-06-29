@@ -4,15 +4,18 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { saveMyReview, deleteMyReview } from "@/lib/member/review-actions";
 import type { MyReviewInput } from "@/lib/member/review-validation";
+import { CharacterPicker } from "@/components/character-picker";
 import { formatScore } from "@/lib/stats";
 
 const field = "border-2 border-foreground bg-background px-3 py-2";
 
 export function MyReviewSection({
   seriesId,
+  anilistId,
   initialReview,
 }: {
   seriesId: string;
+  anilistId: number | null;
   initialReview: MyReviewInput | null;
 }) {
   const router = useRouter();
@@ -20,6 +23,7 @@ export function MyReviewSection({
   const [editing, setEditing] = useState(false);
   const [score, setScore] = useState(initialReview ? String(initialReview.score) : "4");
   const [bestPick, setBestPick] = useState(initialReview?.bestPick ?? "");
+  const [bestPickImage, setBestPickImage] = useState<string | null>(initialReview?.bestPickImage ?? null);
   const [bullets, setBullets] = useState((initialReview?.bulletPoints ?? []).join("\n"));
   const [tags, setTags] = useState((initialReview?.tags ?? []).join(", "));
   const [error, setError] = useState<string | null>(null);
@@ -29,6 +33,7 @@ export function MyReviewSection({
     setError(null);
     setScore(review ? String(review.score) : "4");
     setBestPick(review?.bestPick ?? "");
+    setBestPickImage(review?.bestPickImage ?? null);
     setBullets((review?.bulletPoints ?? []).join("\n"));
     setTags((review?.tags ?? []).join(", "));
     setEditing(true);
@@ -39,15 +44,18 @@ export function MyReviewSection({
     const input: MyReviewInput = {
       score: Number(score),
       bestPick,
+      bestPickImage,
       bulletPoints: bullets.split("\n"),
       tags: tags.split(/[,\n]/),
     };
     startTransition(async () => {
       const res = await saveMyReview(seriesId, input);
       if ("error" in res) { setError(res.error); return; }
+      const cleanPick = bestPick.trim();
       setReview({
         score: Number(score),
-        bestPick: bestPick.trim(),
+        bestPick: cleanPick,
+        bestPickImage: cleanPick ? bestPickImage : null,
         bulletPoints: bullets.split("\n").map((s) => s.trim()).filter(Boolean),
         tags: tags.split(/[,\n]/).map((s) => s.trim()).filter(Boolean),
       });
@@ -81,7 +89,15 @@ export function MyReviewSection({
               <button type="button" onClick={remove} disabled={pending} className="font-mono text-sm font-bold text-red-500 hover:underline disabled:opacity-50">[ poista ]</button>
             </div>
           </div>
-          {review.bestPick ? <p className="text-sm"><span className="text-muted">Best pick: </span><span className="font-semibold">{review.bestPick}</span></p> : null}
+          {review.bestPick ? (
+            <p className="flex items-center gap-2 text-sm">
+              {review.bestPickImage ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={review.bestPickImage} alt="" className="size-8 rounded border-2 border-foreground object-cover" />
+              ) : null}
+              <span><span className="text-muted">Best pick: </span><span className="font-semibold">{review.bestPick}</span></span>
+            </p>
+          ) : null}
           {review.bulletPoints.length > 0 && (
             <ul className="list-disc pl-5 text-sm text-foreground/80 marker:text-accent">
               {review.bulletPoints.map((b, i) => <li key={i}>{b}</li>)}
@@ -101,9 +117,14 @@ export function MyReviewSection({
           <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Pisteet (0–5)
             <input type="number" step="0.1" min={0} max={5} value={score} onChange={(e) => setScore(e.target.value)} className={field} />
           </label>
-          <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Best character
-            <input value={bestPick} onChange={(e) => setBestPick(e.target.value)} className={field} />
-          </label>
+          <div className="flex flex-col gap-1 text-sm font-semibold text-muted">Best character
+            <CharacterPicker
+              anilistId={anilistId}
+              value={bestPick}
+              image={bestPickImage}
+              onChange={(name, img) => { setBestPick(name); setBestPickImage(img); }}
+            />
+          </div>
           <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Kommentit (yksi per rivi)
             <textarea value={bullets} onChange={(e) => setBullets(e.target.value)} className={`${field} min-h-24`} />
           </label>
