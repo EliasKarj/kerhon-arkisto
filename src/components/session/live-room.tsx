@@ -154,7 +154,10 @@ export function LiveRoom({
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-background">
+      <div className="mx-auto w-full max-w-3xl px-5 py-6 sm:px-8">
+        <Link href="/kerhoillat" className="mb-5 inline-block font-mono text-sm font-bold text-muted transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">← Takaisin</Link>
+        <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">{seriesTitle}</h1>
         <span className="font-mono text-sm text-muted">
@@ -253,6 +256,8 @@ export function LiveRoom({
       )}
 
       {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
+        </div>
+      </div>
     </div>
   );
 }
