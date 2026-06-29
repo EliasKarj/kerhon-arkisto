@@ -12,6 +12,8 @@ export interface ClubSession {
   scoreVisibility: ScoreVisibility;
   joinPolicy: JoinPolicy;
   attendees: string[];
+  /** Puheenjohtajaksi nimetty jäsen (saa hallita iltaa); null = vain adminit. */
+  chairmanId: string | null;
   startedAt: string | null;
   endedAt: string | null;
 }

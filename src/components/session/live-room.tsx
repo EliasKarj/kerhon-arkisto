@@ -72,6 +72,9 @@ export function LiveRoom({
           {session.status === "scheduled" ? "Ajastettu" : session.status === "live" ? "● Käynnissä" : "Päättynyt"}
         </span>
       </div>
+      {session.chairmanId ? (
+        <p className="-mt-3 text-sm text-muted">Puheenjohtaja: <span className="font-semibold text-foreground">{nameOf(session.chairmanId)}</span></p>
+      ) : null}
 
       {session.status === "scheduled" && (
         <div className="surface flex flex-col gap-3 p-5">

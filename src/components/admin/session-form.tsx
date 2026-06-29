@@ -21,6 +21,7 @@ export function SessionForm({ members, series }: { members: Member[]; series: Se
   const [scoreVisibility, setScoreVisibility] = useState("live");
   const [joinPolicy, setJoinPolicy] = useState("all");
   const [attendees, setAttendees] = useState<string[]>([]);
+  const [chairmanId, setChairmanId] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
@@ -39,6 +40,7 @@ export function SessionForm({ members, series }: { members: Member[]; series: Se
         scheduledAt: scheduledAt ? new Date(scheduledAt).toISOString() : null,
         reviewMode, scoreVisibility, joinPolicy,
         attendees: joinPolicy === "invited" ? attendees : [],
+        chairmanId: chairmanId || null,
       });
       if ("error" in res) { setError(res.error); return; }
       router.push("/hallinta/kerhoillat");
@@ -96,10 +98,16 @@ export function SessionForm({ members, series }: { members: Member[]; series: Se
             <option value="hidden">Piilotettu loppuun asti</option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-sm font-semibold text-muted sm:col-span-2">Kuka voi liittyä
+        <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Kuka voi liittyä
           <select value={joinPolicy} onChange={(e) => setJoinPolicy(e.target.value)} className={field}>
             <option value="all">Kaikki linkitetyt jäsenet</option>
             <option value="invited">Vain valitut osallistujat</option>
+          </select>
+        </label>
+        <label className="flex flex-col gap-1 text-sm font-semibold text-muted">Puheenjohtaja (saa aloittaa/päättää illan)
+          <select value={chairmanId} onChange={(e) => setChairmanId(e.target.value)} className={field}>
+            <option value="">— vain adminit —</option>
+            {members.map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}
           </select>
         </label>
         {joinPolicy === "invited" && (

@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { supabaseAdmin } from "@/lib/admin/supabase-admin";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireAdmin, isAdmin } from "@/lib/admin/auth";
 import { getCurrentAccount } from "@/lib/auth/account";
 import { createSeriesFromAniList } from "@/lib/admin/series-create";
 import { reviewId } from "@/lib/admin/validation";
@@ -21,9 +21,20 @@ function mapSessionRow(r: Record<string, unknown>): ClubSession {
     scoreVisibility: r.score_visibility as ClubSession["scoreVisibility"],
     joinPolicy: r.join_policy as ClubSession["joinPolicy"],
     attendees: (r.attendees as string[] | null) ?? [],
+    chairmanId: (r.chairman_id as string | null) ?? null,
     startedAt: (r.started_at as string | null) ?? null,
     endedAt: (r.ended_at as string | null) ?? null,
   };
+}
+
+/** Lupatarkistus illan hallintaan: admin TAI sessioon nimetty puheenjohtaja. */
+async function assertSessionControl(sessionId: string): Promise<{ error: string } | { session: ClubSession }> {
+  const session = await loadSessionForWrite(sessionId);
+  if (!session) return { error: "Sessiota ei löydy." };
+  const [adminFlag, account] = await Promise.all([isAdmin(), getCurrentAccount()]);
+  const allowed = adminFlag || (!!account?.memberId && account.memberId === session.chairmanId);
+  if (!allowed) return { error: "Vain illan puheenjohtaja tai admin voi tehdä tämän." };
+  return { session };
 }
 
 async function seriesTitle(seriesId: string): Promise<string> {
@@ -39,6 +50,7 @@ export interface CreateSessionInput {
   scoreVisibility: string;
   joinPolicy: string;
   attendees: string[];
+  chairmanId: string | null;
 }
 
 export async function listSessions(): Promise<ClubSession[]> {
@@ -52,11 +64,11 @@ export async function listSessions(): Promise<ClubSession[]> {
 export async function listJoinableSessions(): Promise<ClubSession[]> {
   const account = await getCurrentAccount();
   const memberId = account?.memberId ?? null;
-  const isAdmin = account?.isAdmin === true;
-  if (!memberId && !isAdmin) return [];
+  const isAdminViewer = account?.isAdmin === true;
+  if (!memberId && !isAdminViewer) return [];
   const { data, error } = await supabaseAdmin.from("sessions").select("*").neq("status", "ended").order("scheduled_at", { ascending: true });
   if (error) throw new Error(error.message);
-  return (data ?? []).map(mapSessionRow).filter((s) => isAdmin || canJoinSession(s, memberId));
+  return (data ?? []).map(mapSessionRow).filter((s) => isAdminViewer || s.chairmanId === memberId || canJoinSession(s, memberId));
 }
 
 export async function createSession(input: CreateSessionInput): Promise<{ error: string } | { ok: true; id: string }> {
@@ -80,6 +92,7 @@ export async function createSession(input: CreateSessionInput): Promise<{ error:
     series_id: seriesId, scheduled_at: input.scheduledAt, status: "scheduled",
     review_mode: input.reviewMode, score_visibility: input.scoreVisibility,
     join_policy: input.joinPolicy, attendees: input.attendees,
+    chairman_id: input.chairmanId || null,
   }).select("id").single();
   if (error) return { error: error.message };
   revalidatePath("/hallinta/kerhoillat");
@@ -129,6 +142,20 @@ export async function deleteSession(id: string): Promise<{ error: string } | { o
   return { ok: true };
 }
 
+/** Admin: vaihda illan puheenjohtaja (esim. jos nimetty ei pääse paikalle). Sallittu kunnes ilta on päättynyt. */
+export async function setSessionChairman(id: string, chairmanId: string | null): Promise<{ error: string } | { ok: true }> {
+  await requireAdmin();
+  const { data: existing, error: gErr } = await supabaseAdmin.from("sessions").select("status").eq("id", id).maybeSingle();
+  if (gErr) return { error: gErr.message };
+  if (!existing) return { error: "Sessiota ei löydy." };
+  if (existing.status === "ended") return { error: "Päättyneen illan puheenjohtajaa ei voi vaihtaa." };
+  const { error } = await supabaseAdmin.from("sessions").update({ chairman_id: chairmanId || null }).eq("id", id);
+  if (error) return { error: error.message };
+  revalidatePath("/hallinta/kerhoillat");
+  revalidatePath(`/kerhoilta/${id}`);
+  return { ok: true };
+}
+
 const PUBLIC_PATHS = ["/", "/sarjat", "/tilastot", "/hall-of-fame", "/jasenet"];
 
 function revalidateAfterCommit(seriesId: string) {
@@ -137,7 +164,8 @@ function revalidateAfterCommit(seriesId: string) {
 }
 
 export async function startSession(id: string): Promise<{ error: string } | { ok: true }> {
-  await requireAdmin();
+  const auth = await assertSessionControl(id);
+  if ("error" in auth) return auth;
   const { data: live, error: lErr } = await supabaseAdmin.from("sessions").select("id").eq("status", "live").limit(1);
   if (lErr) return { error: lErr.message };
   if (live && live.length > 0 && live[0].id !== id) return { error: "Toinen kerhoilta on jo käynnissä." };
@@ -157,7 +185,8 @@ export async function startSession(id: string): Promise<{ error: string } | { ok
 }
 
 export async function endSession(id: string): Promise<{ error: string } | { ok: true }> {
-  await requireAdmin();
+  const auth = await assertSessionControl(id);
+  if ("error" in auth) return auth;
   const { data: session, error: sErr } = await supabaseAdmin.from("sessions").select("*").eq("id", id).maybeSingle();
   if (sErr) return { error: sErr.message };
   if (!session) return { error: "Sessiota ei löydy." };
@@ -237,10 +266,9 @@ export async function saveSessionReview(sessionId: string, input: MyReviewInput)
 }
 
 export async function saveSessionReviewAsChairman(sessionId: string, memberId: string, input: MyReviewInput): Promise<{ error: string } | { ok: true }> {
-  await requireAdmin();
-  const session = await loadSessionForWrite(sessionId);
-  if (!session) return { error: "Sessiota ei löydy." };
-  if (!canEnterReview(session, { asChairman: true })) return { error: "Puheenjohtajan syöttö ei ole käytössä." };
+  const auth = await assertSessionControl(sessionId);
+  if ("error" in auth) return auth;
+  if (!canEnterReview(auth.session, { asChairman: true })) return { error: "Puheenjohtajan syöttö ei ole käytössä." };
   return upsertStagedReview(sessionId, memberId, input);
 }
 
@@ -256,13 +284,14 @@ export interface RoomState {
 export async function getRoomState(sessionId: string): Promise<RoomState> {
   const account = await getCurrentAccount();
   const memberId = account?.memberId ?? null;
-  const viewerIsChairman = account?.isAdmin === true;
+  const isAdminViewer = account?.isAdmin === true;
 
   const { data: row, error } = await supabaseAdmin.from("sessions").select("*").eq("id", sessionId).maybeSingle();
   if (error) throw new Error(error.message);
-  if (!row) return { allowed: false, session: null, viewerMemberId: memberId, viewerIsChairman, present: [], reviews: [] };
+  if (!row) return { allowed: false, session: null, viewerMemberId: memberId, viewerIsChairman: isAdminViewer, present: [], reviews: [] };
   const session = mapSessionRow(row);
 
+  const viewerIsChairman = isAdminViewer || (!!memberId && memberId === session.chairmanId);
   const allowed = viewerIsChairman || canJoinSession(session, memberId);
   if (!allowed) return { allowed: false, session, viewerMemberId: memberId, viewerIsChairman, present: [], reviews: [] };
 

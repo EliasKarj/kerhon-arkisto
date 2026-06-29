@@ -2,11 +2,12 @@ import Link from "next/link";
 import { listSessions } from "@/lib/session/session-actions";
 import { getRoomData, seriesById } from "@/lib/data";
 import { CancelSessionButton } from "@/components/admin/cancel-session-button";
+import { ChairmanSelect } from "@/components/admin/chairman-select";
 
 const STATUS_LABEL: Record<string, string> = { scheduled: "Ajastettu", live: "Käynnissä", ended: "Päättynyt" };
 
 export default async function SessionsAdminPage() {
-  const [sessions, { series }] = await Promise.all([listSessions(), getRoomData()]);
+  const [sessions, { series, members }] = await Promise.all([listSessions(), getRoomData()]);
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
@@ -23,6 +24,9 @@ export default async function SessionsAdminPage() {
                 <span className="ml-2 font-mono text-sm text-muted">· {STATUS_LABEL[s.status] ?? s.status}{s.scheduledAt ? ` · ${new Date(s.scheduledAt).toLocaleString("fi-FI")}` : ""}</span>
               </span>
               <span className="flex items-center gap-3">
+                {s.status !== "ended" ? (
+                  <ChairmanSelect sessionId={s.id} current={s.chairmanId} members={members} />
+                ) : null}
                 {s.status === "scheduled" ? (
                   <CancelSessionButton sessionId={s.id} title={seriesById(series, s.seriesId)?.title ?? s.seriesId} />
                 ) : null}
