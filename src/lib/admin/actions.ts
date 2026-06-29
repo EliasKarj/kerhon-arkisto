@@ -14,6 +14,7 @@ import {
 import {
   slugify, uniqueId, reviewId, validateClubNight, type ClubNightInput,
 } from "./validation";
+import { createSeriesFromAniList, type NewSeriesInput } from "./series-create";
 
 const PUBLIC_PATHS = ["/", "/sarjat", "/aikajana", "/tilastot", "/jasenet"];
 
@@ -173,6 +174,23 @@ export async function updateClubNight(seriesId: string, input: ClubNightInput): 
   if (writeErr) return writeErr;
   revalidatePublic(seriesId, input.proposerId);
   return { ok: true, seriesId };
+}
+
+/** Lisää uuden "nyt katselussa" -sarjan (club_score null). Ei arvioita vielä. */
+export async function createWatchingSeries(
+  input: NewSeriesInput,
+): Promise<{ error: string } | { ok: true; seriesId: string }> {
+  await requireAdmin();
+  let res: Awaited<ReturnType<typeof createSeriesFromAniList>>;
+  try {
+    res = await createSeriesFromAniList(input);
+  } catch (e) {
+    return { error: actionErrorMessage(e) };
+  }
+  if ("error" in res) return res;
+  revalidatePublic(res.seriesId, input.proposerId);
+  revalidatePath("/hallinta");
+  return { ok: true, seriesId: res.seriesId };
 }
 
 /** Poistaa sarjan kokonaan: arviot, sitä koskevat sessiot (cascade) ja itse sarjan. */

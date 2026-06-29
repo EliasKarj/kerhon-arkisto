@@ -14,6 +14,7 @@ export default async function HallintaDashboard() {
           <Link href="/hallinta/palaute" className="border-2 border-foreground bg-panel px-4 py-2 font-bold tracking-tight">Palaute</Link>
           <Link href="/hallinta/tilit" className="border-2 border-foreground bg-panel px-4 py-2 font-bold tracking-tight">Tilit &amp; linkitys</Link>
           <Link href="/hallinta/kerhoillat" className="border-2 border-foreground bg-panel px-4 py-2 font-bold tracking-tight">Live-kerhoillat</Link>
+          <Link href="/hallinta/sarja/uusi" className="border-2 border-foreground bg-panel px-4 py-2 font-bold tracking-tight">+ Nyt katselussa</Link>
           <Link href="/hallinta/kerhoilta" className="border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Kirjaa kerhoilta</Link>
         </div>
       </div>
