@@ -8,7 +8,7 @@ import { isAdmin, requireAdmin, setSessionCookie, clearSessionCookie } from "./a
 import { passwordMatches } from "./auth-token";
 import { checkRateLimit, resetRateLimit } from "./rate-limit";
 import {
-  fetchAnimeDetail, searchAnime, fetchCharacters, mediaToCover, mediaToMeta, mediaToType,
+  fetchAnimeDetail, searchAnime, fetchCharacters, fetchMediaBasic, mediaToCover, mediaToMeta, mediaToType,
   mediaToWatchLinks, matchCharacterImage, type AnimeSearchResult, type SeriesCharacter,
 } from "./anilist";
 import { getCurrentAccount } from "@/lib/auth/account";
@@ -225,7 +225,49 @@ export interface SiteAnnouncement {
   id: string;
   message: string;
   href: string | null;
+  imageUrl: string | null;
   createdAt: string;
+}
+
+export interface LinkPreview {
+  title: string | null;
+  coverUrl: string | null;
+}
+
+/** Tunnistaa sarjalinkin: sisäinen /sarja/, AniList- tai MAL-osoite. */
+function parseAnimeLink(href: string): { seriesId?: string; anilistId?: number; malId?: number } | null {
+  let m = href.match(/^\/sarja\/([^/?#]+)/);
+  if (m) return { seriesId: m[1] };
+  m = href.match(/anilist\.co\/anime\/(\d+)/i);
+  if (m) return { anilistId: Number(m[1]) };
+  m = href.match(/myanimelist\.net\/anime\/(\d+)/i);
+  if (m) return { malId: Number(m[1]) };
+  return null;
+}
+
+/** Hakee linkistä kannen + otsikon: DB (oma sarja) tai AniList/MAL. */
+async function resolveLinkPreview(href: string | null): Promise<LinkPreview | null> {
+  if (!href) return null;
+  const parsed = parseAnimeLink(href);
+  if (!parsed) return null;
+  if (parsed.seriesId) {
+    const { data } = await supabaseAdmin.from("series").select("title,cover_url").eq("id", parsed.seriesId).maybeSingle();
+    if (!data) return null;
+    return { title: (data.title as string) ?? null, coverUrl: (data.cover_url as string) || null };
+  }
+  if (parsed.anilistId) return fetchMediaBasic({ id: parsed.anilistId });
+  if (parsed.malId) return fetchMediaBasic({ idMal: parsed.malId });
+  return null;
+}
+
+/** Admin-lomakkeen esikatselu: hakee otsikon + kannen linkistä. */
+export async function fetchLinkPreview(href: string): Promise<LinkPreview | null> {
+  if (!(await isAdmin())) return null;
+  try {
+    return await resolveLinkPreview(href.trim());
+  } catch {
+    return null;
+  }
 }
 
 /** Lähettää ilmoituksen valituille kanaville: sivuston toast (announcements-taulu) ja/tai Discord. */
@@ -242,18 +284,21 @@ export async function sendAnnouncement(input: {
   if (!input.toDiscord && !input.toSite) return { error: "Valitse vähintään yksi kanava." };
   const href = input.href?.trim() || null;
 
+  // Linkistä (oma sarja / AniList / MAL) haettu kansikuva sekä toastiin että Discordiin.
+  let imageUrl: string | null = null;
+  if (href) {
+    try {
+      imageUrl = (await resolveLinkPreview(href))?.coverUrl ?? null;
+    } catch {
+      imageUrl = null;
+    }
+  }
+
   if (input.toSite) {
-    const { error } = await supabaseAdmin.from("announcements").insert({ message, href });
+    const { error } = await supabaseAdmin.from("announcements").insert({ message, href, image_url: imageUrl });
     if (error) return { error: error.message };
   }
   if (input.toDiscord) {
-    // Jos linkki osoittaa sarjaan, liitä sarjan kansikuva (AniList) embediin.
-    let imageUrl: string | null = null;
-    const seriesMatch = href?.match(/^\/sarja\/(.+)$/);
-    if (seriesMatch) {
-      const { data } = await supabaseAdmin.from("series").select("cover_url").eq("id", seriesMatch[1]).maybeSingle();
-      imageUrl = (data?.cover_url as string | undefined) || null;
-    }
     await sendDiscordMessage(href ? `📣 ${message}\n${absoluteUrl(href)}` : `📣 ${message}`, { imageUrl });
   }
   return { ok: true };
@@ -263,7 +308,7 @@ export async function sendAnnouncement(input: {
 export async function fetchAnnouncementsSince(sinceIso: string): Promise<SiteAnnouncement[]> {
   const { data, error } = await supabase
     .from("announcements")
-    .select("id,message,href,created_at")
+    .select("id,message,href,image_url,created_at")
     .gt("created_at", sinceIso)
     .order("created_at", { ascending: true })
     .limit(10);
@@ -272,6 +317,7 @@ export async function fetchAnnouncementsSince(sinceIso: string): Promise<SiteAnn
     id: a.id as string,
     message: a.message as string,
     href: (a.href as string | null) ?? null,
+    imageUrl: (a.image_url as string | null) ?? null,
     createdAt: a.created_at as string,
   }));
 }

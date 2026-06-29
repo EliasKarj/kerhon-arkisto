@@ -133,6 +133,24 @@ export async function fetchAnimeDetail(anilistId: number): Promise<AniListMedia>
   return data.Media;
 }
 
+const BASIC_QUERY = `query($id:Int,$idMal:Int){ Media(id:$id, idMal:$idMal, type:ANIME){
+  title{ romaji english } coverImage{ extraLarge large }
+} }`;
+
+/** Hakee perustiedot (otsikko + kansi) AniList- tai MAL-id:llä. Palauttaa null virheessä. */
+export async function fetchMediaBasic(args: { id?: number; idMal?: number }): Promise<{ title: string; coverUrl: string | null } | null> {
+  try {
+    const data = await gql<{ Media: AniListMedia | null }>(BASIC_QUERY, { id: args.id ?? null, idMal: args.idMal ?? null });
+    if (!data.Media) return null;
+    return {
+      title: data.Media.title.english ?? data.Media.title.romaji ?? "",
+      coverUrl: mediaToCover(data.Media),
+    };
+  } catch {
+    return null;
+  }
+}
+
 export interface SeriesCharacter {
   name: string;
   image: string | null;

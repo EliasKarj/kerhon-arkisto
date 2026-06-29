@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import { sendAnnouncement } from "@/lib/admin/actions";
+import { useEffect, useState, useTransition } from "react";
+import { sendAnnouncement, fetchLinkPreview, type LinkPreview } from "@/lib/admin/actions";
 
 const field = "border-2 border-foreground bg-background px-3 py-2";
 
@@ -10,9 +10,22 @@ export function AnnouncementForm() {
   const [href, setHref] = useState("");
   const [toSite, setToSite] = useState(true);
   const [toDiscord, setToDiscord] = useState(false);
+  const [preview, setPreview] = useState<LinkPreview | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
   const [pending, startTransition] = useTransition();
+
+  // Hae linkistä kansi + otsikko (debounce), näytä esikatselussa.
+  useEffect(() => {
+    const h = href.trim();
+    let active = true;
+    const t = setTimeout(async () => {
+      if (!h) { if (active) setPreview(null); return; }
+      const res = await fetchLinkPreview(h);
+      if (active) setPreview(res);
+    }, 500);
+    return () => { active = false; clearTimeout(t); };
+  }, [href]);
 
   function submit() {
     setError(null);
@@ -39,7 +52,7 @@ export function AnnouncementForm() {
         <label className="flex items-center gap-2"><input type="checkbox" checked={toDiscord} onChange={(e) => setToDiscord(e.target.checked)} /> Discord</label>
       </div>
 
-      <AnnouncementPreview message={message} href={href.trim()} toSite={toSite} toDiscord={toDiscord} />
+      <AnnouncementPreview message={message} href={href.trim()} toSite={toSite} toDiscord={toDiscord} coverUrl={preview?.coverUrl ?? null} title={preview?.title ?? null} />
 
       {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
       {done ? <p className="font-mono text-sm text-accent">Ilmoitus lähetetty. ✓</p> : null}
@@ -52,12 +65,11 @@ export function AnnouncementForm() {
 }
 
 function AnnouncementPreview({
-  message, href, toSite, toDiscord,
+  message, href, toSite, toDiscord, coverUrl, title,
 }: {
-  message: string; href: string; toSite: boolean; toDiscord: boolean;
+  message: string; href: string; toSite: boolean; toDiscord: boolean; coverUrl: string | null; title: string | null;
 }) {
   const text = message.trim() || "Viestin esikatselu…";
-  const isSeriesLink = /^\/sarja\/.+/.test(href);
 
   return (
     <section className="flex flex-col gap-3" aria-label="Esikatselu">
@@ -66,11 +78,20 @@ function AnnouncementPreview({
         <p className="text-sm text-muted">Valitse vähintään yksi kanava nähdäksesi esikatselun.</p>
       ) : null}
 
+      {href && title ? (
+        <p className="text-xs text-muted">Linkki tunnistettu: <span className="font-semibold text-foreground">{title}</span>{coverUrl ? " (kansikuva liitetään)" : ""}</p>
+      ) : null}
+
       {toSite ? (
         <div className="flex flex-col gap-1">
           <span className="text-xs font-semibold uppercase tracking-wide text-muted">Sivuston toast</span>
           <div className="flex w-[min(100%,22rem)] items-start gap-3 rounded-[13px] border-2 border-ink bg-panel p-3 shadow-[4px_4px_0_rgba(0,0,0,.5)]">
-            <span aria-hidden className="mt-1 inline-block size-2 shrink-0 rounded-full bg-accent" />
+            {coverUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={coverUrl} alt="" className="h-14 w-10 shrink-0 rounded border-2 border-ink object-cover" />
+            ) : (
+              <span aria-hidden className="mt-1 inline-block size-2 shrink-0 rounded-full bg-accent" />
+            )}
             <span className="flex-1 text-sm font-semibold">{text}</span>
             <span aria-hidden className="shrink-0 text-muted">✕</span>
           </div>
@@ -83,10 +104,9 @@ function AnnouncementPreview({
           <div className="flex flex-col gap-1 rounded-md border border-line bg-panel p-3 text-sm">
             <span>📣 {text}</span>
             {href ? <span className="break-all text-muted">{href}</span> : null}
-            {isSeriesLink ? (
-              <span className="mt-1 flex aspect-[3/4] w-16 items-center justify-center rounded border-2 border-ink bg-background text-center text-[10px] font-semibold text-muted">
-                sarjan kansikuva
-              </span>
+            {coverUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={coverUrl} alt="" className="mt-1 aspect-[3/4] w-20 rounded border-2 border-ink object-cover" />
             ) : null}
           </div>
         </div>

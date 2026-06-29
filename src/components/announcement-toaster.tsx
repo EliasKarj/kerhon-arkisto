@@ -51,7 +51,12 @@ export function AnnouncementToaster() {
       {toasts.map((a) => {
         const inner = (
           <div className="toast-in flex items-start gap-3 rounded-[13px] border-2 border-ink bg-panel p-3 shadow-[4px_4px_0_rgba(0,0,0,.5)]">
-            <span aria-hidden className="mt-1 inline-block size-2 shrink-0 rounded-full bg-accent" />
+            {a.imageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={a.imageUrl} alt="" className="h-14 w-10 shrink-0 rounded border-2 border-ink object-cover" />
+            ) : (
+              <span aria-hidden className="mt-1 inline-block size-2 shrink-0 rounded-full bg-accent" />
+            )}
             <span className="flex-1 text-sm font-semibold">{a.message}</span>
             <button
               type="button"
