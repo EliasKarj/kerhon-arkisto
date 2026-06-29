@@ -286,6 +286,11 @@ export async function getRoomState(sessionId: string): Promise<RoomState> {
   const memberId = account?.memberId ?? null;
   const isAdminViewer = account?.isAdmin === true;
 
+  // Epäkelpo (ei-UUID) id → kohtele "ei löydy" (sivun notFound), ei 500:aa.
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sessionId)) {
+    return { allowed: false, session: null, viewerMemberId: memberId, viewerIsChairman: isAdminViewer, present: [], reviews: [] };
+  }
+
   const { data: row, error } = await supabaseAdmin.from("sessions").select("*").eq("id", sessionId).maybeSingle();
   if (error) throw new Error(error.message);
   if (!row) return { allowed: false, session: null, viewerMemberId: memberId, viewerIsChairman: isAdminViewer, present: [], reviews: [] };
