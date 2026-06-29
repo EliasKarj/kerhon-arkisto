@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import Link from "next/link";
 import type { Member } from "@/lib/types";
+import { getInitials } from "@/lib/labels";
 import type { RoomState } from "@/lib/session/session-actions";
 import type { MyReviewInput } from "@/lib/member/review-validation";
 import {
@@ -13,6 +14,39 @@ import { CharacterPicker } from "@/components/character-picker";
 import { formatScore } from "@/lib/stats";
 
 const field = "border-2 border-foreground bg-background px-3 py-2";
+
+const MODE_LABEL: Record<string, string> = { both: "Jäsenet + pj", chairman: "Vain puheenjohtaja", members: "Vain jäsenet" };
+const VIS_LABEL: Record<string, string> = { live: "Pisteet näkyvät heti", hidden: "Pisteet piilossa loppuun" };
+const JOIN_LABEL: Record<string, string> = { all: "Kaikki jäsenet", invited: "Vain kutsutut" };
+
+/** Tikittävä laskuri kerhoillan alkuun. Mountin jälkeen (ei hydraatiomismatchia). */
+function Countdown({ target }: { target: string }) {
+  const [now, setNow] = useState<number | null>(null);
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => setNow(Date.now()));
+    const t = setInterval(() => setNow(Date.now()), 1000);
+    return () => { cancelAnimationFrame(raf); clearInterval(t); };
+  }, []);
+  if (now === null) return null;
+  const diff = new Date(target).getTime() - now;
+  if (diff <= 0) return <p className="font-mono text-xl font-bold text-accent">Alkamassa…</p>;
+  const parts: [number, string][] = [
+    [Math.floor(diff / 86_400_000), "pv"],
+    [Math.floor(diff / 3_600_000) % 24, "t"],
+    [Math.floor(diff / 60_000) % 60, "min"],
+    [Math.floor(diff / 1_000) % 60, "s"],
+  ];
+  return (
+    <div className="flex gap-2">
+      {parts.map(([v, l]) => (
+        <div key={l} className="flex flex-col items-center rounded-md border-2 border-ink bg-ink px-3 py-1.5 font-mono text-accent">
+          <span className="text-2xl font-bold leading-none tabular-nums">{String(v).padStart(2, "0")}</span>
+          <span className="text-[10px] uppercase opacity-70">{l}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 type ReviewInitial = { score: number | null; bestPick: string; bestPickImage: string | null; bulletPoints: string[]; tags: string[] };
 
@@ -37,9 +71,9 @@ function ReviewFields({ onSubmit, pending, initial, anilistId }: { onSubmit: (in
 }
 
 export function LiveRoom({
-  sessionId, initial, seriesTitle, members, anilistId,
+  sessionId, initial, seriesTitle, members, anilistId, coverUrl,
 }: {
-  sessionId: string; initial: RoomState; seriesTitle: string; members: Member[]; anilistId: number | null;
+  sessionId: string; initial: RoomState; seriesTitle: string; members: Member[]; anilistId: number | null; coverUrl: string | null;
 }) {
   const state = useRoomPolling(sessionId, initial);
   const [error, setError] = useState<string | null>(null);
@@ -77,14 +111,46 @@ export function LiveRoom({
       ) : null}
 
       {session.status === "scheduled" && (
-        <div className="surface flex flex-col gap-3 p-5">
-          <p className="text-muted">{session.scheduledAt ? `Alkaa ${new Date(session.scheduledAt).toLocaleString("fi-FI")}` : "Odottaa puheenjohtajaa."}</p>
-          {viewerIsChairman && (
-            <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="w-fit border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
-              Aloita kerhoilta
-            </button>
-          )}
-        </div>
+        <section className="ink-panel halftone flex flex-col gap-6 p-6 sm:flex-row sm:items-center">
+          <div className="flex aspect-[2/3] w-32 shrink-0 items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted sm:w-40">
+            {coverUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={coverUrl} alt="" className="h-full w-full object-cover" />
+            ) : (
+              <span aria-hidden>{getInitials(seriesTitle)}</span>
+            )}
+          </div>
+
+          <div className="flex flex-1 flex-col gap-4">
+            <span className="sticker w-fit -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
+              <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
+              Odottaa aloitusta
+            </span>
+
+            {session.scheduledAt ? (
+              <div className="flex flex-col gap-2">
+                <span className="text-sm text-muted">Alkaa {new Date(session.scheduledAt).toLocaleString("fi-FI")}</span>
+                <Countdown target={session.scheduledAt} />
+              </div>
+            ) : (
+              <p className="text-muted">Ajankohta avoin — puheenjohtaja aloittaa kun porukka on koossa.</p>
+            )}
+
+            <ul className="flex flex-wrap gap-2 text-xs font-semibold">
+              <li className="chip">{MODE_LABEL[session.reviewMode] ?? session.reviewMode}</li>
+              <li className="chip">{VIS_LABEL[session.scoreVisibility] ?? session.scoreVisibility}</li>
+              <li className="chip">{JOIN_LABEL[session.joinPolicy] ?? session.joinPolicy}</li>
+            </ul>
+
+            {viewerIsChairman ? (
+              <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="w-fit border-2 border-ink bg-accent px-5 py-2.5 font-bold tracking-tight text-ink shadow-[3px_3px_0_rgba(0,0,0,.5)] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:opacity-50">
+                ▶ Aloita kerhoilta
+              </button>
+            ) : (
+              <p className="text-sm text-muted">Puheenjohtaja aloittaa illan — pysy linjoilla.</p>
+            )}
+          </div>
+        </section>
       )}
 
       {session.status !== "scheduled" && (
