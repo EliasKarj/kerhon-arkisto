@@ -2,8 +2,8 @@
 
 Kaveriporukan kerhosovellus animejen ja elokuvien yhteiseen arviointiin:
 julkinen **arkisto** (arviot, Best character -äänet, tilastot, yhteysverkko),
-jäsenten **omat arviot**, **live-kerhoillat** ja **Discord-ilmoitukset** — kaikki
-yhdessä paikassa.
+jäsenten **omat arviot**, **live-kerhoillat**, **ilmoitukset** (Discord + sivuston
+toast) ja sisäänrakennettu **palaute** — kaikki yhdessä paikassa.
 
 **▶ Live:** https://kerhon-arkisto.vercel.app
 
@@ -22,19 +22,27 @@ saavutettavuus.
 - **Hall of Fame** — parhaat/huonoimmat sarjat, tiukin/löysin arvioija, best character -leaderboard
 - **Tilastot** — trivia-dataa + animeiden **yhteysverkko** (build-aikainen d3-force-layout)
 - **Aikajana** — vaakasuora, raahattava aikajana
-- **Teemavalitsin** — 6 väriteemaa (tumma neo-brutalist -oletus)
+- **Palaute** — kuka tahansa voi jättää palautetta (roskasuojattu lomake: hunajapurkki + aikaloukku)
+- **Asetukset** — 6 väriteemaa vaihdettavissa (tumma "Yö" + lime oletuksena); ilmoitukset nousevat oikeasta alakulmasta
 
 **Jäsenet** (Discord-kirjautuminen):
 
 - Kirjautuminen Discordilla; admin linkittää tilin kerhon jäseneen
 - **Oma arvio** suoraan sarjasivulla (lisää/muokkaa/poista) — sarjan pistemäärä on jäsenarvioiden keskiarvo
+- **Best character -valitsin** ehdottaa sarjan hahmot AniListista kuvineen; valittu hahmo kuvineen tallentuu arvioon
 - **Live-kerhoillat:** liity huoneeseen, näe läsnäolo ja arviot reaaliajassa
 
 **Admin** (jäsentili tai jaettu salasana):
 
 - Kerhoiltojen kirjaus (sarja + kaikkien arviot) AniList-haulla
-- Tilien linkitys jäseniin
-- **Live-sessioiden ajastus** (per-sessio-asetukset: kuka syöttää, pisteiden paljastus, ketkä liittyvät) ja puheenjohtajana ajaminen
+- **"Nyt katselussa" -sarjan lisäys** AniList-haulla (valinnainen auto-ilmoitus)
+- Tilien linkitys jäseniin; **palautteen luku** (käsittele/poista)
+- **Live-sessioiden ajastus** (per-sessio-asetukset: kuka syöttää, pisteiden paljastus, ketkä liittyvät), puheenjohtajana ajaminen ja ajastetun illan peruutus
+- **Ilmoitukset** — lähetä Discordiin ja/tai sivuston toastiin; linkistä (oma sarja / AniList / MyAnimeList) haetaan kansikuva mukaan, live-esikatselulla
+
+**Developer** (adminin yläpuolinen rooli):
+
+- Yksinoikeus roolien hallintaan (admin/developer-oikeuksien myöntö ja poisto); suojaa omistajan aseman, "viimeisen developerin" lukkiutumissuoja
 
 **Live-kerhoilta** (`/kerhoilta/[id]`): puheenjohtaja aloittaa session, jäsenet
 syöttävät arviot huoneessa (pollaus ~3 s), pisteet voivat olla piilossa
@@ -45,16 +53,18 @@ arkistoon. Ajastuksesta, alkamisesta ja päättymisestä lähtee **Discord-ilmoi
 
 - **[Next.js](https://nextjs.org) 16** — App Router, React Server Components, **Server Actions**, palvelinrenderöinti
 - **TypeScript**
-- **[Tailwind CSS](https://tailwindcss.com) v4** — neo-brutalist-teema, CSS-muuttujat, vaihdettavat teemat
+- **[Tailwind CSS](https://tailwindcss.com) v4** — rauhallinen ammattimainen pohja + sarjakuvamaiset charmi-aksentit, CSS-muuttujat, 6 vaihdettavaa teemaa
 - **[Supabase](https://supabase.com)** — Postgres (RLS) + **Auth (Discord OAuth)** `@supabase/ssr`:llä
 - **[Recharts](https://recharts.org)** kaavioihin; **[d3-force](https://github.com/d3/d3-force)** verkkokaavion layoutiin (build-aikana)
-- **[AniList](https://anilist.co) GraphQL** — kannet/hahmot/linkit/metadata (ilmainen, ei API-avainta)
-- **Discord webhook** — kerhoilta-ilmoitukset
+- **[AniList](https://anilist.co) GraphQL** — kannet/hahmot/linkit/metadata + hahmovalitsin ja linkkien (AniList/MAL) kansihaku (ilmainen, ei API-avainta)
+- **Discord webhook** — kerhoilta- ja ilmoitusviestit (sarjan kansi embedissä)
 - Deploy: **[Vercel](https://vercel.com)**
 
 ## Arkkitehtuuri
 
-- **Data** on Supabase Postgresissa (`members`, `series`, `reviews`, `accounts`, `sessions`, …). Sivut ovat async server-komponentteja jotka lukevat `getRoomData()`:lla (React `cache()` per pyyntö).
+- **Data** on Supabase Postgresissa (`members`, `series`, `reviews`, `accounts`, `sessions`, `announcements`, `feedback`, …). Sivut ovat async server-komponentteja jotka lukevat `getRoomData()`:lla (React `cache()` per pyyntö).
+- **Roolit:** `accounts.is_admin` ja `is_developer` (developer ⊃ admin). Roolien myöntö on developer-rajattua; jaettu salasana antaa adminin muttei developeria.
+- **Ilmoitukset:** toast pollaa uudet ilmoitukset (sivun latauksen jälkeen luodut) ja nostaa ne hetkeksi; `feedback`/`announcements`-kirjoitukset menevät palvelimelta, eikä palautetta voi lukea julkisesti (RLS).
 - **Johdettu data** (kannet, hahmot, linkit, AniList-meta) tallennetaan sarjan riville; vanhalle datalle on build-aikainen JSON-fallback. Yhteysverkko (`graph.json`) rakennetaan build-aikana d3-forcella kannasta.
 - **Kirjoitukset** menevät Next **Server Actioneiden** kautta `service_role`-clientilla (palvelin-only). Identiteetti tulee aina palvelimelta (`getCurrentAccount()`), ei clientiltä. Julkinen luku on anon/publishable-avaimella + RLS public-SELECT.
 - **Pistemäärä** = jäsenarvioiden keskiarvo, fallback tallennettuun yhteisarvosanaan kun arvioita ei ole (`displayScore`).
@@ -106,7 +116,7 @@ npm run fetch:meta       # (ja fetch:covers / fetch:characters / fetch:links) An
 | `SUPABASE_SERVICE_ROLE_KEY` | **palvelin-only** kirjoitusavain (secret) |
 | `ADMIN_PASSWORD` | jaettu admin-salasana (`/kirjaudu`) |
 | `ADMIN_SESSION_SECRET` | admin-cookien HMAC-allekirjoitus |
-| `DISCORD_WEBHOOK_URL` | (valinnainen) kerhoilta-ilmoitukset |
+| `DISCORD_WEBHOOK_URL` | (valinnainen) kerhoilta- ja ilmoitusviestit |
 | `NEXT_PUBLIC_SITE_URL` | (valinnainen) absoluuttiset linkit ilmoituksissa |
 
 Supabase Auth → Providers → **Discord** pitää olla päällä, ja `…/auth/callback` sallittuna redirect-URL:ina.
