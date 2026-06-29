@@ -111,14 +111,14 @@ export function LiveRoom({
       ) : null}
 
       {session.status === "scheduled" && (
-        <section className="standby-glow relative overflow-hidden rounded-[var(--radius)] border border-line-strong bg-panel px-6 py-10">
-          <div className="relative mx-auto flex max-w-md flex-col items-center gap-5 text-center">
+        <section className="standby-glow relative flex min-h-[calc(100dvh-13rem)] items-center justify-center overflow-hidden rounded-[var(--radius)] border border-line-strong bg-panel px-6 py-12">
+          <div className="relative mx-auto flex max-w-md flex-col items-center gap-6 text-center">
             <span className="sticker -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
               <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
               Odottaa aloitusta
             </span>
 
-            <div className="flex aspect-[2/3] w-36 rotate-[-2deg] items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted shadow-[6px_6px_0_rgba(0,0,0,.55)]">
+            <div className="flex aspect-[2/3] w-40 rotate-[-2deg] items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted shadow-[6px_6px_0_rgba(0,0,0,.55)] sm:w-48">
               {coverUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={coverUrl} alt="" className="h-full w-full object-cover" />
