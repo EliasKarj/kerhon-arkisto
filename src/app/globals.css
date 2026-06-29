@@ -182,14 +182,24 @@ body {
     mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent);
   }
   .toast-in { animation: toast-in 0.25s ease-out; }
-  /* "Valoheitin" ylhäältä (live-huoneen odotustila). */
+  /* "Valoheitin" ylhäältä (live-huoneen odotustila), hengittävä sykintä. */
   .standby-glow::before {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
     background: radial-gradient(120% 75% at 50% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 62%);
+    animation: standby-pulse 3.2s ease-in-out infinite;
   }
+}
+
+@keyframes standby-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .standby-glow::before { animation: none; }
 }
 
 @keyframes toast-in {
