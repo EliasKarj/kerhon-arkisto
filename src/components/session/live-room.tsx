@@ -111,39 +111,40 @@ export function LiveRoom({
       ) : null}
 
       {session.status === "scheduled" && (
-        <section className="ink-panel halftone flex flex-col gap-6 p-6 sm:flex-row sm:items-center">
-          <div className="flex aspect-[2/3] w-32 shrink-0 items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted sm:w-40">
-            {coverUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={coverUrl} alt="" className="h-full w-full object-cover" />
-            ) : (
-              <span aria-hidden>{getInitials(seriesTitle)}</span>
-            )}
-          </div>
-
-          <div className="flex flex-1 flex-col gap-4">
-            <span className="sticker w-fit -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
+        <section className="standby-glow relative overflow-hidden rounded-[var(--radius)] border border-line-strong bg-panel px-6 py-10">
+          <div className="relative mx-auto flex max-w-md flex-col items-center gap-5 text-center">
+            <span className="sticker -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
               <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
               Odottaa aloitusta
             </span>
 
+            <div className="flex aspect-[2/3] w-36 rotate-[-2deg] items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted shadow-[6px_6px_0_rgba(0,0,0,.55)]">
+              {coverUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={coverUrl} alt="" className="h-full w-full object-cover" />
+              ) : (
+                <span aria-hidden>{getInitials(seriesTitle)}</span>
+              )}
+            </div>
+
             {session.scheduledAt ? (
-              <div className="flex flex-col gap-2">
-                <span className="text-sm text-muted">Alkaa {new Date(session.scheduledAt).toLocaleString("fi-FI")}</span>
+              <div className="flex flex-col items-center gap-2">
+                <span className="font-mono text-xs uppercase tracking-widest text-muted">Kerhoilta alkaa</span>
                 <Countdown target={session.scheduledAt} />
+                <span className="text-xs text-muted">{new Date(session.scheduledAt).toLocaleString("fi-FI")}</span>
               </div>
             ) : (
               <p className="text-muted">Ajankohta avoin — puheenjohtaja aloittaa kun porukka on koossa.</p>
             )}
 
-            <ul className="flex flex-wrap gap-2 text-xs font-semibold">
+            <ul className="flex flex-wrap justify-center gap-2 text-xs font-semibold">
               <li className="chip">{MODE_LABEL[session.reviewMode] ?? session.reviewMode}</li>
               <li className="chip">{VIS_LABEL[session.scoreVisibility] ?? session.scoreVisibility}</li>
               <li className="chip">{JOIN_LABEL[session.joinPolicy] ?? session.joinPolicy}</li>
             </ul>
 
             {viewerIsChairman ? (
-              <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="w-fit border-2 border-ink bg-accent px-5 py-2.5 font-bold tracking-tight text-ink shadow-[3px_3px_0_rgba(0,0,0,.5)] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:opacity-50">
+              <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="border-2 border-ink bg-accent px-6 py-3 font-bold tracking-tight text-ink shadow-[4px_4px_0_rgba(0,0,0,.5)] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:opacity-50">
                 ▶ Aloita kerhoilta
               </button>
             ) : (
