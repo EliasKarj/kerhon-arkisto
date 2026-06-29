@@ -247,7 +247,14 @@ export async function sendAnnouncement(input: {
     if (error) return { error: error.message };
   }
   if (input.toDiscord) {
-    await sendDiscordMessage(href ? `📣 ${message}\n${absoluteUrl(href)}` : `📣 ${message}`);
+    // Jos linkki osoittaa sarjaan, liitä sarjan kansikuva (AniList) embediin.
+    let imageUrl: string | null = null;
+    const seriesMatch = href?.match(/^\/sarja\/(.+)$/);
+    if (seriesMatch) {
+      const { data } = await supabaseAdmin.from("series").select("cover_url").eq("id", seriesMatch[1]).maybeSingle();
+      imageUrl = (data?.cover_url as string | undefined) || null;
+    }
+    await sendDiscordMessage(href ? `📣 ${message}\n${absoluteUrl(href)}` : `📣 ${message}`, { imageUrl });
   }
   return { ok: true };
 }

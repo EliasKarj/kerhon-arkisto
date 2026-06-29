@@ -49,15 +49,20 @@ export function buildEndedMessage(input: {
   return lines.join("\n");
 }
 
-/** Best-effort: lähettää viestin Discord-webhookiin. Ei koskaan heitä; ohittaa jos env puuttuu. */
-export async function sendDiscordMessage(content: string): Promise<void> {
+/** Best-effort: lähettää viestin Discord-webhookiin. Ei koskaan heitä; ohittaa jos env puuttuu.
+ *  imageUrl lisää sarjan kuvan embediin (esim. AniList-kansi). */
+export async function sendDiscordMessage(content: string, opts?: { imageUrl?: string | null }): Promise<void> {
   const url = process.env.DISCORD_WEBHOOK_URL;
   if (!url) return;
+  const body: Record<string, unknown> = { content };
+  if (opts?.imageUrl) {
+    body.embeds = [{ image: { url: opts.imageUrl }, color: 0xc6f000 }];
+  }
   try {
     const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ content }),
+      body: JSON.stringify(body),
     });
     if (!res.ok) console.error(`Discord webhook ${res.status}`);
   } catch (e) {
