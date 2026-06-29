@@ -102,6 +102,11 @@ export function ClubNightForm({ members, editSeriesId, defaultSeason, initial }:
 
       <section className="flex flex-col gap-3">
         <h2 className="sec-title w-fit text-lg">Arviot</h2>
+        <p className="text-sm text-muted">
+          {reviews.length === 0
+            ? "Ei vielä arvioita. Lisää jokaiselle arvioijalle oma rivi alla olevalla napilla (voi myös jättää tyhjäksi)."
+            : `${reviews.length} arvio${reviews.length === 1 ? "" : "ta"}.`}
+        </p>
         {reviews.map((r, i) => (
           <div key={i} className="surface-flat flex flex-col gap-2 p-3">
             <div className="grid gap-2 sm:grid-cols-2">
