@@ -48,12 +48,15 @@ export function CharacterPicker({
 
   if (!anilistId) {
     return (
-      <input
-        value={value}
-        onChange={(e) => onChange(e.target.value, null)}
-        placeholder={placeholder}
-        className={FIELD}
-      />
+      <div className="flex flex-col gap-1">
+        <input
+          value={value}
+          onChange={(e) => onChange(e.target.value, null)}
+          placeholder={placeholder}
+          className={FIELD}
+        />
+        <span className="text-xs font-normal text-muted">Ei AniList-hahmoehdotuksia (sarjaa ei ole liitetty AniListiin) — kirjoita nimi vapaasti.</span>
+      </div>
     );
   }
 
