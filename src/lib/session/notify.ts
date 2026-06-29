@@ -9,6 +9,12 @@ export function roomUrl(sessionId: string): string {
   return `${siteBase()}/kerhoilta/${sessionId}`;
 }
 
+/** Tekee suhteellisesta polusta absoluuttisen URL:n (Discord-viesteihin). */
+export function absoluteUrl(path: string): string {
+  if (/^https?:\/\//.test(path)) return path;
+  return `${siteBase()}${path.startsWith("/") ? "" : "/"}${path}`;
+}
+
 export function seriesUrl(seriesId: string): string {
   return `${siteBase()}/sarja/${seriesId}`;
 }

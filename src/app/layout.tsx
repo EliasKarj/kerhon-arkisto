@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
+import { AnnouncementToaster } from "@/components/announcement-toaster";
 import { DEFAULT_THEME, THEME_IDS, THEME_STORAGE_KEY } from "@/lib/themes";
 
 // Asetetaan tallennettu teema ennen ensimmäistä maalausta (estää välähdyksen).
@@ -77,6 +78,7 @@ export default function RootLayout({
             </a>
           </div>
         </footer>
+        <AnnouncementToaster />
       </body>
     </html>
   );

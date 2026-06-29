@@ -16,6 +16,8 @@ import {
   slugify, uniqueId, reviewId, validateClubNight, type ClubNightInput,
 } from "./validation";
 import { createSeriesFromAniList, type NewSeriesInput } from "./series-create";
+import { sendDiscordMessage, absoluteUrl } from "@/lib/session/notify";
+import { supabase } from "@/lib/supabase";
 
 const PUBLIC_PATHS = ["/", "/sarjat", "/aikajana", "/tilastot", "/jasenet"];
 
@@ -194,6 +196,7 @@ export async function updateClubNight(seriesId: string, input: ClubNightInput): 
 /** Lisää uuden "nyt katselussa" -sarjan (club_score null). Ei arvioita vielä. */
 export async function createWatchingSeries(
   input: NewSeriesInput,
+  announce = false,
 ): Promise<{ error: string } | { ok: true; seriesId: string }> {
   await requireAdmin();
   let res: Awaited<ReturnType<typeof createSeriesFromAniList>>;
@@ -205,7 +208,65 @@ export async function createWatchingSeries(
   if ("error" in res) return res;
   revalidatePublic(res.seriesId, input.proposerId);
   revalidatePath("/hallinta");
+  if (announce) {
+    const { data } = await supabaseAdmin.from("series").select("title").eq("id", res.seriesId).maybeSingle();
+    const title = (data?.title as string | undefined) ?? "uusi sarja";
+    await sendAnnouncement({
+      message: `📺 Uusi sarja nyt katselussa: ${title}`,
+      href: `/sarja/${res.seriesId}`,
+      toDiscord: true,
+      toSite: true,
+    });
+  }
   return { ok: true, seriesId: res.seriesId };
+}
+
+export interface SiteAnnouncement {
+  id: string;
+  message: string;
+  href: string | null;
+  createdAt: string;
+}
+
+/** Lähettää ilmoituksen valituille kanaville: sivuston toast (announcements-taulu) ja/tai Discord. */
+export async function sendAnnouncement(input: {
+  message: string;
+  href: string | null;
+  toDiscord: boolean;
+  toSite: boolean;
+}): Promise<{ error: string } | { ok: true }> {
+  await requireAdmin();
+  const message = input.message.trim();
+  if (!message) return { error: "Viesti puuttuu." };
+  if (message.length > 500) return { error: "Viesti on liian pitkä (max 500 merkkiä)." };
+  if (!input.toDiscord && !input.toSite) return { error: "Valitse vähintään yksi kanava." };
+  const href = input.href?.trim() || null;
+
+  if (input.toSite) {
+    const { error } = await supabaseAdmin.from("announcements").insert({ message, href });
+    if (error) return { error: error.message };
+  }
+  if (input.toDiscord) {
+    await sendDiscordMessage(href ? `📣 ${message}\n${absoluteUrl(href)}` : `📣 ${message}`);
+  }
+  return { ok: true };
+}
+
+/** Julkinen: hakee ilmoitukset jotka on luotu annetun ajankohdan jälkeen (toast-pollaus). */
+export async function fetchAnnouncementsSince(sinceIso: string): Promise<SiteAnnouncement[]> {
+  const { data, error } = await supabase
+    .from("announcements")
+    .select("id,message,href,created_at")
+    .gt("created_at", sinceIso)
+    .order("created_at", { ascending: true })
+    .limit(10);
+  if (error) return [];
+  return (data ?? []).map((a) => ({
+    id: a.id as string,
+    message: a.message as string,
+    href: (a.href as string | null) ?? null,
+    createdAt: a.created_at as string,
+  }));
 }
 
 /** Poistaa sarjan kokonaan: arviot, sitä koskevat sessiot (cascade) ja itse sarjan. */

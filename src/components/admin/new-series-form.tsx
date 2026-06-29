@@ -14,6 +14,7 @@ export function NewSeriesForm({ members, defaultSeason }: { members: Member[]; d
   const [clubSeason, setClubSeason] = useState(defaultSeason);
   const [proposerId, setProposerId] = useState("");
   const [watchedDate, setWatchedDate] = useState("");
+  const [announce, setAnnounce] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
@@ -28,7 +29,7 @@ export function NewSeriesForm({ members, defaultSeason }: { members: Member[]; d
         clubSeason,
         watchedDate: watchedDate || new Date().toISOString().slice(0, 10),
         proposerId,
-      });
+      }, announce);
       if ("error" in res) { setError(res.error); return; }
       router.push(`/sarja/${res.seriesId}`);
     });
@@ -55,6 +56,11 @@ export function NewSeriesForm({ members, defaultSeason }: { members: Member[]; d
           <input type="date" value={watchedDate} onChange={(e) => setWatchedDate(e.target.value)} className={field} />
         </label>
       </section>
+
+      <label className="flex w-fit items-center gap-2 text-sm font-semibold text-muted">
+        <input type="checkbox" checked={announce} onChange={(e) => setAnnounce(e.target.checked)} />
+        Ilmoita (Discord + sivuston toast)
+      </label>
 
       {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
       <button type="button" onClick={submit} disabled={pending} className="w-fit border-2 border-foreground bg-accent px-4 py-3 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)] disabled:opacity-50">
