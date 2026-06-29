@@ -41,6 +41,7 @@ export default async function HallintaDashboard() {
         <div className="flex flex-wrap gap-2">
           <Link href="/hallinta/ilmoitus" className={action}>+ Ilmoitus</Link>
           <Link href="/hallinta/sarja/uusi" className={action}>+ Nyt katselussa</Link>
+          <Link href="/hallinta/kerhoillat/uusi" className={action}>+ Live-kerhoilta</Link>
           <Link href="/hallinta/kerhoilta" className="border-2 border-foreground bg-accent px-4 py-2 font-bold tracking-tight text-background shadow-[4px_4px_0_var(--color-foreground)]">+ Kirjaa kerhoilta</Link>
         </div>
       </div>
