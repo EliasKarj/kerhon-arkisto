@@ -101,7 +101,8 @@ export function LiveRoom({
   // Odotustila: koko näytön kokoinen oma "aula"-näkymä.
   if (session.status === "scheduled") {
     return (
-      <section className="standby-glow relative left-1/2 flex min-h-[calc(100dvh-4.5rem)] w-screen -translate-x-1/2 flex-col items-center justify-center gap-6 overflow-hidden bg-background px-6 py-12 text-center">
+      <section className="standby-glow fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 overflow-y-auto bg-background px-6 py-12 text-center">
+        <Link href="/kerhoillat" className="absolute left-4 top-4 font-mono text-sm font-bold text-muted transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">← Takaisin</Link>
         <div className="flex flex-col items-center gap-1">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{seriesTitle}</h1>
           <p className="text-sm text-muted">
