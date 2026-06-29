@@ -98,63 +98,73 @@ export function LiveRoom({
   const canChairmanEnter = session.status === "live" && viewerIsChairman && (session.reviewMode === "chairman" || session.reviewMode === "both");
   const myReview = reviews.find((r) => r.memberId === viewerMemberId);
 
+  // Odotustila: koko näytön kokoinen oma "aula"-näkymä.
+  if (session.status === "scheduled") {
+    return (
+      <section className="standby-glow relative left-1/2 flex min-h-[calc(100dvh-4.5rem)] w-screen -translate-x-1/2 flex-col items-center justify-center gap-6 overflow-hidden bg-background px-6 py-12 text-center">
+        <div className="flex flex-col items-center gap-1">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{seriesTitle}</h1>
+          <p className="text-sm text-muted">
+            Ajastettu{session.chairmanId ? <> · Puheenjohtaja: <span className="font-semibold text-foreground">{nameOf(session.chairmanId)}</span></> : null}
+          </p>
+        </div>
+
+        <span className="sticker -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
+          <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
+          Odottaa aloitusta
+        </span>
+
+        <div className="flex aspect-[2/3] w-44 rotate-[-2deg] items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted shadow-[7px_7px_0_rgba(0,0,0,.55)] sm:w-52">
+          {coverUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={coverUrl} alt="" className="h-full w-full object-cover" />
+          ) : (
+            <span aria-hidden>{getInitials(seriesTitle)}</span>
+          )}
+        </div>
+
+        {session.scheduledAt ? (
+          <div className="flex flex-col items-center gap-2">
+            <span className="font-mono text-xs uppercase tracking-widest text-muted">Kerhoilta alkaa</span>
+            <Countdown target={session.scheduledAt} />
+            <span className="text-xs text-muted">{new Date(session.scheduledAt).toLocaleString("fi-FI")}</span>
+          </div>
+        ) : (
+          <p className="text-muted">Ajankohta avoin — puheenjohtaja aloittaa kun porukka on koossa.</p>
+        )}
+
+        <ul className="flex flex-wrap justify-center gap-2 text-xs font-semibold">
+          <li className="chip">{MODE_LABEL[session.reviewMode] ?? session.reviewMode}</li>
+          <li className="chip">{VIS_LABEL[session.scoreVisibility] ?? session.scoreVisibility}</li>
+          <li className="chip">{JOIN_LABEL[session.joinPolicy] ?? session.joinPolicy}</li>
+        </ul>
+
+        {viewerIsChairman ? (
+          <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="border-2 border-ink bg-accent px-6 py-3 font-bold tracking-tight text-ink shadow-[4px_4px_0_rgba(0,0,0,.5)] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:opacity-50">
+            ▶ Aloita kerhoilta
+          </button>
+        ) : (
+          <p className="text-sm text-muted">Puheenjohtaja aloittaa illan — pysy linjoilla.</p>
+        )}
+
+        {error ? <p className="font-mono text-sm text-red-500">{error}</p> : null}
+      </section>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">{seriesTitle}</h1>
         <span className="font-mono text-sm text-muted">
-          {session.status === "scheduled" ? "Ajastettu" : session.status === "live" ? "● Käynnissä" : "Päättynyt"}
+          {session.status === "live" ? "● Käynnissä" : "Päättynyt"}
         </span>
       </div>
       {session.chairmanId ? (
         <p className="-mt-3 text-sm text-muted">Puheenjohtaja: <span className="font-semibold text-foreground">{nameOf(session.chairmanId)}</span></p>
       ) : null}
 
-      {session.status === "scheduled" && (
-        <section className="standby-glow relative flex min-h-[calc(100dvh-13rem)] items-center justify-center overflow-hidden rounded-[var(--radius)] border border-line-strong bg-panel px-6 py-12">
-          <div className="relative mx-auto flex max-w-md flex-col items-center gap-6 text-center">
-            <span className="sticker -rotate-2 px-3 py-1 text-xs font-bold uppercase tracking-wide">
-              <span className="inline-block size-2 animate-pulse rounded-full bg-ink" aria-hidden />
-              Odottaa aloitusta
-            </span>
-
-            <div className="flex aspect-[2/3] w-40 rotate-[-2deg] items-center justify-center overflow-hidden rounded-md border-2 border-ink bg-background text-2xl font-bold text-muted shadow-[6px_6px_0_rgba(0,0,0,.55)] sm:w-48">
-              {coverUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={coverUrl} alt="" className="h-full w-full object-cover" />
-              ) : (
-                <span aria-hidden>{getInitials(seriesTitle)}</span>
-              )}
-            </div>
-
-            {session.scheduledAt ? (
-              <div className="flex flex-col items-center gap-2">
-                <span className="font-mono text-xs uppercase tracking-widest text-muted">Kerhoilta alkaa</span>
-                <Countdown target={session.scheduledAt} />
-                <span className="text-xs text-muted">{new Date(session.scheduledAt).toLocaleString("fi-FI")}</span>
-              </div>
-            ) : (
-              <p className="text-muted">Ajankohta avoin — puheenjohtaja aloittaa kun porukka on koossa.</p>
-            )}
-
-            <ul className="flex flex-wrap justify-center gap-2 text-xs font-semibold">
-              <li className="chip">{MODE_LABEL[session.reviewMode] ?? session.reviewMode}</li>
-              <li className="chip">{VIS_LABEL[session.scoreVisibility] ?? session.scoreVisibility}</li>
-              <li className="chip">{JOIN_LABEL[session.joinPolicy] ?? session.joinPolicy}</li>
-            </ul>
-
-            {viewerIsChairman ? (
-              <button type="button" disabled={pending} onClick={() => run(() => startSession(sessionId))} className="border-2 border-ink bg-accent px-6 py-3 font-bold tracking-tight text-ink shadow-[4px_4px_0_rgba(0,0,0,.5)] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 disabled:opacity-50">
-                ▶ Aloita kerhoilta
-              </button>
-            ) : (
-              <p className="text-sm text-muted">Puheenjohtaja aloittaa illan — pysy linjoilla.</p>
-            )}
-          </div>
-        </section>
-      )}
-
-      {session.status !== "scheduled" && (
+      {(
         <>
           <section className="surface-flat p-3">
             <span className="text-sm text-muted">Paikalla: </span>
